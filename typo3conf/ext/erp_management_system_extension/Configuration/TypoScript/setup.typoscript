@@ -1,0 +1,341 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:erp_management_system_extension/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+ 
+################
+#### menu ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:erp_management_system_extension/Configuration/TypoScript/menu.typoscript">
+
+################
+#### plugin ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:erp_management_system_extension/Configuration/TypoScript/plugin.typoscript">
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    # shortcutIcon = {$page.favicon.file}
+    shortcutIcon = EXT:erp_management_system_extension/Resources/Public/Icons/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        # Template names will be generated automatically by converting the applied
+        # backend_layout, there is no explicit mapping necessary anymore.
+        #
+        # BackendLayout Key
+        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        #
+        # Backend Record
+        # uid: 1 -> 1.html
+        #
+        # Database Entry
+        # value: -1 -> None.html
+        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Default
+        }
+        templateRootPaths {
+            0 = EXT:erp_management_system_extension/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:erp_management_system_extension/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:erp_management_system_extension/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = media
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                special = rootline
+                special.range = 0|-1
+                includeNotInMenu = 1
+                as = menuBreadcrumb
+            }
+            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            30 {
+                special = directory
+                special.value = 1
+                levels = 5
+                expandAll = 1
+                includeSpacer = 1
+                titleField = nav_title // title
+                as = menuFooter
+            }
+            40 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            40 {
+                special = directory
+                special.value = 12
+                levels = 5
+                titleField = nav_title // title
+                as = menuMeta
+            }
+        }
+
+        variables {
+            pageTitle = TEXT
+            pageTitle.data = page:title
+
+            pageSubTitle = TEXT
+            pageSubTitle.data = page:subtitle
+
+            pageId = TEXT
+            pageId.data = page:uid
+
+            siteTitle = TEXT
+            siteTitle.data = TSFE:tmpl|setup|sitetitle
+
+            BASEURL = TEXT
+            BASEURL.value = {$config.baseURL}
+
+            FTPBASEURL = TEXT
+            FTPBASEURL.value = {$config.ftpBaseUrl}
+            
+            USERUID = TEXT
+            USERUID.data = TSFE:fe_user|user|uid
+
+            EMAIL = TEXT
+            EMAIL.data = TSFE:fe_user|user|email
+
+            USER = TEXT
+            USER.data = TSFE:fe_user|user|username
+
+            USERNAME = TEXT
+            USERNAME.data = TSFE:fe_user|user|name
+
+            GROUP = TEXT
+            GROUP.data = TSFE:fe_user|user|usergroup
+
+            rootPage = TEXT
+            rootPage.data = leveluid:0
+
+            logoFile = TEXT
+            logoFile.value = {$page.logo.file}
+            logoHeight = TEXT
+            logoHeight.value = {$page.logo.height}
+            logoWidth = TEXT
+            logoWidth.value = {$page.logo.width}
+
+            bannerFile = TEXT
+            bannerFile.data = page:media
+
+            themeCopyright = TEXT
+            themeCopyright.value = {$page.theme.copyright.enable}
+            themeCopyrightText = TEXT
+            themeCopyrightText.data = date:U
+            themeCopyrightText.strftime = %Y
+            themeCopyrightText.wrap =(Copyright)&nbsp;&copy;&nbsp; | &nbsp;<i class="mdi mdi-heart text-danger"></i>&nbsp; <a href="{$config.baseURL}">{$config.headerComment}</a>
+
+            sys_language_uid = TEXT
+            sys_language_uid.data = TSFE:sys_language_uid
+
+            searchKeyword = TEXT
+            searchKeyword.data = GP:tx_indexedsearch|sword
+        }
+    }
+
+    #headerData{
+    #    50 = TEXT
+    #    50.value(
+    #        <link rel="apple-touch-icon" sizes="180x180" href="{$page.favicon.file}">
+    #        <link rel="icon" type="image/png" sizes="32x32" href="{$page.favicon.file}">
+    #        <link rel="icon" type="image/png" sizes="16x16" href="{$page.favicon.file}">
+    #    )
+    #}
+
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        description = {$page.meta.description}
+        description {
+            override.field = description
+        }
+        author = {$page.meta.author}
+        author {
+            override.field = author
+        }
+        keywords = {$page.meta.keywords}
+        keywords {
+            override.field = keywords
+        }
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+        og:image {
+            attribute = property
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    data = levelfield:-1, media, slide
+                }
+                maxItems = 1
+                renderObj = COA
+                renderObj {
+                    10 = IMG_RESOURCE
+                    10 {
+                        file {
+                            import.data = file:current:uid
+                            treatIdAsReference = 1
+                            width = 1280c
+                            height = 720c
+                        }
+                        stdWrap {
+                            typolink {
+                                parameter.data = TSFE:lastImgResourceInfo|3
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    includeCSS {
+        # <!-- Plugins css -->
+        css5 = {$page.includePath.plugins}bootstrap-colorpicker/css/bootstrap-colorpicker.min.css
+        css6 = {$page.includePath.plugins}bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css
+        css7 = {$page.includePath.plugins}select2/css/select2.min.css
+        css8 = {$page.includePath.plugins}bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css
+        css9 = {$page.includePath.plugins}magnific-popup/magnific-popup.css
+        css10 = {$page.includePath.plugins}uikit/dist/css/uikit.css
+        css11 = {$page.includePath.plugins}uikit/dist/css/components/notify.css
+
+        css1  = {$page.includePath.main}css/bootstrap.min.css
+        css2  = {$page.includePath.main}css/metismenu.min.css
+        css3  = {$page.includePath.main}css/icons.css
+        css4  = {$page.includePath.main}css/style.css
+        css100  = {$page.includePath.layout}Css/layout.css
+
+    }
+
+    includeJSLibs {
+        js1 = {$page.includePath.main}js/jquery.min.js
+        js2 = {$page.includePath.plugins}layer/layer.js
+        js3 = {$page.includePath.plugins}uikit/dist/js/uikit.min.js
+        js4 = {$page.includePath.plugins}uikit/dist/js/components/notify.min.js
+        js100 = {$page.includePath.layout}JavaScript/scripts.js
+    }
+
+    includeJS {
+    }
+
+    includeJSFooterlibs {
+    }
+
+    # jsFooterInline {
+    #     10 = TEXT
+    #     10.value (
+    #         layer.config({
+    #             extend: 'mystyle/style.css',
+    #             skin: 'layer-ext-mystyle'
+    #         });
+    #     )
+    # }
+
+    includeJSFooter {
+
+        js2 = {$page.includePath.main}js/bootstrap.bundle.min.js
+        js3 = {$page.includePath.main}js/metisMenu.min.js
+        js4 = {$page.includePath.main}js/jquery.slimscroll.js
+        js5 = {$page.includePath.main}js/waves.min.js
+        #<!-- Plugins js -->
+        js6 = {$page.includePath.plugins}bootstrap-colorpicker/js/bootstrap-colorpicker.min.js
+        js7 = {$page.includePath.plugins}bootstrap-datepicker/js/bootstrap-datepicker.js
+        js8 = {$page.includePath.plugins}select2/js/select2.min.js
+        js9 = {$page.includePath.plugins}bootstrap-maxlength/bootstrap-maxlength.min.js
+        js10 = {$page.includePath.plugins}bootstrap-filestyle/js/bootstrap-filestyle.min.js
+        js11 = {$page.includePath.plugins}bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js
+
+        #<!-- Plugins Init js -->
+        js12 = {$page.includePath.main}pages/form-advanced.js
+        js13 = {$page.includePath.plugins}magnific-popup/jquery.magnific-popup.min.js
+        js14 = {$page.includePath.main}pages/lightbox.js  
+
+        #<!-- App js -->
+        js100 = {$page.includePath.main}js/app.js
+    }
+
+    includeCSSLibs {
+
+    }
+
+}
+
+
+################
+#### CONFIG ####
+################
+config {
+    absRefPrefix = auto
+    no_cache = {$config.no_cache}
+    uniqueLinkVars = 1
+    pageTitleFirst = 1
+    linkVars = L
+    prefixLocalAnchors = {$config.prefixLocalAnchors}
+    renderCharset = utf-8
+    metaCharset = utf-8
+    doctype = html5
+    removeDefaultJS = {$config.removeDefaultJS}
+    inlineStyle2TempFile = 1
+    admPanel = {$config.admPanel}
+    debug = 0
+    cache_period = 86400
+    sendCacheHeaders = {$config.sendCacheHeaders}
+    intTarget =
+    extTarget =
+    disablePrefixComment = 1
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 1
+    headerComment = {$config.headerComment}
+
+    // Disable Image Upscaling
+    noScaleUp = 1
+}

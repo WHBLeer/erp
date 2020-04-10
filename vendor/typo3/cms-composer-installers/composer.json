@@ -1,0 +1,51 @@
+{
+    "name": "typo3/cms-composer-installers",
+    "type": "composer-plugin",
+    "description": "TYPO3 CMS Installers",
+    "keywords": [
+        "installer", "typo3", "cms", "core", "extension"
+    ],
+    "homepage": "https://github.com/TYPO3/CmsComposerInstallers",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "TYPO3 CMS Core Team",
+            "role": "Developer",
+            "homepage": "https://forge.typo3.org/projects/typo3cms-core"
+        },
+        {
+            "name": "The TYPO3 Community",
+            "role": "Contributor",
+            "homepage": "https://typo3.org/community/"
+        }
+    ],
+    "support": {
+        "general": "https://typo3.org/support/",
+        "issues": "https://github.com/TYPO3/CmsComposerInstallers/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "TYPO3\\CMS\\Composer\\": "src/"
+        }
+    },
+    "replace": {
+        "lw/typo3cms-installers": "*",
+        "netresearch/composer-installers": "*"
+    },
+    "require": {
+        "php": ">=7.0.0 <=7.4",
+        "composer-plugin-api": "^1.0.0"
+    },
+    "conflict": {
+        "composer/installers": "<1.0.24 || >1.0.24"
+    },
+    "require-dev": {
+        "composer/composer": "^1.2"
+    },
+    "extra": {
+        "class": "TYPO3\\CMS\\Composer\\Installer\\Plugin",
+        "branch-alias": {
+            "dev-master": "2.1.x-dev"
+        }
+    }
+}

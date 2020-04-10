@@ -1,0 +1,291 @@
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+	  
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-table/1.11.1/bootstrap-table.min.css">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/jquery-treegrid/0.2.0/css/jquery.treegrid.min.css">
+		<script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap-table/1.12.0/extensions/treegrid/bootstrap-table-treegrid.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-treegrid/0.2.0/js/jquery.treegrid.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-treegrid/0.2.0/js/jquery.treegrid.min.js"></script>
+
+		<f:flashMessages as="flashMessages">
+			<script>
+				<f:for each="{flashMessages}" as="flashMessage">
+					notify("{flashMessage.message}", "{flashMessage.severity}");
+				</f:for>
+			</script>
+		</f:flashMessages>
+
+		<div class="dataTables_wrapper dt-bootstrap4">
+            <div class="row mb-10">
+                <div class="col-sm-12 col-md-9">
+					<a href="javascript:void(0);" onclick="addTemplate('添加模板')" class="btn btn-info">添加模板</a>
+					<!-- <f:link.action action="new" class="btn btn-info">添加模板</f:link.action> -->
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <f:form action="list" name="search" object="{search}">
+                        <div class="input-group justify-content-end">
+							<f:form.textfield name="keyword" value="{keyword}" class="form-control" placeholder="关键字" />
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-search"></i></span>
+                            </div>
+                        </div>
+                    </f:form>
+                </div>
+            </div><br/>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-responsive">
+						<table class="table table-hover mb-10" id="treeTable">
+						</table>
+                    </div>
+                    
+                </div>
+            </div>
+		</div>
+		<div style="display: none;" id="content">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="card">
+					<div class="card-body">
+						<f:form action="create" enctype="multipart/form-data" name="template" object="{template}">
+							<table class="table table-bordered mb-0">
+								<tbody>
+									<tr>
+										<th><b>中文名称:</b></th>
+										<td><f:form.textfield property="name" id="t_name" class="form-control" /></td>
+									</tr>
+									<tr>
+										<th><b>英文名称:</b></th>
+										<td><f:form.textfield property="nameEn" id="t_nameEn" class="form-control" /></td>
+									</tr>
+									<tr>
+										<th><b>代码:</b></th>
+										<td><f:form.textfield property="code" id="t_code" class="form-control" /></td>
+									</tr>
+									<tr>
+										<th><b>父级:</b></th>
+										<td>
+											<select name="tx_erpmanageproducttemplate_pi1[parent]" class="select2 form-control" id="select2">
+												<option value="">--请选择--</option>
+												<f:for each="{parents}" as="parent" iteration="i">
+													<option value="{parent.uid}">{parent.title}</option>
+												</f:for>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<f:form.submit class="btn btn-space btn-primary" id="btn-sub" value="提交" />
+											<f:link.action action="list" class="btn btn-space btn-secondary">取消</f:link.action>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							
+						</f:form>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<script>
+			var $table = $('#treeTable');
+			var data = JSON.parse('<f:format.raw>{templatesJson}</f:format.raw>');
+		
+			// 添加模板
+			function addTemplate(title){
+				layer.open({
+					type : 1,
+					title : title,
+					maxmin : true,
+					shadeClose : false, // 点击遮罩关闭层
+					area : [ '500px', '320px' ],
+					content :  $("#content")
+				});
+			}
+
+			function parentId(obj,val) {
+				$("#parentId").val(val);
+			}
+			$(function() {
+		
+				//控制台输出一下数据
+				console.log(data);
+		
+				$table.bootstrapTable({
+					data:data,
+					idField: 'id',
+					dataType:'jsonp',
+					columns: [
+						{ field: 'check',  checkbox: true, formatter: function (value, row, index) {
+								if (row.check == true) {
+								   // console.log(row.serverName);
+									//设置选中
+									return {  checked: true };
+								}
+							}
+						},
+					   	{ field: 'number', title: '编号', sortable: true, align: 'center'},
+						{ field: 'name', title: '模板名称(EN)'  },
+						{ field: 'crdate', title: '添加时间'  },
+						{ field: 'tstamp', title: '最后修改时间'  },
+						{ field: 'operate', title: '操作', align: 'right', events : operateEvents, formatter: 'operateFormatter' },
+					],
+		
+					// bootstrap-table-treegrid.js 插件配置 -- start
+		
+					//在哪一列展开树形
+					treeShowField: 'name',
+					//指定父id列
+					parentIdField: 'pid',
+					
+					onResetView: function(data) {
+						//console.log('load');
+						$table.treegrid({
+							initialState: 'collapsed',// 所有节点都折叠
+							// initialState: 'expanded',// 所有节点都展开，默认展开
+							treeColumn: 1,
+							expanderExpandedClass: 'ion ion-md-arrow-dropdown',  //图标样式
+							expanderCollapsedClass: 'ion ion-md-arrow-dropright',
+							onChange: function() {
+								$table.bootstrapTable('resetWidth');
+							}
+						});
+		
+						//只展开树形的第一级节点
+						$table.treegrid('getRootNodes').treegrid('expand');
+		
+					},
+					onCheck:function(row){
+						var datas = $table.bootstrapTable('getData');
+						// 勾选子类
+						selectChilds(datas,row,"id","pid",true);
+		
+						// 勾选父类
+						selectParentChecked(datas,row,"id","pid")
+		
+						// 刷新数据
+						$table.bootstrapTable('load', datas);
+					},
+		
+					onUncheck:function(row){
+						var datas = $table.bootstrapTable('getData');
+						selectChilds(datas,row,"id","pid",false);
+						$table.bootstrapTable('load', datas);
+					},
+					// bootstrap-table-treetreegrid.js 插件配置 -- end
+				});
+			});
+		
+			// 格式化按钮
+			function operateFormatter(value, row, index) {
+				return [
+					'<a class="btn btn-sm btn-info" href="/erp/merchant-settings/template?tx_erpmanageproducttemplate_pi1%5Baction%5D=list&amp;tx_erpmanageproducttemplate_pi1%5Bcontroller%5D=Template&amp;tx_erpmanageproducttemplate_pi1%5Btemplate%5D=1&amp;cHash=8cd2bfe41bf9844ff5453e2ef5e3c685"><i class="ti-reload"></i></a>',
+					'<a class="btn btn-sm btn-default" href="/erp/merchant-settings/template?tx_erpmanageproducttemplate_pi1%5Baction%5D=show&amp;tx_erpmanageproducttemplate_pi1%5Bcontroller%5D=Template&amp;tx_erpmanageproducttemplate_pi1%5Btemplate%5D=1&amp;cHash=cfb99b67ffcfb19e5ecff952c964bc34"><i class="ti-eye"></i></a>',
+					'<a class="btn btn-sm btn-info" href="/erp/merchant-settings/template?tx_erpmanageproducttemplate_pi1%5Baction%5D=edit&amp;tx_erpmanageproducttemplate_pi1%5Bcontroller%5D=Template&amp;tx_erpmanageproducttemplate_pi1%5Btemplate%5D=1&amp;cHash=3b38357da28b1e081cbf99569c469ebd"><i class="ti-pencil-alt"></i></a>',
+					'<a class="btn btn-sm btn-danger" href="/erp/merchant-settings/template?tx_erpmanageproducttemplate_pi1%5Baction%5D=delete&amp;tx_erpmanageproducttemplate_pi1%5Bcontroller%5D=Template&amp;tx_erpmanageproducttemplate_pi1%5Btemplate%5D=1&amp;cHash=d13d006749b53b99d4b2a430398e5725"><i class="ti-close"></i></a>',
+				].join('');
+		
+			}
+			// 格式化类型
+			function typeFormatter(value, row, index) {
+				if (value === 'menu') {  return '菜单';  }
+				if (value === 'button') {  return '按钮'; }
+				if (value === 'api') {  return '接口'; }
+				return '-';
+			}
+			// 格式化状态
+			function statusFormatter(value, row, index) {
+				if (value === 1) {
+					return '<span class="label label-success">正常</span>';
+				} else {
+					return '<span class="label label-default">锁定</span>';
+				}
+			}
+		
+			//初始化操作按钮的方法
+			window.operateEvents = {
+				'click .RoleOfadd': function (e, value, row, index) {
+					add(row.id);
+				},
+				'click .RoleOfdelete': function (e, value, row, index) {
+					del(row.id);
+				},
+				'click .RoleOfedit': function (e, value, row, index) {
+					update(row.id);
+				}
+			};
+		</script>
+		<script>
+			/**
+			 * 选中父项时，同时选中子项
+			 * @param datas 所有的数据
+			 * @param row 当前数据
+			 * @param id id 字段名
+			 * @param pid 父id字段名
+			 */
+			function selectChilds(datas,row,id,pid,checked) {
+				for(var i in datas){
+					if(datas[i][pid] == row[id]){
+						datas[i].check=checked;
+						selectChilds(datas,datas[i],id,pid,checked);
+					};
+				}
+			}
+		
+			function selectParentChecked(datas,row,id,pid){
+				for(var i in datas){
+					if(datas[i][id] == row[pid]){
+						datas[i].check=true;
+						selectParentChecked(datas,datas[i],id,pid);
+					};
+				}
+			}
+		
+			function test() {
+				var selRows = $table.bootstrapTable("getSelections");
+				if(selRows.length == 0){
+					alert("请至少选择一行");
+					return;
+				}
+		
+				var postData = "";
+				$.each(selRows,function(i) {
+					postData +=  this.id;
+					if (i < selRows.length - 1) {
+						postData += "， ";
+					}
+				});
+				alert("你选中行的 id 为："+postData);
+		
+			}
+		
+			function add(id) {
+				alert("add 方法 , id = " + id);
+			}
+			function del(id) {
+				alert("del 方法 , id = " + id);
+			}
+			function update(id) {
+				alert("update 方法 , id = " + id);
+			}
+		
+		
+		</script>
+	</f:section>
+</html>

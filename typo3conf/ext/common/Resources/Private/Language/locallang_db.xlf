@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="ch" datatype="plaintext" original="messages" date="2019-09-24T09:48:35Z" product-name="common">
+		<header/>
+		<body>
+			<trans-unit id="tx_common_domain_model_config">
+				<source>Config</source>
+			</trans-unit>
+			<trans-unit id="tx_common_domain_model_config.parent_id">
+				<source>父级ID</source>
+			</trans-unit>
+			<trans-unit id="tx_common_domain_model_config.icon">
+				<source>图标</source>
+			</trans-unit>
+			<trans-unit id="tx_common_domain_model_config.svg_icon">
+				<source>SVG格式图标</source>
+			</trans-unit>
+			<trans-unit id="pages.tx_extbase_type.Tx_Common_Config">
+				<source>通用配置 Config</source>
+			</trans-unit>
+			<trans-unit id="tx_common_pi1.name">
+				<source>系统配置</source>
+			</trans-unit>
+			<trans-unit id="tx_common_pi1.description">
+				<source>通用系统配置</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

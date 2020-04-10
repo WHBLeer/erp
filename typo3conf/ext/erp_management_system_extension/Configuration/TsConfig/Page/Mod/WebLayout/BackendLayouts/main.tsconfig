@@ -1,0 +1,39 @@
+#
+# BACKENDLAYOUT: MAIN
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            main {
+                title = LLL:EXT:erp_management_system_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.main
+                config {
+					backend_layout {
+                    
+                        colCount = 1
+				        rowCount = 2
+				        rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:erp_management_system_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.column.header
+										colPos = 0
+									}
+								}
+							}
+				          	2 {
+				            	columns {
+				              		1 {
+				                		name = LLL:EXT:erp_management_system_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.column.normal
+				                		colPos = 1
+				              		}
+				            	}
+				          	}
+				          
+                        }
+                    }
+                }
+                #icon = EXT:erp_management_system_extension/Resources/Public/Images/BackendLayouts/main.png
+            }
+        }
+    }
+}

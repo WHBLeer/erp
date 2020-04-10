@@ -1,0 +1,124 @@
+<f:if condition="{configuration.insertAbove}">
+    <f:render section="paginator" arguments="{pagination: pagination,configuration:configuration}" />
+</f:if>
+<f:renderChildren arguments="{contentArguments}" />
+
+<f:if condition="{configuration.insertBelow}">
+    <f:render section="paginator" arguments="{pagination: pagination,configuration:configuration}" />
+</f:if>
+
+<f:section name="paginator">
+    <f:debug title="" inline="1">{_all}</f:debug>
+    <f:if condition="{pagination.numberOfPages} > 1">
+        <div class="row">
+            <div class="col-sm-12 col-md-5">
+                <div class="dataTables_info" id="datatable-buttons_info" role="status" aria-live="polite">Showing 1 to
+                    10 of 57
+                    entries</div>
+            </div>
+            <div class="col-sm-12 col-md-7">
+                <div class="dataTables_paginate paging_simple_numbers" id="datatable-buttons_paginate">
+                    <ul class="pagination justify-content-end">
+                        <f:if condition="{pagination.previousPage}">
+                            <li class="paginate_button page-item previous disabled" id="datatable-buttons_previous">
+                                <f:if condition="{pagination.previousPage} > 1"> 
+                                    <f:then>
+                                        <f:widget.link class="page-link" action="index"
+                                            arguments="{currentPage: pagination.previousPage}">上一页</f:widget.link>
+                                    </f:then>
+                                    <f:else>
+                                        <f:widget.link class="page-link" action="index">上一页
+                                        </f:widget.link>
+                                    </f:else>
+                                </f:if>
+                            </li>
+                        </f:if>
+                        <f:if condition="{pagination.displayRangeStart} > 1">
+                            <li class="paginate_button page-item">
+                                <f:widget.link class="page-link" action="index">1
+                                </f:widget.link>
+                            </li>
+                        </f:if>
+                        <f:if condition="{pagination.hasLessPages}">
+                            <li><a href="javascript:void(0)">...</a></li>
+                        </f:if>
+
+                        <f:for each="{pagination.pages}" as="page">
+                            <f:if condition="{page.isCurrent}">
+                                <f:then>
+                                    <li class="paginate_button page-item active">
+                                        <f:widget.link class="page-link ui-state-disabled"
+                                            action="index">
+                                            {page.number}</f:widget.link>
+                                    </li>
+                                </f:then>
+                                <f:else>
+                                    <li>
+                                        <f:if condition="{page.number} > 1">
+                                            <f:then>
+                                                <f:widget.link class="page-link"
+                                                    arguments="{currentPage: page.number}" action="index">{page.number}
+                                                </f:widget.link>
+                                            </f:then>
+                                            <f:else>
+                                                <f:widget.link class="page-link"
+                                                    action="index">{page.number}
+                                                </f:widget.link>
+                                            </f:else>
+                                        </f:if>
+                                    </li>
+                                </f:else>
+                            </f:if>
+                        </f:for>
+
+                        <f:if condition="{pagination.hasMorePages}">
+                            <li><a href="javascript:void(0)">...</a></li>
+                        </f:if>
+                        <f:if condition="{pagination.displayRangeEnd} < {pagination.numberOfPages}">
+                            <li class="paginate_button page-item ">
+                                <f:widget.link class="page-link"
+                                    arguments="{currentPage: pagination.numberOfPages}" action="index">
+                                    {pagination.numberOfPages}
+                                </f:widget.link>
+                            </li>
+                        </f:if>
+                        <f:if condition="{pagination.nextPage}">
+                            <li class="paginate_button page-item next" id="datatable-buttons_next">
+                                <f:widget.link class="page-link"
+                                    arguments="{currentPage: pagination.nextPage}"
+                                    action="index">下一页</f:widget.link>
+                            </li>
+                        </f:if>
+                    </ul>
+                    <!-- <ul class="pagination">
+                        <li class="paginate_button page-item previous disabled" id="datatable-buttons_previous"><a
+                                href="#"
+                                aria-controls="datatable-buttons" data-dt-idx="0" tabindex="0"
+                                class="page-link">Previous</a>
+                        </li>
+                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-buttons"
+                                data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable-buttons"
+                                data-dt-idx="2"
+                                tabindex="0" class="page-link">2</a></li>
+                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable-buttons"
+                                data-dt-idx="3"
+                                tabindex="0" class="page-link">3</a></li>
+                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable-buttons"
+                                data-dt-idx="4"
+                                tabindex="0" class="page-link">4</a></li>
+                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable-buttons"
+                                data-dt-idx="5"
+                                tabindex="0" class="page-link">5</a></li>
+                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable-buttons"
+                                data-dt-idx="6"
+                                tabindex="0" class="page-link">6</a></li>
+                        <li class="paginate_button page-item next" id="datatable-buttons_next"><a href="#"
+                                aria-controls="datatable-buttons" data-dt-idx="7" tabindex="0"
+                                class="page-link">Next</a></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </f:if>
+</f:section>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2020-02-16T02:37:42Z" product-name="form">
+		<header/>
+		<body>
+			<trans-unit id="form-runtime-identifier-42.element.form-element-identifier.properties.label" resname="form-runtime-identifier-42.element.form-element-identifier.properties.label" xml:space="preserve">
+                <source>form-runtime-identifier-42 form-element-identifierlabel EN</source>
+            <target/></trans-unit>
+			<trans-unit id="form-runtime-identifier-42.element.form-runtime-identifier-42.renderingOptions.submitButtonLabel" resname="form-runtime-identifier-42.element.form-runtime-identifier-42.renderingOptions.submitButtonLabel" xml:space="preserve">
+                <source>form-runtime-identifier-42 submitButtonLabel EN</source>
+            <target/></trans-unit>
+			<trans-unit id="form-runtime-identifier-42.finisher.Foo.test" resname="form-runtime-identifier-42.finisher.Foo.test" xml:space="preserve">
+                <source>form-runtime-identifier-42 FooFinisher test EN</source>
+            <target/></trans-unit>
+			<trans-unit id="form-runtime-identifier-42.validation.error.form-element-identifier.123" resname="form-runtime-identifier-42.validation.error.form-element-identifier.123" xml:space="preserve">
+                <source>form-runtime-identifier-42 form-element-identifier error 123 EN</source>
+            <target/></trans-unit>
+			<trans-unit id="form-runtime-identifier-42.validation.error.form-runtime-identifier-42.123" resname="form-runtime-identifier-42.validation.error.form-runtime-identifier-42.123" xml:space="preserve">
+                <source>form-runtime-identifier-42 error 123 EN</source>
+            <target/></trans-unit>
+		</body>
+	</file>
+</xliff>

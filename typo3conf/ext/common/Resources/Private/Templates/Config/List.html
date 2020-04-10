@@ -1,0 +1,77 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+	<f:section name="content">
+		<f:flashMessages as="flashMessages">
+			<script>
+				<f:for each="{flashMessages}" as="flashMessage">
+					notify("{flashMessage.message}", "{flashMessage.severity}");
+				</f:for>
+			</script>
+		</f:flashMessages>
+		<div class="dataTables_wrapper dt-bootstrap4">
+            <div class="row mb-10">
+                <div class="col-sm-12 col-md-9">
+					<h4 class="mt-0 header-title">基本系统配置</h4>
+					<p class="text-muted m-b-30">您可以再这个页面中对您的网站进行简单的配置，保存后会立即应用你的改动！非管理员请勿修改！！！</p>
+                </div>
+            </div>
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" id="base-tab-justify" href="#base-justify" role="tab">
+						<span class="d-none d-sm-block"><i class="ti-star"></i> 基本配置</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" id="file-tab-justify" href="#file-justify" role="tab">
+						<span class="d-none d-sm-block"><i class="ti-file"></i> 文件配置</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" id="email-tab-justify" href="#email-justify" role="tab">
+						<span class="d-none d-sm-block"><i class="ti-email"></i> 邮件配置</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" id="seo-tab-justify" href="#seo-justify" role="tab">
+						<span class="d-none d-sm-block"><i class="ti-flag-alt"></i> SEO配置</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" id="ftp-tab-justify" href="#ftp-justify" role="tab">
+						<span class="d-none d-sm-block"><i class="ti-cloud-up"></i> FTP配置</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" id="trans-tab-justify" href="#trans-justify" role="tab">
+						<span class="d-none d-sm-block"><i class="mdi mdi-google-translate"></i> 翻译配置</span>
+					</a>
+				</li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active p-3" id="base-justify" role="tabpanel">
+					<f:render partial="Config/BaseFormFields" arguments="{_all}" />
+				</div>
+				<div class="tab-pane p-3" id="file-justify" role="tabpanel">
+					<f:render partial="Config/FileFormFields" arguments="{_all}" />
+				</div>
+				<div class="tab-pane p-3" id="email-justify" role="tabpanel">
+					<f:render partial="Config/EmailFormFields" arguments="{_all}" />
+				</div>
+				<div class="tab-pane p-3" id="seo-justify" role="tabpanel">
+					<f:render partial="Config/SeoFormFields" arguments="{_all}" />
+				</div>
+				<div class="tab-pane p-3" id="ftp-justify" role="tabpanel">
+					<f:render partial="Config/FtpFormFields" arguments="{_all}" />
+				</div>
+				<div class="tab-pane p-3" id="trans-justify" role="tabpanel">
+					<f:render partial="Config/TransFormFields" arguments="{_all}" />
+				</div>
+			</div>
+		</div>
+	</f:section>
+
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2020-02-16T02:31:28Z" product-name="fluid">
+		<header/>
+		<body>
+			<trans-unit id="viewhelper.format.bytes.units" resname="viewhelper.format.bytes.units" approved="yes">
+				<source>B,KB,MB,GB,TB,PB,EB,ZB,YB</source>
+				<target state="translated">B、KB、MB、GB、TB、PB、EB、ZB、YB</target>
+			</trans-unit>
+			<trans-unit id="widget.pagination.first" resname="widget.pagination.first" approved="yes">
+				<source>first</source>
+				<target state="translated">首页</target>
+			</trans-unit>
+			<trans-unit id="widget.pagination.last" resname="widget.pagination.last" approved="yes">
+				<source>last</source>
+				<target state="translated">末页</target>
+			</trans-unit>
+			<trans-unit id="widget.pagination.next" resname="widget.pagination.next" approved="yes">
+				<source>next</source>
+				<target state="translated">后一页</target>
+			</trans-unit>
+			<trans-unit id="widget.pagination.page" resname="widget.pagination.page" approved="yes">
+				<source>Page</source>
+				<target state="translated">页</target>
+			</trans-unit>
+			<trans-unit id="widget.pagination.previous" resname="widget.pagination.previous" approved="yes">
+				<source>previous</source>
+				<target state="translated">前一页</target>
+			</trans-unit>
+			<trans-unit id="widget.pagination.records" resname="widget.pagination.records" approved="yes">
+				<source>Records</source>
+				<target state="translated">记录</target>
+			</trans-unit>
+			<trans-unit id="widget.pagination.refresh" resname="widget.pagination.refresh" approved="yes">
+				<source>Refresh</source>
+				<target state="translated">刷新</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

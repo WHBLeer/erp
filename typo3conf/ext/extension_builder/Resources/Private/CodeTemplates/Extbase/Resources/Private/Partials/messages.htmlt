@@ -1,0 +1,13 @@
+{namespace k=EBT\ExtensionBuilder\ViewHelpers}<f:format.raw><k:openingTag>html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true"</k:openingTag>
+    <k:openingTag>f:flashMessages as="flashMessages"</k:openingTag>
+        <script>
+            <k:openingTag>f:for each="<k:curlyBrackets>flashMessages</k:curlyBrackets>" as="flashMessage"</k:openingTag>
+                <k:openingTag>f:if condition="<k:curlyBrackets>flashMessage.severity</k:curlyBrackets>==0"</k:openingTag>UIkit.notify("<k:curlyBrackets>flashMessage.message</k:curlyBrackets>", { status: 'success' });<k:openingTag>/f:if</k:openingTag>
+                <k:openingTag>f:if condition="<k:curlyBrackets>flashMessage.severity</k:curlyBrackets>==1"</k:openingTag>UIkit.notify("<k:curlyBrackets>flashMessage.message</k:curlyBrackets>", { status: 'warning' });<k:openingTag>/f:if</k:openingTag>
+                <k:openingTag>f:if condition="<k:curlyBrackets>flashMessage.severity</k:curlyBrackets>==2"</k:openingTag>UIkit.notify("<k:curlyBrackets>flashMessage.message</k:curlyBrackets>", { status: 'danger' });<k:openingTag>/f:if</k:openingTag>
+                <k:openingTag>f:if condition="<k:curlyBrackets>flashMessage.severity</k:curlyBrackets>==-1"</k:openingTag>UIkit.notify("<k:curlyBrackets>flashMessage.message</k:curlyBrackets>", { status: 'info' });<k:openingTag>/f:if</k:openingTag>
+                <k:openingTag>f:if condition="<k:curlyBrackets>flashMessage.severity</k:curlyBrackets>==-2"</k:openingTag>UIkit.notify("<k:curlyBrackets>flashMessage.message</k:curlyBrackets>", { status: 'info' });<k:openingTag>/f:if</k:openingTag>
+            <k:openingTag>/f:for</k:openingTag>
+        </script>
+    <k:openingTag>/f:flashMessages</k:openingTag>
+<k:openingTag>/html</k:openingTag></f:format.raw>

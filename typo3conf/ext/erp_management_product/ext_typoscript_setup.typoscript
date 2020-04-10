@@ -1,0 +1,14 @@
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      ERP\ErpManagementProduct\Domain\Model\Product {
+        mapping {
+          
+        }
+      }
+
+    }
+  }
+}

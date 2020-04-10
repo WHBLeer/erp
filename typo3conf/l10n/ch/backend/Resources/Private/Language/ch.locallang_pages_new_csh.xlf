@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2019-03-29T00:04:44Z" product-name="backend">
+		<header/>
+		<body>
+			<trans-unit id="pages_new.alttitle">
+				<source>Create multiple pages</source>
+				<target>创建多个页面</target>
+			</trans-unit>
+			<trans-unit id="pages_new.description" xml:space="preserve">
+				<source>Enables you to create a batch of new, empty pages for quickly building up a new page tree.
+Just enter the titles for the pages you need. Only filled in fields will be created as pages.</source>
+				<target>使您可以创建一批新的空白页面，以快速构建新的页面树。
+只需输入所需页面的标题即可。仅将填写的字段创建为页面</target>
+			</trans-unit>
+			<trans-unit id="pages_new.details" xml:space="preserve">
+				<source>The new pages will always be created as subpages to the currently active page from the page tree. This page is shown in the top of the page. In the example image below it is "/Intro/Startpage/".
+
+&lt;b&gt;"Place new pages after the existing subpages"&lt;/b&gt;
+If you select this option the pages will be create &lt;em&gt;after&lt;/em&gt; any existing subpages.
+
+&lt;b&gt;"Hide new pages"&lt;/b&gt;
+Select this if the new pages should be hidden by default. This option may be forced upon you if you do not have credentials to create new, online pages.</source>
+				<target>新页面将始终被创建为页面树中当前活动页面的子页面。此页面显示在页面顶部。在下面的示例图像中，它是"/Intro/Startpage/".
+
+&lt;b&gt;"在现有子页面之后放置新页面"&lt;/b&gt;
+如果您选择此选项，则会在＆lt; / em＆gt;之后创建＆lt; em＆gt;页面。任何现有的子页面。
+
+&lt;b&gt;"隐藏新页面"&lt;/b&gt;
+如果默认情况下应隐藏新页面，请选择此选项。如果您没有创建新的在线页面的凭据，则可能会强行使用此选项。</target>
+			</trans-unit>
+			<trans-unit id="_pages_new.image" xml:space="preserve">
+				<source>EXT:backend/Resources/Public/Images/Csh/PagesNew_1.png,
+EXT:backend/Resources/Public/Images/Csh/PagesNew_2.png</source>
+			</target></trans-unit>
+			<trans-unit id="pages_new.image_descr" xml:space="preserve">
+				<source>You simply enter the new page titles in the fields. Only fields you fill in will be created as pages.
+After pressing the "Create pages" button the page tree to the left will update instantly, showing you the position of the new pages!</source>
+				<target>您只需在字段中输入新的页面标题。仅将您填写的字段创建为页面。
+按下“创建页面”按钮后，左侧的页面树将立即更新，向您显示新页面的位置！</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

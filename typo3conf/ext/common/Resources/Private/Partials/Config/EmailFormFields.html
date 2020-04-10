@@ -1,0 +1,86 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:form action="update" name="config" object="{config}" enctype="multipart/form-data">
+		<f:form.hidden name="label" value="email" />
+		<div class="row">
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="defaultMailFromAddress">发件人邮箱</label>
+					<input type="text" id="defaultMailFromAddress" name="TYPO3_CONF_VARS[MAIL][defaultMailFromAddress]"
+						value="{TYPO3_CONF_VARS.MAIL.defaultMailFromAddress}" class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="defaultMailFromName">发件人姓名</label>
+					<input type="text" id="defaultMailFromName" name="TYPO3_CONF_VARS[MAIL][defaultMailFromName]"
+						value="{TYPO3_CONF_VARS.MAIL.defaultMailFromName}" class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="transport">邮件引擎</label>
+					<select name="TYPO3_CONF_VARS[MAIL][transport]" id="transport" class="form-control">
+						<option value="mail" <f:if condition="{TYPO3_CONF_VARS.MAIL.transport} == 'mail'">selected="selected"</f:if>
+							>mail</option>
+						<option value="smtp" <f:if condition="{TYPO3_CONF_VARS.MAIL.transport} == 'smtp'">selected="selected"</f:if>
+							>smtp</option>
+						<option value="sendmail" <f:if condition="{TYPO3_CONF_VARS.MAIL.transport} == 'sendmail'">
+							selected="selected"
+							</f:if>>sendmail</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="transport_smtp_server">SMTP Server</label>
+					<input type="text" id="transport_smtp_server" name="TYPO3_CONF_VARS[MAIL][transport_smtp_server]"
+						value="{TYPO3_CONF_VARS.MAIL.transport_smtp_server}" class="form-control" />
+					<span class="help-block m-b-none">邮件引擎为smtp有效，格式：server:port</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="transport_smtp_encrypt">SMTP加密</label>
+					<select name="TYPO3_CONF_VARS[MAIL][transport_smtp_encrypt]" id="transport_smtp_encrypt" class="form-control">
+						<option value="">无</option>
+						<option value="ssl" <f:if condition="{TYPO3_CONF_VARS.MAIL.transport_smtp_encrypt} == 'ssl'">selected="selected"
+							</f:if>>ssl</option>
+						<option value="sslv2" <f:if condition="{TYPO3_CONF_VARS.MAIL.transport_smtp_encrypt} == 'sslv2'">
+							selected="selected"</f:if>>sslv2</option>
+						<option value="sslv3" <f:if condition="{TYPO3_CONF_VARS.MAIL.transport_smtp_encrypt} == 'sslv3'">
+							selected="selected"</f:if>>sslv3</option>
+						<option value="tls" <f:if condition="{TYPO3_CONF_VARS.MAIL.transport_smtp_encrypt} == 'tls'">selected="selected"
+							</f:if>>tls</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="transport_smtp_username">SMTP用户名</label>
+					<input type="text" id="transport_smtp_username" name="TYPO3_CONF_VARS[MAIL][transport_smtp_username]"
+						value="{TYPO3_CONF_VARS.MAIL.transport_smtp_username}" class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="transport_smtp_password">SMTP密码</label>
+					<input type="text" id="transport_smtp_password" name="TYPO3_CONF_VARS[MAIL][transport_smtp_password]"
+						value="{TYPO3_CONF_VARS.MAIL.transport_smtp_password}" class="form-control" />
+				</div>
+			</div>
+			<!-- <div class="col-md-6">
+				<div class="form-group">
+					<label for="author">作者(author)</label>
+					<input type="text" id="author" name="TYPO3_CONF_VARS[SEO][author]" value="{TYPO3_CONF_VARS.SEO.author}"
+						class="form-control" />
+				</div>
+			</div> -->
+		</div>
+		<div class="well">
+			这是全局邮件服务设置，应用于全局SMTP收发邮件。
+		</div>
+		<f:form.submit value="保存" class="btn btn-secondary" />
+	</f:form>
+
+</html>

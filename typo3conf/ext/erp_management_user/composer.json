@@ -1,0 +1,28 @@
+{
+    "name": "erp/erp-management-user",
+    "type": "typo3-cms-extension",
+    "description": "\u7528\u6237\u7ba1\u7406",
+    "authors": [
+        {
+            "name": "\u738b\u5b8f\u5f6c",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ERP\\ErpManagementUser\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ERP\\ErpManagementUser\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "erp/erp-management-user": "self.version",
+        "typo3-ter/erp-management-user": "self.version"
+    }
+}

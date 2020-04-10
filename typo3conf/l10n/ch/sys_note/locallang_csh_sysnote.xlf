@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2011-10-17T20:22:37Z" product-name="sys_note" target-language="ch">
+    <header/>
+    <body>
+      <trans-unit id=".description" xml:space="preserve">
+        <source>Internal reminder note attached to a page.</source>
+      <target/></trans-unit>
+      <trans-unit id=".details" xml:space="preserve">
+        <source>This provides a simple way to attach informative notes to a page regarding backend-related issues. Use it as you like for reminders, instructions, etc.</source>
+      <target/></trans-unit>
+      <trans-unit id="_.seeAlso" xml:space="preserve">
+        <source>pages</source>
+      <target/></trans-unit>
+      <trans-unit id="category.description" xml:space="preserve">
+        <source>Select a category which describes the character of the note.</source>
+      <target/></trans-unit>
+      <trans-unit id="subject.description" xml:space="preserve">
+        <source>Enter a title for the note.</source>
+      <target/><alt-trans xml:space="preserve" origin="stonys"><target>输入短信的标题</target></alt-trans></trans-unit>
+      <trans-unit id="message.description" xml:space="preserve">
+        <source>This is the note itself.</source>
+      <target/><alt-trans xml:space="preserve" origin="stonys"><target>这是短信自己</target></alt-trans></trans-unit>
+      <trans-unit id="author.description" xml:space="preserve">
+        <source>Enter your name.</source>
+      <target/><alt-trans xml:space="preserve" origin="stonys"><target>输入你的名称</target></alt-trans></trans-unit>
+      <trans-unit id="email.description" xml:space="preserve">
+        <source>Enter your email address.</source>
+      <target/><alt-trans xml:space="preserve" origin="stonys"><target>输入你的EMAIL地址</target></alt-trans></trans-unit>
+      <trans-unit id="personal.description" xml:space="preserve">
+        <source>Check this if you don't want other users to see this note.</source>
+      <target/><alt-trans xml:space="preserve" origin="stonys"><target>请检查这个，如果不想其他用户看到这个说明。</target></alt-trans></trans-unit>
+    </body>
+  </file>
+</xliff>

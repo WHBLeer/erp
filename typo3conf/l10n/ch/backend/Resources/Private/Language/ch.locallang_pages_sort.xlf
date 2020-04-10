@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2019-03-29T00:04:44Z" product-name="backend">
+		<header/>
+		<body>
+			<trans-unit id="changeOrder" approved="yes">
+				<source>Sort these pages by</source>
+				<target>对这些页面进行排序</target>
+			</trans-unit>
+			<trans-unit id="changeOrderByCreate" approved="yes">
+				<source>Create-time</source>
+				<target>创建时间</target>
+			</trans-unit>
+			<trans-unit id="changeOrderByNavtitle" approved="yes">
+				<source>Navigation title</source>
+				<target>导航标题</target>
+			</trans-unit>
+			<trans-unit id="changeOrderBySubtitle" approved="yes">
+				<source>Subtitle</source>
+				<target>副标题</target>
+			</trans-unit>
+			<trans-unit id="changeOrderByTitle" approved="yes">
+				<source>Page title</source>
+				<target>页面标题</target>
+			</trans-unit>
+			<trans-unit id="changeOrderByTstamp" approved="yes">
+				<source>Change-time</source>
+				<target>修改时间</target>
+			</trans-unit>
+			<trans-unit id="changeOrderConfirm" approved="yes">
+				<source>You're about to change the order of the above pages. Are you sure you want to continue?</source>
+				<target>您将要更改以上页面的顺序。确定要继续吗？</target>
+			</trans-unit>
+			<trans-unit id="changeOrderReverse" approved="yes">
+				<source>Reverse current order</source>
+				<target>逆序排序</target>
+			</trans-unit>
+			<trans-unit id="currentPageOrder" approved="yes">
+				<source>Current page order</source>
+				<target>当前页面顺序</target>
+			</trans-unit>
+			<trans-unit id="fieldCrdate" approved="yes">
+				<source>Create-time</source>
+				<target>创建时间</target>
+			</trans-unit>
+			<trans-unit id="fieldNavitle" approved="yes">
+				<source>Navigation title</source>
+				<target>导航标题</target>
+			</trans-unit>
+			<trans-unit id="fieldSubtitle" approved="yes">
+				<source>Subtitle</source>
+				<target>副标题</target>
+			</trans-unit>
+			<trans-unit id="fieldTitle" approved="yes">
+				<source>Page title</source>
+				<target>页面标题</target>
+			</trans-unit>
+			<trans-unit id="fieldTstamp" approved="yes">
+				<source>Change-time</source>
+				<target>修改时间</target>
+			</trans-unit>
+			<trans-unit id="hasInvisiblePage.message" approved="yes">
+				<source>The page has invisible subpages which are not shown due to access restrictions. Those will not be sorted among others.</source>
+				<target>该页面包含不可见的子页面，由于访问限制，这些子页面未显示。这些将不会被排序。</target>
+			</trans-unit>
+			<trans-unit id="hasInvisiblePage.title" approved="yes">
+				<source>Invisible subpages</source>
+				<target>看不见的子页面</target>
+			</trans-unit>
+			<trans-unit id="noEditPermissions" approved="yes">
+				<source>No edit permissions on this sub page. This page can not be re-sorted among others.</source>
+				<target>在此子页面上没有编辑权限。此页面无法在其他页面中重新排序。</target>
+			</trans-unit>
+			<trans-unit id="noSubpages.message" approved="yes">
+				<source>Please select a page with subpages.</source>
+				<target>请选择包含子页面的页面。</target>
+			</trans-unit>
+			<trans-unit id="noSubpages.title" approved="yes">
+				<source>No subpages</source>
+				<target>没有子页面</target>
+			</trans-unit>
+			<trans-unit id="notAvailableInWorkspace.message" approved="yes">
+				<source>Sorry, this function is not available in the current draft workspace!</source>
+				<target>抱歉，此功能在当前的草稿工作区中不可用！</target>
+			</trans-unit>
+			<trans-unit id="notAvailableInWorkspace.title" approved="yes">
+				<source>Not implemented</source>
+				<target>未实现</target>
+			</trans-unit>
+			<trans-unit id="title" approved="yes">
+				<source>Sort sub pages</source>
+				<target>排序子页面</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

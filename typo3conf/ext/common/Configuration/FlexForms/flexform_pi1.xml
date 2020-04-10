@@ -1,0 +1,32 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Function</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<switchableControllerActions>
+						<TCEforms>
+							<label>Select function</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">系统配置</numIndex>
+										<numIndex index="1">Config-&gt;list;Config-&gt;edit;Config-&gt;update;Config-&gt;delete;Config-&gt;ajax</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">系统配置测试</numIndex>
+										<numIndex index="1">Config-&gt;ajax</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

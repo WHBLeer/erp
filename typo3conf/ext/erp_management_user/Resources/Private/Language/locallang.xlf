@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-22T20:28:25Z" product-name="erp_management_user">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement">
+				<source>User Management</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.authcode">
+				<source>Authcode</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.wxopenid">
+				<source>Wxopenid</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.bindip">
+				<source>Bindip</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.nickname">
+				<source>Nickname</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.province">
+				<source>Province</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

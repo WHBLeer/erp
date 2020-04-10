@@ -1,0 +1,123 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+<f:layout name="Api" />
+<f:section name="content">
+	<div id="menuTree" class="jstree jstree-1 jstree-default">
+	</div>
+	<div class="layui-layer layui-layer-page" id="layui-layer2" type="page" times="2" showtime="0" contype="object"
+		style="z-index: 19891016; width: 300px; top: 0px; left: 60%;">
+		<div id="" class="layui-layer-content">
+			<div id="inputfu" class="layui-layer-wrap">
+				<input id="fuzhiinput" type="text" class="form-control" style="float: left;width:80%">
+				<input type="hidden" id="categoryid" />
+				<div id="buttonfu">
+					<button type="button" class="btn btn-primary" onclick="queding()">确定</button>
+				</div>
+			</div>
+		</div><span class="layui-layer-setwin"></span><span class="layui-layer-resize"></span>
+	</div>
+
+	<f:link.action action="ajax" id="ajaxurl"></f:link.action>
+	<script type="text/javascript">
+		var url = $("#ajaxurl").attr('href');
+
+		$(function () {
+			//初始化树
+			getMenuTreeData()
+			//邦定树单击节点方法
+			$('#menuTree').bind("activate_node.jstree", function (obj, e) {
+				var currentNode = e.node;
+				$("#fuzhiinput").val(currentNode.text);
+				$("#categoryid").val(currentNode.id);
+				if (!$('#menuTree').jstree("is_parent", currentNode)) {
+					parent.$("#categoryValueid").val(currentNode.id);
+					console.log(currentNode.id);
+					console.log(parent.$("#categoryValueid").val());
+					var str = currentNode.text
+					getName(currentNode, str);
+					parent.$("#categoryValuetext").val(str);
+					if (currentNode.original.hasChildren) {
+						getMenuTreeData(currentNode.id, currentNode.text);
+					}
+				}
+
+			})
+			layer.open({
+				type: 1,
+				title: false,
+				shade: 0,
+				closeBtn: 0,
+				area: "300px",
+				content: $('#inputfu'),
+				offset: 'rt',
+			});
+		})
+		//反填数据到文本框
+		function getName(currentNode, str) {
+			str1 = str;
+			var nodeid = $('#menuTree').jstree("get_parent", currentNode);
+			var node = $('#menuTree').jstree("get_node", nodeid);
+			//node.id=='-1' 
+			if (node.id == '#') {
+				return;
+			} else {
+				str1 = node.text + "/" + str;
+				getName(node, str1);
+			};
+		}
+		//请求树数据
+		function getMenuTreeData(obj, objtext) {
+			getCategory(url, obj, objtext);
+		}
+		function getCategory(url, oobbjj, objtext) {
+			$.ajax({
+				type: "POST",
+				url: url,
+				async: false,
+				dataType: "json",
+				data: { pid: oobbjj },
+				success: function (menuTree) {
+					if (oobbjj == null) {
+						loadMenuTree(menuTree);
+					} else {
+						if (menuTree.length != 0) {
+							for (var u = 0; u < menuTree.length; u++) {
+								createNode("#" + oobbjj, menuTree[u], "last");
+							}
+						} else {
+							parent.$("#categoryValueid").val(oobbjj);
+							var str = objtext
+							getName(oobbjj, str);
+							parent.$("#categoryValuetext").val(str);
+						}
+					}
+				}
+			});
+		}
+		function queding() {
+			var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
+			parent.layer.close(index);
+		}
+		//加载树结构
+		function loadMenuTree(menuTree) {
+			$('#menuTree').jstree({
+				'core': {
+					"check_callback": true,
+					'data': menuTree,
+					'themes': {
+						'icons': false,
+					},
+				},
+
+			});
+
+		}
+		function createNode(parent_node, obj, position) {
+			$('#menuTree').jstree('create_node', $(parent_node), obj, position, false, false);
+		}
+	</script>
+
+	<div class="layui-layer-move"></div>
+</f:section>
+
+</html>

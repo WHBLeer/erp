@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2020-02-16T02:37:42Z" product-name="form">
+		<header/>
+		<body>
+			<trans-unit id="element.Page.renderingOptions.nextButtonLabel" resname="element.Page.renderingOptions.nextButtonLabel" xml:space="preserve" approved="no">
+                <source>TEXT EN</source>
+                <target state="needs-translation">TEXT DE</target>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

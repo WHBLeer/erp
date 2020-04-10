@@ -1,0 +1,227 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    23,
+                    41
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": [
+                        "ajax",
+                        "batch"
+                    ]
+                },
+                "name": "Upload",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u4ea7\u54c1\u4e0a\u4f20",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "191394461021"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4e0a\u4f20\u65f6\u95f4",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "subdate",
+                            "propertyType": "Integer",
+                            "uid": "632145001085"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8bed\u8a00",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "lang",
+                            "propertyType": "String",
+                            "uid": "198743294503"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5b9a\u65f6\u4e0a\u4f20\u65f6\u95f4",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "timing",
+                            "propertyType": "Integer",
+                            "uid": "878861860437"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4ea7\u54c1\u72b6\u6001",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "st1",
+                            "propertyType": "Integer",
+                            "uid": "1383131263082"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5173\u7cfb\u72b6\u6001",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "st2",
+                            "propertyType": "Integer",
+                            "uid": "223942601421"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u56fe\u7247\u72b6\u6001\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "st3",
+                            "propertyType": "Integer",
+                            "uid": "168983639928"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5e93\u5b58\u72b6\u6001",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "st4",
+                            "propertyType": "Integer",
+                            "uid": "978858761801"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4ef7\u683c\u72b6\u6001",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "st5",
+                            "propertyType": "Integer",
+                            "uid": "139526270412"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementUser\\Domain\\Model\\UserManagement",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u4e0a\u4f20\u7528\u6237",
+                            "relationName": "user",
+                            "relationType": "zeroToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "1118536090515"
+                        },
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementDict\\Domain\\Model\\Category",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "AMZ\u5206\u7c7b",
+                            "relationName": "category",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingle",
+                            "uid": "1324781745834"
+                        },
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManageProductTemplate\\Domain\\Model\\Template",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u5206\u7c7b\u6a21\u677f",
+                            "relationName": "template",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingle",
+                            "uid": "370672785356"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u4e0a\u4f20\u5230\u5e97\u94fa",
+                            "relationName": "shop",
+                            "relationType": "zeroToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "841984416647"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "\u4ea7\u54c1\u4e0a\u4f20",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": true,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "erp_manage_product_upload",
+        "name": "\u4ea7\u54c1\u4e0a\u4f20",
+        "originalExtensionKey": "erp_manage_product_upload",
+        "originalVendorName": "ERP",
+        "persons": [
+            {
+                "company": "",
+                "email": "wanghongbin816@gmail.com",
+                "name": "\u738b\u5b8f\u5f6c",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Upload=>list,show,new,create,edit,update,delete,ajax,batch",
+                    "noncacheableActions": "Upload=>list,show,new,create,edit,update,delete,ajax,batch",
+                    "switchableActions": "\u4ea7\u54c1\u4e0a\u4f20\nUpload->list;Upload->show;Upload->new;Upload->create;Upload->edit;Upload->update;Upload->delete;Upload->ajax;Upload->batch"
+                },
+                "description": "\u4ea7\u54c1\u4e0a\u4f20\u6a21\u5757",
+                "key": "pi1",
+                "name": "\u4ea7\u54c1\u4e0a\u4f20"
+            }
+        ],
+        "vendorName": "ERP"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2020-04-06 05:09",
+        "extension_builder_version": "9.10.2",
+        "be_user": "\u7ba1\u7406\u5458 (1)"
+    }
+}

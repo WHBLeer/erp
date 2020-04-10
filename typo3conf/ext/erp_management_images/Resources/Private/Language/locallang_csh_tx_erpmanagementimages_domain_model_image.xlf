@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-12T14:00:08Z" product-name="erp_management_images">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>名称</source>
+			</trans-unit>
+			<trans-unit id="re_name.description">
+				<source>重命名</source>
+			</trans-unit>
+			<trans-unit id="original.description">
+				<source>原图链接</source>
+			</trans-unit>
+			<trans-unit id="thumbnail.description">
+				<source>缩略图链接</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

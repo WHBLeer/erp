@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-12T16:28:53Z" product-name="erp_management_product">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>标题</source>
+			</trans-unit>
+			<trans-unit id="keyword.description">
+				<source>关键字</source>
+			</trans-unit>
+			<trans-unit id="key_points.description">
+				<source>要点说明</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>产品介绍</source>
+			</trans-unit>
+			<trans-unit id="lang.description">
+				<source>翻译语言</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

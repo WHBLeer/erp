@@ -1,0 +1,6 @@
+#page count
+lib.calc = TEXT
+lib.calc {
+  current = 1
+  prioriCalc = 1
+}

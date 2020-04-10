@@ -1,0 +1,882 @@
+<html 
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+    xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+<table class="table table-bordered mb-0">
+	<tbody>
+		<tr>
+			<td>产品名称</td>
+			<td>
+				<f:form.textfield property="name" class="form-control" placeholder="商品名称" />
+			</td>
+		</tr>
+		<tr>
+			<td>产品编号</td>
+			<td>
+				<f:form.textfield property="numbering" class="form-control" placeholder="商品编号" />
+			</td>
+		</tr>
+		<tr>
+			<td>产品相册</td>
+			<td>
+				<div class="form-group">
+                    <input id="bootstarp-fileupload" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="2">
+				</div>
+				<f:form.hidden property="imageuids" id="imageuids"/>
+			</td>
+		</tr>
+		<tr>
+			<td>产品分类</td>
+			<td>
+				<input type="text" id="categoryValuetext" class="form-control" placeholder="产品分类" onclick="getCategory()" readonly value="{product.category.name}  {product.category.nameEn}"/>
+				<f:form.hidden id="categoryValueid" name="category" value="{product.category.code}" />
+			</td>
+		</tr>
+		<tr>
+			<td>审核状态</td>
+			<td>
+				<f:for each="{approvals}" as="sh0" iteration="i">
+					<label style="font-weight:normal;margin-right:20px">
+						<f:form.radio name="approval" value="{sh0.uid}" checked="{f:if(condition: '{product.approval.uid}=={sh0.uid}', then: 'checked')}" />{sh0.name}
+					</label>
+				</f:for>
+			</td>
+		</tr>
+		<tr>
+			<td>上架状态</td>
+			<td>
+				<f:for each="{shelvess}" as="sh1" iteration="i">
+					<label style="font-weight:normal;margin-right:20px">
+						<f:form.radio name="shelves" value="{sh1.uid}" checked="{f:if(condition: '{product.shelves.uid}=={sh1.uid}', then: 'checked')}" />{sh1.name}
+					</label>
+				</f:for>
+			</td>
+		</tr>
+		<tr>
+			<td>商品类型</td>
+			<td>
+				<f:for each="{gettypes}" as="sh2" iteration="i">
+					<label style="font-weight:normal;margin-right:20px">
+						<f:form.radio name="gtypes" value="{sh2.uid}" checked="{f:if(condition: '{product.gtypes.uid}=={sh2.uid}', then: 'checked')}" />{sh2.name}
+					</label>
+				</f:for>
+			</td>
+		</tr>
+		<tr>
+			<td>商家信息</td>
+			<td>
+				<div class="row">
+					<div class="col-md-10">
+						<f:form.textfield id="businessurl" property="business" class="form-control" placeholder="商家信息主页链接" />
+					</div>
+					<div class="col-md-2">
+						<a href="javascript:;" class="btn btn-info" onclick="showBusiness('businessurl');"><i class="ti-eye"></i> 查看</a>
+					</div>
+				</div>
+				
+			</td>
+		</tr>
+		<tr> 
+			<td>产品信息</td>
+			<td>
+				<div class="form-inline">
+					<div class="input-group">
+						<div class="input-group-addon">厂商名称</div>
+						<f:form.textfield name="info[tradeName]" class="form-control" style="border-color: red;" placeholder="建议填写" value="{product.info.tradeName}"/>
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">品牌名称</div>
+						<f:form.textfield name="info[brandName]" class="form-control" style="border-color: red;" placeholder="建议填写" value="{product.info.brandName}" />
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">厂家编号</div>
+						<f:form.textfield name="info[tradeNum]" class="form-control" style="border-color: red;" placeholder="建议填写" value="{product.info.tradeNum}" />
+					</div>
+				</div>
+				<div class="form-inline">
+					<div class="input-group">
+						<div class="input-group-addon">内部SKU</div>
+						<f:form.textfield name="info[sku]" class="form-control" placeholder="SKU" additionalAttributes="{oninput:'skuChange(this)'}" value="{product.info.sku}" />
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">产品来源</div>
+						<f:form.textfield name="info[source]" class="form-control" placeholder="1688,淘宝,天猫..."  value="{product.info.source}" />
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">来源网址</div>
+						<f:form.textfield type="url" name="info[link]" class="form-control" placeholder="产品来源链接:https:// http://" value="{product.info.link}" />
+					</div>
+				</div>
+				<div class="form-inline">
+					<div class="input-group">
+						<div class="input-group-addon">产品码</div>
+						<f:form.textfield type="text" name="info[code]" class="form-control" placeholder="UPC/EAN"  value="{product.info.code}"/>
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">备注</div>
+						<f:form.textfield type="text" name="info[remark]" class="form-control" placeholder="附加备注"  value="{product.info.remark}"/>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>成本运费</td>
+			<td>
+				<div class="form-inline">
+					<div class="input-group ">
+						<div class="input-group-addon">采购价格:(¥)</div>
+						<f:form.textfield name="cost[cg]" class="form-control" placeholder="采购价格" additionalAttributes="{oninput:'changePrice(1)',size:'10'}" value="{product.cost.cg}" />
+					</div>
+					<div class="input-group ">
+						<div class="input-group-addon">产品重量:(kg)</div>
+						<f:form.textfield name="cost[zl]" class="form-control" placeholder="产品重量" additionalAttributes="{oninput:'changePrice(0)',size:'8'}" value="{product.cost.zl}" />
+					</div>
+					<div class="input-group  ">
+						<div class="input-group-addon">长:(cm)</div>
+						<f:form.textfield name="cost[cc]" class="form-control" placeholder="长" additionalAttributes="{oninput:'changePrice(0)',size:'5'}" value="{product.cost.cc}" />
+					</div>
+					<div class="input-group  ">
+						<div class="input-group-addon">宽:(cm)</div>
+						<f:form.textfield name="cost[kd]" class="form-control" placeholder="宽" additionalAttributes="{oninput:'changePrice(0)',size:'5'}" value="{product.cost.kd}" />
+					</div>
+					<div class="input-group  ">
+						<div class="input-group-addon">高:(cm)</div>
+						<f:form.textfield name="cost[gd]" class="form-control" placeholder="高" additionalAttributes="{oninput:'changePrice(0)',size:'5'}" value="{product.cost.gd}" />
+					</div>
+				</div>
+				<div class="form-inline">
+					<div class="input-group">
+						<div class="input-group-addon">国内运费:(¥)</div>
+						<f:form.textfield id="piFreight" name="cost[yf]" class="form-control" placeholder="国内运费" additionalAttributes="{oninput:'changePrice(1)',size:'10'}" value="{product.cost.yf}" />
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">折扣:(系数)</div>
+						<f:form.textfield id="piDiscount" name="cost[zk]" class="form-control" placeholder="折扣系数" additionalAttributes="{oninput:'changePrice(1)',size:'10'}" value="{product.cost.zk}" />
+					</div>
+				</div>
+
+				<table class="table table-condensed table-bordered" id="moneyType">
+					<thead>
+						<tr>
+							<th>国家</th>
+							<th>运费(￥)</th>
+							<th>售价(￥)</th>
+							<th>外币(？)</th>
+							<th>最终(？)</th>
+							<th>利润(￥)</th>
+						</tr>
+					</thead>
+					<tbody align="center" id="priceTbody">
+						<tr>
+							<td>
+								<span>美国</span>
+								<input type="hidden" value="982322">
+							</td>
+							<td>
+								<span>100.00</span>
+							</td>
+							<td>
+								<span>422.92</span>
+							</td>
+							<td>
+								<span>60.05</span>[USD]
+							</td>
+							<td>
+								<input type="text" class="form-control" id="calculation-0" onchange="freChange(this)">
+								<f:form.hidden id="piDiscount" name="cost[calculation][0]" />
+							</td>
+							<td>
+								<span>219.92</span>(<span>52.00%</span>)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>加拿大</span>
+								<input type="hidden" value="982323">
+							</td>
+							<td>
+								<span>74.00</span>
+							</td>
+							<td>
+								<span>368.75</span>
+							</td>
+							<td>
+								<span>69.33</span>[CAD]
+							</td>
+							<td>
+								<input type="text" class="form-control" id="calculation-1" onchange="freChange(this)">
+								<f:form.hidden id="piUsprice" name="cost[calculation][1]" />
+							</td>
+							<td>
+								<span>191.75</span>(<span>52.00%</span>)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>墨西哥</span>
+								<input type="hidden" value="982324">
+							</td>
+							<td>
+								<span>130.00</span>
+							</td>
+							<td>
+								<span>485.42</span>
+							</td>
+							<td>
+								<span>1328.10</span>[MXN]
+							</td>
+							<td>
+								<input type="text" class="form-control" id="calculation-2" onchange="freChange(this)">
+								<f:form.hidden id="piUsprice" name="cost[calculation][2]" />
+							</td>
+							<td>
+								<span>252.42</span>(<span>52.00%</span>)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>英国</span>
+								<input type="hidden" value="982325">
+							</td>
+							<td>
+								<span>53.00</span>
+							</td>
+							<td>
+								<span>325.00</span>
+							</td>
+							<td>
+								<span>35.10</span>[GBP]
+							</td>
+							<td>
+								<input type="text" class="form-control" id="calculation-3" onchange="freChange(this)">
+								<f:form.hidden id="pricehid" name="cost[calculation][3]" />
+							</td>
+							<td>
+								<span>169.00</span>(<span>52.00%</span>)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>法国</span>
+								<input type="hidden" value="982326">
+							</td>
+							<td>
+								<span>82.00</span>
+							</td>
+							<td>
+								<span>385.42</span>
+							</td>
+							<td>
+								<span>49.33</span>[EUR]
+							</td>
+							<td>
+								<input type="text" class="form-control" id="calculation-4" onchange="freChange(this)">
+								<f:form.hidden class="pricehid" name="cost[calculation][4]" />
+							</td>
+							<td>
+								<span>200.42</span>(<span>52.00%</span>)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>德国</span>
+								<input type="hidden" value="982327">
+							</td>
+							<td>
+								<span>65.00</span>
+							</td>
+							<td>
+								<span>350.00</span>
+							</td>
+							<td>
+								<span>44.80</span>[EUR]
+							</td>
+							<td>
+								<input type="text" class="form-control" id="calculation-5" onchange="freChange(this)">
+								<f:form.hidden class="pricehid" name="cost[calculation][5]" />
+							</td>
+							<td>
+								<span>182.00</span>(<span>52.00%</span>)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>意大利</span>
+								<input type="hidden" value="982328">
+							</td>
+							<td>
+								<span>80.00</span>
+							</td>
+							<td>
+								<span>381.25</span>
+							</td>
+							<td>
+								<span>48.80</span>[EUR]
+							</td>
+							<td>
+								<input type="text" class="form-control" id="calculation-6" onchange="freChange(this)">
+								<f:form.hidden class="pricehid" name="cost[calculation][6]" />
+							</td>
+							<td>
+								<span>198.25</span>(<span>52.00%</span>)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>西班牙</span>
+								<input type="hidden" value="982329">
+							</td>
+							<td>
+								<span>60.00</span>
+							</td>
+							<td>
+								<span>339.58</span>
+							</td>
+							<td>
+								<span>43.47</span>[EUR]
+							</td>
+							<td>
+								<input type="text" class="form-control" id="calculation-7" onchange="freChange(this)">
+								<f:form.hidden class="pricehid" name="cost[calculation][7]" />
+							</td>
+							<td>
+								<span>176.58</span>(<span>52.00%</span>)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>日本</span>
+								<input type="hidden" value="982330">
+							</td>
+							<td>
+								<span>65.00</span>
+							</td>
+							<td>
+								<span>350.00</span>
+							</td>
+							<td>
+								<span>5404.00</span>[JPY]
+							</td>
+							<td>
+								<input type="text" class="form-control" id="calculation-8" onchange="freChange(this)">
+								<f:form.hidden class="pricehid" name="cost[calculation][8]" />
+							</td>
+							<td>
+								<span>182.00</span>(<span>52.00%</span>)
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span>澳大利亚</span>
+								<input type="hidden" value="982331">
+							</td>
+							<td>
+								<span>80.00</span>
+							</td>
+							<td>
+								<span>381.25</span>
+							</td>
+							<td>
+								<span>79.30</span>[AUD]
+							</td>
+							<td>
+								<input type="text" class="form-control" id="calculation-9" onchange="freChange(this)">
+								<f:form.hidden class="pricehid" name="cost[calculation][9]" />
+							</td>
+							<td>
+								<span>198.25</span>(<span>52.00%</span>)
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="form-inline">
+					<div class="input-group">
+						<div class="input-group-addon">库存数量:</div>
+						<f:form.textfield id="piQuantity" name="cost[sy]" class="form-control" additionalAttributes="{size:'10'}" value="{product.cost.sy}" />
+					</div>
+					<div class="input-group">
+						<div class="input-group-addon">预处理时间:(天)</div>
+						<f:form.textfield name="cost[sj]" class="form-control" additionalAttributes="{size:'10'}" value="{product.cost.sj}" />
+					</div>
+					<span class="input-group-text">(现货填1)</span>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				产品介绍
+			</td>
+			<td>
+				<ul class="nav nav-tabs">
+					<li role="presentation" class="nav-item">
+						<a class="nav-link active" aria-expanded="true" aria-controls="tab_lang_zh" data-toggle="tab" role="tab" href="#tab_lang_zh" id="label_lang_zh">中文</a>
+					</li>
+					<li role="presentation" class="nav-item">
+						<a class="nav-link" aria-expanded="false" aria-controls="tab_lang_en" data-toggle="tab" role="tab" href="#tab_lang_en" id="label_lang_en">英语</a>
+					</li>
+					<li role="presentation" class="nav-item">
+						<a class="nav-link" aria-expanded="false" aria-controls="tab_lang_fr" data-toggle="tab" role="tab" href="#tab_lang_fr" id="label_lang_fr">法语</a>
+					</li>
+					<li role="presentation" class="nav-item">
+						<a class="nav-link" aria-expanded="false" aria-controls="tab_lang_de" data-toggle="tab" role="tab" href="#tab_lang_de" id="label_lang_de">德语</a>
+					</li>
+					<li role="presentation" class="nav-item">
+						<a class="nav-link" aria-expanded="false" aria-controls="tab_lang_it" data-toggle="tab" role="tab" href="#tab_lang_it" id="label_lang_it">意大利语</a>
+					</li>
+					<li role="presentation" class="nav-item">
+						<a class="nav-link" aria-expanded="false" aria-controls="tab_lang_es" data-toggle="tab" role="tab" href="#tab_lang_es" id="label_lang_es">西班牙语</a>
+					</li>
+					<li role="presentation" class="nav-item">
+						<a class="nav-link" aria-expanded="false" aria-controls="tab_lang_ja" data-toggle="tab" role="tab" href="#tab_lang_ja" id="label_lang_ja">日语</a>
+					</li>
+				</ul>
+				<div class="tab-content lang-content" id="myTabContent" style="padding:2px 20px 0 20px;width: 80%">
+					<div id="tab_lang_zh" class="tab-pane active" role="tabpanel">
+						<div class="form-group">
+							<label>产品标题：(中文)&nbsp;&nbsp;&nbsp;&nbsp;
+								<button class="btn btn_translate btn-success" type="button" onclick="translationList()">一键中文翻译</button>
+							</label>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input id="zhbardname" placeholder="请填写品牌名称" type="text" style="border: 1px solid #e5e6e7;height: 34px;">
+							<button class="btn btn-primary btn_translate" type="button" onclick="addzhbardname(&quot;zhbardname&quot;)">+品牌名</button>
+							<button class="btn btn-danger btn_translate" type="button" onclick="removezhbardname('zhbardname')">-品牌名</button>
+							<button class="btn btn-eliminate btn_translate" type="button" onclick="removezhspace('title_zh')">-空格符</button>
+							<button class="btn btn-primary btn_translate" type="button" onclick="choosetemplate('zh')">模板选择</button>
+							<div class="t_div">
+								<textarea name="piTitle" id="title_zh" class="form-control keytitle" rows="2"cols="75">圣诞节万圣节window projector led投光灯投射灯Christmas投影灯</textarea>
+								<button class="btn btn_translate translate_item btn-success" 
+								type="button" onclick="translationByItem(this)">中文翻译</button>
+							</div>
+							<span class="title_zh t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>关键字 限制1行：(中文)</label>
+							<div class="t_div">
+								<textarea name="piKeyword" id="keywords_zh" class="form-control keyword"
+								rows="2" cols="75">projectorled投光灯,led投光灯,window投光灯,christmas投影灯,projector投光灯</textarea>
+								<button class="btn btn_translate translate_item btn-success" 
+								type="button" onclick="translationByItem(this)">中文翻译</button>
+							</div>
+							<span class="keywords_zh t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>要点说明 不超过5行：(中文)</label>
+							<div class="t_div">
+								<textarea name="piPoints" id="keypoints_zh" class="form-control keypoint"
+								rows="4" cols="80">
+								</textarea>
+								<button class="btn btn_translate translate_item btn-success" 
+								type="button" onclick="translationByItem(this)">中文翻译</button>
+							</div>
+							<span class="keypoints_zh t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>产品描述：(中文)</label>
+							<div class="t_div">
+								<textarea name="piDesc" id="description_zh" class="form-control keydesc"
+								rows="6" cols="80">
+								</textarea>
+								<button class="btn btn_translate translate_item btn-success" 
+								type="button" onclick="translationByItem(this)">中文翻译</button>
+							</div>
+							<span class="description_zh t_number">
+							</span>
+						</div>
+					</div>
+					<div id="tab_lang_en" class="tab-pane" role="tabpanel">
+						<div class="form-group">
+							<label>产品标题：(英语)&nbsp;&nbsp;&nbsp;&nbsp;
+								<button class="btn btn_translate btn-success"  type="button"
+								onclick="translationYingList()">一键从英文翻译</button>
+							</label>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input id="enbardname" placeholder="请填写品牌名称" type="text" style="border: 1px solid #e5e6e7;height: 34px;">
+							<button class="btn btn-primary btn_translate" type="button" onclick="addzhbardname('enbardname')">+品牌名</button>
+							<button class="btn btn-danger btn_translate" type="button" onclick="removezhbardname('enbardname')">-品牌名</button>
+							<button class="btn btn-eliminate btn_translate" type="button" onclick="removezhspace('title_en')">-空格换行符</button>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input id="luanxunum" placeholder="请填写位置" type="text" style="border: 1px solid #e5e6e7;height: 34px;width: 85px;">
+							<button class="btn btn-danger btn_translate" type="button" onclick="luanxutitle()">乱序</button>
+							<button class="btn btn-primary btn_translate" type="button" onclick="choosetemplate('en')">模板选择</button>
+							<div class="t_div">
+								<textarea name="title_en" id="title_en" class="form-control keytitle"
+								rows="2" cols="75" style="border-color: red;">
+								</textarea>
+								<button class="btn btn_translate translate_item btn-success" 
+								type="button" onclick="translationByItem(this)">英文翻译</button>
+							</div>
+							<span class="title_en t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>关键字 限制1行：(英语)</label>
+							<div class="t_div">
+								<textarea name="keywords_en" id="keywords_en" class="form-control keyword"
+								rows="4" cols="75" style="border-color: red;">
+								</textarea>
+								<button class="btn btn_translate translate_item btn-success" 
+								type="button" onclick="translationByItem(this)">英文翻译</button>
+							</div>
+							<span class="keywords_en t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>要点说明 不超过5行：(英语)</label>
+							<div class="t_div">
+								<textarea name="keypoints_en" id="keypoints_en" class="form-control keypoint"
+								rows="4" cols="80" style="border-color: red;">
+								</textarea>
+								<button class="btn btn_translate translate_item btn-success" 
+								type="button" onclick="translationByItem(this)">英文翻译</button>
+							</div>
+							<span class="keypoints_en t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>产品描述：(英语)</label>
+							<div class="t_div">
+								<textarea name="description_en" id="description_en" class="form-control keydesc"
+								rows="6" cols="80" style="border-color: red;">
+								</textarea>
+								<button class="btn btn_translate translate_item btn-success" 
+								type="button" onclick="translationByItem(this)">英文翻译</button>
+							</div>
+							<span class="description_en t_number">
+							</span>
+						</div>
+					</div>
+					<div id="tab_lang_fr" class="tab-pane" role="tabpanel">
+						<div class="form-group">
+							<label>产品标题：(法语)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<div class="t_div">
+								<textarea name="title_fr" id="title_fr" class="form-control keytitle"
+								rows="2" cols="75" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="title_fr t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>关键字 限制1行：(法语)</label>
+							<div class="t_div">
+								<textarea name="keywords_fr" id="keywords_fr" class="form-control keyword"
+								rows="4" cols="75" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="keywords_fr t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>要点说明 不超过5行：(法语)</label>
+							<div class="t_div">
+								<textarea name="keypoints_fr" id="keypoints_fr" class="form-control keypoint"
+								rows="4" cols="80" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="keypoints_fr t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>产品描述：(法语)</label>
+							<div class="t_div">
+								<textarea name="description_fr" id="description_fr" class="form-control keydesc"
+								rows="5" cols="80" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="description_fr t_number">
+							</span>
+						</div>
+					</div>
+					<div id="tab_lang_de" class="tab-pane" role="tabpanel">
+						<div class="form-group">
+							<label>产品标题：(德语)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<div class="t_div">
+								<textarea name="title_de" id="title_de" class="form-control keytitle"
+								rows="2" cols="75" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="title_de t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>关键字 限制1行：(德语)</label>
+							<div class="t_div">
+								<textarea name="keywords_de" id="keywords_de" class="form-control keyword"
+								rows="4" cols="75" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="keywords_de t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>要点说明 不超过5行：(德语)</label>
+							<div class="t_div">
+								<textarea name="keypoints_de" id="keypoints_de" class="form-control keypoint"
+								rows="4" cols="80" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="keypoints_de t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>产品描述：(德语)</label>
+							<div class="t_div">
+								<textarea name="description_de" id="description_de" class="form-control keydesc"
+								rows="6" cols="80" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="description_de t_number">
+							</span>
+						</div>
+					</div>
+					<div id="tab_lang_it" class="tab-pane" role="tabpanel">
+						<div class="form-group">
+							<label>产品标题：(意大利语)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<div class="t_div">
+								<textarea name="title_it" id="title_it" class="form-control keytitle"
+								rows="2" cols="75" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="title_it t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>关键字 限制1行：(意大利语)</label>
+							<div class="t_div">
+								<textarea name="keywords_it" id="keywords_it" class="form-control keyword"
+								rows="4" cols="75" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="keywords_it t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>要点说明 不超过5行：(意大利语)</label>
+							<div class="t_div">
+								<textarea name="keypoints_it" id="keypoints_it" class="form-control keypoint"
+								rows="4" cols="80" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="keypoints_it t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>产品描述：(意大利语)</label>
+							<div class="t_div">
+								<textarea name="description_it" id="description_it" class="form-control keydesc"
+								rows="5" cols="80" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="description_it t_number">
+							</span>
+						</div>
+					</div>
+					<div id="tab_lang_es" class="tab-pane" role="tabpanel">
+						<div class="form-group">
+							<label>产品标题：(西班牙语)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<div class="t_div">
+								<textarea name="title_es" id="title_es" class="form-control keytitle"
+								rows="2" cols="75" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="title_es t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>关键字 限制1行：(西班牙语)</label>
+							<div class="t_div">
+								<textarea name="keywords_es" id="keywords_es" class="form-control keyword"
+								rows="4" cols="75" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="keywords_es t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>要点说明 不超过5行：(西班牙语)</label>
+							<div class="t_div">
+								<textarea name="keypoints_es" id="keypoints_es" class="form-control keypoint"
+								rows="4" cols="80" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="keypoints_es t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>产品描述：(西班牙语)</label>
+							<div class="t_div">
+								<textarea name="description_es" id="description_es" class="form-control keydesc"
+								rows="5" cols="80" style="border-color: red;">
+								</textarea>
+							</div>
+							<span class="description_es t_number">
+							</span>
+						</div>
+					</div>
+					<div id="tab_lang_ja" class="tab-pane" role="tabpanel">
+						<div class="form-group">
+							<label>产品标题：(日语)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<div class="t_div">
+								<textarea name="title_ja" id="title_ja" class="form-control keytitle"
+								rows="2" cols="75">
+								</textarea>
+							</div>
+							<span class="title_ja t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>关键字 限制1行：(日语)</label>
+							<div class="t_div">
+								<textarea name="keywords_ja" id="keywords_ja" class="form-control keyword"
+								rows="4" cols="75">
+								</textarea>
+							</div>
+							<span class="keywords_ja t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>要点说明 不超过5行：(日语)</label>
+							<div class="t_div">
+								<textarea name="keypoints_ja" id="keypoints_ja" class="form-control keypoint"
+								rows="4" cols="80">
+								</textarea>
+							</div>
+							<span class="keypoints_ja t_number">
+							</span>
+						</div>
+						<div class="form-group">
+							<label>产品描述：(日语)</label>
+							<div class="t_div">
+								<textarea name="description_ja" id="description_ja" class="form-control keydesc"
+								rows="5" cols="80">
+								</textarea>
+							</div>
+							<span class="description_ja t_number">
+							</span>
+						</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				原始规格
+			</td>
+			<td>
+				<div id="valuejx">
+					<span>英规</span>
+					<span>奥规</span>
+					<span>美规</span>
+					<span>欧规</span>
+				</div>
+				<input id="jx" type="hidden" value="{&quot;sku&quot;:{&quot;skuProps&quot;:[{&quot;prop&quot;:&quot;尺寸规格&quot;,&quot;value&quot;:[{&quot;name&quot;:&quot;英规&quot;},{&quot;name&quot;:&quot;奥规&quot;},{&quot;name&quot;:&quot;美规&quot;},{&quot;name&quot;:&quot;欧规&quot;}]}]}}">
+			</td>
+		</tr>
+		<tr>
+			<td>规格变体</td>
+			<td>
+				<div id="skuhead">
+					<ul id="sku">
+						<li>
+							<span id="sku_name">变体参数(点击编辑)：</span>
+						</li>
+					</ul>
+					<button style="" type="button" class="btn btn-success btn-sm" id="skuModalLabel"onclick="addVariant()">添加</button>
+					<div>
+						<ul id="valueli">
+						</ul>
+					</div>
+				</div>
+				<button class="btn btn-success btn-sm" type="button" onclick="tipImg(this)"
+				id="imgChooseBtn">图片选择</button>
+				<button class="btn btn-success btn-sm" type="button" onclick="deleC(this)">删除变体</button>
+				<table id="vtable" class="table">
+					<thead>
+						<tr>
+							<th style="width: 2%"><input id="ckx" onclick="oclickAllChecked(this)" type="checkbox"></th>
+							<th style="width: 4%">序号</th>
+							<th style="width: 8%">组合</th>
+							<th style="width: 8%">SKU修正</th>
+							<th style="width: 6%">加价</th>
+							<th style="width: 6%">库存</th>
+							<th style="width: 10%">UPC/EAN</th>
+							<th style="width: 56%">已选图片</th>
+						</tr>
+					</thead>
+					<tbody id="tbAdd">
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<script>
+	//定义图片展示参数
+	<f:format.raw><sll:viewAndDelSetting uids="{product.imageuids}" /></f:format.raw>
+
+	function getCategory(){
+		layer.open({
+			type : 2,
+			title : '商品类别',
+			maxmin : true,
+			shadeClose : false, 
+			area : [ '800px', '620px' ],
+			content :  '/api/getcategory',
+		});
+	}
+	function showBusiness(id) {
+		link = $("#"+id).val();
+		window.open(link);
+	}
+
+	var priceTable=new Array();
+	// 成本运费
+	function changePrice(obj){
+		/*priceTable=new Array();
+		var tr=$('#priceTbody').children("tr");
+		for (var i = 0; i < tr.length; i++) {
+			var td=$(tr[i]).children("td");
+			var inp=new Object();
+			inp[1]=$(td[1]).text();
+			inp[2]="";
+			priceTable.push(inp);
+		}
+		pricetableJson = encodeURI(JSON.stringify(priceTable));
+		if($("#piWeight").valid()){
+			$.ajax({
+				type : "post",
+				url : prefix+"/ymx/productInfo/changePrice",
+				data : {
+					"cmd":"changePrice",
+					"piId":$("#psoId").val(),
+					"piPrice":$("#piPrice").val(),
+					"piWeight":$("#piWeight").val(),
+					"piLong":$("#piLong").val(),
+					"piWide":$("#piWide").val(),
+					"piHigh":$("#piHigh").val(),
+					"piFreight":$("#piFreight").val(),
+					"piDiscount":$("#piDiscount").val(),
+					"obj":obj,
+					"pricetableJson" :pricetableJson,
+				},
+				error : function(request) {
+					parent.layer.alert("Connection error");
+				},
+				success : function(data) {
+					$("#priceTbody").html('');
+					var str="";
+					for (var i = 0; i < data.length; i++) {
+						$("#priceTbody").append('<tr><td><span>'+data[i].cityName+'</span><input type="hidden" value="'+data[i].freId+'"></td><td><span>'+data[i].freFreight+'</span></td><td><span>'+data[i].frePrice+'</span></td>'
+							+'<td><span>'+data[i].freCurrency+'</span>['+data[i].backup+']</td><td><input type="text"class="form-control" name="piUsprice" value="'+data[i].freFinal+'" onchange="freChange(this)"><input type="hidden" class="pricehid" value="'+data[i].bbackup+'"></td>'
+							+'<td><span>'+data[i].freProfit+'</span>(<span>'+data[i].frePromargin+'</span>)</td></tr>')
+					}
+				}
+			})
+		}*/
+	}
+</script>
+</html>

@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:form action="update" name="config" object="{config}" enctype="multipart/form-data">
+		<f:form.hidden name="label" value="base" />
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="sitename">网站标题</label>
+					<input type="text" id="sitename" name="TYPO3_CONF_VARS[SYS][sitename]"
+						value="{TYPO3_CONF_VARS.SYS.sitename}"
+						class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="baseURL">网站域名</label>
+					<input type="text" id="baseURL" name="TYPO3_CONF_VARS[FE][baseURL]" value="{TYPO3_CONF_VARS.FE.baseURL}"
+						class="form-control" />
+					<span class="help-block m-b-none">example: http://www.yourdomain.org/ </span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="icp">工业和信息化部备案号</label>
+					<input type="text" id="icp" name="TYPO3_CONF_VARS[FE][icp]"
+						value="{TYPO3_CONF_VARS.FE.icp}" class="form-control" />
+					<span class="help-block m-b-none">国内备案填写(ICP/IP地址/域名信息等), 备案查询地址: <a href="http://www.beian.miit.gov.cn/">http://www.beian.miit.gov.cn/</a></span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="dicp">全国互联网安全管理服务平台备案号</label>
+					<input type="text" id="dicp" name="TYPO3_CONF_VARS[FE][dicp]"
+						value="{TYPO3_CONF_VARS.FE.dicp}" class="form-control" />
+					<span class="help-block m-b-none">国内备案填写, 备案查询地址: <a href="http://www.beian.gov.cn/">http://www.beian.gov.cn/</a></span>
+				</div>
+			</div>
+		</div>
+		<f:form.submit value="保存" class="btn btn-secondary" />
+	</f:form>
+
+</html>

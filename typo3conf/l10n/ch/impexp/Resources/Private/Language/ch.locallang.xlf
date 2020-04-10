@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2020-02-16T03:31:12Z" product-name="impexp">
+		<header/>
+		<body>
+			<trans-unit id="ALL_tables" resname="ALL_tables" approved="yes">
+				<source>ALL tables</source>
+				<target state="translated">全部表格</target>
+			</trans-unit>
+			<trans-unit id="execlistqu_maxNumberLimit" resname="execlistqu_maxNumberLimit" approved="yes">
+				<source>Max number limit!</source>
+				<target state="translated">最大数量极限</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10
+This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v9</note>
+			</trans-unit>
+			<trans-unit id="execlistqu_structureToBeExported" resname="execlistqu_structureToBeExported" approved="no">
+				<source>Structure to be exported</source>
+				<target state="needs-translation">欲导出的结构</target>
+			</trans-unit>
+			<trans-unit id="export" resname="export" approved="no">
+				<source>Export</source>
+				<target state="needs-translation">导出至.t3d</target>
+			</trans-unit>
+			<trans-unit id="exportdata_advancedOptions" resname="exportdata_advancedOptions" approved="yes">
+				<source>Advanced Options</source>
+				<target state="translated">高级选项</target>
+			</trans-unit>
+			<trans-unit id="exportdata_badPathS" resname="exportdata_badPathS" approved="yes">
+				<source>Bad path: "%s"</source>
+				<target state="translated">坏的路径： "%s"</target>
+			</trans-unit>
+			<trans-unit id="exportdata_filePreset" resname="exportdata_filePreset" approved="yes">
+				<source>File &amp; Preset</source>
+				<target state="translated">文件&amp;预设制</target>
+			</trans-unit>
+			<trans-unit id="exportdata_messages" resname="exportdata_messages" approved="yes">
+				<source>Messages</source>
+				<target state="translated">消息</target>
+			</trans-unit>
+			<trans-unit id="exportdata_problemsSavingFile" resname="exportdata_problemsSavingFile" approved="yes">
+				<source>Problems saving file</source>
+				<target state="translated">问题存储文件</target>
+			</trans-unit>
+			<trans-unit id="exportdata_savedFile" resname="exportdata_savedFile" approved="yes">
+				<source>SAVED FILE</source>
+				<target state="translated">存储文件</target>
+			</trans-unit>
+			<trans-unit id="exportdata_savedInSBytes" resname="exportdata_savedInSBytes" approved="yes">
+				<source>Saved in "%s", bytes %s</source>
+				<target state="translated">存至"%s", bytes %s</target>
+			</trans-unit>
+			<trans-unit id="filterpage_structureToBeImported" resname="filterpage_structureToBeImported" approved="no">
+				<source>Structure to be imported</source>
+				<target state="needs-translation">欲导入的结构：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_displaycon_controls" resname="impexpcore_displaycon_controls" approved="no">
+				<source>Controls</source>
+				<target state="needs-translation">控制：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_displaycon_currentPath" resname="impexpcore_displaycon_currentPath" approved="no">
+				<source>Current Path</source>
+				<target state="needs-translation">当前路径：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_displaycon_insidePagetree" resname="impexpcore_displaycon_insidePagetree" approved="no">
+				<source>Inside pagetree</source>
+				<target state="needs-translation">内部页面树：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_displaycon_message" resname="impexpcore_displaycon_message" approved="no">
+				<source>Message</source>
+				<target state="needs-translation">消息：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_displaycon_result" resname="impexpcore_displaycon_result" approved="no">
+				<source>Result</source>
+				<target state="needs-translation">结果：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_displaycon_title" resname="impexpcore_displaycon_title" approved="no">
+				<source>Title</source>
+				<target state="needs-translation">标题：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_displaycon_updateMode" resname="impexpcore_displaycon_updateMode" approved="no">
+				<source>Update Mode</source>
+				<target state="needs-translation">更新模式：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_printerror_description" resname="impexpcore_printerror_description" approved="no">
+				<source>Description</source>
+				<target state="needs-translation">描述：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_descr" resname="impexpcore_singlereco_descr" approved="no">
+				<source>Descr</source>
+				<target state="needs-translation">描述：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_exclude" resname="impexpcore_singlereco_exclude" approved="yes">
+				<source>Exclude</source>
+				<target state="translated">不包括</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_filename" resname="impexpcore_singlereco_filename" approved="no">
+				<source>Filename</source>
+				<target state="needs-translation">文件名：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_forceUidSAdmin" resname="impexpcore_singlereco_forceUidSAdmin" approved="yes">
+				<source>Force UID [%s] (Admin)</source>
+				<target state="translated">要求UID [%s] (管理员)</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_ignorePid" resname="impexpcore_singlereco_ignorePid" approved="yes">
+				<source>Ignore PID</source>
+				<target state="translated">忽略PID</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_importAsNew" resname="impexpcore_singlereco_importAsNew" approved="yes">
+				<source>Import as new</source>
+				<target state="translated">作为新的导入</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_insert" resname="impexpcore_singlereco_insert" approved="yes">
+				<source>Insert</source>
+				<target state="translated">插入</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_outsidePagetree" resname="impexpcore_singlereco_outsidePagetree" approved="no">
+				<source>Outside pagetree</source>
+				<target state="needs-translation">外部页面树：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_respectPid" resname="impexpcore_singlereco_respectPid" approved="yes">
+				<source>Respect PID</source>
+				<target state="translated">考虑PID</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_softReferencesFiles" resname="impexpcore_singlereco_softReferencesFiles" approved="no">
+				<source>Soft References Files</source>
+				<target state="needs-translation">软件参考文件：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_title" resname="impexpcore_singlereco_title" approved="no">
+				<source>Title</source>
+				<target state="needs-translation">标题：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_update" resname="impexpcore_singlereco_update" approved="yes">
+				<source>Update</source>
+				<target state="translated">更新</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_singlereco_value" resname="impexpcore_singlereco_value" approved="no">
+				<source>Value</source>
+				<target state="needs-translation">值：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_softrefsel_editable" resname="impexpcore_softrefsel_editable" approved="yes">
+				<source>Editable</source>
+				<target state="translated">可编辑</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_softrefsel_exclude" resname="impexpcore_softrefsel_exclude" approved="yes">
+				<source>Exclude</source>
+				<target state="translated">不包括</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_softrefsel_record" resname="impexpcore_softrefsel_record" approved="no">
+				<source>Record</source>
+				<target state="needs-translation">记录：</target>
+			</trans-unit>
+			<trans-unit id="impexpcore_toggle_all_disabled_records" resname="impexpcore_toggle_all_disabled_records">
+				<source>Toggle disabled records</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="import" resname="import" approved="no">
+				<source>Import</source>
+				<target state="needs-translation">从.t3d导入</target>
+			</trans-unit>
+			<trans-unit id="importdata_action" resname="importdata_action" approved="no">
+				<source>Action</source>
+				<target state="needs-translation">动作：</target>
+			</trans-unit>
+			<trans-unit id="importdata_allowToWriteBanned" resname="importdata_allowToWriteBanned" approved="yes">
+				<source>Allow to write banned file extensions (eg. PHP scripts), if any</source>
+				<target state="translated">允许写禁止的文件扩展（如PHP scripts）， 如果</target>
+			</trans-unit>
+			<trans-unit id="importdata_areYouSure" resname="importdata_areYouSure" approved="yes">
+				<source>Are you sure?</source>
+				<target state="translated">您确定吗？</target>
+			</trans-unit>
+			<trans-unit id="importdata_browse" resname="importdata_browse" approved="no">
+				<source>Browse</source>
+				<target state="needs-translation">浏览器：</target>
+			</trans-unit>
+			<trans-unit id="importdata_description" resname="importdata_description" approved="no">
+				<source>Description</source>
+				<target state="needs-translation">描述：</target>
+			</trans-unit>
+			<trans-unit id="importdata_doNotShowDifferences" resname="importdata_doNotShowDifferences" approved="yes">
+				<source>Do not show differences in records</source>
+				<target state="translated">不显示记录中的不同</target>
+			</trans-unit>
+			<trans-unit id="importdata_email" resname="importdata_email" approved="no">
+				<source>Email</source>
+				<target state="needs-translation">Email:</target>
+			</trans-unit>
+			<trans-unit id="importdata_enableLogging" resname="importdata_enableLogging" approved="no">
+				<source>Enable logging</source>
+				<target state="needs-translation">允许记录：</target>
+			</trans-unit>
+			<trans-unit id="importdata_failureNoFileUploaded" resname="importdata_failureNoFileUploaded" approved="yes">
+				<source>Failure: No file uploaded - was it too big? Check system log.</source>
+				<target state="translated">故障：　无文件上传－文件太大？　检查系统日志。</target>
+			</trans-unit>
+			<trans-unit id="importdata_file" resname="importdata_file" approved="no">
+				<source>File</source>
+				<target state="needs-translation">文件：</target>
+			</trans-unit>
+			<trans-unit id="importdata_force_all_UIDS" resname="importdata_force_all_UIDS" approved="yes">
+				<source>Force ALL UIDs values</source>
+				<target state="translated">要求全部UIDs的数值</target>
+			</trans-unit>
+			<trans-unit id="importdata_force_all_UIDS_descr" resname="importdata_force_all_UIDS_descr" approved="yes">
+				<source>With this option the original UID value of all imported records are forced to be the same. BE VERY CAREFUL WITH THIS! (Admin Only).</source>
+				<target state="translated">用此选项，全部导入的记录的原始UID值被要求相同。 用此选项须特别当心！（仅可管理员使用）。</target>
+			</trans-unit>
+			<trans-unit id="importdata_fromPathS" resname="importdata_fromPathS" approved="yes">
+				<source>(From path: %s)</source>
+				<target state="translated">（从路径： %s）</target>
+			</trans-unit>
+			<trans-unit id="importdata_greenValuesAreFrom" resname="importdata_greenValuesAreFrom" approved="yes">
+				<source>Green values are from the import file, red values from the current database record and black values are similar in both versions.</source>
+				<target state="translated">绿色值来自导入文件， 红色值来自当前数据库， 黑色值在两个版本中相同。</target>
+			</trans-unit>
+			<trans-unit id="importdata_icon" resname="importdata_icon" approved="no">
+				<source>Icon</source>
+				<target state="needs-translation">图标：</target>
+			</trans-unit>
+			<trans-unit id="importdata_ifYouSetThis" resname="importdata_ifYouSetThis" approved="yes">
+				<source>If you set this option, the position of updated elements will not be updated to match the structure of the input file.</source>
+				<target state="translated">如果您设定此选项， 则更新元素的位置将不被更新以匹配输入文件的结构。</target>
+			</trans-unit>
+			<trans-unit id="importdata_ignorePidDifferencesGlobally" resname="importdata_ignorePidDifferencesGlobally" approved="yes">
+				<source>Ignore PID differences globally</source>
+				<target state="translated">全局性忽略PID区别</target>
+			</trans-unit>
+			<trans-unit id="importdata_import" resname="importdata_import" approved="yes">
+				<source>Import</source>
+				<target state="translated">导入</target>
+			</trans-unit>
+			<trans-unit id="importdata_importOptions" resname="importdata_importOptions" approved="no">
+				<source>Import Options</source>
+				<target state="needs-translation">导入选项：</target>
+			</trans-unit>
+			<trans-unit id="importdata_messages" resname="importdata_messages" approved="yes">
+				<source>Messages</source>
+				<target state="translated">消息</target>
+			</trans-unit>
+			<trans-unit id="importdata_metaData" resname="importdata_metaData" approved="no">
+				<source>Meta data</source>
+				<target state="needs-translation">元数据</target>
+			</trans-unit>
+			<trans-unit id="importdata_metaData_1387" resname="importdata_metaData_1387" approved="yes">
+				<source>Meta data</source>
+				<target state="translated">元数据</target>
+			</trans-unit>
+			<trans-unit id="importdata_newImport" resname="importdata_newImport" approved="yes">
+				<source>New import</source>
+				<target state="translated">新导入</target>
+			</trans-unit>
+			<trans-unit id="importdata_no_accessible_file_mount" resname="importdata_no_accessible_file_mount">
+				<source>No accessible filemount</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="importdata_no_default_upload_folder" resname="importdata_no_default_upload_folder">
+				<source>No default upload folder</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="importdata_noteNoDecompressorAvailable" resname="importdata_noteNoDecompressorAvailable" approved="yes">
+				<source>NOTE: No decompressor available for compressed files!</source>
+				<target state="translated">备注： 对压缩文件无解压器！</target>
+			</trans-unit>
+			<trans-unit id="importdata_notes" resname="importdata_notes" approved="no">
+				<source>Notes</source>
+				<target state="needs-translation">备注：</target>
+			</trans-unit>
+			<trans-unit id="importdata_options" resname="importdata_options" approved="no">
+				<source>Options</source>
+				<target state="needs-translation">选项：</target>
+			</trans-unit>
+			<trans-unit id="importdata_packager" resname="importdata_packager" approved="no">
+				<source>Packager</source>
+				<target state="needs-translation">包：</target>
+			</trans-unit>
+			<trans-unit id="importdata_preview" resname="importdata_preview" approved="yes">
+				<source>Preview</source>
+				<target state="translated">预显示</target>
+			</trans-unit>
+			<trans-unit id="importdata_saveToFilename" resname="importdata_saveToFilename" approved="yes">
+				<source>Save to filename</source>
+				<target state="translated">存为文件名</target>
+			</trans-unit>
+			<trans-unit id="importdata_selectFileToImport" resname="importdata_selectFileToImport" approved="no">
+				<source>Select file to import</source>
+				<target state="needs-translation">选择导出的文件：</target>
+			</trans-unit>
+			<trans-unit id="importdata_structureHasBeenImported" resname="importdata_structureHasBeenImported" approved="no">
+				<source>Structure has been imported, here is the result</source>
+				<target state="needs-translation">结构已导入，这里是结果：</target>
+			</trans-unit>
+			<trans-unit id="importdata_success" resname="importdata_success" approved="no">
+				<source>Success</source>
+				<target state="needs-translation">成功：</target>
+			</trans-unit>
+			<trans-unit id="importdata_thisIsDisabledBy" resname="importdata_thisIsDisabledBy" approved="yes">
+				<source>This is disabled by default since there may be hundred of entries generated.</source>
+				<target state="translated">默认为禁止，因为可能有成百个记录被产生。</target>
+			</trans-unit>
+			<trans-unit id="importdata_thisOptionRequiresThat" resname="importdata_thisOptionRequiresThat" approved="yes">
+				<source>This option requires that the structure you import already exists on this server and only needs to be updated with new content!</source>
+				<target state="translated">此选项的要求： 导入的结构已存在于此服务器，仅需更新新的内容！</target>
+			</trans-unit>
+			<trans-unit id="importdata_title" resname="importdata_title" approved="no">
+				<source>Title</source>
+				<target state="needs-translation">标题：</target>
+			</trans-unit>
+			<trans-unit id="importdata_update" resname="importdata_update" approved="no">
+				<source>Update</source>
+				<target state="needs-translation">更新：</target>
+			</trans-unit>
+			<trans-unit id="importdata_update_299e" resname="importdata_update_299e" approved="yes">
+				<source>Update</source>
+				<target state="translated">更新</target>
+			</trans-unit>
+			<trans-unit id="importdata_updateRecords" resname="importdata_updateRecords" approved="yes">
+				<source>Update records</source>
+				<target state="translated">更新纪录</target>
+			</trans-unit>
+			<trans-unit id="importdata_upload" resname="importdata_upload" approved="yes">
+				<source>Upload</source>
+				<target state="translated">上传</target>
+			</trans-unit>
+			<trans-unit id="importdata_upload_error" resname="importdata_upload_error">
+				<source>Upload error</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="importdata_uploadFileFromLocal" resname="importdata_uploadFileFromLocal" approved="no">
+				<source>Upload file from local computer</source>
+				<target state="needs-translation">从本地计算机上传文件：</target>
+			</trans-unit>
+			<trans-unit id="importdata_upload_nodata" resname="importdata_upload_nodata">
+				<source>The import module hasn't received any data. This may occur due to a file upload with a large file. Please check the file size of your uploaded file with the server's post_max_size and upload_max_filesize configuration.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="importdata_uploadStatus" resname="importdata_uploadStatus" approved="no">
+				<source>Upload status</source>
+				<target state="needs-translation">上传状态：</target>
+			</trans-unit>
+			<trans-unit id="importdata_writeIndividualDbActions" resname="importdata_writeIndividualDbActions" approved="yes">
+				<source>Write individual DB actions during import to the log</source>
+				<target state="translated">将导入时各种数据库动作写入纪录</target>
+			</trans-unit>
+			<trans-unit id="makeadvanc_excludeHtmlCssFile" resname="makeadvanc_excludeHtmlCssFile" approved="no">
+				<source>Exclude HTML/CSS file resources</source>
+				<target state="needs-translation">不包含的HTML/CSS文件资源：</target>
+			</trans-unit>
+			<trans-unit id="makeadvanc_extensionDependencies" resname="makeadvanc_extensionDependencies" approved="no">
+				<source>Extension dependencies</source>
+				<target state="needs-translation">扩展相关</target>
+			</trans-unit>
+			<trans-unit id="makeadvanc_files" resname="makeadvanc_files" approved="no">
+				<source>Files</source>
+				<target state="needs-translation">文件：</target>
+			</trans-unit>
+			<trans-unit id="makeadvanc_saveFilesOutsideExportFile" resname="makeadvanc_saveFilesOutsideExportFile">
+				<source>Save files in extra folder beside the export file</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="makeadvanc_saveFilesOutsideExportFile_limit" resname="makeadvanc_saveFilesOutsideExportFile_limit">
+				<source>(supported for "Save to filename" only)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="makeadvanc_selectExtensionsThatThe" resname="makeadvanc_selectExtensionsThatThe" approved="no">
+				<source>Select extensions that the exported content depends on</source>
+				<target state="needs-translation">选择导出内容相关的扩展名：</target>
+			</trans-unit>
+			<trans-unit id="makeadvanc_softReferences" resname="makeadvanc_softReferences" approved="no">
+				<source>Soft References</source>
+				<target state="needs-translation">软件参考</target>
+			</trans-unit>
+			<trans-unit id="makeadvanc_update" resname="makeadvanc_update" approved="yes">
+				<source>Update</source>
+				<target state="translated">更新</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_anSqlQueryReturned" resname="makeconfig_anSqlQueryReturned" approved="yes">
+				<source>An SQL query returned exactly the amount of records specified by the limit value (%s) - that could indicate an incomplete selection of records! Make sure this is on purpose.</source>
+				<target state="translated">一个SQL查询正好返回给定的纪录数量极限值(%s) - 这有可能反映了不完全的纪录选择。 请确认这是有意这样做的。</target>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+				<note>This label is deprecated (not used anymore) since TYPO3v10
+This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v10 This label is deprecated (not used anymore) since TYPO3v9</note>
+			</trans-unit>
+			<trans-unit id="makeconfig_clearAllManualExclusions" resname="makeconfig_clearAllManualExclusions" approved="no">
+				<source>Clear all manual exclusions</source>
+				<target state="needs-translation">清除全部排斥：</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_excludeDisabledElements" resname="makeconfig_excludeDisabledElements">
+				<source>Exclude disabled elements</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="makeconfig_excludeElements" resname="makeconfig_excludeElements" approved="no">
+				<source>Exclude elements</source>
+				<target state="needs-translation">排斥元素：</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_expandedTree" resname="makeconfig_expandedTree" approved="yes">
+				<source>Expanded tree</source>
+				<target state="translated">扩展树</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_exportPagetreeConfiguration" resname="makeconfig_exportPagetreeConfiguration" approved="no">
+				<source>Export pagetree configuration</source>
+				<target state="needs-translation">导出页面树设置</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_exportSingleRecord" resname="makeconfig_exportSingleRecord" approved="no">
+				<source>Export single record</source>
+				<target state="needs-translation">导出单一记录：</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_exportTablesFromPages" resname="makeconfig_exportTablesFromPages" approved="no">
+				<source>Export tables from pages</source>
+				<target state="needs-translation">从这些页面导出表格：</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_includeRelationsToTables" resname="makeconfig_includeRelationsToTables" approved="no">
+				<source>Include relations to tables</source>
+				<target state="needs-translation">包含与下列表格的关系：</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_includeTables" resname="makeconfig_includeTables" approved="no">
+				<source>Include tables</source>
+				<target state="needs-translation">内含表格：</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_levels" resname="makeconfig_levels" approved="no">
+				<source>Levels</source>
+				<target state="needs-translation">层</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_noManuallyExcludedElementsYet" resname="makeconfig_noManuallyExcludedElementsYet">
+				<source>No manually excluded elements yet. Exclude by setting checkboxes below in the element display.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="makeconfig_noTreeExportedOnly" resname="makeconfig_noTreeExportedOnly" approved="yes">
+				<source>No tree exported - only tables on the page.</source>
+				<target state="translated">无树导出-仅页面的表格</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_pageId" resname="makeconfig_pageId" approved="no">
+				<source>Page ID</source>
+				<target state="needs-translation">页面ID:</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_record" resname="makeconfig_record" approved="no">
+				<source>Record</source>
+				<target state="needs-translation">记录：</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_relationsAndExclusions" resname="makeconfig_relationsAndExclusions" approved="no">
+				<source>Relations and Exclusions</source>
+				<target state="needs-translation">关系和排斥</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_showStaticRelations" resname="makeconfig_showStaticRelations" approved="no">
+				<source>Show static relations</source>
+				<target state="needs-translation">显示静态关系：</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_tableListEntry" resname="makeconfig_tableListEntry">
+				<source>Table "%s" from %s</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="makeconfig_tablePids" resname="makeconfig_tablePids" approved="no">
+				<source>Table/Pids</source>
+				<target state="needs-translation">表格/Pids：</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_tablesOnThisPage" resname="makeconfig_tablesOnThisPage" approved="yes">
+				<source>Tables on this page</source>
+				<target state="translated">此页的表格</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_tree" resname="makeconfig_tree" approved="no">
+				<source>Tree</source>
+				<target state="needs-translation">树：</target>
+			</trans-unit>
+			<trans-unit id="makeconfig_useStaticRelationsFor" resname="makeconfig_useStaticRelationsFor" approved="no">
+				<source>Use static relations for tables</source>
+				<target state="needs-translation">使用与下列表格的静态关系：</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_areYouSure" resname="makesavefo_areYouSure" approved="yes">
+				<source>Are you sure?</source>
+				<target state="translated">您肯定？</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_delete" resname="makesavefo_delete" approved="yes">
+				<source>Delete</source>
+				<target state="translated">删除</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_description" resname="makesavefo_description" approved="no">
+				<source>Description</source>
+				<target state="needs-translation">描述：</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_downloadExport" resname="makesavefo_downloadExport" approved="yes">
+				<source>Download export</source>
+				<target state="translated">下载的导出</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_fileFormat" resname="makesavefo_fileFormat" approved="no">
+				<source>File format</source>
+				<target state="needs-translation">文件格式</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_filenameSavedInS" resname="makesavefo_filenameSavedInS" approved="no">
+				<source>Filename (saved in "%s")</source>
+				<target state="needs-translation">文件名（存储在"%s"）：</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_load" resname="makesavefo_load" approved="yes">
+				<source>Load</source>
+				<target state="translated">加载</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_merge" resname="makesavefo_merge" approved="yes">
+				<source>Merge</source>
+				<target state="translated">合并</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_metaData" resname="makesavefo_metaData" approved="no">
+				<source>Meta data</source>
+				<target state="needs-translation">元数据：</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_notes" resname="makesavefo_notes" approved="no">
+				<source>Notes</source>
+				<target state="needs-translation">备注：</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_outputOptions" resname="makesavefo_outputOptions" approved="no">
+				<source>Output options</source>
+				<target state="needs-translation">选项输出：</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_presets" resname="makesavefo_presets" approved="no">
+				<source>Presets</source>
+				<target state="needs-translation">预设</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_public" resname="makesavefo_public" approved="no">
+				<source>Public</source>
+				<target state="needs-translation">公共：</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_save" resname="makesavefo_save" approved="yes">
+				<source>Save</source>
+				<target state="translated">保存</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_selectPreset" resname="makesavefo_selectPreset" approved="no">
+				<source>Select preset</source>
+				<target state="needs-translation">选择预设</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_t3dFile" resname="makesavefo_t3dFile" approved="yes">
+				<source>T3D file</source>
+				<target state="translated">T3D文件</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_t3dFileCompressed" resname="makesavefo_t3dFileCompressed" approved="yes">
+				<source>T3D file / compressed</source>
+				<target state="translated">T3D文件 / 已压缩</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_title" resname="makesavefo_title" approved="no">
+				<source>Title</source>
+				<target state="needs-translation">标题：</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_titleOfNewPreset" resname="makesavefo_titleOfNewPreset" approved="no">
+				<source>Title of new preset</source>
+				<target state="needs-translation">新预设标题</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_update" resname="makesavefo_update" approved="yes">
+				<source>Update</source>
+				<target state="translated">更新</target>
+			</trans-unit>
+			<trans-unit id="makesavefo_xml" resname="makesavefo_xml" approved="yes">
+				<source>XML</source>
+				<target state="translated">XML</target>
+			</trans-unit>
+			<trans-unit id="pleaseConfirm" resname="pleaseConfirm">
+				<source>Please confirm</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tableselec_configuration" resname="tableselec_configuration" approved="yes">
+				<source>Configuration</source>
+				<target state="translated">设置</target>
+			</trans-unit>
+			<trans-unit id="title" resname="title" approved="yes">
+				<source>Import / Export</source>
+				<target state="translated">导入/导出</target>
+			</trans-unit>
+			<trans-unit id="title_export" resname="title_export" approved="no">
+				<source>Export</source>
+				<target state="needs-translation">导出至.t3d</target>
+			</trans-unit>
+			<trans-unit id="title_import" resname="title_import" approved="no">
+				<source>Import</source>
+				<target state="needs-translation">从.t3d导入</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

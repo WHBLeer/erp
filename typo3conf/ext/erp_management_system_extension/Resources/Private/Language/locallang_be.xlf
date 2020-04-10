@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-02-16UTC08:13:100">
+        <header>
+            <authorName>HongBin Wang</authorName>
+            <authorEmail>wanghongbin816@gmail.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default" approved="yes">
+                <source>默认</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.api" approved="yes">
+                <source>API</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.login" approved="yes">
+                <source>后台-登录</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.main" approved="yes">
+                <source>后台-通用</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.header" approved="yes">
+                <source>头部</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal" approved="yes">
+                <source>内容</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

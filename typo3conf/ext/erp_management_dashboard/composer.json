@@ -1,0 +1,28 @@
+{
+    "name": "erp/erp-management-dashboard",
+    "type": "typo3-cms-extension",
+    "description": "\u4eea\u8868\u677f",
+    "authors": [
+        {
+            "name": "\u738b\u5b8f\u5f6c",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ERP\\ErpManagementDashboard\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ERP\\ErpManagementDashboard\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "erp/erp-management-dashboard": "self.version",
+        "typo3-ter/erp-management-dashboard": "self.version"
+    }
+}

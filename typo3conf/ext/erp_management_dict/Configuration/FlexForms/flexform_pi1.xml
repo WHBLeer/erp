@@ -1,0 +1,85 @@
+<T3DataStructure>
+	<meta><langDisable>1</langDisable></meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms><sheetTitle>基本配置</sheetTitle></TCEforms>
+				<type>array</type>
+				<el>
+					<!-- View -->
+					<switchableControllerActions>
+						<TCEforms>
+							<label>加载模块</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">类目管理</numIndex>
+										<numIndex index="1">Dicttype-&gt;list;Dicttype-&gt;show;Dicttype-&gt;new;Dicttype-&gt;create;Dicttype-&gt;edit;Dicttype-&gt;update;Dicttype-&gt;delete;Dictitem-&gt;list;Dictitem-&gt;show;Dictitem-&gt;new;Dictitem-&gt;create;Dictitem-&gt;edit;Dictitem-&gt;update;Dictitem-&gt;delete</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">区域管理</numIndex>
+										<numIndex index="1">Region-&gt;list;Region-&gt;show;Region-&gt;new;Region-&gt;create;Region-&gt;edit;Region-&gt;update;Region-&gt;delete</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">产品类别管理</numIndex>
+										<numIndex index="1">Category-&gt;list;Category-&gt;show;Category-&gt;new;Category-&gt;create;Category-&gt;edit;Category-&gt;update;Category-&gt;delete</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">产品类别API</numIndex>
+										<numIndex index="1">Category-&gt;getCategory;Category-&gt;ajax</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">产品变体API</numIndex>
+										<numIndex index="1">Dictitem-&gt;getVariant;Dictitem-&gt;ajax</numIndex>
+									</numIndex>
+								</items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+							</config>
+						</TCEforms>
+					</switchableControllerActions> 
+					<settings.previewPid>
+						<TCEforms>
+							<label>预览页面</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.previewPid>
+					<persistence.storagePid>
+						<TCEforms>
+							<label>数据存储</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>0</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</persistence.storagePid>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

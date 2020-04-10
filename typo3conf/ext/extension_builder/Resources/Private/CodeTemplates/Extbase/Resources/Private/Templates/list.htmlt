@@ -1,0 +1,96 @@
+{namespace k=EBT\ExtensionBuilder\ViewHelpers}
+<f:format.raw><k:openingTag>html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+data-namespace-typo3-fluid="true"</k:openingTag>
+	<k:openingTag>f:layout name="Default" /</k:openingTag>
+	  
+	This Template is responsible for creating a table of domain objects.
+
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<k:openingTag>f:section name="content"</k:openingTag>
+		<k:openingTag>f:flashMessages as="flashMessages"</k:openingTag>
+			<script>
+				<k:openingTag>f:for each="<k:curlyBrackets>flashMessages</k:curlyBrackets>" as="flashMessage"</k:openingTag>
+					notify("<k:curlyBrackets>flashMessage.message</k:curlyBrackets>", "<k:curlyBrackets>flashMessage.severity</k:curlyBrackets>");
+				<k:openingTag>/f:for</k:openingTag>
+			</script>
+		<k:openingTag>/f:flashMessages</k:openingTag>
+
+		<div class="dataTables_wrapper dt-bootstrap4">
+            <div class="row mb-10">
+                <div class="col-sm-12 col-md-9">
+					<k:openingTag>f:link.action action="new" class="btn btn-info"</k:openingTag>New {domainObject.name}<k:openingTag>/f:link.action</k:openingTag>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <k:openingTag>f:form action="list" name="search" object="<k:curlyBrackets>search</k:curlyBrackets>"</k:openingTag>
+                        <div class="input-group justify-content-end">
+							<k:openingTag>f:form.textfield name="keyword" value="<k:curlyBrackets>keyword</k:curlyBrackets>" class="form-control" placeholder="关键字" /</k:openingTag>
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-search"></i></span>
+                            </div>
+                        </div>
+                    <k:openingTag>/f:form</k:openingTag>
+                </div>
+            </div><br/>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-responsive">
+                        <k:openingTag>sll:widget.paginateBe objects="{domainObject.name -> k:format.lowercaseFirst() -> k:pluralize() -> k:curlyBrackets()}" as="{domainObject.name -> k:format.lowercaseFirst()}Pagination"  configuration="<k:curlyBrackets>settings.paginate</k:curlyBrackets>"</k:openingTag>
+                            <table class="table table-hover mb-10">
+                                <thead> 
+									<k:format.removeMultipleNewlines><tr>
+									<f:comment>Building up the table header</f:comment>
+										<th></th>
+                                        <th>#</th>
+										<f:for each="{domainObject.properties}" as="property"><f:if condition="{property.isDisplayable}">
+										<th><k:openingTag>f:translate key="{property.labelNamespace}" /</k:openingTag></th>
+										</f:if></f:for>
+										<th>操作</th>
+									</tr></k:format.removeMultipleNewlines>
+								</thead>
+                                <tbody>
+                                    <k:openingTag>f:for each="<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()}Pagination</k:curlyBrackets>" as="{domainObject.name -> k:format.lowercaseFirst()}" iteration="itemIteration"</k:openingTag>
+									<tr>
+                                        <td>
+											<input type="checkbox" name="test" class="custom-checkbox-input" id="chk-<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()}.uid</k:curlyBrackets>" value="<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()}.uid</k:curlyBrackets>">
+										</td>
+										<td>lib.calc</td>
+										<f:for each="{domainObject.properties}" as="property"><f:if condition="{property.isDisplayable}"><td><k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()}.{property.nameToBeDisplayedInFluidTemplate}</k:curlyBrackets></td></f:if></f:for>
+										<td>
+											<k:openingTag>f:link.action action="list" class="btn btn-sm btn-info" arguments="<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()} : {domainObject.name -> k:format.lowercaseFirst()}</k:curlyBrackets>"</k:openingTag><i class="ti-reload"></i><k:openingTag>/f:link.action</k:openingTag>
+											<k:openingTag>f:link.action action="show" class="btn btn-sm btn-default" arguments="<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()} : {domainObject.name -> k:format.lowercaseFirst()}</k:curlyBrackets>"</k:openingTag><i class="ti-eye"></i><k:openingTag>/f:link.action</k:openingTag>
+											<k:openingTag>f:link.action action="edit" class="btn btn-sm btn-info" arguments="<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()} : {domainObject.name -> k:format.lowercaseFirst()}</k:curlyBrackets>"</k:openingTag><i class="ti-pencil-alt"></i><k:openingTag>/f:link.action</k:openingTag>
+											<k:openingTag>f:link.action action="delete" class="btn btn-sm btn-danger" arguments="<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()} : {domainObject.name -> k:format.lowercaseFirst()}</k:curlyBrackets>"</k:openingTag><i class="ti-close"></i><k:openingTag>/f:link.action</k:openingTag>
+										</td>
+									</tr>
+									<k:openingTag>/f:for</k:openingTag>
+                                    <tr>
+                                        <td>
+											<input type="checkbox" name="test" class="selectall custom-checkbox-input" id="chkall" value="uid">
+                                        </td>
+                                        <td colspan="8">
+											<k:openingTag>f:form action="multi" name="datas" </k:openingTag>
+                                                <k:openingTag>f:form.hidden id="multidelete-items" property="items" value="" /</k:openingTag>
+												<k:openingTag>f:form.submit class="btn btn-danger btn-sm delete btn-del btn-delete-all" value="删除选中" /</k:openingTag>
+                                            <k:openingTag>/f:form</k:openingTag>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        <k:openingTag>/sll:widget.paginateBe</k:openingTag>
+                    </div>
+                    
+                </div>
+            </div>
+		</div>
+	<k:openingTag>/f:section</k:openingTag>
+<k:openingTag>/html</k:openingTag></f:format.raw>

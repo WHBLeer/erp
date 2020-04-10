@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="ch" datatype="plaintext" original="messages" date="2019-09-24T09:48:35Z" product-name="common">
+		<header/>
+		<body>
+			<trans-unit id="icon.description">
+				<source>页面图标</source>
+			</trans-unit>
+			<trans-unit id="svg_icon.description">
+				<source>SVG页面图标</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

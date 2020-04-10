@@ -1,0 +1,74 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:form action="update" name="config" object="{config}" enctype="multipart/form-data">
+		<f:form.hidden name="label" value="translate" />
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="app_key">APP_KEY(应用ID)</label>
+					<input type="text" id="app_key" name="TYPO3_CONF_VARS[TRANSLATE][app_key]" value="{TYPO3_CONF_VARS.TRANSLATE.app_key}" class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="sec_key">SEC_KEY(应用密钥)</label>
+					<input type="text" id="sec_key" name="TYPO3_CONF_VARS[TRANSLATE][sec_key]" value="{TYPO3_CONF_VARS.TRANSLATE.sec_key}" class="form-control" />
+				</div>
+			</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered mb-10">
+                        <tr>
+                            <td width="25%">中文(zh-CHS)  </td>
+                            <td><div id="zh-CHS">欢迎使用本系统</div></td>
+                        </tr>
+                        <tr>
+                            <td width="25%">英语(en)  <button class="btn btn-xs btn-info"  style="float: right;" onclick="transtest('en');return false;" >测试翻译</button></td>
+                            <td><div id="en"></div></td>
+                        </tr>
+                        <tr>
+                            <td>法语(fr)  <button class="btn btn-xs btn-info"  style="float: right;" onclick="transtest('fr');return false;" >测试翻译</button></td>
+                            <td><div id="fr"></div></td>
+                        </tr>
+                        <tr>
+                            <td>德语(de)  <button class="btn btn-xs btn-info"  style="float: right;" onclick="transtest('de');return false;" >测试翻译</button></td>
+                            <td><div id="de"></div></td>
+                        </tr>
+                        <tr>
+                            <td>意大利语(it)  <button class="btn btn-xs btn-info"  style="float: right;" onclick="transtest('it');return false;" >测试翻译</button></td>
+                            <td><div id="it"></div></td>
+                        </tr>
+                        <tr>
+                            <td>西班牙语(es)  <button class="btn btn-xs btn-info"  style="float: right;" onclick="transtest('es');return false;" >测试翻译</button></td>
+                            <td><div id="es"></div></td>
+                        </tr>
+                        <tr>
+                            <td>日文(ja)  <button class="btn btn-xs btn-info"  style="float: right;" onclick="transtest('ja');return false;" >测试翻译</button></td>
+                            <td><div id="ja"></div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+		<f:form.submit value="保存" class="btn btn-secondary" />
+	</f:form>
+    <script>
+	    var url = '/api/config-test';
+        function transtest(to) {
+            var query = $('#zh-CHS').text();
+            var app_key = $('#app_key').val();
+            var sec_key = $('#sec_key').val();
+            $.ajax({
+                type: "GET",
+                url: url,
+                data: {cmd:'transtest', app_key:app_key, sec_key:sec_key, query:query, to:to},
+                dataType: "json",
+                success: function(data){
+                    $("#"+to).text(data.text);
+                }
+            });
+            return false;
+        }
+    </script>
+</html>

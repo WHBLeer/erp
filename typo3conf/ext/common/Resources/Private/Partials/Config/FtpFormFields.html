@@ -1,0 +1,55 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:form action="update" name="config" object="{config}" enctype="multipart/form-data">
+		<f:form.hidden name="label" value="ftp" />
+		<div class="row">
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="sever">FTP_SEVER(http)</label>
+					<input type="text" id="sever" name="TYPO3_CONF_VARS[FTP][sever]" value="{TYPO3_CONF_VARS.FTP.sever}" class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="host">主机(host)</label>
+					<input type="text" id="host" name="TYPO3_CONF_VARS[FTP][host]" value="{TYPO3_CONF_VARS.FTP.host}" class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="username">账号(username)</label>
+					<input type="text" id="username" name="TYPO3_CONF_VARS[FTP][username]" class="form-control" value="{TYPO3_CONF_VARS.FTP.username}" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="password">密码(password)</label>
+					<input type="password" id="password" name="TYPO3_CONF_VARS[FTP][password]" class="form-control" value="{TYPO3_CONF_VARS.FTP.password}" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="timeout">请求等待时间 s(timeout)</label>
+					<input type="text" id="timeout" name="TYPO3_CONF_VARS[FTP][timeout]" class="form-control" value="{TYPO3_CONF_VARS.FTP.timeout}" />
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="port">端口(port)</label>
+					<input type="text" id="port" name="TYPO3_CONF_VARS[FTP][port]" value="{TYPO3_CONF_VARS.FTP.port}" class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="rename">重命名(以时间戳重命名文件)</label>
+					<select name="TYPO3_CONF_VARS[FTP][rename]" id="rename" class="form-control">
+						<option value="0" {f:if(condition: '{TYPO3_CONF_VARS.FTP.rename}==0', then: 'selected')}>否</option>
+						<option value="1" {f:if(condition: '{TYPO3_CONF_VARS.FTP.rename}==1', then: 'selected')}>是</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<f:form.submit value="保存" class="btn btn-secondary" />
+	</f:form>
+
+</html>

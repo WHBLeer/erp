@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2012-02-29T20:53:46Z" product-name="extension_builder">
+		<header/>
+		<body>
+			<trans-unit id="error.extension.0">
+				<source>An extension key must have minimum 3, maximum 30 characters (not counting underscores)</source>
+				<target>扩展密钥必须至少包含3个字符，最多30个字符（不包括下划线）</target>
+			</trans-unit>
+			<trans-unit id="error.extension.1">
+				<source>Illegal character(s) in extension key. Allowed characters are: a-z (lowercase), 0-9 and '_'
+					(underscore)
+				</source>
+				<target>扩展密钥中的字符非法。允许的字符为：a-z（小写），0-9和"_"（下划线）</target>
+			</trans-unit>
+			<trans-unit id="error.extension.2">
+				<source>The key may not begin with one of the following prefixes:tx,u,user_,pages,tt_,sys_,ts_language_,csh_
+				</source>
+				<target>密钥不能以以下前缀之一开头：tx，u，user_，pages，tt_，sys_，ts_language_，csh_</target>
+			</trans-unit>
+			<trans-unit id="error.extension.3">
+				<source>Extension keys cannot start or end with 0-9 and '_' (underscore)</source>
+				<target>分机键不能以0-9和"_"（下划线）开头或结尾</target>
+			</trans-unit>
+			<trans-unit id="error.extension.500">
+				<source>There is an existing piBased extension with this extension key. Please choose another extension key or rename the existing extension directory
+				</source>
+				<target>现有带有此扩展密钥的piBased扩展。请选择另一个扩展密钥或重命名现有扩展目录</target>
+			</trans-unit>
+			<trans-unit id="name">
+				<source>Name</source>
+				<target>名称(Name)</target>
+			</trans-unit>
+			<trans-unit id="key">
+				<source>Key</source>
+				<target>密钥(Key)</target>
+			</trans-unit>
+			<trans-unit id="extensionTitle">
+				<source>Extension title</source>
+				<target>扩展名(Extension title)</target>
+			</trans-unit>
+			<trans-unit id="extensionKey">
+				<source>Extension Key</source>
+				<target>扩展键(Extension Key)</target>
+			</trans-unit>
+			<trans-unit id="descr_extensionKey">
+				<source>The extensionkey should be lowercase and without spaces. It will be the unique identifier for this extension.
+				</source>
+				<target>扩展密钥应为小写字母，且不能有空格。这将是此扩展的唯一标识符。</target>
+			</trans-unit>
+			<trans-unit id="vendorName">
+				<source>Vendor name</source>
+				<target>供应商名称(Vendor name)</target>
+			</trans-unit>
+			<trans-unit id="descr_vendorName">
+				<source>The vendor name is the first part of the new package identifier</source>
+				<target>供应商名称是新包装标识符的第一部分</target>
+			</trans-unit>
+			<trans-unit id="short_description">
+				<source>Descr.</source>
+				<target>简介(Descr)</target>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Description</source>
+				<target>描述(Description)</target>
+			</trans-unit>
+			<trans-unit id="version">
+				<source>Version</source>
+				<target>版本(Version)</target>
+			</trans-unit>
+			<trans-unit id="target_version">
+				<source>Target version</source>
+				<target>目标版本</target>
+			</trans-unit>
+			<trans-unit id="descr_target_version">
+				<source>Select the TYPO3 version the extension requires.</source>
+				<target>选择扩展所需的TYPO3版本。</target>
+			</trans-unit>
+			<trans-unit id="state">
+				<source>State</source>
+				<target>State</target>
+			</trans-unit>
+			<trans-unit id="alpha">
+				<source>Alpha</source>
+				<target>Alpha</target>
+			</trans-unit>
+			<trans-unit id="beta">
+				<source>Beta</source>
+				<target>Beta</target>
+			</trans-unit>
+			<trans-unit id="stable">
+				<source>Stable</source>
+				<target>Stable</target>
+			</trans-unit>
+			<trans-unit id="experimental">
+				<source>Experimental</source>
+				<target>Experimental</target>
+			</trans-unit>
+			<trans-unit id="test">
+				<source>Test</source>
+				<target>Test</target>
+			</trans-unit>
+			<trans-unit id="category">
+				<source>Category</source>
+				<target>类别</target>
+			</trans-unit>
+			<trans-unit id="custom_category">
+				<source>OR custom</source>
+				<target>或自定义</target>
+			</trans-unit>
+			<trans-unit id="descr_custom_category">
+				<source>You can define an own category here</source>
+				<target>您可以在此处定义自己的类别</target>
+			</trans-unit>
+			<trans-unit id="descr_category">
+				<source>The category this extension belongs to in the extension manager.</source>
+				<target>该扩展程序所属的类别在扩展程序管理器中。</target>
+			</trans-unit>
+			<trans-unit id="misc">
+				<source>Miscellaneous</source>
+				<target>杂项</target>
+			</trans-unit>
+			<trans-unit id="services">
+				<source>Services</source>
+				<target>服务</target>
+			</trans-unit>
+			<trans-unit id="backend">
+				<source>Backend</source>
+				<target>后端</target>
+			</trans-unit>
+			<trans-unit id="frontend">
+				<source>Frontend</source>
+				<target>前端</target>
+			</trans-unit>
+			<trans-unit id="templates">
+				<source>Templates</source>
+				<target>范本</target>
+			</trans-unit>
+			<trans-unit id="examples">
+				<source>Examples</source>
+				<target>例子</target>
+			</trans-unit>
+			<trans-unit id="distribution">
+				<source>Distribution</source>
+				<target>分配</target>
+			</trans-unit>
+			<trans-unit id="documentation">
+				<source>Documentation</source>
+				<target>文献资料</target>
+			</trans-unit>
+			<trans-unit id="disableVersioning">
+				<source>Disable versioning</source>
+				<target>禁用版本控制</target>
+			</trans-unit>
+			<trans-unit id="descr_disableVersioning">
+				<source>Check this if your extension needs no support for versioning. This will skip the creation of
+					versioning related columns in the database
+				</source>
+				<target>如果您的扩展程序不需要版本控制，请选中此选项。这将跳过数据库中与版本控制相关的列的创建</target>
+			</trans-unit>
+			<trans-unit id="disableLocalization">
+				<source>Disable localization</source>
+				<target>禁用本地化</target>
+			</trans-unit>
+			<trans-unit id="descr_disableLocalization">
+				<source>Check this if your extension needs no support for localization. This will skip the creation of
+					localization related columns in the database
+				</source>
+				<target>如果您的扩展程序不需要本地化支持，请选中此选项。这将跳过数据库中与本地化相关的列的创建</target>
+			</trans-unit>
+			<trans-unit id="skipGenerateDocumentationTemplate">
+				<source>Don't generate doc-template</source>
+				<target>不生成文档模板</target>
+			</trans-unit>
+			<trans-unit id="descr_skipGenerateDocumentationTemplate">
+				<source>Check this if you don't want a documentation-template generated for your extension.</source>
+				<target>如果您不希望为扩展程序生成文档模板，请选中此复选框。</target>
+			</trans-unit>
+			<trans-unit id="sourceLanguage">
+				<source>Source language for xliff files</source>
+				<target>xliff文件的源语言</target>
+			</trans-unit>
+			<trans-unit id="descr_sourceLanguage">
+				<source>The source language for xliff files is the language in which the "source" of a label is defined,
+					which can be translated into other languages. In general it should be english.
+				</source>
+				<target>xliff文件的源语言是定义标签"source"的语言，可以将其翻译为其他语言。一般来说，它应该是英语。</target>
+			</trans-unit>
+			<trans-unit id="dependsOn">
+				<source>Depends on</source>
+				<target>取决于</target>
+			</trans-unit>
+			<trans-unit id="descr_dependsOn">
+				<source>If the extension is depending on other extensions, enter the extension keys here (one per line
+					followed by a double arrow and the lowest version number).
+				</source>
+				<target>如果扩展名取决于其他扩展名，请在此处输入扩展名键（每行一个，后跟一个双箭头和最低版本号）。</target>
+			</trans-unit>
+			<trans-unit id="persons">
+				<source>Extension Authors</source>
+				<target>作者</target>
+			</trans-unit>
+			<trans-unit id="role">
+				<source>Role</source>
+				<target>角色</target>
+			</trans-unit>
+			<trans-unit id="developer">
+				<source>Developer</source>
+				<target>开发者</target>
+			</trans-unit>
+			<trans-unit id="product_manager">
+				<source>Product Manager</source>
+				<target>产品经理</target>
+			</trans-unit>
+			<trans-unit id="email">
+				<source>Email</source>
+				<target>Email</target>
+			</trans-unit>
+			<trans-unit id="company">
+				<source>Company</source>
+				<target>公司</target>
+			</trans-unit>
+			<trans-unit id="plugins">
+				<source>Frontend plugins</source>
+				<target>前端插件</target>
+			</trans-unit>
+			<trans-unit id="descr_plugins">
+				<source>The frontend plugins which have to be registered in the extension</source>
+				<target>必须在扩展中注册的前端插件</target>
+			</trans-unit>
+			<trans-unit id="controller_action_combinations">
+				<source>Controller action combinations</source>
+				<target>控制器动作组合</target>
+			</trans-unit>
+			<trans-unit id="descr_controller_action_combinations">
+				<source>Here you can configure, which controller action combinations this plugin/module should have.
+					Example: &lt;br /&gt;Blog =&gt; list,show &lt;br /&gt;(one controller per line, actions comma
+					separated) &lt;br /&gt;If you leave this empty, all available actions are configured for this
+					plugin.
+				</source>
+				<target>您可以在此处配置此插件/模块应具有的控制器动作组合。例：&lt;br /&gt;Blog =&gt; list,show &lt;br /&gt;(每行一个控制器，动作逗号分隔) &lt;br /&gt;如果将此保留为空，则将为此插件配置所有可用的操作。</target>
+			</trans-unit>
+			<trans-unit id="noncacheable_actions">
+				<source>Non cacheable actions</source>
+				<target>不可缓存的动作</target>
+			</trans-unit>
+			<trans-unit id="descr_noncacheable_actions">
+				<source>Typically create, delete and update actions should not be cached. (Same format as above)
+				</source>
+				<target>通常，不应缓存create，delete和update操作。 （与上述格式相同）</target>
+			</trans-unit>
+			<trans-unit id="switchableActions">
+				<source>Switchable actions</source>
+				<target>可切换的动作</target>
+			</trans-unit>
+			<trans-unit id="descr_switchableActions">
+				<source>Make actions switchable in the plugin's form. One line for the label, one for the list of
+					allowed Controller-&gt;action pairs (semicolon separated). Example: &lt;br /&gt;Display items&lt;br
+					/&gt;Model-&gt;list; Model-&gt;show;&lt;br /&gt;Admin&lt;br /&gt;Model-&gt;new; Model-&gt;create;
+					Model-&gt;edit; Model-&gt;update;
+				</source>
+				<target>在插件的表单中使操作可切换。一行用于标签，一行用于列表.Controller-&gt;action.示例: &lt;br /&gt;Display items&lt;br/&gt;Model-&gt;list; Model-&gt;show;&lt;br /&gt;Admin&lt;br /&gt;Model-&gt;new; Model-&gt;create;Model-&gt;edit; Model-&gt;update;</target>
+			</trans-unit>
+			<trans-unit id="backendModules">
+				<source>Backend modules</source>
+				<target>后端模块</target>
+			</trans-unit>
+			<trans-unit id="mainModule">
+				<source>Main module</source>
+				<target>主模块</target>
+			</trans-unit>
+			<trans-unit id="uniqueInThisModel">
+				<source>Should be unique for this model</source>
+				<target>对于此模型应该是唯一的</target>
+			</trans-unit>
+			<trans-unit id="type">
+				<source>Type</source>
+				<target>类型</target>
+			</trans-unit>
+			<trans-unit id="more">
+				<source>More</source>
+				<target>更多</target>
+			</trans-unit>
+			<trans-unit id="moreOptions">
+				<source>More options</source>
+				<target>更多选择</target>
+			</trans-unit>
+			<trans-unit id="advancedOptions">
+				<source>Advanced options</source>
+				<target>高级选项</target>
+			</trans-unit>
+			<trans-unit id="remove">
+				<source>Remove</source>
+				<target>删除</target>
+			</trans-unit>
+			<trans-unit id="add">
+				<source>Add</source>
+				<target>添加</target>
+			</trans-unit>
+			<trans-unit id="zeroToOne">
+				<source>1:1</source>
+				<target>1:1</target>
+			</trans-unit>
+			<trans-unit id="manyToOne">
+				<source>n:1</source>
+				<target>n:1</target>
+			</trans-unit>
+			<trans-unit id="zeroToMany">
+				<source>1:n</source>
+				<target>1:n</target>
+			</trans-unit>
+			<trans-unit id="manyToMany">
+				<source>m:n</source>
+				<target>m:n</target>
+			</trans-unit>
+			<trans-unit id="renderType">
+				<source>Render type</source>
+				<target>渲染类型</target>
+			</trans-unit>
+			<trans-unit id="desc_renderType">
+				<source>How should the relation be displayed in backend forms?</source>
+				<target>关系应如何以后端形式显示？</target>
+			</trans-unit>
+			<trans-unit id="selectSingleBox">
+				<source>Dropdown (multiple)</source>
+				<target>Dropdown (multiple</target>
+			</trans-unit>
+			<trans-unit id="selectCheckBox">
+				<source>Checkboxes</source>
+				<target>Checkboxes</target>
+			</trans-unit>
+			<trans-unit id="selectMultipleSideBySide">
+				<source>Side by side multi select</source>
+				<target>Multi Select</target>
+			</trans-unit>
+			<trans-unit id="inline">
+				<source>Inline (IRRE)</source>
+				<target>Inline (IRRE)</target>
+			</trans-unit>
+			<trans-unit id="select">
+				<source>Dropdown</source>
+				<target>Dropdown</target>
+			</trans-unit>
+			<trans-unit id="isExcludeField">
+				<source>Is exclude field?</source>
+				<target>是排除字段？</target>
+			</trans-unit>
+			<trans-unit id="descr_isExcludeField">
+				<source>If set to true, this field will only be visible for admin users per default</source>
+				<target>如果设置为true，则默认情况下此字段仅对管理员用户可见</target>
+			</trans-unit>
+			<trans-unit id="isL10nModeExclude">
+				<source>Is l10n_mode = exclude?</source>
+				<target>设置l10n_mode = exclude?</target>
+			</trans-unit>
+			<trans-unit id="descr_isL10nModeExclude">
+				<source>If set to true, this field will be set to l10n_mode = exclude</source>
+				<target>如果设置为true，则此字段将设置为l10n_mode = exclude</target>
+			</trans-unit>
+			<trans-unit id="newModelObject">
+				<source>New model object</source>
+				<target>新模型对象</target>
+			</trans-unit>
+			<trans-unit id="domainObjectSettings">
+				<source>Domain object settings</source>
+				<target>域对象设置</target>
+			</trans-unit>
+			<trans-unit id="objectType">
+				<source>Object type</source>
+				<target>对象类型</target>
+			</trans-unit>
+			<trans-unit id="descr_objectType">
+				<source>Value objects are simple objects that are defined by their value and have no 'identity'</source>
+				<target>值对象是由值定义的简单对象，没有"identity"</target>
+			</trans-unit>
+			<trans-unit id="entity">
+				<source>Entity</source>
+				<target>实体</target>
+			</trans-unit>
+			<trans-unit id="valueObject">
+				<source>Value object</source>
+				<target>值对象</target>
+			</trans-unit>
+			<trans-unit id="isAggregateRoot">
+				<source>Is aggregate root?</source>
+				<target>是聚合根吗？</target>
+			</trans-unit>
+			<trans-unit id="descr_isAggregateRoot">
+				<source>If true, the extension builder will generate a repository for this model</source>
+				<target>如果为true，那么扩展构建器将为此模型生成一个存储库(repository)</target>
+			</trans-unit>
+			<trans-unit id="enableSorting">
+				<source>Enable sorting?</source>
+				<target>启用排序?</target>
+			</trans-unit>
+			<trans-unit id="descr_enableSorting">
+				<source>If true, sorting in the backend is enabled</source>
+				<target>如果为true，则启用后端排序</target>
+			</trans-unit>
+			<trans-unit id="addDeletedField">
+				<source>Add deleted field</source>
+				<target>添加删除字段</target>
+			</trans-unit>
+			<trans-unit id="descr_addDeletedField">
+				<source>Deleting a record with "delete" field will not really delete the record, but just set the delete
+					flag to true
+				</source>
+				<target>使用"delete"字段删除记录不会真正删除记录，而只是将delete标志设置为true</target>
+			</trans-unit>
+			<trans-unit id="addHiddenField">
+				<source>Add hidden field</source>
+				<target>添加隐藏字段</target>
+			</trans-unit>
+			<trans-unit id="descr_addHiddenField">
+				<source>The hidden field is an "enable" field. Only records which are not hidden will be displayed
+				</source>
+				<target>隐藏的字段是"enable"字段。仅显示未隐藏的记录</target>
+			</trans-unit>
+			<trans-unit id="addStarttimeEndtimeFields">
+				<source>Add starttime/endtime fields</source>
+				<target>添加startime和endtime字段</target>
+			</trans-unit>
+			<trans-unit id="descr_addStarttimeEndtimeFields">
+				<source>If set, the related records will have a startime and endtime as "enable" field</source>
+				<target>如果设置，相关记录将在startime和endtime作为"enable"字段</target>
+			</trans-unit>
+			<trans-unit id="enableCategorizable">
+				<source>Enable categorization?</source>
+				<target>启用分类？</target>
+			</trans-unit>
+			<trans-unit id="descr_enableCategorizable">
+				<source>If true, categorization in the backend is enabled for this model</source>
+				<target>如果为true，则为此模型启用后端分类</target>
+			</trans-unit>
+			<trans-unit id="mapToTable">
+				<source>Map to existing table</source>
+				<target>映射到现有表</target>
+			</trans-unit>
+			<trans-unit id="descr_mapToTable">
+				<source>If the model should extend an existing table, you can configure this here</source>
+				<target>如果模型应继承现有表，则可以在此处进行配置</target>
+			</trans-unit>
+			<trans-unit id="parentClass">
+				<source>Extend existing model class</source>
+				<target>继承现有模型类</target>
+			</trans-unit>
+			<trans-unit id="descr_parentClass">
+				<source>If this model should extend an existing other model, name it here</source>
+				<target>如果此模型应该继承现有的其他模型，请在此处命名</target>
+			</trans-unit>
+			<trans-unit id="defaultActions">
+				<source>Default actions</source>
+				<target>默认Action</target>
+			</trans-unit>
+			<trans-unit id="actionType">
+				<source>Action type</source>
+				<target>Action类型</target>
+			</trans-unit>
+			<trans-unit id="descr_actionType">
+				<source>For each selected action, the extension builder will generate a template and a action method in
+					the controller of this model. If the model is an aggregate root the default CRUD actions will be
+					generated per default.
+				</source>
+				<target>对于每个选定的动作，扩展构建器将在此模型的控制器中生成model和Action。如果模型是聚合根，则默认情况下将生成默认的CRUD操作。</target>
+			</trans-unit>
+			<trans-unit id="show">
+				<source>show</source>
+				<target>show</target>
+			</trans-unit>
+			<trans-unit id="list">
+				<source>list</source>
+				<target>list</target>
+			</trans-unit>
+			<trans-unit id="create_new">
+				<source>new/create</source>
+				<target>new/create</target>
+			</trans-unit>
+			<trans-unit id="edit_update">
+				<source>edit/update</source>
+				<target>edit/update</target>
+			</trans-unit>
+			<trans-unit id="delete">
+				<source>delete</source>
+				<target>delete</target>
+			</trans-unit>
+			<trans-unit id="properties">
+				<source>Properties</source>
+				<target>属性</target>
+			</trans-unit>
+			<trans-unit id="propertyName">
+				<source>Property name</source>
+				<target>属性名称</target>
+			</trans-unit>
+			<trans-unit id="descr_propertyName">
+				<source>The name should be lowerCamelCase and unique in this model</source>
+				<target>名称应为lowerCamelCase，并且在此模型中是唯一的</target>
+			</trans-unit>
+			<trans-unit id="propertyType">
+				<source>Property type</source>
+				<target>属性类别</target>
+			</trans-unit>
+			<trans-unit id="descr_propertyType">
+				<source>All types with * are not yet supported by the frontend form generation/validation</source>
+				<target>前端表单生成/验证尚不支持带*的所有类型</target>
+			</trans-unit>
+			<trans-unit id="string">
+				<source>String</source>
+				<target>String</target>
+			</trans-unit>
+			<trans-unit id="text">
+				<source>Text</source>
+				<target>Text</target>
+			</trans-unit>
+			<trans-unit id="richText">
+				<source>Rich text*</source>
+				<target>Rich text*</target>
+			</trans-unit>
+			<trans-unit id="integer">
+				<source>Integer</source>
+				<target>Integer</target>
+			</trans-unit>
+			<trans-unit id="floatingPoint">
+				<source>Floating point</source>
+				<target>Floating point</target>
+			</trans-unit>
+			<trans-unit id="boolean">
+				<source>Boolean</source>
+				<target>Boolean</target>
+			</trans-unit>
+			<trans-unit id="dateTime">
+				<source>DateTime (timestamp)</source>
+				<target>DateTime (timestamp)</target>
+			</trans-unit>
+			<trans-unit id="date">
+				<source>Date (timestamp)</source>
+				<target>Date (timestamp)</target>
+			</trans-unit>
+			<trans-unit id="nativeDateTime">
+				<source>DateTime</source>
+				<target>DateTime</target>
+			</trans-unit>
+			<trans-unit id="nativeDate">
+				<source>Date</source>
+				<target>Date</target>
+			</trans-unit>
+			<trans-unit id="time">
+				<source>Time*</source>
+				<target>Time*</target>
+			</trans-unit>
+			<trans-unit id="timeSec">
+				<source>Time/Sec*</source>
+				<target>Time/Sec*</target>
+			</trans-unit>
+			<trans-unit id="selectList">
+				<source>Select list</source>
+				<target>Select list</target>
+			</trans-unit>
+			<trans-unit id="file">
+				<source>File*</source>
+				<target>File*</target>
+			</trans-unit>
+			<trans-unit id="image">
+				<source>Image*</source>
+				<target>Image*</target>
+			</trans-unit>
+			<trans-unit id="fileReference">
+				<source>File reference*</source>
+				<target>File reference*</target>
+			</trans-unit>
+			<trans-unit id="folder">
+				<source>Folder*</source>
+				<target>Folder*</target>
+			</trans-unit>
+			<trans-unit id="password">
+				<source>Password</source>
+				<target>Password</target>
+			</trans-unit>
+			<trans-unit id="allowedFileTypes">
+				<source>Allowed file types</source>
+				<target>允许的文件类型</target>
+			</trans-unit>
+			<trans-unit id="descr_allowedFileTypes">
+				<source>Comma separated file endings like: doc,ods</source>
+				<target>逗号分隔的文件结尾，例如：doc，ods</target>
+			</trans-unit>
+			<trans-unit id="maxItems">
+				<source>Allowed number of files</source>
+				<target>允许的文件数</target>
+			</trans-unit>
+			<trans-unit id="isRequired">
+				<source>Is required?</source>
+				<target>必填?</target>
+			</trans-unit>
+			<trans-unit id="relations">
+				<source>Relations</source>
+				<target>关系</target>
+			</trans-unit>
+			<trans-unit id="relationName">
+				<source>Name</source>
+				<target>名称</target>
+			</trans-unit>
+			<trans-unit id="descr_relationName">
+				<source>The name should be lowerCamelCase and unique in this model</source>
+				<target>名称应为lowerCamelCase，并且在此模型中是唯一的</target>
+			</trans-unit>
+			<trans-unit id="extensionProperties">
+				<source>Extension properties</source>
+				<target>扩展属性</target>
+			</trans-unit>
+			<trans-unit id="tab_label">
+				<source>Tab label</source>
+				<target>标签</target>
+			</trans-unit>
+			<trans-unit id="lazyLoading">
+				<source>Lazy loading</source>
+				<target>延迟加载</target>
+			</trans-unit>
+			<trans-unit id="descr_lazyLoading">
+				<source>Make this relation lazy loading</source>
+				<target>使此关系延迟加载</target>
+			</trans-unit>
+			<trans-unit id="foreignRelationClass">
+				<source>Relation to external class</source>
+				<target>与外部阶级的关系</target>
+			</trans-unit>
+			<trans-unit id="descr_foreignRelationClass">
+				<source>If this is a relation to an external model, enter the (full qualified) class name here. The
+					class must exist and be loadable
+				</source>
+				<target>如果这是与外部模型的关系，请在此处输入（完全合格的）类名称。该类必须存在并且可以加载</target>
+			</trans-unit>
+			<trans-unit id="modeler_invalidConfigurationTitle">
+				<source>Invalid configuration!</source>
+				<target>无效的配置！</target>
+			</trans-unit>
+			<trans-unit id="modeler_invalidExtensionPropertiesTitle">
+				<source>Invalid extension properties</source>
+				<target>扩展名属性无效</target>
+			</trans-unit>
+			<trans-unit id="modeler_invalidExtensionProperties">
+				<source>Please check the fields in the left panel</source>
+				<target>请检查左侧面板中的字段</target>
+			</trans-unit>
+			<trans-unit id="modeler_duplicatePropertyNamesTitle">
+				<source>Duplicate property names</source>
+				<target>属性名称重复</target>
+			</trans-unit>
+			<trans-unit id="modeler_missingModelName">
+				<source>Please enter a model name!</source>
+				<target>请输入模型名称！</target>
+			</trans-unit>
+			<trans-unit id="modeler_duplicateModelNamesTitle">
+				<source>Duplicate model names</source>
+				<target>模型名称重复</target>
+			</trans-unit>
+			<trans-unit id="modeler_invalidModelConfiguration">
+				<source>Invalid fields in model: </source>
+				<target>模型中的无效字段：</target>
+			</trans-unit>
+			<trans-unit id="modeler_extensionSaveError">
+				<source>Extension could not be saved:</source>
+				<target>扩展名无法保存：</target>
+			</trans-unit>
+			<trans-unit id="modeler_loadPipeConfirmMessage">
+				<source>Do you really want to clear the current working board and load the selected pipe? Unsaved changes will get lost!</source>
+				<target>您是否真的要清除当前工作板并加载选定的管道？未保存的更改将丢失！</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

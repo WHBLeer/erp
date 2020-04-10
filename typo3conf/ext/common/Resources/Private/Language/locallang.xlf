@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="ch" datatype="plaintext" original="messages" date="2019-09-24T09:48:35Z" product-name="common">
+		<header/>
+		<body>
+			<trans-unit id="tx_common_domain_model_config">
+				<source>Config</source>
+			</trans-unit>
+			<trans-unit id="tx_common_domain_model_config.icon">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="tx_common_domain_model_config.svg_icon">
+				<source>Svg Icon</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

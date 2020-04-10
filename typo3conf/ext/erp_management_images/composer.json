@@ -1,0 +1,28 @@
+{
+    "name": "erp/erp-management-images",
+    "type": "typo3-cms-extension",
+    "description": "\u4ea7\u54c1\u56fe\u7247\u7ba1\u7406,\u4e0a\u4f20,\u6279\u91cf\u4e0a\u4f20,ftp\u4e0a\u4f20",
+    "authors": [
+        {
+            "name": "\u738b\u5b8f\u5f6c",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ERP\\ErpManagementImages\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ERP\\ErpManagementImages\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "erp/erp-management-images": "self.version",
+        "typo3-ter/erp-management-images": "self.version"
+    }
+}

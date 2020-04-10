@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2020-02-17T00:20:51Z" product-name="belog">
+		<header/>
+		<body>
+			<trans-unit id="100" resname="100" approved="yes">
+				<source>100</source>
+				<target state="translated">100</target>
+			</trans-unit>
+			<trans-unit id="1000" resname="1000" approved="yes">
+				<source>1000</source>
+				<target state="translated">1000</target>
+			</trans-unit>
+			<trans-unit id="20" resname="20" approved="yes">
+				<source>20</source>
+				<target state="translated">20</target>
+			</trans-unit>
+			<trans-unit id="200" resname="200" approved="yes">
+				<source>200</source>
+				<target state="translated">200</target>
+			</trans-unit>
+			<trans-unit id="50" resname="50" approved="yes">
+				<source>50</source>
+				<target state="translated">50</target>
+			</trans-unit>
+			<trans-unit id="500" resname="500" approved="yes">
+				<source>500</source>
+				<target state="translated">500</target>
+			</trans-unit>
+			<trans-unit id="action" resname="action" approved="no">
+				<source>Action</source>
+				<target state="needs-translation">操作：</target>
+			</trans-unit>
+			<trans-unit id="action_1_1" resname="action_1_1" approved="yes">
+				<source>Insert</source>
+				<target state="translated">插入</target>
+			</trans-unit>
+			<trans-unit id="action_1_2" resname="action_1_2" approved="yes">
+				<source>Update</source>
+				<target state="translated">更新</target>
+			</trans-unit>
+			<trans-unit id="action_1_3" resname="action_1_3" approved="yes">
+				<source>Delete</source>
+				<target state="translated">删除</target>
+			</trans-unit>
+			<trans-unit id="action_1_4" resname="action_1_4" approved="yes">
+				<source>Move</source>
+				<target state="translated">移动</target>
+			</trans-unit>
+			<trans-unit id="action_1_5" resname="action_1_5" approved="yes">
+				<source>Check</source>
+				<target state="translated">检查</target>
+			</trans-unit>
+			<trans-unit id="action_2_1" resname="action_2_1" approved="yes">
+				<source>Upload</source>
+				<target state="translated">上传</target>
+			</trans-unit>
+			<trans-unit id="action_2_2" resname="action_2_2" approved="yes">
+				<source>Copy</source>
+				<target state="translated">复制</target>
+			</trans-unit>
+			<trans-unit id="action_2_3" resname="action_2_3" approved="yes">
+				<source>Move</source>
+				<target state="translated">移动</target>
+			</trans-unit>
+			<trans-unit id="action_2_4" resname="action_2_4" approved="yes">
+				<source>Delete</source>
+				<target state="translated">删除</target>
+			</trans-unit>
+			<trans-unit id="action_2_5" resname="action_2_5" approved="yes">
+				<source>Rename</source>
+				<target state="translated">重命名</target>
+			</trans-unit>
+			<trans-unit id="action_254_1" resname="action_254_1" approved="yes">
+				<source>Change</source>
+				<target state="translated">修改</target>
+			</trans-unit>
+			<trans-unit id="action_255_1" resname="action_255_1" approved="yes">
+				<source>LOGIN</source>
+				<target state="translated">登录</target>
+			</trans-unit>
+			<trans-unit id="action_255_2" resname="action_255_2" approved="yes">
+				<source>LOGOUT</source>
+				<target state="translated">注销</target>
+			</trans-unit>
+			<trans-unit id="action_255_3" resname="action_255_3" approved="yes">
+				<source>ATTEMPT</source>
+				<target state="translated">尝试</target>
+			</trans-unit>
+			<trans-unit id="action_2_6" resname="action_2_6" approved="yes">
+				<source>New</source>
+				<target state="translated">新建</target>
+			</trans-unit>
+			<trans-unit id="action_2_7" resname="action_2_7" approved="yes">
+				<source>Unzip</source>
+				<target state="translated">解压</target>
+			</trans-unit>
+			<trans-unit id="action_2_8" resname="action_2_8" approved="yes">
+				<source>New file</source>
+				<target state="translated">新建文件</target>
+			</trans-unit>
+			<trans-unit id="action_2_9" resname="action_2_9" approved="yes">
+				<source>Edit</source>
+				<target state="translated">修改</target>
+			</trans-unit>
+			<trans-unit id="action_3_1" resname="action_3_1" approved="yes">
+				<source>Clear Cache</source>
+				<target state="translated">清除缓存</target>
+			</trans-unit>
+			<trans-unit id="action_5_0" resname="action_5_0" approved="yes">
+				<source>Error handler</source>
+				<target state="translated">错误处理程序</target>
+			</trans-unit>
+			<trans-unit id="actionAll" resname="actionAll" approved="yes">
+				<source>All</source>
+				<target state="translated">全部</target>
+			</trans-unit>
+			<trans-unit id="actionCache" resname="actionCache" approved="yes">
+				<source>Cache</source>
+				<target state="translated">缓存</target>
+			</trans-unit>
+			<trans-unit id="actionDatabase" resname="actionDatabase" approved="yes">
+				<source>Database</source>
+				<target state="translated">数据库</target>
+			</trans-unit>
+			<trans-unit id="actionErrors" resname="actionErrors" approved="yes">
+				<source>Errors</source>
+				<target state="translated">错误</target>
+			</trans-unit>
+			<trans-unit id="actionFile" resname="actionFile" approved="yes">
+				<source>File</source>
+				<target state="translated">文件</target>
+			</trans-unit>
+			<trans-unit id="actionLogin" resname="actionLogin" approved="yes">
+				<source>Login</source>
+				<target state="translated">登录</target>
+			</trans-unit>
+			<trans-unit id="actions" resname="actions" approved="no">
+				<source>Actions</source>
+				<target state="needs-translation">操作</target>
+			</trans-unit>
+			<trans-unit id="actions.delete" resname="actions.delete">
+				<source>Delete similar errors</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="actions.delete.message" resname="actions.delete.message">
+				<source>Total entries deleted: %1$d</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="actions.delete.noRowFound" resname="actions.delete.noRowFound">
+				<source>Log entry could not be found.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="actions.deleteWarnings" resname="actions.deleteWarnings">
+				<source>Delete similar warnings</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="actionSettings" resname="actionSettings" approved="yes">
+				<source>Settings</source>
+				<target state="translated">设置</target>
+			</trans-unit>
+			<trans-unit id="adminLog" resname="adminLog" approved="yes">
+				<source>Administration log</source>
+				<target state="translated">管理日志</target>
+			</trans-unit>
+			<trans-unit id="allUsers" resname="allUsers" approved="yes">
+				<source>[All users]</source>
+				<target state="translated">[所有用户]</target>
+			</trans-unit>
+			<trans-unit id="any" resname="any" approved="yes">
+				<source>[Any]</source>
+				<target state="translated">[任意]</target>
+			</trans-unit>
+			<trans-unit id="changesInFields" resname="changesInFields" approved="yes">
+				<source>Changes in fields: %s.</source>
+				<target state="translated">修改部分：%s</target>
+			</trans-unit>
+			<trans-unit id="chLog_l_action" resname="chLog_l_action" approved="yes">
+				<source>Action</source>
+				<target state="translated">操作</target>
+			</trans-unit>
+			<trans-unit id="chLog_l_details" resname="chLog_l_details" approved="yes">
+				<source>Details</source>
+				<target state="translated">详细信息</target>
+			</trans-unit>
+			<trans-unit id="chLog_l_error" resname="chLog_l_error" approved="yes">
+				<source>E</source>
+				<target state="translated">E</target>
+			</trans-unit>
+			<trans-unit id="chLog_l_table" resname="chLog_l_table" approved="yes">
+				<source>Table</source>
+				<target state="translated">数据表</target>
+			</trans-unit>
+			<trans-unit id="chLog_l_time" resname="chLog_l_time" approved="yes">
+				<source>Time</source>
+				<target state="translated">时间</target>
+			</trans-unit>
+			<trans-unit id="chLog_l_types" resname="chLog_l_types" approved="yes">
+				<source>Type</source>
+				<target state="translated">类型</target>
+			</trans-unit>
+			<trans-unit id="chLog_l_user" resname="chLog_l_user" approved="yes">
+				<source>User</source>
+				<target state="translated">用户</target>
+			</trans-unit>
+			<trans-unit id="chLog_menuDepth" resname="chLog_menuDepth" approved="no">
+				<source>Depth</source>
+				<target state="needs-translation">深度：</target>
+			</trans-unit>
+			<trans-unit id="chLog_menuTime" resname="chLog_menuTime" approved="yes">
+				<source>Time</source>
+				<target state="translated">时间</target>
+			</trans-unit>
+			<trans-unit id="chLog_menuUsers" resname="chLog_menuUsers" approved="yes">
+				<source>Users</source>
+				<target state="translated">用户</target>
+			</trans-unit>
+			<trans-unit id="chLog_time_0" resname="chLog_time_0" approved="yes">
+				<source>This week</source>
+				<target state="translated">本周</target>
+			</trans-unit>
+			<trans-unit id="chLog_time_1" resname="chLog_time_1" approved="yes">
+				<source>Last week</source>
+				<target state="translated">上周</target>
+			</trans-unit>
+			<trans-unit id="chLog_time_10" resname="chLog_time_10" approved="yes">
+				<source>This month</source>
+				<target state="translated">本月</target>
+			</trans-unit>
+			<trans-unit id="chLog_time_11" resname="chLog_time_11" approved="yes">
+				<source>Last month</source>
+				<target state="translated">上月</target>
+			</trans-unit>
+			<trans-unit id="chLog_time_12" resname="chLog_time_12" approved="yes">
+				<source>Last 31 days</source>
+				<target state="translated">最近31天</target>
+			</trans-unit>
+			<trans-unit id="chLog_time_2" resname="chLog_time_2" approved="yes">
+				<source>Last 7 days</source>
+				<target state="translated">最近7天</target>
+			</trans-unit>
+			<trans-unit id="chLog_time_20" resname="chLog_time_20" approved="yes">
+				<source>No limit</source>
+				<target state="translated">无限制</target>
+			</trans-unit>
+			<trans-unit id="chLog_title" resname="chLog_title" approved="yes">
+				<source>Admin Changelog</source>
+				<target state="translated">管理员更新日志</target>
+			</trans-unit>
+			<trans-unit id="chLog_users_0" resname="chLog_users_0" approved="yes">
+				<source>All users</source>
+				<target state="translated">所有用户</target>
+			</trans-unit>
+			<trans-unit id="chLog_users_-1" resname="chLog_users_-1" approved="yes">
+				<source>Self</source>
+				<target state="translated">自己</target>
+			</trans-unit>
+			<trans-unit id="draft" resname="draft" approved="yes">
+				<source>Draft</source>
+				<target state="translated">草稿</target>
+			</trans-unit>
+			<trans-unit id="forNonPageRelatedActions" resname="forNonPageRelatedActions" approved="yes">
+				<source>for NON-PAGE related actions</source>
+				<target state="translated">非页面相关操作</target>
+			</trans-unit>
+			<trans-unit id="forPage" resname="forPage" approved="yes">
+				<source>for PAGE "%s" (UID: %s)</source>
+				<target state="translated">对页面“%s”（UID：%s）</target>
+			</trans-unit>
+			<trans-unit id="forRootLevel" resname="forRootLevel" approved="yes">
+				<source>for ROOT LEVEL</source>
+				<target state="translated">对根等级</target>
+			</trans-unit>
+			<trans-unit id="group" resname="group" approved="no">
+				<source>Group</source>
+				<target state="needs-translation">组：</target>
+			</trans-unit>
+			<trans-unit id="groupByPage" resname="groupByPage" approved="no">
+				<source>Group by page</source>
+				<target state="needs-translation">按页面分组：</target>
+			</trans-unit>
+			<trans-unit id="last31Days" resname="last31Days" approved="yes">
+				<source>Last 31 days</source>
+				<target state="translated">最近31天</target>
+			</trans-unit>
+			<trans-unit id="last7Days" resname="last7Days" approved="yes">
+				<source>Last 7 days</source>
+				<target state="translated">最近7天</target>
+			</trans-unit>
+			<trans-unit id="lastMonth" resname="lastMonth" approved="yes">
+				<source>Last month</source>
+				<target state="translated">上月</target>
+			</trans-unit>
+			<trans-unit id="lastWeek" resname="lastWeek" approved="yes">
+				<source>Last week</source>
+				<target state="translated">上周</target>
+			</trans-unit>
+			<trans-unit id="live" resname="live" approved="yes">
+				<source>LIVE</source>
+				<target state="translated">在线</target>
+			</trans-unit>
+			<trans-unit id="logForNonPageRelatedActionsOrRootLevelOrPage" resname="logForNonPageRelatedActionsOrRootLevelOrPage" approved="yes">
+				<source>Log %s from %s to %s</source>
+				<target state="translated">%s日志从%s至%s</target>
+			</trans-unit>
+			<trans-unit id="max" resname="max" approved="no">
+				<source>Max</source>
+				<target state="needs-translation">最大：</target>
+			</trans-unit>
+			<trans-unit id="msg_1_0_1" resname="msg_1_0_1" approved="yes">
+				<source>Referer host '%s' and server host '%s' did not match!</source>
+				<target state="translated">来源主机'%s'和服务器主机'%'不匹配！</target>
+			</trans-unit>
+			<trans-unit id="msg_1_1_11" resname="msg_1_1_11" approved="yes">
+				<source>Attempt to insert record on page '%s' (%s) where this table, %s, is not allowed</source>
+				<target state="translated">试图在页面'%s'（%s）插入不被允许的数据表%s的记录</target>
+			</trans-unit>
+			<trans-unit id="msg_1_1_12" resname="msg_1_1_12" approved="yes">
+				<source>Attempt to insert a record on page '%s' (%s) from table '%s' without permissions. Or non-existing page.</source>
+				<target state="translated">试图在无权限的情况下在页面'%s'（%s）中插入数据表'%s'的记录。或者不存在的页面。</target>
+			</trans-unit>
+			<trans-unit id="msg_1_2_1" resname="msg_1_2_1" approved="yes">
+				<source>Attempt to modify table '%s' without permission</source>
+				<target state="translated">试图在无权限的情况下修改数据表'%s'</target>
+			</trans-unit>
+			<trans-unit id="msg_1_2_10" resname="msg_1_2_10" approved="yes">
+				<source>Record '%s' (%s) was updated.</source>
+				<target state="translated">记录'%s'（%s）已更新。</target>
+			</trans-unit>
+			<trans-unit id="msg_1_2_12" resname="msg_1_2_12" approved="yes">
+				<source>MySQL error: '%s' (%s)</source>
+				<target state="translated">MySQL错误：'%s'（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_2_2" resname="msg_1_2_2" approved="yes">
+				<source>Attempt to modify record '%s' (%s) without permission. Or non-existing page.</source>
+				<target state="translated">试图在无权限的情况下修改记录'%s'（%s）。或者不存在的页面。</target>
+			</trans-unit>
+			<trans-unit id="msg_1_4_1" resname="msg_1_4_1" approved="yes">
+				<source>Attempt to move record '%s' (%s) to after a non-existing record (uid=%s)</source>
+				<target state="translated">试图将记录'%s'（%s）移至一个不存在的记录（uid=%s）后</target>
+			</trans-unit>
+			<trans-unit id="msg_1_4_10" resname="msg_1_4_10" approved="yes">
+				<source>Attempt to move page '%s' (%s) to inside of its own rootline (at page '%s' (%s))</source>
+				<target state="translated">试图移动页面 '%s'（%s）至自己的内部（在页面'％s'（%s））</target>
+			</trans-unit>
+			<trans-unit id="msg_1_4_11" resname="msg_1_4_11" approved="yes">
+				<source>Attempt to insert record on page '%s' (%s) where this table, %s, is not allowed</source>
+				<target state="translated">试图在页面'%s'（%s）插入不被允许的数据表%s的记录</target>
+			</trans-unit>
+			<trans-unit id="msg_1_4_12" resname="msg_1_4_12" approved="yes">
+				<source>Attempt to insert a record on page '%s' (%s) from table '%s' without permissions. Or non-existing page.</source>
+				<target state="translated">试图在没有权限的情况下在页面'%s'（%s）插入数据表'%s'的记录。或者不存在的页面。</target>
+			</trans-unit>
+			<trans-unit id="msg_1_4_13" resname="msg_1_4_13" approved="yes">
+				<source>Attempt to move record '%s' (%s) to after another record, although the table has no sorting row.</source>
+				<target state="translated">试图移动记录'%s'（%s）至另一记录的后面，尽管数据表没有排序列</target>
+			</trans-unit>
+			<trans-unit id="msg_1_4_14" resname="msg_1_4_14" approved="yes">
+				<source>Attempt to move record '%s' (%s) without having permissions to do so</source>
+				<target state="translated">试图在没有权限进行此操作的情况下移动记录'%s'（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_4_2" resname="msg_1_4_2" approved="yes">
+				<source>Moved record '%s' (%s) to page '%s' (%s)</source>
+				<target state="translated">移动记录'%s'（%s）至页面'%s'（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_4_3" resname="msg_1_4_3" approved="yes">
+				<source>Moved record '%s' (%s) from page '%s' (%s)</source>
+				<target state="translated">移动记录'%s'（%s）从页面'%s'（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_4_4" resname="msg_1_4_4" approved="yes">
+				<source>Moved record '%s' (%s) on page '%s' (%s)</source>
+				<target state="translated">移动记录 '%s'（%s）在页面 '%s'（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_5_1" resname="msg_1_5_1" approved="yes">
+				<source>You cannot change the 'doktype' of page '%s' to the desired value.</source>
+				<target state="translated">你不能修改页面'%s'的'doktype'为所需值。</target>
+			</trans-unit>
+			<trans-unit id="msg_1_5_10" resname="msg_1_5_10" approved="yes">
+				<source>Could not delete file '%s' (does not exist). (%s)</source>
+				<target state="translated">无法删除文件'%s'（不存在）。（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_5_11" resname="msg_1_5_11" approved="yes">
+				<source>Copying file '%s' failed!: No destination file (%s) possible!. (%s)</source>
+				<target state="translated">复制文件'%s'失败！可能无目标文件（%s）！。（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_5_12" resname="msg_1_5_12" approved="yes">
+				<source>File extension '%s' is not allowed. (%s)</source>
+				<target state="translated">文件扩展名'%s'不被允许。（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_5_13" resname="msg_1_5_13" approved="yes">
+				<source>File size (%s) of file '%s' exceeds limit (%s). (%s)</source>
+				<target state="translated">文件大小（%s，文件'%s'），超出限制（%s）。（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_5_14" resname="msg_1_5_14" approved="yes">
+				<source>The destination (%s) or the source file (%s) does not exist. (%s)</source>
+				<target state="translated">目标（%s）或源文件（%s）不存在。（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_5_15" resname="msg_1_5_15" approved="yes">
+				<source>Copying to file '%s' failed! (%s)</source>
+				<target state="translated">复制到文件'%s'失败！（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_5_16" resname="msg_1_5_16" approved="yes">
+				<source>Copying file '%s' failed!: The destination path (%s) may be write protected. Please make it write enabled!. (%s)</source>
+				<target state="translated">复制文件'%s'失败！：目标路径可能被写保护。请使其可写！。（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_1_5_2" resname="msg_1_5_2" approved="yes">
+				<source>'doktype' of page '%s' could not be changed because the page contains records from disallowed tables; %s</source>
+				<target state="translated">页面'%s'的'doktype'无法被修改，因为此页面含有不被允许的数据表的记录；%s</target>
+			</trans-unit>
+			<trans-unit id="msg_1_5_3" resname="msg_1_5_3" approved="yes">
+				<source>Too few items in the list of values. (%s)</source>
+				<target state="translated">值列表中的的项目太少。（%s）</target>
+			</trans-unit>
+			<trans-unit id="msg_2_9_1" resname="msg_2_9_1" approved="yes">
+				<source>File saved to '%s', bytes: %s, MD5: %s </source>
+				<target state="translated">文件保存至'%s'，字节：%s，MD5：%s</target>
+			</trans-unit>
+			<trans-unit id="noLimit" resname="noLimit" approved="yes">
+				<source>No limit</source>
+				<target state="translated">无限制</target>
+			</trans-unit>
+			<trans-unit id="overview" resname="overview" approved="yes">
+				<source>Overview</source>
+				<target state="translated">概述</target>
+			</trans-unit>
+			<trans-unit id="pagenameWithUID" resname="pagenameWithUID" approved="yes">
+				<source>%s" [UID: %s]</source>
+				<target state="translated">%s" [UID：%s]</target>
+			</trans-unit>
+			<trans-unit id="self" resname="self" approved="yes">
+				<source>Self</source>
+				<target state="translated">自己</target>
+			</trans-unit>
+			<trans-unit id="set" resname="set" approved="yes">
+				<source>Set</source>
+				<target state="translated">设置</target>
+			</trans-unit>
+			<trans-unit id="showHistory" resname="showHistory" approved="yes">
+				<source>Show History</source>
+				<target state="translated">显示历史</target>
+			</trans-unit>
+			<trans-unit id="systemmessage.errorsInPeriod" resname="systemmessage.errorsInPeriod" approved="yes">
+				<source>We have found %1$d errors. Please check your &lt;a href="%2$s"&gt;system log&lt;/a&gt;.</source>
+				<target state="translated">我们发现%1$d个错误。请检查您的&lt;a href="%2$s"&gt;系统日志&lt;/a&gt;。</target>
+			</trans-unit>
+			<trans-unit id="thisMonth" resname="thisMonth" approved="yes">
+				<source>This month</source>
+				<target state="translated">本月</target>
+			</trans-unit>
+			<trans-unit id="thisWeek" resname="thisWeek" approved="yes">
+				<source>This week</source>
+				<target state="translated">本周</target>
+			</trans-unit>
+			<trans-unit id="time" resname="time" approved="no">
+				<source>Time</source>
+				<target state="needs-translation">时间：</target>
+			</trans-unit>
+			<trans-unit id="timeInfo" resname="timeInfo" approved="yes">
+				<source>These pages have log messages from %s to %s</source>
+				<target state="translated">这些页面拥有从%s至%s的日志信息</target>
+			</trans-unit>
+			<trans-unit id="type_1" resname="type_1" approved="yes">
+				<source>DB</source>
+				<target state="translated">数据库</target>
+			</trans-unit>
+			<trans-unit id="type_2" resname="type_2" approved="yes">
+				<source>FILE</source>
+				<target state="translated">文件</target>
+			</trans-unit>
+			<trans-unit id="type_254" resname="type_254" approved="yes">
+				<source>SETTING</source>
+				<target state="translated">设置</target>
+			</trans-unit>
+			<trans-unit id="type_255" resname="type_255" approved="yes">
+				<source>LOGIN</source>
+				<target state="translated">登录</target>
+			</trans-unit>
+			<trans-unit id="type_3" resname="type_3" approved="yes">
+				<source>CACHE</source>
+				<target state="translated">缓存</target>
+			</trans-unit>
+			<trans-unit id="type_4" resname="type_4" approved="yes">
+				<source>EXTENSION</source>
+				<target state="translated">扩展</target>
+			</trans-unit>
+			<trans-unit id="type_5" resname="type_5" approved="yes">
+				<source>ERROR</source>
+				<target state="translated">错误</target>
+			</trans-unit>
+			<trans-unit id="user" resname="user" approved="no">
+				<source>User</source>
+				<target state="needs-translation">用户：</target>
+			</trans-unit>
+			<trans-unit id="userDefined" resname="userDefined" approved="yes">
+				<source>User defined</source>
+				<target state="translated">用户自定义</target>
+			</trans-unit>
+			<trans-unit id="userGroup" resname="userGroup" approved="no">
+				<source>Group</source>
+				<target state="needs-translation">组：</target>
+			</trans-unit>
+			<trans-unit id="users" resname="users" approved="no">
+				<source>Users</source>
+				<target state="needs-translation">用户：</target>
+			</trans-unit>
+			<trans-unit id="viaUser" resname="viaUser" approved="yes">
+				<source>via</source>
+				<target state="translated">由</target>
+			</trans-unit>
+			<trans-unit id="workspace" resname="workspace" approved="no">
+				<source>Workspace</source>
+				<target state="needs-translation">工作区：</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-12T16:28:53Z" product-name="erp_management_product">
+		<header/>
+		<body>
+			<trans-unit id="numbering.description">
+				<source>编号</source>
+			</trans-unit>
+			<trans-unit id="name.description">
+				<source>名称</source>
+			</trans-unit>
+			<trans-unit id="business.description">
+				<source>商品主页</source>
+			</trans-unit>
+			<trans-unit id="original.description">
+				<source>原始规格</source>
+			</trans-unit>
+			<trans-unit id="imageuids.description">
+				<source>图片id</source>
+			</trans-unit>
+			<trans-unit id="category.description">
+				<source>产品分类</source>
+			</trans-unit>
+			<trans-unit id="approval.description">
+				<source>审核状态</source>
+			</trans-unit>
+			<trans-unit id="shelves.description">
+				<source>上架状态</source>
+			</trans-unit>
+			<trans-unit id="gtypes.description">
+				<source>商品获取类型</source>
+			</trans-unit>
+			<trans-unit id="info.description">
+				<source>产品信息</source>
+			</trans-unit>
+			<trans-unit id="cost.description">
+				<source>成本运费</source>
+			</trans-unit>
+			<trans-unit id="descr.description">
+				<source>产品介绍</source>
+			</trans-unit>
+			<trans-unit id="variants.description">
+				<source>规格变体</source>
+			</trans-unit>
+			<trans-unit id="images.description">
+				<source>图片</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

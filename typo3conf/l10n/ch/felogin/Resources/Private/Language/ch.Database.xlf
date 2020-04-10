@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2020-02-16T02:19:20Z" product-name="felogin">
+		<header/>
+		<body>
+			<trans-unit id="felogin_forgotHash" resname="felogin_forgotHash">
+				<source>Forgot hash</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="felogin_redirectPid" resname="felogin_redirectPid">
+				<source>Redirect at Login to Page (felogin)</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>登录时跳转到页面</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>重新定向到登陆页面(felogin)</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.CType_pi1" resname="tt_content.CType_pi1">
+				<source>Website User Login</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>用户登录</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>网站用户登录</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.error_header" resname="tt_content.pi_flexform.error_header">
+				<source>Login Error Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>登录错误标题</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>登录错误页眉</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.error_message" resname="tt_content.pi_flexform.error_message">
+				<source>Login Error Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>登录错我消息：</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>登录错误信息</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.field_manualOrder" resname="tt_content.pi_flexform.field_manualOrder">
+				<source>Using fieldlists below:</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>使用字段列表如下：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.field_orderDetails" resname="tt_content.pi_flexform.field_orderDetails">
+				<source>User Fields/details:</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>用户字段/详细：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.field_orderList" resname="tt_content.pi_flexform.field_orderList">
+				<source>User Fields/list:</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>用户字段/列表：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.forgot_header" resname="tt_content.pi_flexform.forgot_header">
+				<source>Forgot Password Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>忘记密码标题：</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>忘记密码页眉</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.forgot_message" resname="tt_content.pi_flexform.forgot_message">
+				<source>Forgot Password Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>忘记密码信息</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>忘记密码消息：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.general_header" resname="tt_content.pi_flexform.general_header">
+				<source>General Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>通用头：</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>普通页眉</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.general_message" resname="tt_content.pi_flexform.general_message">
+				<source>General Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>通用消息：</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>普通信息</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelection" resname="tt_content.pi_flexform.groupSelection">
+				<source>FE group selection:</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>前台用户组选择：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelection_noGroup" resname="tt_content.pi_flexform.groupSelection_noGroup">
+				<source>no group</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>没有用户组</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelectmode" resname="tt_content.pi_flexform.groupSelectmode">
+				<source>FE group select mode:</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>前台用户组选择模式：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelectmode_DontShowSelected" resname="tt_content.pi_flexform.groupSelectmode_DontShowSelected">
+				<source>Don't show selected</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>不显示已选择项</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelectmode_FromTS" resname="tt_content.pi_flexform.groupSelectmode_FromTS">
+				<source>(from Typoscript)</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>（从Typoscript）</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelectmode_showAll" resname="tt_content.pi_flexform.groupSelectmode_showAll">
+				<source>Show all</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>显示全部</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.groupSelectmode_showSelected" resname="tt_content.pi_flexform.groupSelectmode_showSelected">
+				<source>Show selected</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>显示已选择项</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.logout_header" resname="tt_content.pi_flexform.logout_header">
+				<source>Logout Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>退出标题：</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>退出页眉</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.logout_message" resname="tt_content.pi_flexform.logout_message">
+				<source>Logout Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>退出信息</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>退出消息：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectDisable" resname="tt_content.pi_flexform.redirectDisable">
+				<source>Disable Redirect</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>禁止转向</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectFirstMethod" resname="tt_content.pi_flexform.redirectFirstMethod">
+				<source>Use First Supported Mode from Selection</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>使用第一个选择的支持模式</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirect_header" resname="tt_content.pi_flexform.redirect_header">
+				<source>Redirect Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>重定向页眉</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>跳转标题：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirect_message" resname="tt_content.pi_flexform.redirect_message">
+				<source>Redirect Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>重定向消息</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>跳转消息：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode" resname="tt_content.pi_flexform.redirectMode">
+				<source>Redirect Mode</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>转发模式</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.0" resname="tt_content.pi_flexform.redirectMode.I.0">
+				<source>Defined by Usergroup Record</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>按照用户组设置</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.1" resname="tt_content.pi_flexform.redirectMode.I.1">
+				<source>Defined by User Record</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>按用户记录设置</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.2" resname="tt_content.pi_flexform.redirectMode.I.2">
+				<source>After Login (TS or Flexform)</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>登陆后(TS or Flexform)</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.3" resname="tt_content.pi_flexform.redirectMode.I.3">
+				<source>After Logout (TS or Flexform)</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>退出后(TS or Flexform)</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.4" resname="tt_content.pi_flexform.redirectMode.I.4">
+				<source>After Login Error (TS or Flexform)</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>登陆错误后(TS or Flexform)</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.5" resname="tt_content.pi_flexform.redirectMode.I.5">
+				<source>Defined by GET/POST Parameters</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>按照GET/POST参数</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.6" resname="tt_content.pi_flexform.redirectMode.I.6">
+				<source>Defined by Referrer</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>按照来源定义</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectMode.I.7" resname="tt_content.pi_flexform.redirectMode.I.7">
+				<source>Defined by Domain Entries</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>按照域名记录定义</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectPageLogin" resname="tt_content.pi_flexform.redirectPageLogin">
+				<source>After Successful Login Redirect to Page</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>成功登录转向页面：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectPageLoginError" resname="tt_content.pi_flexform.redirectPageLoginError">
+				<source>After Failed Login Redirect to Page</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>登录错误后转向页面：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.redirectPageLogout" resname="tt_content.pi_flexform.redirectPageLogout">
+				<source>After Logout Redirect to Page</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>注销后转向到页面：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sheet_general" resname="tt_content.pi_flexform.sheet_general">
+				<source>General</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>全局</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>普通</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sheet_messages" resname="tt_content.pi_flexform.sheet_messages">
+				<source>Messages</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>消息</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.sheet_redirect" resname="tt_content.pi_flexform.sheet_redirect">
+				<source>Redirects</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>跳转选项</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>重定向</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.show_forgot_password" resname="tt_content.pi_flexform.show_forgot_password">
+				<source>Display Password Recovery Link</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>显示“忘记密码？”链接：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.show_logoutFormAfterLogin" resname="tt_content.pi_flexform.show_logoutFormAfterLogin">
+				<source>Disable redirect after successful login, but display logout-form</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>显示退出，在成功登陆后</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.show_permalogin" resname="tt_content.pi_flexform.show_permalogin">
+				<source>Display Remember Login Option</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>显示记住登录选项</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.status_header" resname="tt_content.pi_flexform.status_header">
+				<source>Status Display Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>状态显示页眉</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>状态显示标题：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.status_message" resname="tt_content.pi_flexform.status_message">
+				<source>Status Display Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>状态显示信息</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>状态现实消息：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.success_header" resname="tt_content.pi_flexform.success_header">
+				<source>Login Success Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>登录成功页眉</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>登录成功标题：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.success_message" resname="tt_content.pi_flexform.success_message">
+				<source>Login Success Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>登录成功消息：</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>登录成功消息</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.template_file" resname="tt_content.pi_flexform.template_file">
+				<source>Template File</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>模板文件</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.user_storage" resname="tt_content.pi_flexform.user_storage">
+				<source>User Storage Page</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>用户存储页面</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.welcome_header" resname="tt_content.pi_flexform.welcome_header">
+				<source>Welcome Header</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>欢迎页眉</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>欢迎标题：</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.welcome_message" resname="tt_content.pi_flexform.welcome_message">
+				<source>Welcome Message</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="zjhong">
+					<target>欢迎消息：</target>
+				</alt-trans>
+				<alt-trans xml:space="preserve" origin="thinkone">
+					<target>欢迎消息</target>
+				</alt-trans>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

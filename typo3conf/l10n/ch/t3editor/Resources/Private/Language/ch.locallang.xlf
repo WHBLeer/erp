@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2020-02-16T07:27:30Z" product-name="t3editor">
+		<header/>
+		<body>
+			<trans-unit id="constants" resname="constants">
+				<source>Constants</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>常数</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="deactivate" resname="deactivate">
+				<source>Deactivate t3editor</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>关闭T3编辑器</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="delimiter" resname="delimiter">
+				<source/>
+			</trans-unit>
+			<trans-unit id="file" resname="file">
+				<source>File</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>文件</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="js.label_documentModified" resname="js.label_documentModified">
+				<source>document has been modified</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>文档已修改</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="js.label_errorWhileSaving" resname="js.label_errorWhileSaving">
+				<source>An error occurred while saving the data.</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>保存数据时发生错误</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="js.label_lines" resname="js.label_lines">
+				<source>lines</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>行</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="noPermission" resname="noPermission">
+				<source>Access denied: No permission to template records.</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>访问拒绝：无权访问模板记录</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="pageIDInteger" resname="pageIDInteger">
+				<source>Syntax error: Parameter pageID must be a valid integer.</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>语法错误：页面ID参数必须是整数值</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="setup" resname="setup">
+				<source>Setup</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>配置</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="template" resname="template">
+				<source>Template</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>模板</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="typeIDMissing" resname="typeIDMissing">
+				<source>Syntax error: At least parameter typeID has to be supplied.</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>语法错误：最少需提供一个类型ID</target>
+				</alt-trans>
+			</trans-unit>
+			<trans-unit id="unknownContentType" resname="unknownContentType">
+				<source>Unknown content type</source>
+				<target/>
+				<alt-trans xml:space="preserve" origin="stonys">
+					<target>未知内容类型</target>
+				</alt-trans>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

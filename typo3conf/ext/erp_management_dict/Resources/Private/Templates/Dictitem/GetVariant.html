@@ -1,0 +1,188 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+<f:layout name="Api" />
+<f:section name="content">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm">
+							<div class="form-group">	
+								<label class="col-sm-3 control-label">变体名称:</label>
+								<div class="col-sm-8">
+									<select id="pvaId" name="pvaId" class="form-control chosen-select" tabindex="2" >
+										<option value="4" >Color</option>
+										<option value="5" >Size</option>
+									</select>
+								</div>
+                            </div>
+                            <div class="form-group">	
+								<label class="col-sm-3 control-label">变体值:(多个值用逗号隔开如:red,white,black)</label>
+								<div class="col-sm-8">
+									<input id="pvNamehid" class="form-control" type="hidden">
+									<textarea id="pvName" name="pvName"  class="form-control" ></textarea>
+								</div>
+							</div>
+							<div class="form-group" id="vatypeDiv">	
+								<!-- <div class="col-sm-10" style="margin-left: 125px;" >
+									
+								</div> -->
+                            </div>
+                            <div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+								<button type="button" class="btn btn-default" id="bt_sku_translate" style="float:left;">翻译</button>
+									<button type="submit" class="btn btn-primary" onclick="save();" style="float:right;">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	    </div>
+	</div>
+	<script type="text/javascript">
+
+		$().ready(function() {
+            getVatype();
+            $("#pvaId").on("change",function(){
+                $("#pvName").val("");
+                $.ajax({
+                    type : "POST",
+                    url : '/api/getproduct',
+                    data : {
+                        cmd:"getVariant",
+                        pvaId:$("#pvaId option:selected").val()
+                    },
+                    async : false,
+                    success : function(data) {
+                        var str="<label class='col-sm-3 control-label'>推荐:</label><div class='col-sm-9'>";
+                        for (var i = 0; i < data.length; i++) {
+                            str+="<label onclick='clickValue(this)' style='margin-right: 15px;border-radius:5px;margin-bottom: 15px;border: 1px solid #ccc;padding: 8px 6px 6px 6px;' value='"+data[i].code+"'>"+data[i].name+"</label>"
+                        }
+                        str+="</div>";
+                        $("#vatypeDiv").html(str);
+                    }
+                });
+            })
+        });
+
+        $("#bt_sku_translate").click(function(){
+            $.ajax({
+                type : "POST",
+                url : "/api/translate",
+                data:{
+                    cmd:'translate_item',
+                    query:$("#pvName").val().replace(/，/ig,','),
+                },
+                success : function(data) {
+                    // console.log(data);
+                    $("#pvName").val(data.text.en);
+                }
+            })
+        })
+        //变体推荐
+        var pvText="";
+        function clickValue(obj){
+            pvText=$("#pvName").val();
+            var objV=$(obj);
+            
+            var pvArry=pvText.split(",");
+            var obval="";
+            for (var i = 0; i < pvArry.length; i++) {
+                if(pvArry[i]==objV.attr("value")){
+                    obval="";
+                    break;
+                }else{
+                    obval=objV.attr("value");
+                }
+            }
+            pvText+=","+obval;
+            if(pvText.substr(pvText.length-1,1)==","){
+                pvText=pvText.substring(0,pvText.length-1);
+            }
+            if(pvText.substring(0,1)==","){
+                pvText=pvText.substring(1);
+            }
+            $("#pvName").val(pvText);
+        }
+
+        function getVatype(){
+            $.ajax({
+                type : "POST",
+                url : '/api/getproduct',
+                data : {
+                    cmd:"getVariant",
+                    pvaId:$("#pvaId").val()
+                },
+                async : false,
+                success : function(data) {
+                    var str="<label class='col-sm-3 control-label'>推荐:</label><div class='col-sm-9'>";
+                    for (var i = 0; i < data.length; i++) {
+                        str+="<label onclick='clickValue(this)' style='margin-right: 15px;border-radius:5px;margin-bottom: 15px;border: 1px solid #ccc;padding: 8px 6px 6px 6px;' value='"+data[i].code+"'>"+data[i].name+"</label>"
+                    }
+                    str+="</div>";
+                    $("#vatypeDiv").html(str);
+                }
+            });
+        }
+
+
+        //添加所有变体/变体值
+        function save() {
+            // parent.layer.msg("操作成功");
+            var index =parent.layer.getFrameIndex(window.name); // 获取窗口索引
+            console.log(index);
+            parent.layer.close(index);
+            var flag=false;
+            var options=$("#pvaId option:selected");//获取当前选择项.
+            //当前选项显示
+            var $pvaId=options.text();
+            //当前选项值
+            var $pvaIdId=options.val();
+            parent.$("#valueli li[data]").each(function(){
+                if($(this).attr("data")==$pvaId){
+                    flag=true;
+                    var $pvName=$("#pvName").val();
+                    var names=$pvName.split(",");
+                    var str1="";
+                    var names2=new Array();
+                    for (var i = 0; i < names.length; i++) {
+                        var minxNames=names[i].split("，");
+                        names2=names2.concat(minxNames);
+                    }
+                    for (var int = 0; int < names2.length; int++) {
+                        str1+="<li onclick='chooseColor(this)'>"+names2[int]+"</li>";
+                    }
+                    $(this).children().eq(1).append(str1);
+                    return false;
+                }
+            })
+            if(!flag){
+                var str2="<li><span class='sku_text' data='"+$pvaIdId+"' onclick='updateV(this)'>"+$pvaId+"</span><span class='close bt_del_skutype' onclick='removeMyself(this)'>x</span></li>";
+                parent.$("#sku").append(str2);
+                var $pvName=$("#pvName").val();
+                var str="<li iddata='"+$pvaIdId+"' data='"+$pvaId+"'><span>"+$pvaId+': </span><ul>'
+                var names=$pvName.split(",");
+                var names2=new Array();
+                for (var i = 0; i < names.length; i++) {
+                    var minxNames=names[i].split("，");
+                    names2=names2.concat(minxNames);
+                }
+                for (var int = 0; int < names2.length; int++) {
+                    str+="<li onclick='chooseColor(this)'>"+names2[int]+"</li>";
+                }
+                str+="</ul></li>";
+                parent.$("#valueli").append(str);
+            }
+            var array=new Array();
+            array[0]="";
+            parent.diedai(0,array);
+        }
+
+	</script>
+
+	<div class="layui-layer-move"></div>
+</f:section>
+
+</html>

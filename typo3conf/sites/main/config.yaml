@@ -1,0 +1,33 @@
+base: /
+baseVariants: {  }
+errorHandling:
+  -
+    errorCode: '404'
+    errorHandler: Page
+    errorContentSource: /404.html
+  -
+    errorCode: '500'
+    errorHandler: Page
+    errorContentSource: /500.html
+languages:
+  -
+    title: 中文
+    enabled: true
+    languageId: '0'
+    base: /
+    typo3Language: ch
+    locale: zh_CH.UTF-8
+    iso-639-1: zh
+    navigationTitle: 中文
+    hreflang: zh-ch
+    direction: ltr
+    flag: cn
+rootPageId: 1
+routes: {  }
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    # efault: .html
+    map:
+      .html: 0
+disableStaticFileCache: false

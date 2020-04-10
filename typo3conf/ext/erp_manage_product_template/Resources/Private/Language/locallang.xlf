@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-04-06T18:36:34Z" product-name="erp_manage_product_template">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanageproducttemplate_domain_model_template">
+				<source>Template</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanageproducttemplate_domain_model_template.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanageproducttemplate_domain_model_template.name_en">
+				<source>Name En</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanageproducttemplate_domain_model_template.code">
+				<source>Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanageproducttemplate_domain_model_template.close">
+				<source>Close</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanageproducttemplate_domain_model_template.parent_id">
+				<source>Parent Id</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanageproducttemplate_domain_model_template.bodytext">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanageproducttemplate_domain_model_template.parent">
+				<source>Parent</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

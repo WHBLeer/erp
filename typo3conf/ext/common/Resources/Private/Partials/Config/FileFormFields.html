@@ -1,0 +1,93 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:form action="update" name="config" object="{config}" enctype="multipart/form-data">
+		<f:form.hidden name="label" value="file" />
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group">
+					<label>地址栏图标（.ico格式）</label>
+					<div class="card" style="height: 100px;background-color: #eee;">
+						<div class="card-body">
+							<a class="image-popup-vertical-fit" href="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.favicon}" title="icon">
+								<img class="img-fluid" alt="" src="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.favicon}" style="max-height: 80px;" onerror="javascript:this.src='{TYPO3_CONF_VARS.FTP.sever}static/default.png';">
+							</a>
+						</div>
+					</div>
+					<input type="file" class="filestyle" data-buttonname="btn-secondary" name="favicon" accept="image/x-icon">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label>图标logo（.svg格式）</label>
+					<div class="card" style="height: 100px;background-color: #eee;">
+						<div class="card-body">
+							<a class="image-popup-vertical-fit" href="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.logo_sm}" title="logo">
+								<img class="img-fluid" alt="" src="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.logo_sm}" style="max-height: 80px;" onerror="javascript:this.src='{TYPO3_CONF_VARS.FTP.sever}static/default.png';">
+							</a>
+						</div>
+					</div>
+					<input type="file" class="filestyle" data-buttonname="btn-secondary" name="logo_sm" accept="image/svg+xml">
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label>首页Logo（.svg格式）</label>
+					<div class="card" style="height: 100px;background-color: #eee;">
+						<div class="card-body">
+							<a class="image-popup-vertical-fit" href="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.logo}" title="logo">
+								<img class="img-fluid" alt="" src="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.logo}" style="max-height: 80px;" onerror="javascript:this.src='{TYPO3_CONF_VARS.FTP.sever}static/default.png';">
+							</a>
+						</div>
+					</div>
+					<input type="file" class="filestyle" data-buttonname="btn-secondary" name="logo" accept="image/svg+xml" />
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="logo">登录页Logo（.svg格式）</label>
+					<div class="card" style="height: 100px;background-color: #eee;">
+						<div class="card-body">
+							<a class="image-popup-vertical-fit" href="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.login_logo}" title="logo">
+								<img class="img-fluid" alt="" src="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.login_logo}" style="max-height: 80px;" onerror="javascript:this.src='{TYPO3_CONF_VARS.FTP.sever}static/default.png';">
+							</a>
+						</div>
+					</div>
+					<input type="file" class="filestyle" data-buttonname="btn-secondary" name="login_logo" accept="image/svg+xml" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="login_bg">后台登录背景（.jpg格式）</label>
+					<div class="card" style="height: 180px;">
+						<div class="card-body">
+							<a class="image-popup-vertical-fit" href="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.login_bg}"
+								title="background image file">
+								<img class="img-fluid" alt="" src="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.login_bg}" style="max-height: 160px;" onerror="javascript:this.src='{TYPO3_CONF_VARS.FTP.sever}static/default.png';">
+							</a>
+						</div>
+					</div>
+					<input type="file" class="filestyle" data-buttonname="btn-secondary" name="login_bg"
+						accept="image/jpeg,image/jpg,image/png" />
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="form-group">
+					<label for="banner_inner">内页Banner（.jpg格式）</label>
+					<div class="card" style="height: 180px;">
+						<div class="card-body">
+							<a class="image-popup-vertical-fit" href="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.banner_inner}"
+								title="inner banner file">
+								<img class="img-fluid" alt="" src="{TYPO3_CONF_VARS.FTP.sever}{TYPO3_CONF_VARS.FILE.banner_inner}" style="max-height: 160px;" onerror="javascript:this.src='{TYPO3_CONF_VARS.FTP.sever}static/default.png';">
+							</a>
+						</div>
+					</div>
+					<input type="file" class="filestyle" data-buttonname="btn-secondary" name="banner_inner"
+						accept="image/jpeg,image/jpg,image/png" />
+				</div>
+			</div>
+		</div>
+		<f:form.submit value="保存" class="btn btn-secondary" />
+	</f:form>
+
+</html>

@@ -1,0 +1,77 @@
+<T3DataStructure>
+	<meta><langDisable>1</langDisable></meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms><sheetTitle>基本配置</sheetTitle></TCEforms>
+				<type>array</type>
+				<el>
+					<!-- View -->
+					<switchableControllerActions>
+						<TCEforms>
+							<label>加载模块</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">用户管理</numIndex>
+										<numIndex index="1">UserManagement-&gt;list;UserManagement-&gt;show;UserManagement-&gt;new;UserManagement-&gt;create;UserManagement-&gt;edit;UserManagement-&gt;update;UserManagement-&gt;delete;UserManagement-&gt;check;UserManagement-&gt;ajaxdata</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">用户注册</numIndex>
+										<numIndex index="1">UserManagement-&gt;register</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">修改密码</numIndex>
+										<numIndex index="1">UserManagement-&gt;changepwd</numIndex>
+									</numIndex>
+								</items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+							</config>
+						</TCEforms>
+					</switchableControllerActions> 
+					<settings.previewPid>
+						<TCEforms>
+							<label>预览页面</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.previewPid>
+					<persistence.storagePid>
+						<TCEforms>
+							<label>数据存储</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>0</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</persistence.storagePid>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

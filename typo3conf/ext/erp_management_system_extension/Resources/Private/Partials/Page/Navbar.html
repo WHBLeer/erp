@@ -1,0 +1,24 @@
+ <!-- ========== Left Sidebar Start ========== -->
+ <div class="left side-menu">
+    <div class="slimscroll-menu" id="remove-scroll">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <f:cObject typoscriptObjectPath="lib.navigation.main" />
+            <script>
+                $("ul.submenu").each(function () {
+                    var prev = $(this).prev('a.waves-effect').attr('href','javascript:void(0);');
+                    var act = $(this).find('a.mm-active').length;
+                    if (act > 0) $(this).addClass('mm-show');
+                });
+            </script>
+        </div>
+        <!-- Sidebar -->
+        <div class="clearfix"></div>
+
+    </div>
+    <!-- Sidebar -left -->
+
+</div>
+<!-- Left Sidebar End -->

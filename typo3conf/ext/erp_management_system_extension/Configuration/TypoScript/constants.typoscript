@@ -1,0 +1,85 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:erp_management_system_extension/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:erp_management_system_extension/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:erp_management_system_extension/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:erp_management_system_extension/Resources/Public/Img/logo.svg
+        height =
+        width =
+    }
+    
+    fluidtemplate {
+        layoutRootPath = EXT:erp_management_system_extension/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:erp_management_system_extension/Resources/Private/Partials/Page/
+        templateRootPath = EXT:erp_management_system_extension/Resources/Private/Templates/Page/
+    }
+    
+	includePath {
+        layout = EXT:erp_management_system_extension/Resources/Public/Layout/
+        auth = EXT:erp_management_system_extension/Resources/Public/Login/
+        main = EXT:erp_management_system_extension/Resources/Public/Main/
+        plugins = EXT:erp_management_system_extension/Resources/Public/Plugins/
+        api = EXT:erp_management_system_extension/Resources/Public/Api/
+    }
+    theme {
+        copyright {
+            enable = 1
+            text = SanLiLin
+        }
+    }
+    meta { 
+        description = SanLiLin General Business Backend Package
+        author = SanLiLin
+        keywords = SanLiLin General Business Backend Package
+        viewport = width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+    }
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
+    }
+}
+
+
+##############
+### CONFIG ###
+##############
+config {
+    baseURL = http://erp.whongbin.com/
+    ftpBaseUrl = http://ftp.whongbin.cn/
+    no_cache = 1
+    removeDefaultJS = 1
+    admPanel = 0
+    prefixLocalAnchors = all
+    headerComment = build by whongbin.cn
+    sendCacheHeaders = 1
+    // Disable Image Upscaling
+    noScaleUp = 1
+    // Compression and Concatenation of CSS and JS Files
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
+}

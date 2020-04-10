@@ -1,0 +1,21 @@
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
+        subclasses {
+          Tx_ErpManagementUser_UserManagement = ERP\ErpManagementUser\Domain\Model\UserManagement
+          
+        }
+      }
+      ERP\ErpManagementUser\Domain\Model\UserManagement {
+        mapping {
+          tableName = fe_users
+          recordType = Tx_ErpManagementUser_UserManagement
+        }
+      }
+
+    }
+  }
+}

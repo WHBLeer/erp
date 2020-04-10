@@ -1,0 +1,101 @@
+<T3DataStructure>
+	<meta><langDisable>1</langDisable></meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms><sheetTitle>基本配置</sheetTitle></TCEforms>
+				<type>array</type>
+				<el>
+					<!-- View -->
+					<switchableControllerActions>
+						<TCEforms>
+							<label>加载模块</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">产品中心</numIndex>
+										<numIndex index="1">Product-&gt;listZX;Product-&gt;show;Product-&gt;new;Product-&gt;create;Product-&gt;edit;Product-&gt;update;Product-&gt;delete;Product-&gt;ajax;Product-&gt;batch</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">产品采集</numIndex>
+										<numIndex index="1">Product-&gt;listCJ;Product-&gt;show;Product-&gt;new;Product-&gt;create;Product-&gt;edit;Product-&gt;update;Product-&gt;delete;Product-&gt;ajax;Product-&gt;batch</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">产品上传</numIndex>
+										<numIndex index="1">Product-&gt;listSC;Product-&gt;show;Product-&gt;new;Product-&gt;create;Product-&gt;edit;Product-&gt;update;Product-&gt;delete;Product-&gt;ajax;Product-&gt;batch</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">产品回收</numIndex>
+										<numIndex index="1">Product-&gt;listHS;Product-&gt;show;Product-&gt;new;Product-&gt;create;Product-&gt;edit;Product-&gt;update;Product-&gt;delete;Product-&gt;ajax;Product-&gt;batch</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">自营产品</numIndex>
+										<numIndex index="1">Product-&gt;listZY;Product-&gt;show;Product-&gt;new;Product-&gt;create;Product-&gt;edit;Product-&gt;update;Product-&gt;delete;Product-&gt;ajax;Product-&gt;batch</numIndex>
+									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">热销产品</numIndex>
+										<numIndex index="1">Product-&gt;listRX;Product-&gt;show;Product-&gt;new;Product-&gt;create;Product-&gt;edit;Product-&gt;update;Product-&gt;delete;Product-&gt;ajax;Product-&gt;batch</numIndex>
+									</numIndex>
+									<numIndex index="6">
+										<numIndex index="0">产品详情</numIndex>
+										<numIndex index="1">Product-&gt;show;Product-&gt;ajax;Product-&gt;batch</numIndex>
+									</numIndex>
+									<numIndex index="7">
+										<numIndex index="0">翻译API</numIndex>
+										<numIndex index="1">Product-&gt;translate</numIndex>
+									</numIndex>
+									<numIndex index="8">
+										<numIndex index="0">产品API</numIndex>
+										<numIndex index="1">Product-&gt;ajax</numIndex>
+									</numIndex>
+								</items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+							</config>
+						</TCEforms>
+					</switchableControllerActions> 
+					<settings.previewPid>
+						<TCEforms>
+							<label>预览页面</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.previewPid>
+					<persistence.storagePid>
+						<TCEforms>
+							<label>数据存储</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>0</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</persistence.storagePid>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-04T09:37:09Z" product-name="erp_management_collection">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementcollection_domain_model_collection">
+				<source>Collection</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_collection_pi1.name">
+				<source>采集模块</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_collection_pi1.description">
+				<source>采集模块</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2015-11-15T02:48:49Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="module.title" approved="yes">
+			<source>StaticFileCache</source>
+			<target>静态文件缓存</target> 
+		</trans-unit>
+		<trans-unit id="module.intro.current" approved="yes">
+			<source>This module displays the cache entries and errors of the current page.</source>
+			<target>此模块显示当前页面的缓存条目和错误。</target> 
+		</trans-unit>
+		<trans-unit id="module.intro.childs" approved="yes">
+			<source>This module displays the cache entries and errors of all direct child pages.</source>
+			<target>此模块显示所有直接子页面的缓存条目和错误。</target> 
+		</trans-unit>
+		<trans-unit id="module.intro.both" approved="yes">
+			<source>This module displays the cache entries and errors of the current and all direct child pages.</source>
+			<target>此模块显示当前和所有直接子页面的缓存条目和错误。</target> 
+		</trans-unit>
+		<trans-unit id="staticfilecache.tx_staticfilecache_cache" approved="yes">
+			<source>Cache page as static file</source>
+			<target>缓存页面为静态文件</target> 
+		</trans-unit>
+		<trans-unit id="staticfilecache.tx_staticfilecache_cache_force"> approved="yes"
+			<source>Force the static cache generation (!!!)</source>
+			<target>强制静态缓存生成（!!!）</target> 
+		</trans-unit>
+		<trans-unit id="staticfilecache.tx_staticfilecache_cache_priority"> approved="yes"
+			<source>Cache priority (high => important)</source>
+			<target>缓存优先级（高=>重要）</target> 
+		</trans-unit>
+		<trans-unit id="staticfilecache.tx_staticfilecache_cache_offline" approved="yes">
+			<source>Cache offline (Manifest) - only if page is cached staticly</source>
+			<target>脱机缓存（Manifest） - 仅当页面静态缓存时</target> 
+		</trans-unit>
+		<trans-unit id="moduleFunction.tx_staticfilecache_infomodule" approved="yes">
+			<source>StaticFileCache</source>
+			<target>静态文件缓存</target> 
+		</trans-unit>
+		<trans-unit id="staticfilecache_task_removeExpiredPages.name" approved="yes">
+			<source>Remove expired pages</source>
+			<target>删除过期的页面</target> 
+		</trans-unit>
+		<trans-unit id="staticfilecache_task_removeExpiredPages.description" approved="yes">
+			<source>All expired pages will be removed from the cache.</source>
+			<target>所有过期的页面都将从缓存中删除。</target> 
+		</trans-unit>
+		<trans-unit id="entriesEmpty" approved="yes">
+			<source>No entries on this level of the page tree.</source>
+			<target>页面树的此级别上没有条目。</target> 
+		</trans-unit>
+		<trans-unit id="removeAllExpired" approved="yes">
+			<source>Remove all expired pages</source>
+			<target>删除所有过期的页面</target> 
+		</trans-unit>
+		<trans-unit id="refresh" approved="yes">
+			<source>Refresh</source>
+			<target>刷新</target> 
+		</trans-unit>
+		<trans-unit id="page" approved="yes">
+			<source>Page</source>
+			<target>页</target> 
+		</trans-unit>
+		<trans-unit id="identifier" approved="yes">
+			<source>Identifier</source>
+			<target>识别码</target> 
+		</trans-unit>
+		<trans-unit id="created" approved="yes">
+			<source>Created</source>
+			<target>创建</target> 
+		</trans-unit>
+		<trans-unit id="expires" approved="yes">
+			<source>Expires</source>
+			<target>过期</target> 
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

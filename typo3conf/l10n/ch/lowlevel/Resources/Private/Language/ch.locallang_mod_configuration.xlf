@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2020-02-16T05:44:36Z" product-name="lowlevel">
+		<header/>
+		<body>
+			<trans-unit id="mlang_labels_tabdescr" resname="mlang_labels_tabdescr" approved="no">
+				<source>Allows you to browse the values of the $TCA array (table configuration) and $TYPO3_CONF_VARS. You cannot set any values, only browse them.&lt;br /&gt;&lt;em&gt;Access for 'admin' users only!&lt;/em&gt;</source>
+				<target state="needs-translation">允许您浏览$TCA 数组（设置表格）及$TYPO3_CONF_VARS的值。 您不可设置任何值，只能浏览。 .&lt;br /&gt;&lt;em&gt;仅管理员可做此事！&lt;/em&gt;</target>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tablabel" resname="mlang_labels_tablabel" approved="yes">
+				<source>View configuration from localconf.php and tables.php</source>
+				<target state="translated">从localconf.php和tables.php浏览设置</target>
+			</trans-unit>
+			<trans-unit id="mlang_tabs_tab" resname="mlang_tabs_tab" approved="yes">
+				<source>Configuration</source>
+				<target state="translated">设置</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

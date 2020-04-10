@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:form action="update" name="config" object="{config}" enctype="multipart/form-data">
+		<f:form.hidden name="label" value="seo" />
+		<div class="row">
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="keywords">关键字(keywords)</label>
+					<input type="text" id="keywords" name="TYPO3_CONF_VARS[SEO][keywords]" value="{TYPO3_CONF_VARS.SEO.keywords}"
+						class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="author">作者(author)</label>
+					<input type="text" id="author" name="TYPO3_CONF_VARS[SEO][author]" value="{TYPO3_CONF_VARS.SEO.author}"
+						class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="description">描述(description)</label>
+					<textarea id="description" name="TYPO3_CONF_VARS[SEO][description]" class="form-control">{TYPO3_CONF_VARS.SEO.description}</textarea>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="baidukey">百度统计KEY</label>
+					<textarea id="baidukey" name="TYPO3_CONF_VARS[SEO][baidukey]" class="form-control" >{TYPO3_CONF_VARS.SEO.baidukey}</textarea>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="Promotion">推广代码</label>
+			<textarea id="Promotion" name="TYPO3_CONF_VARS[SEO][Promotion]" class="form-control" >{TYPO3_CONF_VARS.SEO.Promotion}</textarea>
+		</div>
+		<div class="well">
+			这是全局SEO设置，如果需要设置指定页面的SEO信息，请<a href="typo3/" title="登录">登录</a>总后台编辑页面属性SEO。
+		</div>
+		<f:form.submit value="保存" class="btn btn-secondary" />
+	</f:form>
+
+</html>

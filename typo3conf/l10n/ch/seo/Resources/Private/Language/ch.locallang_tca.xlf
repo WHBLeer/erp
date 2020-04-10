@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file t3:id="1528554340" source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2019-01-22T06:21:56Z" product-name="seo">
+		<header/>
+		<body>
+			<trans-unit id="pages.tabs.seo">
+				<source>SEO</source>
+				<target>SEO</target>
+			</trans-unit>
+			<trans-unit id="pages.palettes.seo">
+				<source>General SEO settings</source>
+				<target>一般SEO设置</target>
+			</trans-unit>
+			<trans-unit id="pages.seo_title">
+				<source>Title for search engines</source>
+				<target>搜索引擎的标题</target>
+			</trans-unit>
+			<trans-unit id="pages.palettes.robots">
+				<source>Robot instructions</source>
+				<target>robot 说明</target>
+			</trans-unit>
+			<trans-unit id="pages.no_index">
+				<source>No index</source>
+				<target>没有索引</target>
+			</trans-unit>
+			<trans-unit id="pages.no_index_formlabel">
+				<source>Index this page</source>
+				<target>索引此页面</target>
+			</trans-unit>
+			<trans-unit id="pages.no_follow">
+				<source>No follow</source>
+				<target>不跟踪</target>
+			</trans-unit>
+			<trans-unit id="pages.no_follow_formlabel">
+				<source>Follow this page</source>
+				<target>跟踪此页面</target>
+			</trans-unit>
+			<trans-unit id="pages.palettes.opengraph">
+				<source>Open Graph (Facebook)</source>
+				<target>Facebook名片</target>
+			</trans-unit>
+			<trans-unit id="pages.og_title">
+				<source>Title</source>
+				<target>标题</target>
+			</trans-unit>
+			<trans-unit id="pages.og_description">
+				<source>Description</source>
+				<target>介绍</target>
+			</trans-unit>
+			<trans-unit id="pages.og_image">
+				<source>Image</source>
+				<target>图片</target>
+			</trans-unit>
+			<trans-unit id="pages.palettes.twittercards">
+				<source>Twitter Cards</source>
+				<target>Twitter名片</target>
+			</trans-unit>
+			<trans-unit id="pages.twitter_title">
+				<source>Title</source>
+				<target>标题</target>
+			</trans-unit>
+			<trans-unit id="pages.twitter_description">
+				<source>Description</source>
+				<target>介绍</target>
+			</trans-unit>
+			<trans-unit id="pages.twitter_image">
+				<source>Image</source>
+				<target>图片</target>
+			</trans-unit>
+			<trans-unit id="pages.palettes.canonical">
+				<source>Canonical</source>
+				<target>首选页面(搜索引擎)</target>
+			</trans-unit>
+			<trans-unit id="pages.canonical_link">
+				<source>Canonical link</source>
+				<target>首选页面(搜索引擎)链接</target>
+			</trans-unit>
+			<trans-unit id="pages.tabs.socialmedia">
+				<source>Social media</source>
+				<target>社交媒体</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-16T13:45:16Z" product-name="erp_management_dict">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>区域名称</source>
+			</trans-unit>
+			<trans-unit id="parent.description">
+				<source>上级区域</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

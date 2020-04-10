@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2019-03-29T00:04:43Z" product-name="backend">
+		<header/>
+		<body>
+			<trans-unit id="age">
+				<source>Age</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="changes">
+				<source>Changelog</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="delete">
+				<source>delete</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="differenceMsg">
+				<source>In the Difference column you can see the changes at every modification of records. New changes are displayed in &lt;span class="diff-g"&gt;green colored text&lt;/span&gt; and the &lt;span class="diff-r"&gt;red colored text&lt;/span&gt; are the old values which were removed.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="differences">
+				<source>Differences</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editLockIsActive">
+				<source>Editing is blocked for non-admins</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="elementHistory">
+				<source>You are currently seeing the history for an element.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="elementHistory_link">
+				<source>Show the full page history!</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="externalChange">
+				<source>Intermediate external change!</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="fullView">
+				<source>Return to full view</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="insert">
+				<source>insert</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="linkRecordHistory">
+				<source>Limit history to this record</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="markState">
+				<source>mark this change</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="maxSteps">
+				<source>Show entries</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="maxSteps_all">
+				<source>ALL</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="maxSteps_marked">
+				<source>marked</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="mergedDifferences">
+				<source>Preview for Rollback</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="no">
+				<source>No</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="noDifferences">
+				<source>There are no differences to the current page!</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="return">
+				<source>Return</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="returnLink">
+				<source>Click here to go back</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="revertAll">
+				<source>Rollback all changes shown</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="revertField">
+				<source>Rollback single field</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="revertRecord">
+				<source>Rollback single record</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="rollback">
+				<source>Rollback</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="settings">
+				<source>Settings</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="showDiff">
+				<source>Show differences</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="showDiff_inline">
+				<source>Inline</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="showDiff_no">
+				<source>No</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="showInsertDelete">
+				<source>Show inserts/deletes of records</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="showSubElements">
+				<source>Show sub elements</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="sumUpChanges">
+				<source>Rollback (Preview)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tableUid">
+				<source>Table:uid (Title)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="time">
+				<source>Time</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Show record history</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="unmarkState">
+				<source>unMark this change</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="user">
+				<source>User</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="viaUser">
+				<source>via</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="yes">
+				<source>Yes</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

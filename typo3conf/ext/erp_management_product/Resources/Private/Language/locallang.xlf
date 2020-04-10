@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-12T16:28:53Z" product-name="erp_management_product">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.numbering">
+				<source>Numbering</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.business">
+				<source>Business</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.original">
+				<source>Original</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.imageuids">
+				<source>Imageuids</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.approval">
+				<source>Approval</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.shelves">
+				<source>Shelves</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.gettype">
+				<source>Gettype</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.info">
+				<source>Info</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.cost">
+				<source>Cost</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.descr">
+				<source>Descr</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.variants">
+				<source>Variants</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_product.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_info">
+				<source>Info</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_info.trade_name">
+				<source>Trade Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_info.brand_name">
+				<source>Brand Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_info.trade_num">
+				<source>Trade Num</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_info.sku">
+				<source>Sku</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_info.source">
+				<source>Source</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_info.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_info.code">
+				<source>Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_info.remark">
+				<source>Remark</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost">
+				<source>Cost</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost.cg">
+				<source>Cg</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost.zl">
+				<source>Zl</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost.cc">
+				<source>Cc</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost.kd">
+				<source>Kd</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost.gd">
+				<source>Gd</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost.yf">
+				<source>Yf</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost.zk">
+				<source>Zk</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost.calculation">
+				<source>Calculation</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost.sy">
+				<source>Sy</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_cost.sj">
+				<source>Sj</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_desc">
+				<source>Desc</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_desc.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_desc.keyword">
+				<source>Keyword</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_desc.key_points">
+				<source>Key Points</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_desc.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_desc.lang">
+				<source>Lang</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_variants">
+				<source>Variants</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_variants.combination">
+				<source>Combination</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_variants.sku_new">
+				<source>Sku New</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_variants.markup">
+				<source>Markup</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_variants.kucun">
+				<source>Kucun</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_variants.upc_ean">
+				<source>Upc Ean</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproduct_domain_model_variants.images">
+				<source>Images</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

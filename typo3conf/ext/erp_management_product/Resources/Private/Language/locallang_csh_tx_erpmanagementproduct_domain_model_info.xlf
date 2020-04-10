@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-12T16:28:53Z" product-name="erp_management_product">
+		<header/>
+		<body>
+			<trans-unit id="trade_name.description">
+				<source>厂家名称</source>
+			</trans-unit>
+			<trans-unit id="brand_name.description">
+				<source>品牌名称</source>
+			</trans-unit>
+			<trans-unit id="trade_num.description">
+				<source>厂家编号</source>
+			</trans-unit>
+			<trans-unit id="sku.description">
+				<source>内部sku</source>
+			</trans-unit>
+			<trans-unit id="source.description">
+				<source>产品来源</source>
+			</trans-unit>
+			<trans-unit id="link.description">
+				<source>产品地址</source>
+			</trans-unit>
+			<trans-unit id="code.description">
+				<source>产品码</source>
+			</trans-unit>
+			<trans-unit id="remark.description">
+				<source>备注</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

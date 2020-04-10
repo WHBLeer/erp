@@ -1,0 +1,102 @@
+[
+    {
+        "vatypeId": 12,
+        "vatypeZwname": "均码",
+        "vatypeYwname": "OneSize",
+        "pvaId": 2,
+        "productVariantDO": {
+            "pvaId": 2,
+            "pvaName": "Size"
+        }
+    },
+    {
+        "vatypeId": 13,
+        "vatypeZwname": "XS",
+        "vatypeYwname": "XS",
+        "pvaId": 2,
+        "productVariantDO": {
+            "pvaId": 2,
+            "pvaName": "Size"
+        }
+    },
+    {
+        "vatypeId": 14,
+        "vatypeZwname": "S",
+        "vatypeYwname": "S",
+        "pvaId": 2,
+        "productVariantDO": {
+            "pvaId": 2,
+            "pvaName": "Size"
+        }
+    },
+    {
+        "vatypeId": 15,
+        "vatypeZwname": "M",
+        "vatypeYwname": "M",
+        "pvaId": 2,
+        "productVariantDO": {
+            "pvaId": 2,
+            "pvaName": "Size"
+        }
+    },
+    {
+        "vatypeId": 16,
+        "vatypeZwname": "L",
+        "vatypeYwname": "L",
+        "pvaId": 2,
+        "productVariantDO": {
+            "pvaId": 2,
+            "pvaName": "Size"
+        }
+    },
+    {
+        "vatypeId": 17,
+        "vatypeZwname": "XL",
+        "vatypeYwname": "XL",
+        "pvaId": 2,
+        "productVariantDO": {
+            "pvaId": 2,
+            "pvaName": "Size"
+        }
+    },
+    {
+        "vatypeId": 18,
+        "vatypeZwname": "XXL",
+        "vatypeYwname": "XXL",
+        "pvaId": 2,
+        "productVariantDO": {
+            "pvaId": 2,
+            "pvaName": "Size"
+        }
+    },
+    {
+        "vatypeId": 19,
+        "vatypeZwname": "XXXL",
+        "vatypeYwname": "XXXL",
+        "pvaId": 2,
+        "productVariantDO": {
+            "pvaId": 2,
+            "pvaName": "Size"
+        }
+    },
+    {
+        "vatypeId": 20,
+        "vatypeZwname": "XXXXL",
+        "vatypeYwname": "XXXXL",
+        "pvaId": 2,
+        "productVariantDO": {
+            "pvaId": 2,
+            "pvaName": "Size"
+        }
+    },
+    {
+        "vatypeId": 21,
+        "vatypeZwname": "XXXXXL",
+        "vatypeYwname": "XXXXXL",
+        "pvaId": 2,
+        "productVariantDO": {
+            "pvaId": 2,
+            "pvaName": "Size"
+        }
+    }
+]

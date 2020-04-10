@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2019-03-29T00:04:44Z" product-name="backend">
+		<header/>
+		<body>
+			<trans-unit id="button.confirm.duplicate_record_changed.no">
+				<source>No, just duplicate the original</source>
+				<target>不，只是复制原件</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.close_without_save.no">
+				<source>No, I will continue editing</source>
+				<target>不，我会继续编辑</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.close_without_save.yes">
+				<source>Yes, discard my changes</source>
+				<target>是的，放弃我的更改</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_elements.no">
+				<source>Cancel</source>
+				<target>取消</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_elements.yes">
+				<source>Yes, delete these elements</source>
+				<target>是的，删除这些元素</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_file.no">
+				<source>Cancel</source>
+				<target>取消</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_file.yes">
+				<source>Yes, delete this file</source>
+				<target>是的，删除此文件</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_folder.yes">
+				<source>Yes, delete this folder</source>
+				<target>是的，删除此文件夹</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_record.no">
+				<source>Cancel</source>
+				<target>取消</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.delete_record.yes">
+				<source>Yes, delete this record</source>
+				<target>是的，删除此记录</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.duplicate_record_changed.cancel">
+				<source>Cancel</source>
+				<target>取消</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.duplicate_record_changed.yes">
+				<source>Yes, save and duplicate this record</source>
+				<target>是的，保存并复制此记录</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.new_record_changed.cancel">
+				<source>Cancel</source>
+				<target>取消</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.new_record_changed.no">
+				<source>No, just add</source>
+				<target>不，只需添加</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.new_record_changed.yes">
+				<source>Yes, save and create now</source>
+				<target>是的，立即保存并创建</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.save_and_close">
+				<source>Save and close</source>
+				<target>保存并关闭</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.view_record_changed.cancel">
+				<source>Cancel</source>
+				<target>取消</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.view_record_changed.no-save">
+				<source>View without changes</source>
+				<target>预览无需更改</target>
+			</trans-unit>
+			<trans-unit id="buttons.confirm.view_record_changed.save">
+				<source>Save changes and view</source>
+				<target>保存更改并预览</target>
+			</trans-unit>
+			<trans-unit id="buttons.reviewFailedValidationFields">
+				<source>Review fields with failed validations</source>
+				<target>检查验证失败的字段</target>
+			</trans-unit>
+			<trans-unit id="deleteItem">
+				<source>Delete</source>
+				<target>删除</target>
+			</trans-unit>
+			<trans-unit id="deleteWarning">
+				<source>Are you sure you want to delete this record?</source>
+				<target>您确定要删除此记录吗？</target>
+			</trans-unit>
+			<trans-unit id="editWholeRecord">
+				<source>Edit whole record</source>
+				<target>编辑整个记录</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.close_without_save.content">
+				<source>You currently have unsaved changes. Are you sure you want to discard these changes?</source>
+				<target>您目前有未保存的更改。您确定要放弃这些更改吗？</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.close_without_save.title">
+				<source>Do you want to close without saving?</source>
+				<target>你想关闭而不保存吗？</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.delete_record.content">
+				<source>Are you sure you want to delete this record?</source>
+				<target>您确定要删除此记录吗？</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.delete_record.title">
+				<source>Delete this record?</source>
+				<target>删除此记录？</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.duplicate_record_changed.content">
+				<source>You currently have unsaved changes. Do you want to save your changes before duplicating this record?</source>
+				<target>您目前有未保存的更改。是否要在复制此记录之前保存更改？</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.duplicate_record_changed.title">
+				<source>Do you want to save before duplicating this record?</source>
+				<target>在复制此记录之前，您要保存吗？</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.new_record_changed.content">
+				<source>You need to save your changes before creating a new record. Do you want to save and create now?</source>
+				<target>您需要在创建新记录之前保存更改。你想现在保存和创建吗？</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.new_record_changed.title">
+				<source>Do you want to save before adding?</source>
+				<target>要添加之前要保存吗？</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.view_record_changed.content">
+				<source>You currently have unsaved changes. You can either discard these changes or save and view them.</source>
+				<target>您目前有未保存的更改。您可以放弃这些更改或保存并查看它们。</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.view_record_changed.content.is-new-page">
+				<source>You need to save your changes before viewing the page. Do you want to save and view them now?</source>
+				<target>您需要在预览页面之前保存更改。你想现在保存和预览它们吗？</target>
+			</trans-unit>
+			<trans-unit id="label.confirm.view_record_changed.title">
+				<source>Do you want to save before viewing?</source>
+				<target>你想在预览之前保存吗？</target>
+			</trans-unit>
+			<trans-unit id="noDocuments">
+				<source>No open documents</source>
+				<target>没有打开文件</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_listmodule">
+				<source>the Web&gt;List module</source>
+				<target>网络&gt;列表模块</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_msg">
+				<source>There are no open documents available to edit.</source>
+				<target>没有可供编辑的打开文档。</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_msg2">
+				<source>You can go to %s to find the page or the record you wish to edit.</source>
+				<target>您可以转到%s的查找要编辑的页面或记录。</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_msg3">
+				<source>You can select one of your most recently edited records from this list</source>
+				<target>您可以从此列表中选择一个最近编辑过的记录</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_OR">
+				<source>or</source>
+				<target>或</target>
+			</trans-unit>
+			<trans-unit id="noDocuments_pagemodule">
+				<source>the Web&gt;Page module</source>
+				<target>网络&gt;页面模块</target>
+			</trans-unit>
+			<trans-unit id="openDocs">
+				<source>OPEN DOCUMENTS</source>
+				<target>打开文档</target>
+			</trans-unit>
+			<trans-unit id="recordHistory">
+				<source>View record change history</source>
+				<target>预览记录更改历史记录</target>
+			</trans-unit>
+			<trans-unit id="undoLastChange">
+				<source>Undo/Redo last change (%s ago)</source>
+				<target>撤消/重做上次更改(%s 前)</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

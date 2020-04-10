@@ -1,0 +1,170 @@
+[
+    {
+        "id": "79904031",
+        "text": " DIY和工具  DIY & Tools",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "5866055031",
+        "text": "商业，工业与科学  Business, Industry & Science",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "6e4ce0b91ae949e3863f284756a84a62",
+        "text": " DVD和Blu-ray   DVD & Blu-ray",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "d7f9202c950d47b39815292f551e41d5",
+        "text": "手表  Watches",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "36a1bf5d24a24a59a8e0956aa0c16151",
+        "text": "运动和户外  Sports & Outdoors",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "27fd49710f81402da64de7838416a5d9",
+        "text": "软件  Software",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "fdf76842257a4ce784176e434a14ec32",
+        "text": "鞋子和包包  Shoes & Bags",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "d2d85fbd43ee4bdc987f35d87bba4317",
+        "text": "宠物用品  Pet Supplies",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "073219b9cedf4f22be72f2add01839c0",
+        "text": "文具及办公用品  Stationery & Office Supplies",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "c678b0e0a3554ab3a0f43ca7b7abc9a1",
+        "text": "乐器和DJ   Musical Instruments & DJ",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "a65ee0f365e443d3b0f74e85eb643a04",
+        "text": "行李箱  Luggage",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "ee48ed664c274eeba59a118b99545eb5",
+        "text": "玩具与游戏  Toys & Games",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "46a834b7a9ff4f238427368379737e58",
+        "text": "珠宝  Jewellery",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "f38c420912e941b1b91a4313bf19b511",
+        "text": "家居与园艺  Home & Garden",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "cc9f131acf18404c8fb432e0db1c456c",
+        "text": " PC和视频游戏  PC & Video Games",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "ae13dade582841579f720d45e300cc87",
+        "text": "杂货  Grocery",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "162a576dd3414fae8aed9a48dc5a3846",
+        "text": "电子产品和照片  Electronics & Photo",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "5c46e819acd544c3a2297970d845dbb6",
+        "text": "健康与个人护理  Health & Personal Care",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "afe2387b26984adbab4a7897aa1635bb",
+        "text": "电脑及配件  Computers & Accessories",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "48e8b6cfa63c4129936846b25b3e618a",
+        "text": "美容  Beauty",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "d3a1c745925f49f0b0bdeb1c55e43d76",
+        "text": "婴儿用品  Baby Products",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "2148a0be7d6b40ee8ad6b3c9c4037b69",
+        "text": "汽车  Automotive",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "0ed2d1ff71fc48d5b5c3a055f605f0b6",
+        "text": "大型家电  Large Appliances",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    },
+    {
+        "id": "7f7e71ec028c426d9af77d2fec903a00",
+        "text": "服装  Clothing",
+        "parentId": "0",
+        "hasParent": false,
+        "hasChildren": true
+    }
+]

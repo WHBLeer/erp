@@ -1,0 +1,85 @@
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+	  
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<f:render partial="Messages" arguments="{flashMessages}" />
+
+		<div class="dataTables_wrapper dt-bootstrap4">
+            <div class="row mb-10">
+                <div class="col-sm-12 col-md-9">
+					<f:link.action action="new" class="btn btn-info">New Collection</f:link.action>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <f:form action="list" name="search" object="{search}">
+                        <div class="input-group justify-content-end">
+							<f:form.textfield name="keyword" value="{keyword}" class="form-control" placeholder="关键字" />
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-search"></i></span>
+                            </div>
+                        </div>
+                    </f:form>
+                </div>
+            </div><br/>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-responsive">
+                        <sll:widget.paginateBe objects="{collections}" as="collectionPagination"  configuration="{settings.paginate}">
+                            <table class="table table-hover mb-10">
+                                <thead> 
+									<tr>
+										<th></th>
+                                        <th>#</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+                                <tbody>
+                                    <f:for each="{collectionPagination}" as="collection" iteration="itemIteration">
+									<tr>
+                                        <td>
+											<input type="checkbox" name="test" class="custom-checkbox-input" id="chk-{collection.uid}" value="{collection.uid}">
+										</td>
+										<td>lib.calc</td>
+										
+										<td>
+											<f:link.action action="list" class="btn btn-sm btn-info" arguments="{collection : collection}"><i class="ti-reload"></i></f:link.action>
+											<f:link.action action="show" class="btn btn-sm btn-default" arguments="{collection : collection}"><i class="ti-eye"></i></f:link.action>
+											<f:link.action action="edit" class="btn btn-sm btn-info" arguments="{collection : collection}"><i class="ti-pencil-alt"></i></f:link.action>
+											<f:link.action action="delete" class="btn btn-sm btn-danger" arguments="{collection : collection}"><i class="ti-close"></i></f:link.action>
+										</td>
+									</tr>
+									</f:for>
+                                    <tr>
+                                        <td>
+											<input type="checkbox" name="test" class="selectall custom-checkbox-input" id="chkall" value="uid">
+                                        </td>
+                                        <td colspan="8">
+											<f:form action="multi" name="datas" >
+                                                <f:form.hidden id="multidelete-items" property="items" value="" />
+												<f:form.submit class="btn btn-danger btn-sm delete btn-del btn-delete-all" value="删除选中" />
+                                            </f:form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </sll:widget.paginateBe>
+                    </div>
+                    
+                </div>
+            </div>
+		</div>
+	</f:section>
+</html>

@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="header">
+	<link rel="stylesheet" type="text/css" href="{f:uri.resource(path:'jsDomainModeling/extbaseModeling.css')}" />
+</f:section>
+<f:section name="iconButtons">
+</f:section>
+<f:section name="content">
+	<h1>Extension Builder</h1>
+	<p class="bodytext"> 该页面旨在为您提供有关我们建议的工作流程的概述。</p>
+	<h2>这个扩展程序构建器是做什么的？</h2>
+	<ul>
+		<li>该扩展构建器可帮助您基于Extbase和Fluid构建和管理应用程序。</li>
+		<li>我们还希望提供一种用于领域驱动设计的学习工具</li>
+	</ul>
+	<h2>域驱动设计</h2>
+	View <a href="http://www.infoq.com/presentations/model-to-work-evans" target="_blank">Putting the Model to Work and Strategic Design</a> by Eric Evans to get an introduction into Domain Driven Design (DDD).
+	<h2>领域模型</h2>
+	首先，您将开始使用图形编辑器创建域模型。该编辑器将为您执行以下操作：
+	<ul>
+		<li><b>扩展框架</b>: 将创建所需的扩展目录结构</li>
+		<li><b>领域模型</b>: 将为领域模型创建基本类，位于 Domain/Model/</li>
+		<li><b>数据库表和TCA</b>: 将创建适合域模型的数据库表和TCA定义。</li>
+		<li><b>骨架Locallang文件</b>: 将创建骨架locallang文件</li>
+		<li><b>插件配置</b>: 将创建一个插件配置，因此即开即用。</li>
+		<li><b>动态脚手架</b>:自动为聚合根创建所有CRUD操作（创建，读取，更新，删除）！</li>
+	</ul>
+	有关更多详细信息，请参阅<a href="https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html" target="_blank" >使用扩展构建器</a>的文档。
+	<br /><br />
+	<p><b><f:link.action action="domainmodelling">转到域建模器</f:link.action></b></p>
+
+	<h2>迭代模型细化</h2>
+	该模型的第一个版本通常不会是以后使用的版本。这就是为什么要花一些时间并改进模型的原因。<br />
+	有用的事情要知道：
+	<ul>
+		<li><b>动态脚手架：</b>: 脚手架将自动调整为您的域模型提供CRUD功能所需的模板。也就是说，如果您通过添加或删除字段来修改域模型，则标准CRUD操作也会显示新字段。
+	</ul>
+	当您开始修改生成的文件，但仍想使用图形建模器扩展模型时，必须在扩展管理器的扩展构建器设置中启用往返功能。
+	您将在扩展目录Configuration / ExtensionBuilder / settings.yaml中找到一个文件。
+	您可以在此处配置保存模型时应覆盖，保留或合并的文件。
+	一个好的做法是，让Extension Builder为您生成表单字段和属性的Partials，并将它们包括在模板中。
+	<br /><br />
+	<h3>Please have a look at the <a href="https://docs.typo3.org/typo3cms/extensions/extension_builder/Developer/PublishToTer.html#security" target="_blank" >Security section</a> to avoid unsecure extensions!</h3>
+</f:section>
+</html>

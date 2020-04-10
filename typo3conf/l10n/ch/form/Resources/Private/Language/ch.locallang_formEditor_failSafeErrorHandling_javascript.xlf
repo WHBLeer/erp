@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2020-02-16T02:37:42Z" product-name="form">
+		<header/>
+		<body>
+			<trans-unit id="formEditor.error.headline" resname="formEditor.error.headline" xml:space="preserve">
+                <source>Oops! Something went wrong.</source>
+            <target/></trans-unit>
+			<trans-unit id="formEditor.error.message" resname="formEditor.error.message" xml:space="preserve">
+                <source>Please contact your administrator.</source>
+            <target/></trans-unit>
+			<trans-unit id="formEditor.error.technicalReason" resname="formEditor.error.technicalReason" xml:space="preserve">
+                <source>Technical Reason:</source>
+            <target/></trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-04-06T16:41:34Z" product-name="erp_management_product_upload">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload">
+				<source>Upload</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.subdate">
+				<source>Subdate</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.lang">
+				<source>Lang</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.timing">
+				<source>Timing</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.st1">
+				<source>St1</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.st2">
+				<source>St2</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.st3">
+				<source>St3</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.st4">
+				<source>St4</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.st5">
+				<source>St5</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.template">
+				<source>Template</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementproductupload_domain_model_upload.shop">
+				<source>Shop</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_product_upload_pi1.name">
+				<source>产品上传</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_product_upload_pi1.description">
+				<source>产品上传模块</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

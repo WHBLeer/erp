@@ -1,0 +1,302 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<ul class="nav nav-tabs">
+    <li role="presentation" class="nav-item">
+        <a class="nav-link active" aria-expanded="true" aria-controls="tab_lang_zh" data-toggle="tab" role="tab" href="#tab_lang_zh" id="label_lang_zh">中文</a>
+    </li>
+    <li role="presentation" class="nav-item">
+        <a class="nav-link" aria-expanded="false" aria-controls="tab_lang_en" data-toggle="tab" role="tab" href="#tab_lang_en" id="label_lang_en">英语</a>
+    </li>
+    <li role="presentation" class="nav-item">
+        <a class="nav-link" aria-expanded="false" aria-controls="tab_lang_fr" data-toggle="tab" role="tab" href="#tab_lang_fr" id="label_lang_fr">法语</a>
+    </li>
+    <li role="presentation" class="nav-item">
+        <a class="nav-link" aria-expanded="false" aria-controls="tab_lang_de" data-toggle="tab" role="tab" href="#tab_lang_de" id="label_lang_de">德语</a>
+    </li>
+    <li role="presentation" class="nav-item">
+        <a class="nav-link" aria-expanded="false" aria-controls="tab_lang_it" data-toggle="tab" role="tab" href="#tab_lang_it" id="label_lang_it">意大利语</a>
+    </li>
+    <li role="presentation" class="nav-item">
+        <a class="nav-link" aria-expanded="false" aria-controls="tab_lang_es" data-toggle="tab" role="tab" href="#tab_lang_es" id="label_lang_es">西班牙语</a>
+    </li>
+    <li role="presentation" class="nav-item">
+        <a class="nav-link" aria-expanded="false" aria-controls="tab_lang_ja" data-toggle="tab" role="tab" href="#tab_lang_ja" id="label_lang_ja">日语</a>
+    </li>
+</ul>
+<div class="tab-content lang-content" id="myTabContent" style="padding:2px 20px 0 20px;width: 80%">
+    <div id="tab_lang_zh" class="tab-pane active" role="tabpanel">
+        <f:form.hidden name="desc[zh][uid]" value="{descs.zh.uid}" />
+        <div class="form-group">
+            <label>产品标题：(中文)&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn_translate btn-success" type="button" onclick="translationList('zh-CHS')">一键中文翻译</button>
+            </label>
+            <div class="t_div">
+                <f:form.textarea name="desc[zh][title]" id="title_zh" class="form-control keytitle zh-CHS" rows="2"cols="75" value="{descs.zh.title}" />
+                <button class="btn btn_translate translate_item btn-success" 
+                type="button" onclick="translationByItem(this)">中文翻译</button>
+            </div>
+            <span class="title_zh t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>关键字 限制1行：(中文)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[zh][keywords]" id="keywords_zh" class="form-control keyword zh-CHS" rows="2" cols="75" value="{descs.zh.keyword}" />
+                <button class="btn btn_translate translate_item btn-success" type="button" onclick="translationByItem(this)">中文翻译</button>
+            </div>
+            <span class="keywords_zh t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>要点说明 不超过5行：(中文)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[zh][keypoints]" id="keypoints_zh" class="form-control keypoint zh-CHS" rows="4" cols="80" value="{descs.zh.keypoints}" />
+                <button class="btn btn_translate translate_item btn-success" type="button" onclick="translationByItem(this)">中文翻译</button>
+            </div>
+            <span class="keypoints_zh t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>产品描述：(中文)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[zh][description]" id="description_zh" class="form-control keydesc zh-CHS" rows="6" cols="80" value="{descs.zh.description}" />
+                <button class="btn btn_translate translate_item btn-success" 
+                type="button" onclick="translationByItem(this)">中文翻译</button>
+            </div>
+            <span class="description_zh t_number"></span>
+        </div>
+    </div>
+    <div id="tab_lang_en" class="tab-pane" role="tabpanel">
+        <f:form.hidden name="desc[en][uid]" value="{descs.en.uid}" />
+        <div class="form-group">
+            <label>产品标题：(英语)&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn_translate btn-success"  type="button" onclick="translationList('en')">一键从英文翻译</button>
+            </label>
+            <div class="t_div">
+                <f:form.textarea name="desc[en][title]" id="title_en" class="form-control keytitle en" rows="2" cols="75" style="border-color: red;" value="{descs.en.title}" />
+                <button class="btn btn_translate translate_item btn-success" type="button" onclick="translationByItem(this)">英文翻译</button>
+            </div>
+            <span class="title_en t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>关键字 限制1行：(英语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[en][keywords]" id="keywords_en" class="form-control keyword en" rows="4" cols="75" style="border-color: red;" value="{descs.en.keyword}" />
+                <button class="btn btn_translate translate_item btn-success" type="button" onclick="translationByItem(this)">英文翻译</button>
+            </div>
+            <span class="keywords_en t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>要点说明 不超过5行：(英语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[en][keypoints]" id="keypoints_en" class="form-control keypoint en" rows="4" cols="80" style="border-color: red;" value="{descs.en.keypoints}" />
+                <button class="btn btn_translate translate_item btn-success" type="button" onclick="translationByItem(this)">英文翻译</button>
+            </div>
+            <span class="keypoints_en t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>产品描述：(英语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[en][description]" id="description_en" class="form-control keydesc en" rows="6" cols="80" style="border-color: red;" value="{descs.en.description}" />
+                <button class="btn btn_translate translate_item btn-success" type="button" onclick="translationByItem(this)">英文翻译</button>
+            </div>
+            <span class="description_en t_number"></span>
+        </div>
+    </div>
+    <div id="tab_lang_fr" class="tab-pane" role="tabpanel">
+        <f:form.hidden name="desc[fr][uid]" value="{descs.fr.uid}" />
+        <div class="form-group">
+            <label>产品标题：(法语)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[fr][title]" id="title_fr" class="form-control keytitle" rows="2" cols="75" style="border-color: red;" value="{descs.fr.title}" />
+            </div>
+            <span class="title_fr t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>关键字 限制1行：(法语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[fr][keywords]" id="keywords_fr" class="form-control keyword" rows="4" cols="75" style="border-color: red;" value="{descs.fr.keyword}" />
+            </div>
+            <span class="keywords_fr t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>要点说明 不超过5行：(法语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[fr][keypoints]" id="keypoints_fr" class="form-control keypoint" rows="4" cols="80" style="border-color: red;" value="{descs.fr.keypoints}" />
+            </div> 
+            <span class="keypoints_fr t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>产品描述：(法语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[fr][description]" id="description_fr" class="form-control keydesc" rows="5" cols="80" style="border-color: red;" value="{descs.fr.description}" />
+            </div>
+            <span class="description_fr t_number"></span>
+        </div>
+    </div>
+    <div id="tab_lang_de" class="tab-pane" role="tabpanel">
+        <f:form.hidden name="desc[de][uid]" value="{descs.de.uid}" />
+        <div class="form-group">
+            <label>产品标题：(德语)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[de][title]" id="title_de" class="form-control keytitle" rows="2" cols="75" style="border-color: red;" value="{descs.de.title}" />
+            </div>
+            <span class="title_de t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>关键字 限制1行：(德语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[de][keywords]" id="keywords_de" class="form-control keyword" rows="4" cols="75" style="border-color: red;" value="{descs.de.keyword}" />
+            </div>
+            <span class="keywords_de t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>要点说明 不超过5行：(德语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[de][keypoints]" id="keypoints_de" class="form-control keypoint" rows="4" cols="80" style="border-color: red;" value="{descs.de.keypoints}" />
+            </div>
+            <span class="keypoints_de t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>产品描述：(德语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[de][description]" id="description_de" class="form-control keydesc" rows="6" cols="80" style="border-color: red;" value="{descs.de.description}" />
+            </div>
+            <span class="description_de t_number"></span>
+        </div>
+    </div>
+    <div id="tab_lang_it" class="tab-pane" role="tabpanel">
+        <f:form.hidden name="desc[it][uid]" value="{descs.it.uid}" />
+        <div class="form-group">
+            <label>产品标题：(意大利语)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[it][title]" id="title_it" class="form-control keytitle" rows="2" cols="75" style="border-color: red;" value="{descs.it.title}" />
+            </div>
+            <span class="title_it t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>关键字 限制1行：(意大利语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[it][keywords]" id="keywords_it" class="form-control keyword" rows="4" cols="75" style="border-color: red;" value="{descs.it.keyword}" />
+            </div>
+            <span class="keywords_it t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>要点说明 不超过5行：(意大利语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[it][keypoints]" id="keypoints_it" class="form-control keypoint" rows="4" cols="80" style="border-color: red;" value="{descs.it.keypoints}" />
+            </div>
+            <span class="keypoints_it t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>产品描述：(意大利语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[it][description]" id="description_it" class="form-control keydesc" rows="5" cols="80" style="border-color: red;" value="{descs.it.description}" />
+            </div>
+            <span class="description_it t_number"></span>
+        </div>
+    </div>
+    <div id="tab_lang_es" class="tab-pane" role="tabpanel">
+        <f:form.hidden name="desc[es][uid]" value="{descs.es.uid}" />
+        <div class="form-group">
+            <label>产品标题：(西班牙语)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[es][title]" id="title_es" class="form-control keytitle" rows="2" cols="75" style="border-color: red;" value="{descs.es.title}" />
+            </div>
+            <span class="title_es t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>关键字 限制1行：(西班牙语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[es][keywords]" id="keywords_es" class="form-control keyword" rows="4" cols="75" style="border-color: red;" value="{descs.es.keyword}" />
+            </div>
+            <span class="keywords_es t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>要点说明 不超过5行：(西班牙语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[es][keypoints]" id="keypoints_es" class="form-control keypoint" rows="4" cols="80" style="border-color: red;" value="{descs.es.keypoints}" />
+            </div>
+            <span class="keypoints_es t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>产品描述：(西班牙语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[es][description]" id="description_es" class="form-control keydesc" rows="5" cols="80" style="border-color: red;" value="{descs.es.description}" />
+            </div>
+            <span class="description_es t_number"></span>
+        </div>
+    </div>
+    <div id="tab_lang_ja" class="tab-pane" role="tabpanel">
+        <f:form.hidden name="desc[ja][uid]" value="{descs.ja.uid}" />
+        <div class="form-group">
+            <label>产品标题：(日语)&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[ja][title]" id="title_ja" class="form-control keytitle" rows="2" cols="75" value="{descs.ja.title}" />
+            </div>
+            <span class="title_ja t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>关键字 限制1行：(日语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[ja][keywords]" id="keywords_ja" class="form-control keyword" rows="4" cols="75" value="{descs.ja.keyword}" />
+            </div>
+            <span class="keywords_ja t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>要点说明 不超过5行：(日语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[ja][keypoints]" id="keypoints_ja" class="form-control keypoint" rows="4" cols="80" value="{descs.ja.keypoints}" />
+            </div>
+            <span class="keypoints_ja t_number"></span>
+        </div>
+        <div class="form-group">
+            <label>产品描述：(日语)</label>
+            <div class="t_div">
+                <f:form.textarea name="desc[ja][description]" id="description_ja" class="form-control keydesc" rows="5" cols="80" value="{descs.ja.description}" />
+            </div>
+            <span class="description_ja t_number"></span>
+        </div>
+    </div>
+</div>
+<script>
+    function translationList(from='auto') {
+		var querys = new Object(); //或者写成：var btns= [];
+		$('.'+from).each(function(key,obj){
+			querys[key] = $(obj).val();
+		});
+        console.log(querys);
+		$.ajax({
+			type: "POST",
+			url: '/api/translate',
+			data: {cmd:'translate_all', querys:querys, from:from},
+			dataType: "json",
+			success: function(datas){
+                $.each(datas, function(i, item){
+                    $("#"+item.id.zh).val(item.text.zh);
+                    $("#"+item.id.en).val(item.text.en);
+                    $("#"+item.id.fr).val(item.text.fr);
+                    $("#"+item.id.de).val(item.text.de);
+                    $("#"+item.id.it).val(item.text.it);
+                    $("#"+item.id.es).val(item.text.es);
+                    $("#"+item.id.ja).val(item.text.ja);
+                });
+			}
+		});
+		return false;
+	}
+    function translationByItem(from='auto',id) {
+		var querys = new Array(); //或者写成：var btns= [];
+		$('.'+from).each(function(key,value){
+			querys[key] = $(this).val();
+		});
+		$.ajax({
+			type: "POST",
+			url: '/api/config-test',
+			data: {cmd:'translate_item', querys:querys, from:from},
+			dataType: "json",
+			success: function(data){
+				console.log(data);
+				// $("#"+to).text(data.text);
+			}
+		});
+		return false;
+	}
+</script>
+</html>

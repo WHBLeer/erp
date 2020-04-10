@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-02-23T22:58:30Z" product-name="erp_management_dashboard">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementdashboard_domain_model_dashboard">
+				<source>Dashboard</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

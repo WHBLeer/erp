@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-16T13:45:16Z" product-name="erp_management_dict">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementdict_domain_model_dicttype">
+				<source>Dicttype</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_dicttype.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_dicttype.code">
+				<source>Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_dictitem">
+				<source>Dictitem</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_dictitem.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_dictitem.code">
+				<source>Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_dictitem.dicttype">
+				<source>Dicttype</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_region.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_region.parent">
+				<source>Parent</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_category.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_category.name_en">
+				<source>Name En</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_category.code">
+				<source>Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_category.close">
+				<source>Close</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_category.parent_id">
+				<source>Parent Id</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementdict_domain_model_category.parent">
+				<source>Parent</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

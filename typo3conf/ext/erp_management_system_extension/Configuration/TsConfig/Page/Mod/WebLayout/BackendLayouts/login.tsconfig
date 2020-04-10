@@ -1,0 +1,31 @@
+#
+# BACKENDLAYOUT: LOGIN
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            login {
+                title = LLL:EXT:erp_management_system_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.login
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        
+                        rows {
+				          1 {
+				            columns {
+								1 {
+									name = LLL:EXT:erp_management_system_extension/Resources/Private/Language/locallang_be.xlf:backend_layout.column.normal
+									colPos = 0
+								}
+				            }
+				          }
+				        }
+				        
+                    }
+                }
+                #icon = EXT:erp_management_system_extension/Resources/Public/Images/BackendLayouts/login.png
+            }
+        }
+    }
+}

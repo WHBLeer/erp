@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-12T16:28:53Z" product-name="erp_management_product">
+		<header/>
+		<body>
+			<trans-unit id="cg.description">
+				<source>采购价</source>
+			</trans-unit>
+			<trans-unit id="zl.description">
+				<source>重量</source>
+			</trans-unit>
+			<trans-unit id="cc.description">
+				<source>尺寸</source>
+			</trans-unit>
+			<trans-unit id="kd.description">
+				<source>宽度</source>
+			</trans-unit>
+			<trans-unit id="gd.description">
+				<source>高度</source>
+			</trans-unit>
+			<trans-unit id="yf.description">
+				<source>国内运费</source>
+			</trans-unit>
+			<trans-unit id="zk.description">
+				<source>折扣</source>
+			</trans-unit>
+			<trans-unit id="calculation.description">
+				<source>计算结果</source>
+			</trans-unit>
+			<trans-unit id="sy.description">
+				<source>库存</source>
+			</trans-unit>
+			<trans-unit id="sj.description">
+				<source>预处理时间</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

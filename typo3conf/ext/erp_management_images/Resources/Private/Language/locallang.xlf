@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-12T14:00:53Z" product-name="erp_management_images">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementimages_domain_model_images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementimages_domain_model_images.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementimages_domain_model_images.re_name">
+				<source>Re Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementimages_domain_model_images.original">
+				<source>Original</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementimages_domain_model_images.thumbnail">
+				<source>Thumbnail</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

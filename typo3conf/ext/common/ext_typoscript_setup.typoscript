@@ -1,0 +1,15 @@
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      Sll\Common\Domain\Model\Config {
+        mapping {
+          tableName = pages
+          recordType = Tx_Common_Config
+        }
+      }
+
+    }
+  }
+}
