@@ -45,7 +45,7 @@ function dump($res=null)
  * @author wanghongbin
  * tstamp: 2020-03-19
  */
-function dumpsql($query=null)
+function dumpSql($query=null)
 {
     $this->objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\Object\ObjectManager::class);
     $queryParser = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser::class);
