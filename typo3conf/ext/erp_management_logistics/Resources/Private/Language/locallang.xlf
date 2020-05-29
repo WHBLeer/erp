@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-26T23:14:08Z" product-name="erp_management_logistics">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics">
+				<source>Logistics</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.domestic_waybill">
+				<source>Domestic Waybill</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.international_waybill">
+				<source>International Waybill</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.estimate_freight">
+				<source>Estimate Freight</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.actual_freight">
+				<source>Actual Freight</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.aging">
+				<source>Aging</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.weight">
+				<source>Weight</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.length">
+				<source>Length</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.width">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.height">
+				<source>Height</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.quantity">
+				<source>Quantity</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.goodstype">
+				<source>Goodstype</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.erpuser">
+				<source>Erpuser</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

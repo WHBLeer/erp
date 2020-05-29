@@ -1,0 +1,39 @@
+{
+    "name": "koehlersimon/slug",
+    "description": "Helps you managing the URL slugs of your TYPO3 site",
+    "type": "typo3-cms-extension",
+    "version": "2.0.2",
+    "minimum-stability": "dev",
+    "prefer-stable": "true",
+    "require": {
+        "typo3/cms-core": "^9.5.0"
+    },
+    "keywords": [
+        "TYPO3",
+        "extension",
+        "slug",
+        "slugs",
+        "url",
+        "urltool",
+        "seo",
+        "seotool",
+        "tool",
+        "plugin"
+    ],
+    "homepage": "https://simon-koehler.com/en",
+    "authors": [
+        {
+            "name": "Simon Köhler",
+            "email": "info@simon-koehler.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SIMONKOEHLER\\Slug\\": "Classes"
+        }
+    },
+    "replace": {
+        "koehlersimon/slug": "self.version",
+        "typo3-ter/slug": "self.version"
+    }
+}

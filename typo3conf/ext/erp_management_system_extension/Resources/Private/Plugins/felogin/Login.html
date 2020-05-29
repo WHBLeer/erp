@@ -11,7 +11,7 @@
 <head>
 	<title>Templates for felogin</title>
 </head>
-<body>
+<p>
 
 <h1>Common markers</h1>
 <p>These are substituted in all felogin item displaying templates.</p>
@@ -50,153 +50,169 @@
 </ul>
 
 <!--###TEMPLATE_LOGIN###-->
-<!-- <div class="home-btn d-none d-sm-block">
-	<a href="/" class="text-dark"><i class="fas fa-home h2"></i></a>
-</div> -->
-<div class="lowin" id="login-main">
-	<div class="lowin-brand">
-		<img src="typo3conf/ext/erp_management_system_extension/Resources/Public/Login/kodinger.jpg" alt="logo">
-	</div>
-	<div class="lowin-wrapper" style="min-height: 456px;">
-		<div class="lowin-box lowin-login">
-			<div class="lowin-box-inner">
-				<form class="" id="login-form" action="###ACTION_URI###" method="post"
-					onsubmit="###ON_SUBMIT###" target="_top">
-					<p>ERP管理系统</p>
-						<!-- <h4>###STATUS_HEADER###</h4> -->
-					<small>###STATUS_MESSAGE###</small>
-					<div class="lowin-group">
-						<label>账号 </label>
-						<input type="text" class="lowin-input" id="username" name="user"
-						placeholder="###USERNAME_LABEL###">
-					</div>
-					<div class="lowin-group password-group">
-						<label>密码 <!--###FORGOT_PASSWORD_LINK###-->###FORGOT_PASSWORD### <!--###FORGOT_PASSWORD_LINK###--></label>
-						<input type="password" class="lowin-input" id="userpassword" name="pass"
-						placeholder="###PASSWORD_LABEL###">
-					</div>
-					<div class="felogin-hidden">
-						<input type="hidden" name="logintype" value="login" />
-						<input type="hidden" name="pid" value="###STORAGE_PID###" />
-						<input type="hidden" name="redirect_url" value="###REDIRECT_URL###" />
-						<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
-						###EXTRA_HIDDEN###
-					</div>
-					<button class="lowin-btn login-btn" type="submit">###LOGIN_LABEL###</button>
-
-					<div class="text-foot">
-						Don't have an account? <a href="" class="register-link">Register</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
-<script>
-	var classes = ['','lowin-blue','lowin-purple','lowin-red']
-	var cycle = Math.ceil(Math.random()*3);
-	document.getElementById("login-main").classList.add(classes[cycle]);
-</script>
-<!--###TEMPLATE_LOGIN###-->
-
-<!--###TEMPLATE_LOGOUT###-->
-<div class="logo">
-    <a href="admin/login">
-        <img src="fileadmin/templates/backend/public/images/logo.png" alt="" />
-    </a>
-</div>
-<div class="content">
-    <form role="form" class="login-form" action="###ACTION_URI###" method="post" target="_top">
-        <!-- <h3 class="form-title">###STATUS_HEADER###</h3> -->
-        <div class="alert alert-info">
-            <button class="close" data-close="alert"></button>
-            <span> ###STATUS_MESSAGE###</span>
-        </div>
-        <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">###USERNAME_LABEL###</label>
-            <div class="input-icon">
-                <i class="fa fa-user"></i>
-                <div class="form-control">###USERNAME### 已登录</div>
-            </div>
-        </div>
-        <div class="felogin-hidden">
-			<input type="hidden" name="logintype" value="logout" />
-			<input type="hidden" name="pid" value="###STORAGE_PID###" />
-			<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
-		</div>
-        <button type="submit" class="btn btn-block btn-success">###LOGOUT_LABEL###</button>
-    </form>
-</div>
-<!--###TEMPLATE_LOGOUT###-->
-
-<!--###TEMPLATE_FORGOT###-->
 <div class="limiter">
 	<div class="container-login100">
-		<div class="wrap-login100" style="padding: 85px 130px 85px 96px;">
-			<div class="login100-pic js-tilt" data-tilt>
-				<img src="typo3conf/ext/general_business_backend_package/Resources/Public/Login/images/img-01.png"
-					alt="IMG">
-			</div>
+		<div class="wrap-login100 p-l-40 p-r-40 p-t-45 p-b-30">
+			<form class="login100-form validate-form" action="###ACTION_URI###" method="post"
+				onsubmit="###ON_SUBMIT###" target="_top">
+				<span class="login100-form-title p-b-33">YOYOERP</span>
 
-			<form role="form" class="login100-form validate-form login-form" action="###ACTION_URI###" method="post" target="_top">
-				<span class="login100-form-title">找回密码</span>
-
-				<div class="wrap-input100 validate-input" data-validate="请填写邮箱 demo@whongbin.com">
-					<input class="input100" type="text" placeholder="###DATA_LABEL###" name="###FORGOT_EMAIL###" />
-					<span class="focus-input100"></span>
-					<span class="symbol-input100">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-					</span>
+				<div class="wrap-input100 validate-input" data-validate="用户名必须输入">
+					<input class="input100" type="text" name="user" placeholder="###USERNAME_LABEL###" id="username">
+					<span class="focus-input100-1"></span>
+					<span class="focus-input100-2"></span>
 				</div>
 
-				<div class="container-login100-form-btn">
-					<button type="submit" class="login100-form-btn">###SEND_PASSWORD###</button>
+				<div class="wrap-input100 rs1 validate-input" data-validate="密码必须输入">
+					<input class="input100" type="password" name="pass" placeholder="###PASSWORD_LABEL###">
+					<span class="focus-input100-1"></span>
+					<span class="focus-input100-2"></span>
+				</div>
+				<div class="felogin-hidden">
+					<input type="hidden" name="logintype" value="login" />
+					<input type="hidden" name="pid" value="###STORAGE_PID###" />
+					<input type="hidden" name="redirect_url" value="###REDIRECT_URL###" />
+					<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
+					###EXTRA_HIDDEN###
+				</div>
+				<div class="container-login100-form-btn m-t-20">
+					<button class="login100-form-btn" type="submit">###LOGIN_LABEL###</button>
 				</div>
 
-				<div class="text-center p-t-12">
-					<span class="txt1">GoBack: </span>
-					###BACKLINK_LOGIN###
+				<div class="text-center p-t-25 p-b-4">
+					<a href="/register" class="txt2 hov1">免费注册</a>
+					|
+					<!--###FORGOT_PASSWORD_LINK###-->###FORGOT_PASSWORD###
+					<!--###FORGOT_PASSWORD_LINK###-->
+				</div>
+
+				<div class="text-center">
+					<span class="txt1">Build BY <i class="mdi mdi-heart text-danger"></i> </span>
+					<a href="https://erp.whongbin.com/">环联国际</a>
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
+<!-- <span> ###STATUS_MESSAGE### </span> -->
+<!--###TEMPLATE_LOGIN###-->
+
+<!--###TEMPLATE_LOGOUT###-->
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100 p-l-40 p-r-40 p-t-45 p-b-30">
+			<form class="login100-form validate-form" action="###ACTION_URI###" method="post" onsubmit="###ON_SUBMIT###"
+				target="_top">
+				<span class="login100-form-title p-b-33">YOYOERP</span>
+				<!-- <span> ###STATUS_MESSAGE###</span> -->
+				<p><span id="second">5</span>秒后自动跳转到 <a href="https://erp.whongbin.com/erp/">YOYOERP管理系统</a></p>
+				<div class="text-center">
+					<div class="login100-form-btn">当前 ###USERNAME### 已登录</div>
+				</div>
+				<div class="felogin-hidden">
+					<input type="hidden" name="logintype" value="logout" />
+					<input type="hidden" name="pid" value="###STORAGE_PID###" />
+					<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
+				</div>
+				<div class="container-login100-form-btn m-t-20">
+					<button class="login100-form-btn" type="submit">###LOGOUT_LABEL###</button>
+				</div>
+
+				<div class="text-center">
+					<span class="txt1">Build BY <i class="mdi mdi-heart text-danger"></i> </span>
+					<a href="https://erp.whongbin.com/">环联国际</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//获取显示秒数的元素，通过定时器来更改秒数。
+	var sec = document.getElementById("second");
+	var i = 5;
+	var timer = setInterval(function () {
+		i--;
+		sec.innerHTML = i;
+		if (i == 1) {
+			window.location.href = "https://erp.whongbin.com/erp/";
+		}
+	}, 1000);
+</script>
+<!-- <span> ###STATUS_MESSAGE### </span> -->
+<!--###TEMPLATE_LOGOUT###-->
+
+<!--###TEMPLATE_FORGOT###-->
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100 p-l-40 p-r-40 p-t-45 p-b-30">
+			<form class="login100-form validate-form" action="###ACTION_URI###" method="post" onsubmit="###ON_SUBMIT###"
+				target="_top">
+				<span class="login100-form-title p-b-33">找回密码</span>
+				<div class="wrap-input100 validate-input" data-validate="请填写邮箱 demo@whongbin.cn">
+					<input class="input100" type="text" placeholder="请填写邮箱" name="###FORGOT_EMAIL###" />
+					<span class="focus-input100-1"></span>
+					<span class="focus-input100-2"></span>
+				</div>
+				
+				<div class="container-login100-form-btn m-t-20">
+					<button type="submit" class="login100-form-btn">###SEND_PASSWORD###</button>
+				</div>
+				
+				<div class="text-center p-t-12">
+					<a href="/register" class="txt2 hov1">免费注册</a>
+					|
+					###BACKLINK_LOGIN###
+				</div>
+
+				<div class="text-center">
+					<span class="txt1">Build BY <i class="mdi mdi-heart text-danger"></i> </span>
+					<a href="https://erp.whongbin.com/">环联国际</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- <span> ###STATUS_MESSAGE### </span> -->
 <!--###TEMPLATE_FORGOT###-->
 
 <!--###TEMPLATE_CHANGEPASSWORD###-->
-<div class="logo">
-    <a href="admin/login">
-        <img src="fileadmin/templates/backend/public/images/logo.png" alt="" />
-    </a>
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100 p-l-40 p-r-40 p-t-45 p-b-30">
+			<form class="login100-form validate-form" action="###ACTION_URI###" method="post" onsubmit="###ON_SUBMIT###" target="_top">
+				<div class="wrap-input100 validate-input" data-validate="用户名必须输入">
+					<input class="input100" type="text" name="user" placeholder="###USERNAME_LABEL###" id="username" value="">
+					<span class="focus-input100-1"></span>
+					<span class="focus-input100-2"></span>
+				</div>
+				<div class="wrap-input100 rs1 validate-input" data-validate="密码必须输入">
+					<input class="input100" type="password" name="###NEWPASSWORD1###" placeholder="###PASSWORD1_LABEL###">
+					<span class="focus-input100-1"></span>
+					<span class="focus-input100-2"></span>
+				</div>
+				<div class="wrap-input100 rs1 validate-input" data-validate="密码必须输入">
+					<input class="input100" type="password" name="###NEWPASSWORD2###" placeholder="###PASSWORD2_LABEL###">
+					<span class="focus-input100-1"></span>
+					<span class="focus-input100-2"></span>
+				</div>
+
+				<div class="container-login100-form-btn m-t-20">
+					<button type="submit" class="login100-form-btn">###SEND_PASSWORD###</button>
+				</div>
+
+				<div class="text-center p-t-12">
+					<a href="/register" class="txt2 hov1">免费注册</a>
+					|
+					###BACKLINK_LOGIN###
+				</div>
+
+				<div class="text-center">
+					<span class="txt1">Build BY <i class="mdi mdi-heart text-danger"></i> </span>
+					<a href="https://erp.whongbin.com/">环联国际</a>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
-<div class="content">
-	<!-- ###CHANGEPASSWORD_FORM### -->
-	<form role="form" class="login-form" id="login-form" action="###ACTION_URI###" method="post" onsubmit="###ON_SUBMIT###" target="_top">
-		<!-- <h3 class="form-title">###STATUS_HEADER###</h3> -->
-		<div class="alert alert-info">
-			<button class="close" data-close="alert"></button>
-			<span> ###STATUS_MESSAGE### </span>
-		</div>
-		<div class="form-group">
-			<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-			<label class="control-label visible-ie8 visible-ie9">###USERNAME_LABEL###</label>
-			<div class="input-icon">
-				<i class="fa fa-user"></i>
-				<input type="password" name="###NEWPASSWORD1###" placeholder="###NEWPASSWORD1_LABEL###" class="form-control placeholder-no-fix" data-rsa-encryption="" />
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">###PASSWORD_LABEL###</label>
-			<div class="input-icon">
-				<i class="fa fa-lock"></i>
-				<input type="password" name="###NEWPASSWORD2###" placeholder="###NEWPASSWORD2_LABEL###" class="form-control placeholder-no-fix" data-rsa-encryption="" />
-			</div>
-		</div>
-		<div class="form-actions">
-			<div class="btn btn-block btn btn-danger uppercase pull-left">###BACKLINK_LOGIN###</div>
-			<button type="submit" class="btn btn-success uppercase pull-right" id="login-sub">###SEND_PASSWORD###</button>
-		</div>
-	</form>
-	<!-- ###CHANGEPASSWORD_FORM### -->
-</div>
+<!-- <span> ###STATUS_MESSAGE### </span> -->
 <!--###TEMPLATE_CHANGEPASSWORD###-->

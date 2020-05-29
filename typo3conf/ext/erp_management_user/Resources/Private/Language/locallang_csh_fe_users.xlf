@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-22T20:28:25Z" product-name="erp_management_user">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-15T15:56:42Z" product-name="erp_management_user">
 		<header/>
 		<body>
 			<trans-unit id="authcode.description">

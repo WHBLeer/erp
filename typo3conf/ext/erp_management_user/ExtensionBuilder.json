@@ -23,7 +23,7 @@
                         "ajaxdata"
                     ]
                 },
-                "name": "UserManagement",
+                "name": "ErpUser",
                 "objectsettings": {
                     "addDeletedField": true,
                     "addHiddenField": true,
@@ -95,7 +95,7 @@
                             "relationName": "city",
                             "relationType": "zeroToOne",
                             "relationWire": "",
-                            "renderType": "selectSingleBox",
+                            "renderType": "selectSingle",
                             "uid": "1393728727387"
                         },
                         {
@@ -106,10 +106,49 @@
                             "relationName": "province",
                             "relationType": "zeroToOne",
                             "relationWire": "",
-                            "renderType": "selectSingleBox",
+                            "renderType": "selectSingle",
                             "uid": "196473110532"
                         }
                     ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    421,
+                    67
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "ErpUserGroup",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u7528\u6237\u7ec4\u7ba1\u7406",
+                    "mapToTable": "fe_groups",
+                    "parentClass": "\\TYPO3\\CMS\\Extbase\\Domain\\Model\\FrontendUserGroup",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "574513051432"
+                },
+                "propertyGroup": {
+                    "properties": []
+                },
+                "relationGroup": {
+                    "relations": []
                 }
             }
         }
@@ -157,7 +196,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2020-03-22 08:28",
+        "last_modified": "2020-05-15 03:56",
         "extension_builder_version": "9.10.2",
         "be_user": "\u7ba1\u7406\u5458 (1)"
     }

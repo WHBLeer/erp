@@ -1,0 +1,28 @@
+{
+    "name": "erp/erp-management-workorder",
+    "type": "typo3-cms-extension",
+    "description": "\u5de5\u5355\u6a21\u5757\u7ba1\u7406",
+    "authors": [
+        {
+            "name": "\u738b\u5b8f\u5f6c",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ERP\\ErpManagementWorkorder\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ERP\\ErpManagementWorkorder\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "erp/erp-management-workorder": "self.version",
+        "typo3-ter/erp-management-workorder": "self.version"
+    }
+}

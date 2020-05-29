@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-26T12:30:25Z" product-name="erp_management_wallet">
+		<header/>
+		<body>
+			<trans-unit id="balance.description">
+				<source>动账后余额</source>
+			</trans-unit>
+			<trans-unit id="chmoney.description">
+				<source>变动金额 增+ 减-</source>
+			</trans-unit>
+			<trans-unit id="remark.description">
+				<source>备注</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

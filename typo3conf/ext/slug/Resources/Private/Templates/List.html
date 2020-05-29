@@ -1,0 +1,126 @@
+{namespace core = TYPO3\CMS\Core\ViewHelpers}
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+
+    <f:flashMessages />
+    <f:render partial="GlobalHeader" arguments="{_all}"/>
+
+    <f:form id="filter-list" method="POST">
+        <div class="row">
+            <div class="col-sm-3">
+                <h6>{f:translate(key:'filter.form.label.search_key', extensionName: slug)}</h6>
+                <input type="text" value="{filter.key}" id="filter-key" name="tx_slug_site_slugslugs[filter][key]" class="form-control"/>
+            </div>
+            <div class="col-sm-2">
+                <h6>{f:translate(key:'filter.form.label.entries_per_page', extensionName: slug)}</h6>
+                <f:form.select value="{filter.maxentries}" name="filter[maxentries]" options="{filterOptions.maxentries}" optionValueField="value" optionLabelField="label" class="form-control"/>
+            </div>
+            <div class="col-sm-3">
+                <h6>{f:translate(key:'filter.form.label.order_by', extensionName: slug)}</h6>
+                <f:form.select value="{filter.orderby}" name="filter[orderby]" options="{filterOptions.orderby}" optionValueField="value" optionLabelField="label" class="form-control"/>
+            </div>
+            <div class="col-sm-2">
+                <h6>{f:translate(key:'filter.form.label.order', extensionName: slug)}</h6>
+                <f:form.select value="{filter.order}" name="filter[order]" options="{filterOptions.order}" optionValueField="value" optionLabelField="label" class="form-control"/>
+            </div>
+            <div class="col-sm-2">
+                <h6>{f:translate(key:'filter.form.label.action', extensionName: slug)}</h6>
+                <button class="btn btn-default btn-block"><i class="fa fa-filter"></i> Filter</button>
+            </div>
+        </div>
+    </f:form>
+
+
+    <f:widget.paginate objects="{pages}" as="pagesPaginated" configuration="{addQueryStringMethod: 'POST,GET', itemsPerPage: filter.maxentries, insertAbove: 1, maximumNumberOfLinks: 10}">
+        <table class="table table-hover">
+            <tr>
+                <th colspan="2"><span class="badge badge-info record-count" title="Number of records in the current view"></span></th>
+                <th colspan="3" style="text-align: right;">
+                    <div class="btn-group">
+                        <button class="btn btn-default saveAllPageSlugs" title="{f:translate(key:'button.saveall.title', extensionName: slug)}">
+                            <i class="fa fa-save"></i> {f:translate(key:'button.saveall.label', extensionName: slug)}
+                        </button>
+
+                        <button class="btn btn-default generateAllPageSlugs" title="{f:translate(key:'button.generateall.title', extensionName: slug)}">
+                            <i class="fa fa-refresh"></i> {f:translate(key:'button.generateall.label', extensionName: slug)}
+                        </button>
+                    </div>
+                </th>
+            </tr>
+            <f:for each="{pagesPaginated}" as="page">
+                <tr>
+                    <td title="id={page.uid}">
+                        <f:switch expression="{page.doktype}">
+                            <f:case value="3">
+                                <i class="fa fa-link"></i>
+                            </f:case>
+                            <f:case value="254">
+                                <i class="fa fa-folder"></i>
+                            </f:case>
+                            <f:defaultCase>
+                                <i class="fa fa-file-o"></i>
+                            </f:defaultCase>
+                        </f:switch>
+                    </td>
+                    <td>
+                        <strong>{page.title}</strong><br>
+                        <f:render partial="PageUrl" arguments="{page:page}"/>
+                    </td>
+                    <td>
+                        <core:icon identifier="flags-{page.flag}" size="small" />
+                    </td>
+                    <td class="slug-input">
+                        <f:render partial="SlugInput" arguments="{page:page}"/>
+                    </td>
+                    <td nowrap>
+                        <f:if condition="!{page.tx_slug_locked}">
+                            <div class="btn-group">
+                                <button data-uid="{page.uid}" id="savePageSlug-{page.uid}" class="btn btn-default savePageSlug" title="{f:translate(key:'button.save.title', extensionName: slug)}">
+                                    <i class="fa fa-save"></i>
+                                </button>
+
+                                <button data-uid="{page.uid}" id="generatePageSlug-{page.uid}" class="btn btn-default generatePageSlug" title="{f:translate(key:'button.generate.title', extensionName: slug)}">
+                                    <i class="fa fa-refresh"></i>
+                                </button>
+
+                                <f:if condition="{backendConfiguration.recordInfoEnabled}">
+                                    <button data-uid="{page.uid}" id="slugInfo-{page.uid}" class="btn btn-default slugInfo" title="{f:translate(key:'button.info.title', extensionName: slug)}">
+                                        <i class="fa fa-info-circle"></i>
+                                    </button>
+                                </f:if>
+                            </div>
+                        </f:if>
+                    </td>
+                </tr>
+                <f:if condition="{backendConfiguration.recordInfoEnabled}">
+                    <tr class="record-info-row">
+                        <td colspan="6">
+                            <div data-uid="{page.uid}" class="record-info-container">
+                                <f:switch expression="{page.doktype}">
+                                    <f:case value="3">
+                                        <div class="alert alert-info">
+                                            {f:translate(key:'recordinfo.no_info_available', extensionName: slug)}
+                                        </div>
+                                    </f:case>
+                                    <f:case value="254">
+                                        <div class="alert alert-info">
+                                            {f:translate(key:'recordinfo.no_info_available', extensionName: slug)}
+                                        </div>
+                                    </f:case>
+                                    <f:defaultCase>
+                                        <f:render partial="GooglePreview" arguments="{page:page}"/>
+                                    </f:defaultCase>
+                                </f:switch>
+                            </div>
+                        </td>
+                    </tr>
+                </f:if>
+            </f:for>
+        </table>
+    </f:widget.paginate>
+
+    <f:render partial="SlugNotes"/>
+
+</f:section>

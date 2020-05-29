@@ -132,8 +132,79 @@ class CollectionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
      */
     public function apiAction()
     {
-        dump($_GET);
-        dump($_POST);
+        file_put_contents('/var/www/html/erp.whongbin.com/logs/get.log', date('Y-m-d H:i:s') .'===='. json_encode( $_GET ). chr(10) . chr(10), FILE_APPEND | LOCK_EX);
+        file_put_contents('/var/www/html/erp.whongbin.com/logs/post.log', date('Y-m-d H:i:s') .'===='. json_encode( $_POST ) . chr(10) . chr(10), FILE_APPEND | LOCK_EX);
+        $cmd = GeneralUtility::_GP('cmd');
+
+        // 检查用户登录
+        if ($cmd=="user_check") {
+            $user = $GLOBALS['TSFE']->fe_user->user;
+            if ($user['ses_userid']>0) {
+                $result = array(
+                    'code' => 1,
+                    'offweb' => 'https://erp.whongbin.com/',
+                    'data' => array(
+                        'userinfo' => array(
+                            'name' => $user['name'],
+                            'username' => $user['username'],
+                            // 'company' => $user['company'],
+                            'company' => '测试账号',
+                            // 'nickname' => $user['nickname'],
+                            'nickname' => '王宏彬',
+                            'adminurl' => 'https://erp.whongbin.com/system/profile',
+                        ),
+                        'activesite' => array(
+                            '1688' => 'https://www.1688.com/',
+                            '淘宝' => 'https://www.taobao.com/',
+                            '天猫' => 'https://www.tmall.com/',
+                        ),
+                    )
+                );
+            } else {
+                $result = array(
+                    'code' => 0,
+                    'offweb' => 'https://erp.whongbin.com/',
+                    'data' => array(
+                        'url' => 'https://erp.whongbin.com/login',
+                    )
+                );
+            }
+            JSON($result);
+        }
+
+        // 淘宝采集
+        if ($cmd=="submit_taobao") {
+            $user = $GLOBALS['TSFE']->fe_user->user;
+            if ($user['ses_userid']>0) {
+                $result = array(
+                    'code' => 1,
+                    'data' => array(
+                        'userinfo' => array(
+                            'name' => $user['name'],
+                            'username' => $user['username'],
+                            // 'company' => $user['company'],
+                            'company' => '测试账号',
+                            // 'nickname' => $user['nickname'],
+                            'nickname' => '王宏彬',
+                            'adminurl' => 'https://erp.whongbin.com/system/profile',
+                        ),
+                        'activesite' => array(
+                            '1688' => 'https://www.1688.com/',
+                            '淘宝' => 'https://www.taobao.com/',
+                            '天猫' => 'https://www.tmall.com/',
+                        ),
+                    )
+                );
+            } else {
+                $result = array(
+                    'code' => 0,
+                    'data' => array(
+                        'url' => 'https://erp.whongbin.com/login',
+                    )
+                );
+            }
+            JSON($result);
+        }
         exit;
     }
 }

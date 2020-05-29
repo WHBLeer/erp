@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-24T09:35:38Z" product-name="slug">
+		<header/>
+		<body>
+			<trans-unit id="default.maxentries">
+				<source>Default max entries</source>
+			</trans-unit>
+			<trans-unit id="default.orderby">
+				<source>Default order by field</source>
+			</trans-unit>
+			<trans-unit id="default.order">
+				<source>Default order</source>
+			</trans-unit>
+			<trans-unit id="default.recordInfoEnabled">
+				<source>Enable additional record information</source>
+			</trans-unit>
+
+
+            <trans-unit id="news.maxentries">
+				<source>Default max entries for News records</source>
+			</trans-unit>
+			<trans-unit id="news.orderby">
+				<source>Default order by field for News records</source>
+			</trans-unit>
+			<trans-unit id="news.order">
+				<source>Default order for News records</source>
+			</trans-unit>
+			<trans-unit id="news.enabled">
+				<source>News enabled</source>
+			</trans-unit>
+
+
+			<trans-unit id="tree.enabled">
+				<source>Tree enabled</source>
+			</trans-unit>
+                        <trans-unit id="tree.depth">
+				<source>Tree depth</source>
+			</trans-unit>
+                        <trans-unit id="tree.root">
+				<source>Tree default root page uid</source>
+			</trans-unit>
+
+
+            <trans-unit id="record.enabled">
+				<source>Custom records enabled</source>
+			</trans-unit>
+                        <trans-unit id="record.maxentries">
+				<source>Custom records initial max entries</source>
+			</trans-unit>
+                        <trans-unit id="record.orderby">
+				<source>Custom records order by</source>
+			</trans-unit>
+                        <trans-unit id="record.order">
+				<source>Custom records ordering</source>
+			</trans-unit>
+
+
+			<trans-unit id="seo.enabled">
+				<source>Enable SEO module</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,24 @@
+base: /erp/
+baseVariants: {  }
+disableStaticFileCache: true
+errorHandling: {  }
+languages:
+  -
+    title: 中文
+    enabled: true
+    base: /
+    typo3Language: ch
+    locale: zh_CH.UTF-8
+    iso-639-1: zh
+    navigationTitle: 中文
+    hreflang: zh-ch
+    direction: ltr
+    flag: cn
+    languageId: '0'
+rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    map:
+      .html: 0
+routes: {  }

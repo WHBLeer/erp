@@ -104,17 +104,68 @@ page {
             attribute = http-equiv
         }
     }
-
     includeCSS {
-        css = {$page.includePath.auth}auth.css
+        css1 = {$page.includePath.main}css/bootstrap.min.css
+        css2 = {$page.includePath.main}css/icons.css
+        css3 = {$page.includePath.auth}css/animate.css
+        css4 = {$page.includePath.auth}css/animsition.min.css
+        css5 = {$page.includePath.auth}css/util.css
+        css6 = {$page.includePath.auth}css/main.css
+        css7 = 
+        css8 = 
+        css9 = 
+        css10 =
+        css11 =
+        css100 = 
+
+    }
+
+    includeJSLibs {
+        js1 = {$page.includePath.main}js/jquery.min.js
+        js2 = {$page.includePath.auth}js/animsition.min.js
+        js3 = {$page.includePath.auth}js/popper.min.js
+        js4 = {$page.includePath.main}js/bootstrap.bundle.min.js
+        js5 = {$page.includePath.auth}js/main.js
+        js100 = 
+    }
+
+    includeJS {
     }
 
     includeJSFooterlibs {
-        js = {$page.includePath.auth}auth.js
     }
+
+    # jsFooterInline {
+    #     10 = TEXT
+    #     10.value (
+    #         layer.config({
+    #             extend: 'mystyle/style.css',
+    #             skin: 'layer-ext-mystyle'
+    #         });
+    #     )
+    # }
+
+    includeJSFooter {
+        js1 = 
+        js2 = 
+        js3 = 
+        js4 = 
+        js5 = 
+        js6 = 
+        js7 = 
+        js8 = 
+        js9 = 
+        js10 = 
+        js11 = 
+        js12 = 
+        js13 = 
+        js14 = 
+        js100 = 
+    }
+
 }
 
-
+ 
 ################
 #### CONFIG ####
 ################

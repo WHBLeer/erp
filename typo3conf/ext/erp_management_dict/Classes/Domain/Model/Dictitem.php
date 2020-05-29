@@ -4,7 +4,7 @@ namespace ERP\ErpManagementDict\Domain\Model;
 
 /***
  *
- * This file is part of the "数据字典" Extension for TYPO3 CMS.
+ * This file is part of the "类别" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
@@ -13,7 +13,7 @@ namespace ERP\ErpManagementDict\Domain\Model;
  *
  ***/
 /**
- * 类型
+ * 类别
  */
 class Dictitem extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {

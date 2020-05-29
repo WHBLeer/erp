@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-26T15:14:42Z" product-name="erp_management_workorder">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_workorder">
+				<source>Workorder</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_workorder.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_workorder.worktype">
+				<source>Worktype</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_workorder.closetime">
+				<source>Closetime</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_workorder.contact">
+				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_workorder.telephone">
+				<source>Telephone</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_workorder.dialogue">
+				<source>Dialogue</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_workorder.erpuser">
+				<source>Erpuser</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_dialogue">
+				<source>Dialogue</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_dialogue.bodytext">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementworkorder_domain_model_dialogue.type">
+				<source>Type</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

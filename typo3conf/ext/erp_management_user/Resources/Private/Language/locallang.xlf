@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-22T20:28:25Z" product-name="erp_management_user">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-15T15:56:42Z" product-name="erp_management_user">
 		<header/>
 		<body>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement">
-				<source>User Management</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser">
+				<source>Erp User</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.authcode">
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.authcode">
 				<source>Authcode</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.wxopenid">
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.wxopenid">
 				<source>Wxopenid</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.bindip">
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.bindip">
 				<source>Bindip</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.nickname">
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.nickname">
 				<source>Nickname</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.city">
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.city">
 				<source>City</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.province">
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.province">
 				<source>Province</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpusergroup">
+				<source>Erp User Group</source>
 			</trans-unit>
 		</body>
 	</file>

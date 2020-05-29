@@ -180,12 +180,12 @@ lib.navigation.breadcrumb {
 		1 {
 			noBlur = 1
 			target = _self
-			wrap = <ol class="breadcrumb">当前位置：|</ol>
+			wrap = <div class="row breadcrumb"><div class="col-12">当前位置：|</div></div>
 			NO = 1
 			NO {
 				stdWrap.field = title
 				ATagTitle.field = nav_title // title
-				wrapItemAndSub = <li class="breadcrumb-item">|</li>
+				wrapItemAndSub = <span class="breadcrumb-item">|</span>
 				doNotLinkIt = 1
 				doNotLinkIt.if {
 				value.field = doktype
@@ -197,7 +197,7 @@ lib.navigation.breadcrumb {
 			CUR {
 				stdWrap.field = title
 				doNotLinkIt = 1
-				wrapItemAndSub = <li class="breadcrumb-item active">|</li>
+				wrapItemAndSub = <span class="breadcrumb-item active">|</span>
 			}
 		}
 	}

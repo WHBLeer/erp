@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-24T09:35:38Z" product-name="slug">
+		<header/>
+		<body>
+
+            <trans-unit id="ext.title">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="ext.version">
+				<source>version %s</source>
+			</trans-unit>
+			<trans-unit id="ext.note">
+				<source><![CDATA[<p>This extension is in BETA mode. It works, but be careful what you do. You have the power to manipulate all page slugs directly now!</p>]]></source>
+			</trans-unit>
+
+
+			<trans-unit id="table.head.uid">
+				<source>Uid</source>
+			</trans-unit>
+            <trans-unit id="table.head.state">
+				<source>State</source>
+			</trans-unit>
+            <trans-unit id="table.head.language">
+				<source>Lang</source>
+			</trans-unit>
+            <trans-unit id="table.head.title">
+				<source>Title of the page</source>
+			</trans-unit>
+            <trans-unit id="table.head.slug">
+				<source>Slug</source>
+			</trans-unit>
+            <trans-unit id="table.head.actions">
+				<source>Actions</source>
+			</trans-unit>
+
+
+                        <trans-unit id="button.save.title">
+				<source>Save slug</source>
+			</trans-unit>
+                        <trans-unit id="button.refresh.label">
+				<source>Reload</source>
+			</trans-unit>
+                        <trans-unit id="button.refresh.title">
+				<source>Reloads the whole list module!</source>
+			</trans-unit>
+                        <trans-unit id="button.saveall.label">
+				<source>Save all</source>
+			</trans-unit>
+                        <trans-unit id="button.saveall.title">
+				<source>Saves all slugs. Be careful what you do and better check twice!</source>
+			</trans-unit>
+                        <trans-unit id="button.generate.label">
+				<source>Generate slug</source>
+			</trans-unit>
+                        <trans-unit id="button.generate.title">
+				<source>Generate slug (without saving!)</source>
+			</trans-unit>
+                        <trans-unit id="button.generateall.label">
+				<source>Generate all</source>
+			</trans-unit>
+                        <trans-unit id="button.generateall.title">
+				<source>Generate all</source>
+			</trans-unit>
+                        <trans-unit id="button.info.title">
+				<source>Display additional information</source>
+			</trans-unit>
+                        <trans-unit id="button.filter">
+				<source>Filter</source>
+			</trans-unit>
+                        <trans-unit id="button.pages">
+				<source>Pages</source>
+			</trans-unit>
+                        <trans-unit id="button.news">
+				<source>News</source>
+			</trans-unit>
+                        <trans-unit id="button.tree">
+				<source>Tree</source>
+			</trans-unit>
+
+
+                        <trans-unit id="siteselect.options.others">
+				<source>Other pages on the root level (This function comes with the next version!!)</source>
+			</trans-unit>
+                        <trans-unit id="siteselect.labels.site">
+				<source>Site:</source>
+			</trans-unit>
+                        <trans-unit id="siteselect.labels.language">
+				<source>Language:</source>
+			</trans-unit>
+
+
+                        <trans-unit id="notes.success.saved">
+				<source>Successfully saved</source>
+			</trans-unit>
+                        <trans-unit id="notes.info.nochanges">
+				<source>There is nothing to save...</source>
+			</trans-unit>
+                        <trans-unit id="notes.info.slugexists">
+				<source>This slug exists already in the database!</source>
+			</trans-unit>
+                        <trans-unit id="notes.info.nopagesfound">
+				<source>Ooops! No pages found...</source>
+			</trans-unit>
+                        <trans-unit id="notes.confirm.slashonly">
+				<source>Are you sure you want to save only a slash at this point? What about your root page?</source>
+			</trans-unit>
+                        <trans-unit id="notes.error.noslug">
+				<source>Please enter a slug</source>
+			</trans-unit>
+                        <trans-unit id="notes.error.ajax">
+				<source>Something went wrong with jQuery and Ajax, please see script output: </source>
+			</trans-unit>
+                        <trans-unit id="notes.generator.after_generating">
+				<source>The slug has been generated, but not saved yet! Please don't forget to click on the save button if you want so save this version of the slug! You can also set 'autoSave' to enable automatic saving of the slug, after generating.</source>
+			</trans-unit>
+
+
+                        <trans-unit id="filter.form.label.search_key">
+				<source>Find slugs by keyword/s</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.label.entries_per_page">
+				<source>Entries per page</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.label.order_by">
+				<source>Order by field</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.label.order">
+				<source>Order</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.label.action">
+				<source>Action</source>
+			</trans-unit>
+
+                        <trans-unit id="filter.form.select.option.creation_date">
+				<source>Creation Date</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.tstamp">
+				<source>Last Changed</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.title">
+				<source>Title</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.slug">
+				<source>Slug</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.path_segment">
+				<source>Path Segment</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.sys_language_uid">
+				<source>Language</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.is_siteroot">
+				<source>Site Root</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.doktype">
+				<source>Doktype</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.descending">
+				<source>Descending</source>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.ascending">
+				<source>Ascending</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_slug_domain_model_page">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="tx_slug_domain_model_page.slug_lock">
+				<source>Slug Lock</source>
+			</trans-unit>
+
+
+            <trans-unit id="recordinfo.no_info_available">
+				<source>No information available for this record</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

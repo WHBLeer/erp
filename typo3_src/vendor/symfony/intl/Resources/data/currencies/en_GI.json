@@ -1,0 +1,13 @@
+{
+    "Version": "36.1",
+    "Names": {
+        "GBP": [
+            "GB£",
+            "British Pound"
+        ],
+        "GIP": [
+            "£",
+            "Gibraltar Pound"
+        ]
+    }
+}

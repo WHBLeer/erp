@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:erp_management_product/Resources/Public/Icons/tx_erpmanagementproduct_domain_model_product.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, numbering, name, business, original, imageuids, category, approval, shelves, gtypes, info, cost, descr, variants, images',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, numbering, name, business, original, imageuids, category, approval, shelves, gtypes, info, cost, descr, variants, images,adduser',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, numbering, name, business, original, imageuids, category, approval, shelves, gtypes, info, cost, descr, variants, images, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, numbering, name, business, original, imageuids, category, approval, shelves, gtypes, info, cost, descr, variants, images,adduser, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -318,6 +318,23 @@ return [
                 ],
             ],
 
+        ],
+        'adduser' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_product/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementproduct_domain_model_product.adduser',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'fe_users',
+                'minitems' => 0,
+                'maxitems' => 1,
+                'appearance' => [
+                    'collapseAll' => 0,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
         ],
     
     ],

@@ -11,6 +11,9 @@ return [
         'core' => [
             'packagePath' => 'typo3/sysext/core/',
         ],
+        'scheduler' => [
+            'packagePath' => 'typo3/sysext/scheduler/',
+        ],
         'extbase' => [
             'packagePath' => 'typo3/sysext/extbase/',
         ],
@@ -40,6 +43,9 @@ return [
         ],
         'backend' => [
             'packagePath' => 'typo3/sysext/backend/',
+        ],
+        'reports' => [
+            'packagePath' => 'typo3/sysext/reports/',
         ],
         'setup' => [
             'packagePath' => 'typo3/sysext/setup/',
@@ -74,9 +80,6 @@ return [
         'redirects' => [
             'packagePath' => 'typo3/sysext/redirects/',
         ],
-        'reports' => [
-            'packagePath' => 'typo3/sysext/reports/',
-        ],
         'seo' => [
             'packagePath' => 'typo3/sysext/seo/',
         ],
@@ -110,6 +113,12 @@ return [
         'erp_management_images' => [
             'packagePath' => 'typo3conf/ext/erp_management_images/',
         ],
+        'erp_management_logistics' => [
+            'packagePath' => 'typo3conf/ext/erp_management_logistics/',
+        ],
+        'erp_management_order' => [
+            'packagePath' => 'typo3conf/ext/erp_management_order/',
+        ],
         'erp_management_product' => [
             'packagePath' => 'typo3conf/ext/erp_management_product/',
         ],
@@ -119,11 +128,17 @@ return [
         'erp_management_user' => [
             'packagePath' => 'typo3conf/ext/erp_management_user/',
         ],
+        'erp_management_wallet' => [
+            'packagePath' => 'typo3conf/ext/erp_management_wallet/',
+        ],
+        'erp_management_workorder' => [
+            'packagePath' => 'typo3conf/ext/erp_management_workorder/',
+        ],
         'extension_builder' => [
             'packagePath' => 'typo3conf/ext/extension_builder/',
         ],
-        'lfeditor' => [
-            'packagePath' => 'typo3conf/ext/lfeditor/',
+        'slug' => [
+            'packagePath' => 'typo3conf/ext/slug/',
         ],
         'staticfilecache' => [
             'packagePath' => 'typo3conf/ext/staticfilecache/',

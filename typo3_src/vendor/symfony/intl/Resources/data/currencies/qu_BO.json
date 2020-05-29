@@ -1,0 +1,13 @@
+{
+    "Version": "36.1",
+    "Names": {
+        "BOB": [
+            "Bs",
+            "Boliviano"
+        ],
+        "PEN": [
+            "PEN",
+            "Sol Peruano"
+        ]
+    }
+}

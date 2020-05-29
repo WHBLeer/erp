@@ -142,6 +142,13 @@ class Product extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $variants = null;
 
     /**
+     * 添加用户
+     * 
+     * @var \ERP\ErpManagementUser\Domain\Model\ErpUser
+     */
+    protected $adduser = null;
+
+    /**
      * __construct
      */
     public function __construct()
@@ -593,5 +600,26 @@ class Product extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setShelves(\ERP\ErpManagementDict\Domain\Model\Dictitem $shelves)
     {
         $this->shelves = $shelves;
+    }
+
+    /**
+     * Returns the adduser
+     * 
+     * @return \ERP\ErpManagementUser\Domain\Model\ErpUser $adduser
+     */
+    public function getAdduser()
+    {
+        return $this->adduser;
+    }
+
+    /**
+     * Sets the adduser
+     * 
+     * @param \ERP\ErpManagementUser\Domain\Model\ErpUser $adduser
+     * @return void
+     */
+    public function setAdduser(\ERP\ErpManagementUser\Domain\Model\ErpUser $adduser)
+    {
+        $this->adduser = $adduser;
     }
 }

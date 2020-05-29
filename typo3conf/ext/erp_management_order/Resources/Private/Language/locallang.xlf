@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-21T17:32:13Z" product-name="erp_management_order">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order">
+				<source>Order</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.amazon_order_id">
+				<source>Amazon Order Id</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.purchase_date">
+				<source>Purchase Date</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.last_update_date">
+				<source>Last Update Date</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.order_status">
+				<source>Order Status</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.fulfillment_channel">
+				<source>Fulfillment Channel</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.ship_service_level">
+				<source>Ship Service Level</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.sales_channel">
+				<source>Sales Channel</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_name">
+				<source>Shipper Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_address_line1">
+				<source>Shipper Address Line1</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_address_line2">
+				<source>Shipper Address Line2</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_address_line3">
+				<source>Shipper Address Line3</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_city">
+				<source>Shipper City</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_state_or_region">
+				<source>Shipper State Or Region</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_country_code">
+				<source>Shipper Country Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_phone">
+				<source>Shipper Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_address_type">
+				<source>Shipper Address Type</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_is_address_sharing_confidential">
+				<source>Shipper Is Address Sharing Confidential</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.currency_code">
+				<source>Currency Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.amount">
+				<source>Amount</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.number_of_items_shipped">
+				<source>Number Of Items Shipped</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.number_of_items_unshipped">
+				<source>Number Of Items Unshipped</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.payment_method">
+				<source>Payment Method</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.payment_method_details">
+				<source>Payment Method Details</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.marketplace_id">
+				<source>Marketplace Id</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.buyer_email">
+				<source>Buyer Email</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.buyer_name">
+				<source>Buyer Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipment_service_level_category">
+				<source>Shipment Service Level Category</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipped_by_amazon_t_f_m">
+				<source>Shipped By Amazon T F M</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.order_type">
+				<source>Order Type</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.earliest_ship_date">
+				<source>Earliest Ship Date</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.latest_ship_date">
+				<source>Latest Ship Date</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.earliest_delivery_date">
+				<source>Earliest Delivery Date</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.latest_delivery_date">
+				<source>Latest Delivery Date</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.business_order">
+				<source>Business Order</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.prime">
+				<source>Prime</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.global_express_enabled">
+				<source>Global Express Enabled</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.premium_order">
+				<source>Premium Order</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.replacement_order">
+				<source>Replacement Order</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.sold_by_a_b">
+				<source>Sold By A B</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.goods">
+				<source>Goods</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.erpuser">
+				<source>Erpuser</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

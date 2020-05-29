@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-26T23:14:08Z" product-name="erp_management_logistics">
+		<header/>
+		<body>
+			<trans-unit id="domestic_waybill.description">
+				<source>国内运单号</source>
+			</trans-unit>
+			<trans-unit id="international_waybill.description">
+				<source>国际运单号</source>
+			</trans-unit>
+			<trans-unit id="estimate_freight.description">
+				<source>预计运费</source>
+			</trans-unit>
+			<trans-unit id="actual_freight.description">
+				<source>实际运费</source>
+			</trans-unit>
+			<trans-unit id="aging.description">
+				<source>预计时效,工作日</source>
+			</trans-unit>
+			<trans-unit id="weight.description">
+				<source>重量(kg)</source>
+			</trans-unit>
+			<trans-unit id="length.description">
+				<source>体积-长(cm)</source>
+			</trans-unit>
+			<trans-unit id="width.description">
+				<source>体积-宽(cm)</source>
+			</trans-unit>
+			<trans-unit id="height.description">
+				<source>体积-高(cm)</source>
+			</trans-unit>
+			<trans-unit id="quantity.description">
+				<source>商品数量</source>
+			</trans-unit>
+			<trans-unit id="goodstype.description">
+				<source>货物类型</source>
+			</trans-unit>
+			<trans-unit id="country.description">
+				<source>目的地国家</source>
+			</trans-unit>
+			<trans-unit id="erpuser.description">
+				<source>目的地国家</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

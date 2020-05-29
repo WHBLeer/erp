@@ -3,7 +3,7 @@
 
     <!-- LOGO -->
     <div class="topbar-left">
-        <a href="index.html" class="logo">
+        <a href="/erp" class="logo">
             <span>
                     <img src="typo3conf/ext/erp_management_system_extension/Resources/Public/Main/images/logo-light.png" alt="" height="18">
                 </span>
@@ -15,14 +15,14 @@
 
     <nav class="navbar-custom">
         <ul class="navbar-right list-inline float-right mb-0">
-            <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
+            <!-- <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
                 <f:form  class="app-search">
                     <div class="form-group mb-0">
                         <input type="text" class="form-control" placeholder="Search..">
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </div>
                 </f:form>
-            </li>
+            </li> -->
 
             <!-- full screen -->
             <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
@@ -39,9 +39,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
                     <!-- item-->
-                    <h6 class="dropdown-item-text">
-                            Notifications (258)
-                        </h6>
+                    <h6 class="dropdown-item-text">消息通知【0】</h6>
                     <div class="slimscroll notification-item-list">
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item active">
@@ -82,29 +80,41 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                         <!-- item-->
-                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5"></i> Profile</a>
-                        <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5"></i> My Wallet</a>
-                        <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings m-r-5"></i> Settings</a>
-                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline m-r-5"></i> Lock screen</a>
+                        <a class="dropdown-item" href="system/profile"><i class="mdi mdi-account-circle m-r-5"></i> 个人信息</a>
+                        <a class="dropdown-item" href="system/wallet"><i class="mdi mdi-wallet m-r-5"></i> 我的钱包</a>
+                        <a class="dropdown-item" href="system/awsauth"><i class="mdi mdi-settings m-r-5"></i> 我的授权</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                        <a class="dropdown-item text-danger" href="logout"><i class="mdi mdi-power text-danger"></i> 注销登录</a>
                     </div>
                 </div>
             </li>
 
         </ul>
 
-        <ul class="list-inline menu-left mb-0">
+        <ul class="list-inline menu-left mb-0 mobile-icon">
             <li class="float-left">
                 <button class="button-menu-mobile open-left waves-effect">
                     <i class="mdi mdi-menu"></i>
                 </button>
             </li>
-                
         </ul>
-        <f:cObject typoscriptObjectPath="lib.navigation.breadcrumb" />
-
+        <div class="system-navigation">
+            <span>
+                <a href="product">产品中心</a>
+            </span>
+            <span>
+                <a href="orders">订单中心</a>
+            </span>
+            <span>
+                <a href="logistics">物流服务</a>
+            </span>
+            <span>
+                <a href="helper">帮助中心</a>
+            </span>
+            <span>
+                <a href="system">系统管理</a>
+            </span>
+        </div>
     </nav>
-
 </div>
 <!-- end navbar -->

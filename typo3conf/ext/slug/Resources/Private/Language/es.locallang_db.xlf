@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="es" source-language="en" datatype="plaintext" original="messages" date="2018-11-24T09:35:38Z" product-name="slug">
+		<header/>
+		<body>
+			<trans-unit id="tx_slug_domain_model_page">
+				<target>Página</target>
+			</trans-unit>
+			<trans-unit id="tx_slug_domain_model_page.slug_lock">
+                                <target>Cerrar</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

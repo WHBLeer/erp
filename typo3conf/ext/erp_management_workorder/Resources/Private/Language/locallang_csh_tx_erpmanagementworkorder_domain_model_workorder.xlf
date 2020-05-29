@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-26T15:14:42Z" product-name="erp_management_workorder">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>工单主题</source>
+			</trans-unit>
+			<trans-unit id="worktype.description">
+				<source>工单类型</source>
+			</trans-unit>
+			<trans-unit id="closetime.description">
+				<source>工单关闭时间</source>
+			</trans-unit>
+			<trans-unit id="contact.description">
+				<source>联系人</source>
+			</trans-unit>
+			<trans-unit id="telephone.description">
+				<source>联系人电话</source>
+			</trans-unit>
+			<trans-unit id="dialogue.description">
+				<source>钱包交易记录表</source>
+			</trans-unit>
+			<trans-unit id="erpuser.description">
+				<source>数据所属</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

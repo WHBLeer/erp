@@ -1,0 +1,239 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    53,
+                    46
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": [
+                        "api",
+                        "push",
+                        "pull"
+                    ]
+                },
+                "name": "Logistics",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u7269\u6d41",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "191394461021"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u56fd\u5185\u8fd0\u5355\u53f7",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "domesticWaybill",
+                            "propertyType": "String",
+                            "uid": "1150395252331"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u56fd\u9645\u8fd0\u5355\u53f7",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "internationalWaybill",
+                            "propertyType": "String",
+                            "uid": "1399668981923"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9884\u8ba1\u8fd0\u8d39",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "estimateFreight",
+                            "propertyType": "Float",
+                            "uid": "830584758539"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5b9e\u9645\u8fd0\u8d39",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "actualFreight",
+                            "propertyType": "Float",
+                            "uid": "793175247227"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9884\u8ba1\u65f6\u6548,\u5de5\u4f5c\u65e5",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "aging",
+                            "propertyType": "Integer",
+                            "uid": "1375110392563"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u91cd\u91cf(kg)",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "weight",
+                            "propertyType": "Float",
+                            "uid": "252079344085"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4f53\u79ef-\u957f(cm)",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "length",
+                            "propertyType": "Integer",
+                            "uid": "1293018991174"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4f53\u79ef-\u5bbd(cm)",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "width",
+                            "propertyType": "Integer",
+                            "uid": "1377417431363"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4f53\u79ef-\u9ad8(cm)",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "height",
+                            "propertyType": "Integer",
+                            "uid": "601331868023"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5546\u54c1\u6570\u91cf",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "quantity",
+                            "propertyType": "Integer",
+                            "uid": "923721544229"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8d27\u7269\u7c7b\u578b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "goodstype",
+                            "propertyType": "Integer",
+                            "uid": "860079310568"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementDict\\Domain\\Model\\Region",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u76ee\u7684\u5730\u56fd\u5bb6",
+                            "relationName": "country",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingle",
+                            "uid": "847447107300"
+                        },
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementUser\\Domain\\Model\\ErpUser",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u76ee\u7684\u5730\u56fd\u5bb6",
+                            "relationName": "erpuser",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingle",
+                            "uid": "1240966170006"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "\u7269\u6d41\u4fe1\u606f\u7ba1\u7406",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": true,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "erp_management_logistics",
+        "name": "\u7269\u6d41\u7ba1\u7406\u7cfb\u7edf",
+        "originalExtensionKey": "erp_management_logistics",
+        "originalVendorName": "ERP",
+        "persons": [
+            {
+                "company": "\u4e09\u91cc\u6797",
+                "email": "wanghongbin816@gmail.com",
+                "name": "\u738b\u5b8f\u5f6c",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Logistics=>list,show,new,create,edit,update,delete,api,push,pull",
+                    "noncacheableActions": "Logistics=>list,show,new,create,edit,update,delete,api,push,pull",
+                    "switchableActions": "\u7269\u6d41\u4fe1\u606f\u7ba1\u7406\nLogistics->list;Logistics->show;Logistics->new;Logistics->create;Logistics->edit;Logistics->update;Logistics->delete;Logistics->api\n\u7269\u6d41\u56de\u8c03\nLogistics->api\n\u63d0\u4ea4\u7269\u6d41\u4fe1\u606f\nLogistics->push\n\u62c9\u53d6\u7269\u6d41\u4fe1\u606f\nLogistics->pull"
+                },
+                "description": "\u7269\u6d41\u7ba1\u7406",
+                "key": "pi1",
+                "name": "\u7269\u6d41\u7ba1\u7406"
+            }
+        ],
+        "vendorName": "ERP"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2020-05-26 11:14",
+        "extension_builder_version": "9.10.2",
+        "be_user": "\u7ba1\u7406\u5458 (1)"
+    }
+}

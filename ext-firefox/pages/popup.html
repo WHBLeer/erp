@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title>YOYO采集</title>
+		<script src="../js/jquery-3.3.1.min.js"></script>
+		<script src="../js/popup.js"></script>
+		<style>
+			body {
+				font-family: "微软雅黑", "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+				font-size: 12px;
+				width: 400px;
+				height: 250px;
+				padding: 5px;
+				margin: 0;
+				box-sizing: border-box;
+				word-wrap: break-word;
+			}
+		
+			* {
+				box-sizing: border-box;
+			}
+		
+			a:link,
+			a:visited,
+			a:hover,
+			a:active,
+			a:focus {
+				outline: none;
+				text-decoration: none;
+				color: #000000;
+				border: none;
+			}
+		
+			a:hover {
+				color: #337AB7;
+			}
+		
+			.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				border-top: 1px solid #eee;
+				padding: 6px 0;
+			}
+		
+			.footer a {
+				color: #999;
+			}
+		
+			.footer p {
+				padding: 5px;
+				margin: 0;
+				font-size: 15px;
+				line-height: 10px;
+				font-weight: bold;
+				font-family: "微软雅黑";
+				text-align: right;
+			}
+		
+			#need_login {
+				display: none;
+				height: 80px;
+				padding: 20px 0;
+				text-align: center;
+			}
+		
+			#need_login h1 {
+				color: #000000;
+			}
+		
+			#need_login a:link {
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 56px;
+				border: 1px solid #337AB7;
+				border-radius: 3px;
+				padding: 3px 25px
+			}
+		
+			#need_login a:hover {
+				color: #c45500;
+			}
+		
+			#user_info {
+				display: none;
+				border-bottom: 1px solid #ccc;
+				font-size: 14px;
+				padding: 0 0 3px 2px;
+			}
+		
+			#user_info #user_info_company {
+				font-size: 12px;
+				color: #999;
+			}
+		
+			#content {
+				display: none;
+			}
+		
+			#active_site {
+				padding: 5px 0;
+				font-size: 12px;
+			}
+		
+			#active_site a {
+				border: 1px solid green;
+				border-radius: 3px;
+				padding: 2px 5px;
+				color: green;
+				display: inline-block;
+				margin: 0 3px;
+			}
+		
+			#active_site a:hover {
+				border: 1px solid #c45500;
+				color: #c45500;
+			}
+		
+			#curr_site {
+				overflow: hidden;
+			}
+		
+			#curr_spider {
+				margin: 20px;
+				padding: 15px;
+				background: #c45500;
+				color: white;
+				font-size: 18px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="need_login">
+			<img src="../img/logo.jpg" />
+			<h1>YOYO采集</h1>
+			<a href="#" id="login_jump" target="_black">请先登录系统</a>
+		</div>
+		<div id="user_info">
+			<span id="user_info_nickname"></span>
+			<span id="user_info_company"></span>
+		</div>
+		<div id="content">
+			<div id="active_site"></div>
+			<div id="curr_site"></div>
+			<div id="curr_spider">已采集：<label></label></div>
+		</div>
+		<div class="footer">
+			<p>
+				<a href="https://erp.whongbin.com/" target="_black">威海环联网络科技有限公司</a>
+			</p>
+		</div>
+	</body>
+</html>
+

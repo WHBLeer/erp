@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-26T12:30:25Z" product-name="erp_management_wallet">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record">
+				<source>Record</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.success_time">
+				<source>Success Time</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.amount">
+				<source>Amount</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.serial_number">
+				<source>Serial Number</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.order_number">
+				<source>Order Number</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.payment">
+				<source>Payment</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.billtype">
+				<source>Billtype</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.remark">
+				<source>Remark</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.erpuser">
+				<source>Erpuser</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_log">
+				<source>Log</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_log.balance">
+				<source>Balance</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_log.chmoney">
+				<source>Chmoney</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_log.remark">
+				<source>Remark</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet">
+				<source>Wallet</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.wallet_number">
+				<source>Wallet Number</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.balance">
+				<source>Balance</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.password">
+				<source>Password</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.alipay">
+				<source>Alipay</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.wxpay">
+				<source>Wxpay</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.log">
+				<source>Log</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.record">
+				<source>Record</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.erpuser">
+				<source>Erpuser</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_wallet_pi1.name">
+				<source>钱包管理</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_wallet_pi1.description">
+				<source>钱包管理</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

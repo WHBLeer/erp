@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-24T09:35:38Z" product-name="slug">
+		<header/>
+		<body>
+			<trans-unit id="slug_lock.description">
+				<source>Lock the slug, so that it can not be accidently edited or overwritten by the slug module.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

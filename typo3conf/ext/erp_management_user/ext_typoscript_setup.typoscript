@@ -5,14 +5,27 @@ config.tx_extbase {
 
       TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
         subclasses {
-          Tx_ErpManagementUser_UserManagement = ERP\ErpManagementUser\Domain\Model\UserManagement
+          Tx_ErpManagementUser_ErpUser = ERP\ErpManagementUser\Domain\Model\ErpUser
           
         }
       }
-      ERP\ErpManagementUser\Domain\Model\UserManagement {
+      TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup {
+        subclasses {
+          Tx_ErpManagementUser_ErpUserGroup = ERP\ErpManagementUser\Domain\Model\ErpUserGroup
+          
+        }
+      }
+      ERP\ErpManagementUser\Domain\Model\ErpUser {
         mapping {
           tableName = fe_users
-          recordType = Tx_ErpManagementUser_UserManagement
+          recordType = 0
+        }
+      }
+
+      ERP\ErpManagementUser\Domain\Model\ErpUserGroup {
+        mapping {
+          tableName = fe_groups
+          recordType = 0
         }
       }
 

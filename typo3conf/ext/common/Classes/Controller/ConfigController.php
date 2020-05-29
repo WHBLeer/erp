@@ -155,19 +155,6 @@ class ConfigController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         
         $this->redirect('list');
     }
-
-    /**
-     * action delete
-     * 
-     * @param \Sll\Common\Domain\Model\Config $config
-     * @return void
-     */
-    public function deleteAction(\Sll\Common\Domain\Model\Config $config)
-    {
-        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->configRepository->remove($config);
-        $this->redirect('list');
-    }
     
     /**
      * 异步请求

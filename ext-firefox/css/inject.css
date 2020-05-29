@@ -1,0 +1,73 @@
+/*# 注入到采集页面的CSS */
+body{
+    font-family: "Microsoft Yahei","微软雅黑","simsun",Arial;
+}
+.spider_yes{ color:red !important; border:1px solid red !important;}
+#chuang_bt_submit_box{
+    position:fixed;
+    bottom:20px;
+    right:100px;
+    z-index:500000000;
+    width:190px;
+    height:50px;
+    padding:2px 8px;
+
+}
+#chuang_bt_submit_box_bg{
+    position: absolute;
+    left:0;
+    top:0;
+    width:190px;
+    height:50px;
+    border-radius: 3px;
+    background:#999;
+    opacity:0.8;
+}
+#chuang_bt_submit{
+    position: absolute;
+    right:25px;
+    top:9px;
+	width:90px; 
+	padding:2px 8px;
+    /*height:24px;*/
+	line-height:24px;
+	font-size:14px;
+    border: 3px solid #428BCA;
+    border-radius: 0px;
+	color:white; 
+	background:#428BCA;
+	text-align:center; 
+	cursor:pointer;
+	opacity:1;
+    z-index:600000000;
+	}
+#chuang_bt_submit_box img{
+	height:36px;top:7px; left:10px; vertical-align:top; position: absolute;
+}
+#chuang_bt_submit.yes{
+	background:#00A650; 
+    border: 3px solid #317d43;
+}
+#chuang_info_log{
+	position:fixed;
+	top:-655px;
+	right:100px; 
+	width:300px; 
+	padding:5px; 
+	min-height:50px;
+	max-height:400px; 
+	overflow-y:auto;
+	overflow-x:hidden; 
+	border:1px solid #666;
+    border-radius: 2px;
+	font-size:11px; 
+	z-index:500000000; 
+	background:#fafafa; 
+	color:#666; 
+	opacity:0;
+}
+#chuang_bt_submit:hover{opacity:1; background: #1B6AAA;}/*,#chuang_info_log:hover*/
+#chuang_info_log li{list-style-type:none; border-bottom:1px solid #aaa; margin-bottom:5px;}
+#chuang_bt_submit.error{ color:red !important;}
+/*# 注入到采集页面的CSS */
+

@@ -1,0 +1,248 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    217,
+                    39
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": [
+                        "submit",
+                        "qlist",
+                        "alist"
+                    ]
+                },
+                "name": "Workorder",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u5de5\u5355\u7ba1\u7406",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "464236800080"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5de5\u5355\u4e3b\u9898",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "title",
+                            "propertyType": "String",
+                            "uid": "5294048238"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5de5\u5355\u7c7b\u578b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "worktype",
+                            "propertyType": "Integer",
+                            "uid": "1278182852549"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5de5\u5355\u5173\u95ed\u65f6\u95f4",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "closetime",
+                            "propertyType": "Integer",
+                            "uid": "811496295519"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8054\u7cfb\u4eba",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "contact",
+                            "propertyType": "String",
+                            "uid": "1346881451575"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8054\u7cfb\u4eba\u7535\u8bdd",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "telephone",
+                            "propertyType": "String",
+                            "uid": "54823738931"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u94b1\u5305\u4ea4\u6613\u8bb0\u5f55\u8868",
+                            "relationName": "dialogue",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "1450655239524"
+                        },
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementUser\\Domain\\Model\\ErpUser",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u6570\u636e\u6240\u5c5e",
+                            "relationName": "erpuser",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingleBox",
+                            "uid": "997468699038"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    488,
+                    49
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Dialogue",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1496735159206"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5185\u5bb9\u63cf\u8ff0",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "bodytext",
+                            "propertyType": "Text",
+                            "uid": "1404199595003"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u7c7b\u578b 0\u95ee\u9898 1\u7b54\u590d",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "type",
+                            "propertyType": "String",
+                            "uid": "1549519229016"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "\u5de5\u5355\u6a21\u5757\u7ba1\u7406",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": true,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "erp_management_workorder",
+        "name": "\u5de5\u5355\u6a21\u5757\u7ba1\u7406",
+        "originalExtensionKey": "erp_management_logistics",
+        "originalVendorName": "ERP",
+        "persons": [
+            {
+                "company": "\u4e09\u91cc\u6797",
+                "email": "wanghongbin816@gmail.com",
+                "name": "\u738b\u5b8f\u5f6c",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Workorder=>qlist,alist,show,new,create,edit,update,delete,submit",
+                    "noncacheableActions": "Workorder=>qlist,alist,show,new,create,edit,update,delete,submit",
+                    "switchableActions": "\u7528\u6237\u5de5\u5355\u7ba1\u7406\nWorkorder->qlist;Workorder->show;Workorder->new;Workorder->create;Workorder->edit;Workorder->update;Workorder->delete;Workorder->submit\n\u7ef4\u62a4\u5de5\u5355\u7ba1\u7406\nWorkorder->alist;Workorder->show;Workorder->new;Workorder->create;Workorder->edit;Workorder->update;Workorder->delete;Workorder->submit"
+                },
+                "description": "\u94b1\u5305\u7ba1\u7406",
+                "key": "pi1",
+                "name": "\u94b1\u5305\u7ba1\u7406"
+            }
+        ],
+        "vendorName": "ERP"
+    },
+    "wires": [
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_0",
+                "uid": "1450655239524"
+            },
+            "tgt": {
+                "moduleId": 1,
+                "terminal": "SOURCES",
+                "uid": "1496735159206"
+            }
+        }
+    ],
+    "log": {
+        "last_modified": "2020-05-26 03:14",
+        "extension_builder_version": "9.10.2",
+        "be_user": "\u7ba1\u7406\u5458 (1)"
+    }
+}

@@ -1,0 +1,81 @@
+<T3DataStructure>
+	<meta><langDisable>1</langDisable></meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms><sheetTitle>基本配置</sheetTitle></TCEforms>
+				<type>array</type>
+				<el>
+					<!-- View -->
+					<switchableControllerActions>
+						<TCEforms>
+							<label>加载模块</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">订单管理</numIndex>
+										<numIndex index="1">Order-&gt;list;Order-&gt;show;Order-&gt;new;Order-&gt;create;Order-&gt;edit;Order-&gt;update;Order-&gt;delete;Order-&gt;api</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">订单回调</numIndex>
+										<numIndex index="1">Order-&gt;api</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">提交订单</numIndex>
+										<numIndex index="1">Order-&gt;push</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">拉取订单</numIndex>
+										<numIndex index="1">Order-&gt;pull</numIndex>
+									</numIndex>
+								</items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+							</config>
+						</TCEforms>
+					</switchableControllerActions> 
+					<settings.previewPid>
+						<TCEforms>
+							<label>预览页面</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.previewPid>
+					<persistence.storagePid>
+						<TCEforms>
+							<label>数据存储</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>0</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</persistence.storagePid>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

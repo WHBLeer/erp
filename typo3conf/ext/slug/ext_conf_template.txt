@@ -1,0 +1,37 @@
+# Settings
+###########################
+
+# cat=defaults; type=options[10,20,30,40,50,60,70,80,90,100,150,200,300,400,500]; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:default.maxentries
+defaultMaxEntries = 20
+
+# cat=defaults; type=options[crdate,tstamp,title,slug,sys_language_uid,is_siteroot,doktype]; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:default.orderby
+defaultOrderBy = crdate
+
+# cat=defaults; type=options[DESC,ASC]; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:default.order
+defaultOrder = DESC
+
+# cat=defaults; type=boolean; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:default.recordInfoEnabled
+recordInfoEnabled = 1
+
+
+# cat=tree; type=boolean; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:tree.enabled
+treeEnabled = 1
+
+# cat=tree; type=options[1,2,3,4,5,6,7,8,9,10]; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:tree.depth
+treeDefaultDepth = 3
+
+# cat=tree; type=string; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:tree.root
+treeDefaultRoot =
+
+
+# cat=custom records; type=boolean; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:record.enabled
+recordEnabled = 0
+
+# cat=custom records; type=options[10,20,30,40,50,60,70,80,90,100,150,200,300,400,500]; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:record.maxentries
+recordMaxEntries = 10
+
+# cat=custom records; type=options[crdate,title,path_segment,sys_language_uid]; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:record.orderby
+recordOrderBy = crdate
+
+# cat=custom records; type=options[DESC,ASC]; label=LLL:EXT:slug/Resources/Private/Language/locallang_be.xlf:record.order
+recordOrder = DESC

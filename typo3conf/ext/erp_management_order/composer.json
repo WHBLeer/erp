@@ -1,0 +1,28 @@
+{
+    "name": "erp/erp-management-order",
+    "type": "typo3-cms-extension",
+    "description": "\u7269\u6d41\u4fe1\u606f\u7ba1\u7406",
+    "authors": [
+        {
+            "name": "\u738b\u5b8f\u5f6c",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ERP\\ErpManagementOrder\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ERP\\ErpManagementOrder\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "erp/erp-management-order": "self.version",
+        "typo3-ter/erp-management-order": "self.version"
+    }
+}

@@ -1,0 +1,43 @@
+<div id="globalHeader" class="row">
+    <div class="col-sm-4 col-md-3">
+        <h1><f:translate key="LLL:EXT:slug/Resources/Private/Language/locallang.xlf:ext.title"/> <small class="text-primary"><f:translate key="LLL:EXT:slug/Resources/Private/Language/locallang.xlf:ext.version" arguments="{0:'{extEmconf.version}'}"/></small></h1>
+    </div>
+    <div class="col-sm-8 col-md-9">
+
+        <div class="btn-group pull-right">
+            <f:link.action action="list" controller="Page" class="btn btn-default">
+                <i class="fa fa-file-o"></i> {f:translate(key:'button.pages', extensionName: slug)}
+            </f:link.action>
+            <f:if condition="{backendConfiguration.treeEnabled}">
+                <f:link.action action="tree" controller="Page" class="btn btn-default">
+                    <i class="fa fa-sitemap"></i> {f:translate(key:'button.tree', extensionName: slug)}
+                </f:link.action>
+            </f:if>
+            <f:if condition="{backendConfiguration.recordEnabled}">
+                <f:for each="{additionalTables}" as="table" key="label">
+                    <f:link.action action="additionalTable" controller="Extension" class="btn btn-default" arguments="{table:label}">
+                        <f:if condition="{table.icon}">
+                            <f:then>
+                                <f:image src="{table.icon}" height="14"/>
+                                {table.label}
+                            </f:then>
+                            <f:else>
+                                <i class="fa fa-file-o"></i>
+                                {table.label}
+                            </f:else>
+                        </f:if>
+                    </f:link.action>
+                </f:for>
+            </f:if>
+        </div>
+
+        <f:comment>
+            <div class="alert alert-info">
+                <f:format.raw>
+                    <f:translate key="LLL:EXT:slug/Resources/Private/Language/locallang.xlf:ext.note"/>
+                </f:format.raw>
+            </div>
+        </f:comment>
+
+    </div>
+</div>

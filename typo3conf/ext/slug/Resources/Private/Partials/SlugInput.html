@@ -1,0 +1,11 @@
+<div class="input-group">
+    <span class="input-group-addon">{f:if(condition: '{page.isocode}', then: '{page.isocode}', else: '')}</span>
+    <f:if condition="{page.tx_slug_locked}">
+        <f:then>
+            <input type="text" data-uid="{page.uid}" value="{page.slug}" class="form-control slug-input" disabled="">
+        </f:then>
+        <f:else>
+            <input type="text" data-uid="{page.uid}" value="{page.slug}" class="form-control slug-input page-{page.uid}">
+        </f:else>
+    </f:if>
+</div>

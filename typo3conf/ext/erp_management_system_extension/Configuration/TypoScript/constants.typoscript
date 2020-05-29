@@ -67,7 +67,7 @@ page {
 ### CONFIG ###
 ##############
 config {
-    baseURL = http://erp.whongbin.com/
+    baseURL = https://erp.whongbin.com/erp/
     ftpBaseUrl = http://ftp.whongbin.cn/
     no_cache = 1
     removeDefaultJS = 1

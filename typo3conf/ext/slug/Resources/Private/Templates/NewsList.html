@@ -1,0 +1,85 @@
+{namespace core = TYPO3\CMS\Core\ViewHelpers}
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+
+<f:render partial="GlobalHeader" arguments="{_all}"/>
+
+<f:flashMessages />
+
+<f:if condition="{newsRecords}">
+    <f:then>
+    
+        <f:form id="filter-list" method="POST">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h6>{f:translate(key:'filter.form.label.search_key', extensionName: slug)}</h6>
+                    <input type="text" value="{filter.key}" id="filter-key" name="tx_slug_site_slugslugs[filter][key]" class="form-control"/>
+                </div>
+                <div class="col-sm-2">
+                    <h6>{f:translate(key:'filter.form.label.entries_per_page', extensionName: slug)}</h6>
+                    <f:form.select id="filter-maxentries" value="{filter.maxentries}" name="filter[maxentries]" options="{filterOptions.maxentries}" optionValueField="value" optionLabelField="label" class="form-control"/>
+                </div>
+                <div class="col-sm-3">
+                    <h6>{f:translate(key:'filter.form.label.order_by', extensionName: slug)}</h6>
+                    <f:form.select id="filter-orderby" value="{filter.orderby}" name="filter[orderby]" options="{filterOptions.orderby}" optionValueField="value" optionLabelField="label" class="form-control"/>
+                </div>
+                <div class="col-sm-2">
+                    <h6>{f:translate(key:'filter.form.label.order', extensionName: slug)}</h6>
+                    <f:form.select value="{filter.order}" name="filter[order]" options="{filterOptions.order}" optionValueField="value" optionLabelField="label" class="form-control"/>
+                </div>
+                <div class="col-sm-2">
+                    <h6>{f:translate(key:'filter.form.label.action', extensionName: slug)}</h6>
+                    <button class="btn btn-default btn-block"><i class="fa fa-filter"></i> {f:translate(key:'button.filter', extensionName: slug)}</button>
+                </div>
+            </div>
+        </f:form>
+
+        <f:widget.paginate objects="{newsRecords}" as="newsRecordsPaginated" configuration="{addQueryStringMethod: 'POST,GET', itemsPerPage: filter.maxentries, insertAbove: 1, maximumNumberOfLinks: 10}">
+            <table class="table table-hover">
+                <tr>
+                    <th colspan="2"><span class="badge badge-info record-count" title="Number of records in the current view"></span></th>
+                    <th colspan="2" style="text-align: right;">
+                        <div class="btn-group">
+                            <button class="btn btn-default saveAllNewsSlugs" title="{f:translate(key:'button.saveall.title', extensionName: slug)}">
+                                <i class="fa fa-save"></i> {f:translate(key:'button.saveall.label', extensionName: slug)}
+                            </button>
+
+                            <button class="btn btn-default generateAllNewsSlugs" title="{f:translate(key:'button.generateall.title', extensionName: slug)}">
+                                <i class="fa fa-refresh"></i> {f:translate(key:'button.generateall.label', extensionName: slug)}
+                            </button>
+                        </div>
+                    </th>
+                </tr>
+                <f:for each="{newsRecordsPaginated}" as="news">
+                    <tr>
+                        <td><f:image src="EXT:news/Resources/Public/Icons/news_domain_model_news.svg" height="18" title="id={news.uid}"/></td>
+                        <td><strong>{news.title}</strong></td>
+                        <td class="slug-input">
+                            <f:render partial="SlugInputNews" arguments="{news:news}"/>
+                        </td>
+                        <td nowrap>
+                            <div class="btn-group">
+                                <button data-uid="{news.uid}" id="saveNewsSlug-{news.uid}" class="btn btn-default saveNewsSlug" title="{f:translate(key:'button.save.title', extensionName: slug)}">
+                                    <i class="fa fa-save"></i>
+                                </button>
+                                <button data-uid="{news.uid}" id="generateNewsSlug-{news.uid}" class="btn btn-default generateNewsSlug" title="{f:translate(key:'button.generate.title', extensionName: slug)}">
+                                    <i class="fa fa-refresh"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </f:for>
+            </table>
+        </f:widget.paginate>
+
+        <f:render partial="SlugNotes"/>
+
+    </f:then>
+    <f:else>
+        <div class="alert alert-info"><strong>{message}</strong></div>
+    </f:else>
+</f:if>
+
+</f:section>

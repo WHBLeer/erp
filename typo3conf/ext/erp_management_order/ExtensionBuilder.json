@@ -1,0 +1,547 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    53,
+                    46
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": [
+                        "api",
+                        "push",
+                        "pull"
+                    ]
+                },
+                "name": "Order",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u8ba2\u5355",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "191394461021"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4e9a\u9a6c\u900a\u8ba2\u5355\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "amazonOrderId",
+                            "propertyType": "String",
+                            "uid": "1150395252331"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8d2d\u4e70\u65e5\u671f\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "purchaseDate",
+                            "propertyType": "Integer",
+                            "uid": "1399668981923"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6700\u540e\u4e00\u6b21\u66f4\u65b0\u65f6\u95f4\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "lastUpdateDate",
+                            "propertyType": "Integer",
+                            "uid": "830584758539"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8ba2\u5355\u72b6\u6001\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "orderStatus",
+                            "propertyType": "Integer",
+                            "uid": "793175247227"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5c65\u884c\u6e20\u9053\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "fulfillmentChannel",
+                            "propertyType": "Integer",
+                            "uid": "1375110392563"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u670d\u52a1\u7b49\u7ea7\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipServiceLevel",
+                            "propertyType": "Integer",
+                            "uid": "252079344085"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9500\u552e\u6e20\u9053\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "salesChannel",
+                            "propertyType": "String",
+                            "uid": "1293018991174"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9001\u8d27\u4eba\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipperName",
+                            "propertyType": "String",
+                            "uid": "1377417431363"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9001\u8d27\u5730\u57401\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipperAddressLine1",
+                            "propertyType": "Text",
+                            "uid": "601331868023"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9001\u8d27\u5730\u57402\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipperAddressLine2",
+                            "propertyType": "Integer",
+                            "uid": "923721544229"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9001\u8d27\u5730\u57403",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipperAddressLine3",
+                            "propertyType": "Integer",
+                            "uid": "860079310568"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u53d1\u8d27\u57ce\u5e02\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipperCity",
+                            "propertyType": "String",
+                            "uid": "1507109342806"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u53d1\u8d27\u5730\u533a\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipperStateOrRegion",
+                            "propertyType": "String",
+                            "uid": "939660935533"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u53d1\u8d27\u57ce\u5e02\u4ee3\u7801\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipperCountryCode",
+                            "propertyType": "String",
+                            "uid": "1224575663833"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u53d1\u8d27\u4eba\u7535\u8bdd\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipperPhone",
+                            "propertyType": "String",
+                            "uid": "1475101272668"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5730\u5740\u7c7b\u578b\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipperAddressType",
+                            "propertyType": "String",
+                            "uid": "1498523072813"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u662f\u5426\u5730\u5740\u5171\u4eab\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipperIsAddressSharingConfidential",
+                            "propertyType": "Integer",
+                            "uid": "277575519940"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8d27\u5e01\u4ee3\u7801\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "currencyCode",
+                            "propertyType": "String",
+                            "uid": "1025283809767"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u91d1\u989d\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "amount",
+                            "propertyType": "String",
+                            "uid": "1200045069113"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5df2\u53d1\u8d27\u6570\u91cf\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "numberOfItemsShipped",
+                            "propertyType": "Integer",
+                            "uid": "1458950419492"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u672a\u53d1\u8d27\u6570\u91cf\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "numberOfItemsUnshipped",
+                            "propertyType": "Integer",
+                            "uid": "1378399595688"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u652f\u4ed8\u65b9\u5f0f\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "paymentMethod",
+                            "propertyType": "String",
+                            "uid": "96933860782"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4ed8\u6b3e\u65b9\u5f0f\u8be6\u60c5\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "paymentMethodDetails",
+                            "propertyType": "Text",
+                            "uid": "628683601334"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5e02\u573a\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "marketplaceId",
+                            "propertyType": "String",
+                            "uid": "1576345344683"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4e70\u5bb6\u7535\u5b50\u90ae\u4ef6\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "buyerEmail",
+                            "propertyType": "String",
+                            "uid": "1576342661086"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4e70\u5bb6\u59d3\u540d\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "buyerName",
+                            "propertyType": "String",
+                            "uid": "198732249647"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8239\u8d27\u7b49\u7ea7\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shipmentServiceLevelCategory",
+                            "propertyType": "String",
+                            "uid": "943940061840"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u662f\u5426\u4e9a\u9a6c\u900aTFM\u53d1\u8d27\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shippedByAmazonTFM",
+                            "propertyType": "Integer",
+                            "uid": "310094272373"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8ba2\u5355\u7c7b\u578b\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "orderType",
+                            "propertyType": "String",
+                            "uid": "1047087222394"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6700\u65e9\u88c5\u8fd0\u65e5\u671f\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "earliestShipDate",
+                            "propertyType": "Integer",
+                            "uid": "805359424439"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6700\u8fdf\u88c5\u8f7d\u65e5\u671f\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "latestShipDate",
+                            "propertyType": "Integer",
+                            "uid": "102962468422"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6700\u65e9\u4ea4\u8d27\u65e5\u671f\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "earliestDeliveryDate",
+                            "propertyType": "Integer",
+                            "uid": "1125043230425"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6700\u65b0\u4ea4\u8d27\u65e5\u671f\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "latestDeliveryDate",
+                            "propertyType": "Integer",
+                            "uid": "623207017692"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u662f\u5426\u5546\u4e1a\u8ba2\u5355\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "businessOrder",
+                            "propertyType": "Integer",
+                            "uid": "1073820406767"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u662f\u5426\u662f\u9ec4\u91d1\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "prime",
+                            "propertyType": "Integer",
+                            "uid": "1343243906197"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u662f\u5426\u542f\u7528\u5168\u7403\u5feb\u9012\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "globalExpressEnabled",
+                            "propertyType": "Integer",
+                            "uid": "140963661154"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u662f\u5426\u662f\u9ad8\u7ea7\u8ba2\u5355\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "premiumOrder",
+                            "propertyType": "Integer",
+                            "uid": "621438321078"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u662f\u5426\u662f\u66ff\u6362\u5355\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "replacementOrder",
+                            "propertyType": "Integer",
+                            "uid": "428273807669"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u7531AB\u51fa\u552e\n",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "soldByAB",
+                            "propertyType": "Integer",
+                            "uid": "1318145141260"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementProduct\\Domain\\Model\\Product",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u8ba2\u5355\u5546\u54c1",
+                            "relationName": "goods",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingle",
+                            "uid": "847447107300"
+                        },
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementUser\\Domain\\Model\\ErpUser",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u76ee\u7684\u5730\u56fd\u5bb6",
+                            "relationName": "erpuser",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingle",
+                            "uid": "1240966170006"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "\u7269\u6d41\u4fe1\u606f\u7ba1\u7406",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": true,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "erp_management_order",
+        "name": "\u8ba2\u5355\u7ba1\u7406\u7cfb\u7edf",
+        "originalExtensionKey": "erp_management_order",
+        "originalVendorName": "ERP",
+        "persons": [
+            {
+                "company": "\u4e09\u91cc\u6797",
+                "email": "wanghongbin816@gmail.com",
+                "name": "\u738b\u5b8f\u5f6c",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Order=>list,show,new,create,edit,update,delete,api,push,pull",
+                    "noncacheableActions": "Order=>list,show,new,create,edit,update,delete,api,push,pull",
+                    "switchableActions": "\u8ba2\u5355\u7ba1\u7406\nOrder->list;Order->show;Order->new;Order->create;Order->edit;Order->update;Order->delete;Order->api\n\u8ba2\u5355\u56de\u8c03\nOrder->api\n\u63d0\u4ea4\u8ba2\u5355\nOrder->push\n\u62c9\u53d6\u8ba2\u5355\nOrder->pull"
+                },
+                "description": "\u8ba2\u5355\u7ba1\u7406",
+                "key": "pi1",
+                "name": "\u8ba2\u5355\u7ba1\u7406"
+            }
+        ],
+        "vendorName": "ERP"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2020-05-21 05:32",
+        "extension_builder_version": "9.10.2",
+        "be_user": "\u7ba1\u7406\u5458 (1)"
+    }
+}

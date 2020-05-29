@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-22T20:28:25Z" product-name="erp_management_user">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-15T15:56:42Z" product-name="erp_management_user">
 		<header/>
 		<body>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement">
-				<source>User Management</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser">
+				<source>Erp User</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.authcode">
-				<source>Authcode</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.authcode">
+				<source>授权码</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.wxopenid">
-				<source>Wxopenid</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.wxopenid">
+				<source>微信ID</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.bindip">
-				<source>Bindip</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.bindip">
+				<source>绑定IP</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.nickname">
-				<source>Nickname</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.nickname">
+				<source>昵称</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.city">
-				<source>City</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.city">
+				<source>所在城市</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_usermanagement.province">
-				<source>Province</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.province">
+				<source>所在省份</source>
 			</trans-unit>
-			<trans-unit id="fe_users.tx_extbase_type.Tx_ErpManagementUser_UserManagement">
-				<source>用户管理 UserManagement</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.crdate">
+				<source>创建时间</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.tstamp">
+				<source>修改时间</source>
+			</trans-unit>
+			<trans-unit id="fe_users.tx_extbase_type.Tx_ErpManagementUser_ErpUser">
+				<source>用户管理 ErpUser</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpusergroup">
+				<source>Erp User Group</source>
+			</trans-unit>
+			<trans-unit id="fe_groups.tx_extbase_type.Tx_ErpManagementUser_ErpUserGroup">
+				<source>用户管理 ErpUserGroup</source>
 			</trans-unit>
 			<trans-unit id="tx_erp_management_user_pi1.name">
 				<source>用户管理</source>

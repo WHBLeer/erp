@@ -1,0 +1,43 @@
+{
+
+	"manifest_version": 2,
+	"name": "YoYo",
+	"version": "1.0.0",
+
+	"description": "Adds a spider function in given site.",
+	
+	"icons": {
+		"48": "img/icon_48.png"
+	},
+	"browser_action": {
+		"default_icon": "img/icon_32.png",
+		"default_title": "优优采集",
+		"default_popup": "pages/popup.html"
+	 },
+	"permissions": [
+		"*://*.whongbin.com/*",
+		"*://*.zdzltech.com/*",
+		"storage",
+		"activeTab"
+	],
+	"background": {
+		"scripts": ["js/jquery-3.3.1.min.js","js/background.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+                "http://*/*",
+                "https://*/*",
+                "file:///*/*"
+            ],
+			"js": ["js/content.js"],
+			"css": ["css/inject.css"],
+			"run_at": "document_idle"
+		}
+	],
+	"web_accessible_resources": [
+        "img/icon_48.png",
+        "img/icon_32.png",
+		"img/icon_16.png"
+	]
+}

@@ -15,16 +15,24 @@
 								<type>select</type>
 								<items>
 									<numIndex index="0">
-										<numIndex index="0">用户管理</numIndex>
-										<numIndex index="1">UserManagement-&gt;list;UserManagement-&gt;show;UserManagement-&gt;new;UserManagement-&gt;create;UserManagement-&gt;edit;UserManagement-&gt;update;UserManagement-&gt;delete;UserManagement-&gt;check;UserManagement-&gt;ajaxdata</numIndex>
+										<numIndex index="0">用户注册</numIndex>
+										<numIndex index="1">ErpUser-&gt;register</numIndex>
 									</numIndex>
 									<numIndex index="1">
-										<numIndex index="0">用户注册</numIndex>
-										<numIndex index="1">UserManagement-&gt;register</numIndex>
+										<numIndex index="0">修改密码</numIndex>
+										<numIndex index="1">ErpUser-&gt;changepwd</numIndex>
 									</numIndex>
 									<numIndex index="2">
-										<numIndex index="0">修改密码</numIndex>
-										<numIndex index="1">UserManagement-&gt;changepwd</numIndex>
+										<numIndex index="0">用户中心</numIndex>
+										<numIndex index="1">ErpUser-&gt;profile</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">商户授权</numIndex>
+										<numIndex index="1">ErpUser-&gt;oauth</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">用户管理</numIndex>
+										<numIndex index="1">ErpUser-&gt;list;ErpUser-&gt;show;ErpUser-&gt;new;ErpUser-&gt;create;ErpUser-&gt;edit;ErpUser-&gt;update;ErpUser-&gt;delete;ErpUser-&gt;check;ErpUser-&gt;ajaxdata</numIndex>
 									</numIndex>
 								</items>
                                 <maxitems>1</maxitems>

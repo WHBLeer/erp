@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:flashMessages as="flashMessages">
+        <script>
+            <f:for each="{flashMessages}" as="flashMessage">
+                <f:if condition="{flashMessage.severity}==0">UIkit.notify("{flashMessage.message}", { status: 'success' });</f:if>
+                <f:if condition="{flashMessage.severity}==1">UIkit.notify("{flashMessage.message}", { status: 'warning' });</f:if>
+                <f:if condition="{flashMessage.severity}==2">UIkit.notify("{flashMessage.message}", { status: 'danger' });</f:if>
+                <f:if condition="{flashMessage.severity}==-1">UIkit.notify("{flashMessage.message}", { status: 'info' });</f:if>
+                <f:if condition="{flashMessage.severity}==-2">UIkit.notify("{flashMessage.message}", { status: 'info' });</f:if>
+            </f:for>
+        </script>
+    </f:flashMessages>
+</html>

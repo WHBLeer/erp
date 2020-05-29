@@ -668,7 +668,7 @@ dt {
 }
 
 .navbar-custom {
-  background-color: #ececf1;
+  background-color: #333547;
   border-radius: 0;
   margin-bottom: 0;
   padding: 0 10px 0 0;
@@ -720,6 +720,15 @@ dt {
   overflow: hidden;
 }
 
+/* dashboard */
+.dashboard .mobile-icon{
+  display: none;
+}
+
+.dashboard .content-page{
+  margin-left: 0px;
+}
+
 .content-page .content {
   padding: 0 15px 10px 15px;
   margin-top: 50px;
@@ -728,11 +737,11 @@ dt {
 
 .button-menu-mobile {
   border: none;
-  color: #525f80;
+  color: #ececf1;
   display: inline-block;
   height: 50px;
   width: 60px;
-  background-color: #ececf1;
+  background-color: #333547;
   font-size: 24px;
 }
 
@@ -786,6 +795,31 @@ dt {
   background-color: #383b4e;
 }
 
+.system-navigation {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+}
+.system-navigation > span {
+    margin-right: 50px;
+}
+.system-navigation > span > a{
+    color: #ececf1 !important;
+    font-size: 16px;
+}
+.system-navigation > span > a.mm-active {
+    color: #b4c9de !important;
+}
+
+.breadcrumb{
+  padding: .3rem;
+  margin-bottom: 0;
+  border: none;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(236, 236, 241, 0.44);
+  box-shadow: 0px 0px 13px 0px rgba(236, 236, 241, 0.44);
+}
 .menu-title {
   padding: 12px 20px !important;
   letter-spacing: 1px;
@@ -843,7 +877,7 @@ dt {
 }
 
 .enlarged #wrapper .left.side-menu #sidebar-menu > ul > li > a i {
-  font-size: 18px;
+  font-size: 25px;
   margin-left: 5px;
   margin-right: 20px !important;
 }
@@ -855,8 +889,8 @@ dt {
 
 .enlarged #wrapper .left.side-menu #sidebar-menu ul > li:hover > a {
   position: relative;
-  width: 260px;
-  color: #626ed4 !important;
+  width: 150px;
+  color: #ccc !important;
   background-color: #2e2f40;
 }
 
@@ -958,6 +992,11 @@ dt {
   font-family: "Sarabun", sans-serif;
 }
 
+/* dashboard */
+.dashboard .footer{
+  left: 0px;
+}
+
 /* Notification */
 .notification-item-list {
   max-height: 230px;
@@ -970,7 +1009,7 @@ dt {
 .notification-list .noti-icon {
   font-size: 24px;
   vertical-align: middle;
-  color: #525f80;
+  color: #ececf1;
 }
 
 .notification-list .noti-icon-badge {
@@ -1085,13 +1124,14 @@ dt {
 
 .app-search .form-control,
 .app-search .form-control:focus {
-  border: 1px solid #e0e0ea;
+  /* border: 1px solid #e0e0ea; */
+  border: none;
   font-size: 13px;
   height: 26px;
   padding-left: 18px;
   padding-right: 40px;
   margin-right: 16px;
-  background: #e0e0ea;
+  /* background: #e0e0ea; */
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 30px;

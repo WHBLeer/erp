@@ -1,0 +1,244 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    # shortcutIcon = {$page.favicon.file}
+    shortcutIcon = EXT:erp_management_system_extension/Resources/Public/Icons/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__index
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Index
+        }
+        templateRootPaths {
+            0 = EXT:erp_management_system_extension/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:erp_management_system_extension/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:erp_management_system_extension/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+        variables {
+            pageTitle = TEXT
+            pageTitle.data = page:title
+
+            pageSubTitle = TEXT
+            pageSubTitle.data = page:subtitle
+
+            pageId = TEXT
+            pageId.data = page:uid
+
+            siteTitle = TEXT
+            siteTitle.data = TSFE:tmpl|setup|sitetitle
+
+            BASEURL = TEXT
+            BASEURL.value = {$config.baseURL}
+
+            themeCopyright = TEXT
+            themeCopyright.value = {$page.theme.copyright.enable}
+            themeCopyrightText = TEXT
+            themeCopyrightText.data = date:U
+            themeCopyrightText.strftime = %Y
+            themeCopyrightText.wrap =(Copyright)&nbsp;&copy;&nbsp; | &nbsp;<i class="mdi mdi-heart text-danger"></i>&nbsp; <a href="{$config.baseURL}">{$config.headerComment}</a>
+        }
+    }
+    meta {
+        
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+        og:image {
+            attribute = property
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    data = levelfield:-1, media, slide
+                }
+                maxItems = 1
+                renderObj = COA
+                renderObj {
+                    10 = IMG_RESOURCE
+                    10 {
+                        file {
+                            import.data = file:current:uid
+                            treatIdAsReference = 1
+                            width = 1280c
+                            height = 720c
+                        }
+                        stdWrap {
+                            typolink {
+                                parameter.data = TSFE:lastImgResourceInfo|3
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    includeCSSLibs {
+
+    }
+
+    includeCSS {
+        css0 = {$page.includePath.main}index/layui/css/layui.css
+        css1 = {$page.includePath.main}index/css/main.css
+        css2 = 
+        css3 = 
+        css4 = 
+        css5 = 
+        css6 = 
+        css7 = 
+        css8 = 
+        css9 =  
+        css10 =  
+        css11 =  
+        css100 =  
+    }
+
+    includeJSLibs {
+        js1 = 
+        js2 = 
+        js3 = 
+        js4 = 
+        js100 = 
+    }
+
+    includeJS {
+    }
+
+    includeJSFooterlibs {
+        js1 = {$page.includePath.main}index/layui/layui.all.js
+        js2 = {$page.includePath.main}index/js/common.js
+    }
+
+    includeJSFooter {
+        js2 = 
+        js3 = 
+        js4 = 
+        js5 = 
+        js6 = 
+        js7 = 
+        js8 = 
+        js9 = 
+        js10 = 
+        js11 = 
+        js12 = 
+        js13 = 
+        js14 = 
+        js100 = 
+    }
+
+    jsFooterInline {
+        10 = TEXT
+        10.value (
+    layui.use(['form'], function () {
+        var $ = layui.jquery;
+        var form = layui.form;
+
+        // 留言反馈
+        form.on('submit(submitMessage)', function (data) {
+            var loadIndex = layer.msg('请求中...', { icon: 16, shade: 0.01, time: false });
+            $.post('leaveMessage/add', data.field, function (res) {
+                if (res.code == 200) {
+                    layer.msg(res.msg, { icon: 1 });
+                    $('[lay-filter="submitMessage"]').parents('form')[0].reset();
+                } else {
+                    layer.close(loadIndex);
+                    layer.msg(res.msg, { icon: 2 });
+                }
+            }, 'json');
+            return false;
+        });
+
+        //
+        $('.tip-no-demo').click(function () {
+            layui.layer.msg('暂无演示地址', { icon: 5 });
+        });
+
+    });
+        )
+    }
+
+    includeJSFooter {
+
+    }
+    
+
+    
+}
+
+
+################
+#### CONFIG ####
+################
+config {
+    absRefPrefix = auto
+    no_cache = {$config.no_cache}
+    uniqueLinkVars = 1
+    pageTitleFirst = 1
+    linkVars = L
+    prefixLocalAnchors = {$config.prefixLocalAnchors}
+    renderCharset = utf-8
+    metaCharset = utf-8
+    doctype = html5
+    removeDefaultJS = {$config.removeDefaultJS}
+    inlineStyle2TempFile = 1
+    admPanel = {$config.admPanel}
+    debug = 0
+    cache_period = 86400
+    sendCacheHeaders = {$config.sendCacheHeaders}
+    intTarget =
+    extTarget =
+    disablePrefixComment = 1
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 1
+    headerComment = {$config.headerComment}
+
+
+}

@@ -1,0 +1,82 @@
+{namespace core = TYPO3\CMS\Core\ViewHelpers}
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+
+    <f:flashMessages />
+    <f:render partial="GlobalHeader" arguments="{_all}"/>
+
+    <f:form action="tree" method="POST">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <f:form.select name="siteRoot" value="{args.siteRoot}" options="{sites}" optionValueField="rootPageId" optionLabelField="identifier" class="form-control"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" title="switch Sites">
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </f:form>
+    
+    <hr> 
+    
+    <div class="row">
+        <div class="col-sm-4 col-md-3">
+            <f:for each="{tree}" as="page">
+                <f:render section="treeItem" arguments="{page:page}"/>
+            </f:for>
+        </div>
+        <div class="col-sm-8 col-md-9">
+            <div class="tree-result">
+                <div class="well">
+                    <h2>Experimental Feature</h2>
+                    <p>The tree function is working, but still needs improvement! Click on a page title in the tree, to load all related slugs, including translated records.</p>
+                    <h3>Features</h3>
+                    <ul>
+                        <li>All slugs associated with a page, including translations, can be viewed and edited</li>
+                        <li>Page titles and SEO titles are displayed if the extension SEO is installed</li>
+                    </ul>
+                    <h3>Future improvements</h3>
+                    <ul>
+                        <li>Better UI design, especially for large page trees</li>
+                        <li>Adding button to re-generate slugs</li>
+                    </ul>
+                    <h3>Settings</h3>
+                    <p>You can set some default options for the tree view in the Extension settings</p>
+                    <table class="table table-small table-bordered">
+                        <tr>
+                            <th>treeDefaultRoot</th>
+                            <td>If not set, the first site will be shown</td>
+                        </tr>
+                        <tr>
+                            <th>treeDefaultDepth</th>
+                            <td>Standard value is 3</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <f:render partial="SlugNotes"/>
+    
+</f:section>
+
+<f:section name="treeItem">
+    <div class="tree-item" data-uid="{page.row.uid}">
+        {page.depthData -> f:format.raw()}
+        <f:if condition="{page.icon}">
+            <f:then>
+                <f:format.raw>{page.icon}</f:format.raw>
+            </f:then>
+            <f:else>
+                <f:format.raw>{page.HTML}</f:format.raw>
+            </f:else>
+        </f:if>
+        <a href="#" data-uid="{page.row.uid}">{page.row.title}</a>
+    </div>
+</f:section>

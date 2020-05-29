@@ -1,0 +1,67 @@
+Manifest-Version: 1.0
+
+Name: .project
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: kkyH5i4VRRo3tHwUnT35R8S+BnY=
+SHA256-Digest: 382x5npR1AT6yF76hs0oV0I7FmQ0f+B7mmmSRHOdMWI=
+
+Name: manifest.json
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: c24AtYEiT67zTSwDJIGBiLP8Z9M=
+SHA256-Digest: UhbUu0Bx+33Lmu2jEy705s8jooFy83D1r97Z9wF+ns0=
+
+Name: pages/popup.html
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: z8L8NB6vTV2Kexbye+ne5I7hI7U=
+SHA256-Digest: YUj7H4t24xznHFdM+EA1fuo/TW0gziWouVoqepyFJ/o=
+
+Name: images/icon_32.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 9NWB+2v4eBXJsBUVGDi4/S1d21s=
+SHA256-Digest: cg6n3GIkqSBOvvJGL0G35LQQxsSBH+8lN/rn2Dujx9U=
+
+Name: images/icon_16.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: lW9/94TrWdJEAP6nvn87WLCE2NU=
+SHA256-Digest: YRA9Z59WL/0jDwd7H1ejPwbYraECvUv8fxlWr2CQK9Q=
+
+Name: images/icon_128.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: NrjMCW9ZVPDOG5zfXj2Gc1mGzq8=
+SHA256-Digest: IWFcet7EBbhWsSx+EK7pYVfwTH70+yLimx3TPhnoz5E=
+
+Name: images/icon_19.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: +/u4qA7Oa9vJ1hI8WJ1StHAL/K4=
+SHA256-Digest: E4W1kFG3QwsCZmQakZ2rYweCGIyvJXLD/ng4TCAgzsM=
+
+Name: images/icon_48.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: bWQor4x2GH/R1rdD62gNeMAHL1w=
+SHA256-Digest: qHvkk1MZo8Qic9wEI+aDOYVk9Y0hWQOFP6CZLG2TQqw=
+
+Name: css/inject.css
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: CqYNfJyqVrfRdce3CYMMfoM1/As=
+SHA256-Digest: KV8WAUiPZY7Flr/9qO8NHx1g406xhUTLk9jKenLpEW4=
+
+Name: js/content.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: H5rQXoOC1wdpI+95NsxyiH0nemI=
+SHA256-Digest: 5l9B8qWhP0re/tW2GSzv65TTsO1VkB7KrS6RGoxEIrU=
+
+Name: js/jquery-3.3.1.min.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: DcMttKqcXwPzs4xH2IPb1P7ROq4=
+SHA256-Digest: FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=
+
+Name: js/background.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: nBbirJKSBx9C199CqmmuACelREE=
+SHA256-Digest: pWpMa4uXNMDkiczpXEwKhSg7pdMRPvZE094MTBacP8o=
+
+Name: js/popup.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 5pUg58ZVZxAH2/AvbTgf9Qa+jZw=
+SHA256-Digest: /17cINIeNv2hnEf6V8kcvtun/VI/C75iggWkl08hP0E=
+
