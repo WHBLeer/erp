@@ -5,6 +5,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Cache\CacheManager;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+require_once ExtensionManagementUtility::extPath('erp_management_interaction') . 'Classes/Library/ErpServerApi.php';
 
 /***
  *
@@ -157,16 +158,30 @@ class ProductController extends ComController
      * 
      * @param ERP\ErpManagementProduct\Domain\Model\Product
      * @return void
-     */
+     */ 
     public function createAction(\ERP\ErpManagementProduct\Domain\Model\Product $product)
     {
         $datas = $this->request->getArguments();
+        // dump($datas);exit;
         $product->setCategory($this->getCategoryById($datas['category']));
         $product->setApproval($this->getApprovalById($datas['approval']));
         $product->setShelves($this->getShelvesById($datas['shelves']));
         $product->setGtypes($this->getGettypeById($datas['gtypes']));
         $product->setInfo($this->saveInfo($datas['info']));
         $product->setCost($this->saveCost($datas['cost']));
+
+        //添加介绍
+        foreach ($datas['desc'] as $key => $des) {
+            $desc = $this->saveDesc($key,$des);
+            if ($des['uid']==0) $product->addDescr($desc);
+        }
+        
+        //添加变体
+        foreach ($datas['variants'] as $key => $var) { 
+            $variant = $this->saveVariants($var);
+            if ($var['uid']==0) $product->addVariant($variant);
+        }
+
         $imguids = array_filter(GeneralUtility::trimExplode(',',ltrim($product->getImageuids(),',')));
         if (!empty($imguids)) {
             for ($i = 0; $i < count($imguids); $i++) {
@@ -211,16 +226,23 @@ class ProductController extends ComController
     public function updateAction(\ERP\ErpManagementProduct\Domain\Model\Product $product)
     {
         $datas = $this->request->getArguments();
-        // dump($datas);
         $product->setCategory($this->getCategoryById($datas['category']));
         $product->setApproval($this->getApprovalById($datas['approval']));
         $product->setShelves($this->getShelvesById($datas['shelves']));
         $product->setGtypes($this->getGettypeById($datas['gtypes']));
         $product->setInfo($this->saveInfo($datas['info']));
         $product->setCost($this->saveCost($datas['cost']));
+        
+        //添加介绍
         foreach ($datas['desc'] as $key => $des) {
             $desc = $this->saveDesc($key,$des);
             if ($des['uid']==0) $product->addDescr($desc);
+        }
+        
+        //添加变体
+        foreach ($datas['variants'] as $key => $var) { 
+            $variant = $this->saveVariants($var);
+            if ($var['uid']==0) $product->addVariant($variant);
         }
         
         $imguids = array_filter(GeneralUtility::trimExplode(',',ltrim($product->getImageuids(),',')));
@@ -348,6 +370,85 @@ class ProductController extends ComController
     }
 
     /**
+     * 上传商品
+     * 
+     * @return void
+     */
+    public function uploadProductAction()
+    {
+        dump($_GET);
+        dump($_POST);
+        dump($this->request->getArguments());
+        exit;
+        $descArr = array();
+        foreach ($product->getDescr() as $key => $desc) {
+            $descArr[$desc->getLang()] = array(
+                'title' => $desc->getTitle(),// 标题
+                'keyword' => $desc->getKeyword(),// 关键字
+                'keyPoints' => $desc->getKeyPoints(),// 要点说明
+                'description' => $desc->getDescription(),// 产品介绍
+            );
+        }
+        $variantsArr = array();
+        foreach ($product->getVariants() as $key => $variants) {
+            $variantsArr[] = array(
+                'combination' => $variants->getCombination(),//组合
+                'skuNew' => $variants->getSkuNew(),//sku修正
+                'markup' => $variants->getMarkup(),//加价
+                'kucun' => $variants->getKucun(),//库存
+                'upcEan' => $variants->getUpcEan(),//UPC/EAN
+                'images' => $variants->getImages(),//已选图片
+            );
+        }
+        //与服务端数据对接
+        $productinfo = array(
+            'productId' => $product->getUid(),//数据库主键id
+            'numbering' => $product->getNumbering(), //产品编号
+            'name' => $product->getName(), //产品名称
+            'business' => $product->getBusiness(), //产品主页链接
+            'original' => $product->getOriginal(), //原始规格
+            'categoryZh' => $product->getCategory()->getName(),//产品分类中文
+            'categoryEn' => $product->getCategory()->getNameEn(),//产品分类英文
+            'approval' => $product->getApproval()->getCode(),//审核状态(0待审核.1通过.2失效)
+            'shelves' => $product->getShelves()->getCode(),//上架状态(4屏蔽,3侵权,2过滤,1下架,0上架)
+            'gtypes' => $product->getGtypes()->getCode(),//商品获取类型(5其他,4产品库,3抓取,2海外,1原创,0重点)
+            'info' => array(
+                'tradeName' => $product->getInfo()->getTradeName(),
+                'brandName' => $product->getInfo()->getBrandName(),
+                'tradeNum' => $product->getInfo()->getTradeNum(),
+                'sku' => $product->getInfo()->getSku(),
+                'source' => $product->getInfo()->getSource(),
+                'link' => $product->getInfo()->getLink(),
+                'code' => $product->getInfo()->getCode(),
+                'remark' => $product->getInfo()->getRemark(),
+            ),
+            'cost' => array(
+                'cg' => $product->getCost()->getCg(), //采购价
+                'zl' => $product->getCost()->getZl(), //重量
+                'cc' => $product->getCost()->getCc(), //尺寸
+                'kd' => $product->getCost()->getKd(), //宽度
+                'gd' => $product->getCost()->getGd(), //高度
+                'yf' => $product->getCost()->getYf(), //国内运费
+                'zk' => $product->getCost()->getZk(), //折扣
+                'calculation' => $product->getCost()->getCalculation(), //计算结果
+                'sy' => $product->getCost()->getSy(), //库存
+                'sj' => $product->getCost()->getSj(), //预处理时间
+            ),
+            'desc' => $descArr,
+            'variants' => $variantsArr,
+        );
+        dump($productinfo);exit;
+        // $ErpServer = new \ERP\Api\ErpServer\ErpOrderApi();
+        // $res = $ErpServer->getOrdersList(array(
+        //     'accountId' => '11cac887243b45f1aee986ac7e04c171',
+        //     'productinfo' => $productinfo
+        // ));
+
+        $this->addFlashMessage('操作成功, 排队上传中...', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::OK);
+        $this->redirect('listSC');
+    }
+
+    /**
      * 产品信息
      * 
      * @param array $data
@@ -399,8 +500,10 @@ class ProductController extends ComController
     {
         if (isset($data['uid']) && $data['uid']!=0) {
             $cost = $this->costRepository->findByUid($data['uid']);
+            $func = 'update';
         } else {
             $cost = new \ERP\ErpManagementProduct\Domain\Model\Cost();
+            $func = 'add';
         }
         $cost->setCg($data['cg']);
         //采购价
@@ -422,15 +525,10 @@ class ProductController extends ComController
         //库存
         $cost->setSj($data['sj']);
         //预处理时间
-        if (isset($data['uid']) && $data['uid']!=0) {
-            $this->costRepository->update($cost);
-            $this->persistanceManager->persistAll();
-            return true;
-        } else {
-            $this->costRepository->add($cost);
-            $this->persistanceManager->persistAll();
-            return $cost;
-        }
+
+        $this->costRepository->$func($cost);
+        $this->persistanceManager->persistAll();
+        return $cost;
     }
 
     /**
@@ -447,8 +545,10 @@ class ProductController extends ComController
         $descs = $this->descRepository->findByLang($lang);
         if ($descs->count()>0) {
             $desc = $descs->getFirst();
+            $func = 'update';
         } else {
             $desc = new \ERP\ErpManagementProduct\Domain\Model\Desc();
+            $func = 'add';
         }
         
         // 标题
@@ -462,15 +562,9 @@ class ProductController extends ComController
         // 翻译语言
         $desc->setLang($lang);
 
-        if (isset($data['uid']) && $data['uid']!=0) {
-            $this->descRepository->update($desc);
-            $this->persistanceManager->persistAll();
-            return true;
-        } else {
-            $this->descRepository->add($desc);
-            $this->persistanceManager->persistAll();
-            return $desc;
-        }
+        $this->descRepository->$func($desc);
+        $this->persistanceManager->persistAll();
+        return $desc;
     }
 
     /**
@@ -482,7 +576,21 @@ class ProductController extends ComController
      */
     public function saveVariants(array $data)
     {
-
-        # code...
+        if (isset($data['uid']) && $data['uid']!=0) {
+            $variant = $this->variantsRepository->findByUid($data['uid']);
+            $func = 'update';
+        } else {
+            $variant = new \ERP\ErpManagementProduct\Domain\Model\Variants();
+            $func = 'add';
+        }
+        $variant->setCombination($data['combination']);
+        $variant->setSkuNew($data['skunew']);
+        $variant->setMarkup($data['markup']);
+        $variant->setKucun($data['kucun']);
+        $variant->setUpcEan($data['upcean']);
+        $variant->setImages($data['images']);
+        $this->variantsRepository->$func($variant);
+        $this->persistanceManager->persistAll();
+        return $variant;
     }
 }

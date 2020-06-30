@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-15T15:56:42Z" product-name="erp_management_user">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-23T15:48:07Z" product-name="erp_management_user">
 		<header/>
 		<body>
 			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser">
 				<source>Erp User</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.authcode">
-				<source>授权码</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.account_id">
+				<source>Account Id</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.wxopenid">
-				<source>微信ID</source>
+				<source>Wxopenid</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.bindip">
-				<source>绑定IP</source>
+				<source>Bindip</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.nickname">
-				<source>昵称</source>
+				<source>Nickname</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.city">
-				<source>所在城市</source>
+				<source>City</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.province">
-				<source>所在省份</source>
+				<source>Province</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.crdate">
-				<source>创建时间</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.auth">
+				<source>Auth</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.tstamp">
-				<source>修改时间</source>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuser.position">
+				<source>Position</source>
 			</trans-unit>
 			<trans-unit id="fe_users.tx_extbase_type.Tx_ErpManagementUser_ErpUser">
 				<source>用户管理 ErpUser</source>
@@ -38,6 +38,63 @@
 			</trans-unit>
 			<trans-unit id="fe_groups.tx_extbase_type.Tx_ErpManagementUser_ErpUserGroup">
 				<source>用户管理 ErpUserGroup</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuserauth">
+				<source>Erp User Auth</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuserauth.developer_id">
+				<source>Developer Id</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuserauth.shopalias">
+				<source>Shopalias</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuserauth.awsaccount">
+				<source>Awsaccount</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuserauth.authcountry">
+				<source>Authcountry</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuserauth.authtime">
+				<source>Authtime</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuserauth.amazon_id">
+				<source>Amazon Id</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuserauth.amazon_token">
+				<source>Amazon Token</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuserauth.authtype">
+				<source>Authtype</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_erpuserauth.market">
+				<source>Market</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_position.ip">
+				<source>Ip</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_position.locatlat">
+				<source>Locatlat</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_position.locat_lng">
+				<source>Locat Lng</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_position.nation">
+				<source>Nation</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_position.province">
+				<source>Province</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_position.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_position.district">
+				<source>District</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementuser_domain_model_position.adcode">
+				<source>Adcode</source>
 			</trans-unit>
 			<trans-unit id="tx_erp_management_user_pi1.name">
 				<source>用户管理</source>

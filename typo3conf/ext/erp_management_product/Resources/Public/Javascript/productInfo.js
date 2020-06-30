@@ -12,7 +12,7 @@ $(function() {
 	defineRole();
 });
 //获取代理商
-function getAgent(){
+function getAgent(){ 
 	$.ajax({
 		cache : true,
 		type : "get",

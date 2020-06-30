@@ -24,7 +24,7 @@
 									</numIndex>
 									<numIndex index="2">
 										<numIndex index="0">产品上传</numIndex>
-										<numIndex index="1">Product-&gt;listSC;Product-&gt;show;Product-&gt;new;Product-&gt;create;Product-&gt;edit;Product-&gt;update;Product-&gt;delete;Product-&gt;ajax;Product-&gt;batch</numIndex>
+										<numIndex index="1">Product-&gt;listSC;Product-&gt;show;Product-&gt;new;Product-&gt;create;Product-&gt;edit;Product-&gt;update;Product-&gt;delete;Product-&gt;ajax;Product-&gt;batch;Product-&gt;uploadProduct</numIndex>
 									</numIndex>
 									<numIndex index="3">
 										<numIndex index="0">产品回收</numIndex>

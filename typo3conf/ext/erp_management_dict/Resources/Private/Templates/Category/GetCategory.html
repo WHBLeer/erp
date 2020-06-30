@@ -31,8 +31,6 @@
 				$("#categoryid").val(currentNode.id);
 				if (!$('#menuTree').jstree("is_parent", currentNode)) {
 					parent.$("#categoryValueid").val(currentNode.id);
-					console.log(currentNode.id);
-					console.log(parent.$("#categoryValueid").val());
 					var str = currentNode.text
 					getName(currentNode, str);
 					parent.$("#categoryValuetext").val(str);

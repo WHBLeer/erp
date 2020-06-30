@@ -48,6 +48,11 @@
 						<span class="d-none d-sm-block"><i class="mdi mdi-google-translate"></i> 翻译配置</span>
 					</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" id="payment-tab-justify" href="#payment-justify" role="tab">
+						<span class="d-none d-sm-block"><i class="mdi mdi-google-translate"></i> 支付宝</span>
+					</a>
+				</li>
 			</ul>
 
 			<!-- Tab panes -->
@@ -69,6 +74,9 @@
 				</div>
 				<div class="tab-pane p-3" id="trans-justify" role="tabpanel">
 					<f:render partial="Config/TransFormFields" arguments="{_all}" />
+				</div>
+				<div class="tab-pane p-3" id="payment-justify" role="tabpanel">
+					<f:render partial="Config/PayFormFields" arguments="{_all}" />
 				</div>
 			</div>
 		</div>

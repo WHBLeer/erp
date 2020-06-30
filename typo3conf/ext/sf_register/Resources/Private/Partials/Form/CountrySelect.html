@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:register="http://typo3.org/ns/Evoweb/SfRegister/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+
+<f:variable name="languageKey"><register:languageKey type="countries"/></f:variable>
+<div class="col-md-6 mb-3 {fieldName}">
+	<label for="sfrCountry">
+		<f:translate id="{fieldName}" />
+		<f:render partial="Required" arguments="{field: fieldName}" />
+	</label>
+	<f:render partial="FieldError" arguments="{for: 'user', field: fieldName}" />
+
+	<register:form.selectStaticCountries
+		property="{fieldName}"
+		id="sfrCountry"
+		value="{f:if(condition: '{user.{fieldName}}', then: '{user.{fieldName}}', else: options.defaultValue)}"
+		allowedCountries="{options.allowedCountries}"
+		optionLabelField="cnShort{languageKey}"
+		class="form-control" />
+</div>
+
+</html>

@@ -1,0 +1,102 @@
+@import 'EXT:sf_register/Configuration/TypoScript/Fields/setup.typoscript'
+@import 'EXT:sf_register/Configuration/TypoScript/Common/setup.typoscript'
+
+
+plugin.tx_sfregister.settings {
+  # uid of the page to redirect to after saving
+  redirectPostRegistrationPageId =
+  # uid of the page to redirect to after confirmation
+  redirectPostActivationPageId = {$plugin.tx_sfregister.settings.redirectPostActivationPageId}
+
+  # wether the email address entered should be used as username
+  useEmailAddressAsUsername =
+
+  # boolean use encrypted filename to deny direct access on uploaded files
+  useEncryptedFilename = md5
+
+  # boolean if user or admin need to activate or notified
+  notifyAdmin {
+    createSave =
+    createConfirm =
+    createRefuse =
+    createAccept =
+    createDecline =
+
+    deleteSave =
+    deleteConfirm =
+
+    editSave =
+    editConfirm =
+    editAccept =
+
+    inviteInvite =
+
+    resendMail =
+  }
+
+  notifyUser {
+    createSave =
+    createConfirm =
+    createRefuse =
+    createAccept =
+    createDecline =
+
+    deleteSave = 1
+    deleteConfirm = 1
+
+    editSave =
+    editConfirm =
+    editAccept =
+
+    inviteInvite =
+
+    resendMail = 1
+  }
+
+  confirmEmailPostCreate = {$plugin.tx_sfregister.settings.confirmEmailPostCreate}
+  acceptEmailPostCreate = {$plugin.tx_sfregister.settings.acceptEmailPostCreate}
+
+  confirmEmailPostAccept = {$plugin.tx_sfregister.settings.confirmEmailPostAccept}
+  acceptEmailPostConfirm = {$plugin.tx_sfregister.settings.acceptEmailPostConfirm}
+
+  confirmEmailPostEdit = {$plugin.tx_sfregister.settings.confirmEmailPostEdit}
+  acceptEmailPostEdit = {$plugin.tx_sfregister.settings.acceptEmailPostEdit}
+
+  # boolean if user should get logged in after registration
+  autologinPostRegistration =
+
+  # boolean if user should get logged in after activation
+  autologinPostConfirmation = {$plugin.tx_sfregister.settings.autologinPostConfirmation}
+
+
+  userEmail {
+    fromName = {$plugin.tx_sfregister.settings.emailName}
+    fromEmail = {$plugin.tx_sfregister.settings.emailAddress}
+
+    replyName =
+    replyEmail =
+  }
+
+  adminEmail {
+    toName = {$plugin.tx_sfregister.settings.emailName}
+    toEmail = {$plugin.tx_sfregister.settings.emailAddress}
+
+    fromName = {$plugin.tx_sfregister.settings.emailName}
+    fromEmail = {$plugin.tx_sfregister.settings.emailAddress}
+
+    replyName =
+    replyEmail =
+  }
+
+
+
+
+
+
+}
+
+
+
+
+
+module.tx_sfregister < plugin.tx_sfregister

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-21T17:32:13Z" product-name="erp_management_order">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-09T23:21:07Z" product-name="erp_management_order">
 		<header/>
 		<body>
 			<trans-unit id="tx_erpmanagementorder_domain_model_order">
@@ -27,36 +27,6 @@
 			<trans-unit id="tx_erpmanagementorder_domain_model_order.sales_channel">
 				<source>Sales Channel</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_name">
-				<source>Shipper Name</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_address_line1">
-				<source>Shipper Address Line1</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_address_line2">
-				<source>Shipper Address Line2</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_address_line3">
-				<source>Shipper Address Line3</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_city">
-				<source>Shipper City</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_state_or_region">
-				<source>Shipper State Or Region</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_country_code">
-				<source>Shipper Country Code</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_phone">
-				<source>Shipper Phone</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_address_type">
-				<source>Shipper Address Type</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper_is_address_sharing_confidential">
-				<source>Shipper Is Address Sharing Confidential</source>
-			</trans-unit>
 			<trans-unit id="tx_erpmanagementorder_domain_model_order.currency_code">
 				<source>Currency Code</source>
 			</trans-unit>
@@ -77,12 +47,6 @@
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementorder_domain_model_order.marketplace_id">
 				<source>Marketplace Id</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.buyer_email">
-				<source>Buyer Email</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementorder_domain_model_order.buyer_name">
-				<source>Buyer Name</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipment_service_level_category">
 				<source>Shipment Service Level Category</source>
@@ -128,6 +92,189 @@
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementorder_domain_model_order.erpuser">
 				<source>Erpuser</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.shipper">
+				<source>Shipper</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_order.revenue">
+				<source>Revenue</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_address.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_address.telephone">
+				<source>Telephone</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_address.postcode">
+				<source>Postcode</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_address.state">
+				<source>State</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_address.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_address.street_number">
+				<source>Street Number</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_address.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_revenue">
+				<source>Revenue</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_revenue.order_amount">
+				<source>Order Amount</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_revenue.commission">
+				<source>Commission</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_revenue.arrive">
+				<source>Arrive</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_revenue.cost_amount">
+				<source>Cost Amount</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_revenue.freight">
+				<source>Freight</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_revenue.service_fee">
+				<source>Service Fee</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_revenue.profit">
+				<source>Profit</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_revenue.profit_margin">
+				<source>Profit Margin</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper">
+				<source>Shipper</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.name_zh">
+				<source>Name Zh</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.name_en">
+				<source>Name En</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.sku">
+				<source>Sku</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.number">
+				<source>Number</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.weight">
+				<source>Weight</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.length">
+				<source>Length</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.width">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.height">
+				<source>Height</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.route">
+				<source>Route</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.providers">
+				<source>Providers</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.gn_waybill">
+				<source>Gn Waybill</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.gn_tracking">
+				<source>Gn Tracking</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.gn_status">
+				<source>Gn Status</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.gj_waybill">
+				<source>Gj Waybill</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.gj_tracking">
+				<source>Gj Tracking</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.gj_status">
+				<source>Gj Status</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.shipper_address_line1">
+				<source>Shipper Address Line1</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.shipper_address_line2">
+				<source>Shipper Address Line2</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.shipper_address_line3">
+				<source>Shipper Address Line3</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.shipper_city">
+				<source>Shipper City</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.shipper_state_or_region">
+				<source>Shipper State Or Region</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.shipper_country_code">
+				<source>Shipper Country Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.shipper_phone">
+				<source>Shipper Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.shipper_address_type">
+				<source>Shipper Address Type</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.shipper_is_address_sharing_confidential">
+				<source>Shipper Is Address Sharing Confidential</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.delivery_type">
+				<source>Delivery Type</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.remark">
+				<source>Remark</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.customermail">
+				<source>Customermail</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.logs">
+				<source>Logs</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementorder_domain_model_shipper.reissue">
+				<source>Reissue</source>
+			</trans-unit>
+			<trans-unit id="order_status.0">
+				<source>未发货</source>
+			</trans-unit>
+			<trans-unit id="order_status.1">
+				<source>已发货</source>
+			</trans-unit>
+			<trans-unit id="order_status.2">
+				<source>退款</source>
+			</trans-unit>
+			<trans-unit id="shipper_status.0">
+				<source>未发货</source>
+			</trans-unit>
+			<trans-unit id="shipper_status.1">
+				<source>已发货</source>
+			</trans-unit>
+			<trans-unit id="shipper_status.2">
+				<source>运输中</source>
+			</trans-unit>
+			<trans-unit id="shipper_status.3">
+				<source>待签收</source>
+			</trans-unit>
+			<trans-unit id="shipper_status.4">
+				<source>已签收</source>
+			</trans-unit>
+			<trans-unit id="shipper_status.5">
+				<source>拒签</source>
 			</trans-unit>
 		</body>
 	</file>

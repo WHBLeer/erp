@@ -1,0 +1,14 @@
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      ERP\ErpManagementNotify\Domain\Model\Receive {
+        mapping {
+          
+        }
+      }
+
+    }
+  }
+}

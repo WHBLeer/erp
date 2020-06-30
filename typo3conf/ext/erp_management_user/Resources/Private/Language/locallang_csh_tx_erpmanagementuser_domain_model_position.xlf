@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-23T15:48:07Z" product-name="erp_management_user">
+		<header/>
+		<body>
+			<trans-unit id="ip.description">
+				<source>ip</source>
+			</trans-unit>
+			<trans-unit id="locatlat.description">
+				<source>locatlat</source>
+			</trans-unit>
+			<trans-unit id="locat_lng.description">
+				<source>locatLng</source>
+			</trans-unit>
+			<trans-unit id="nation.description">
+				<source>nation</source>
+			</trans-unit>
+			<trans-unit id="province.description">
+				<source>province</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="district.description">
+				<source>district</source>
+			</trans-unit>
+			<trans-unit id="adcode.description">
+				<source>adcode</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

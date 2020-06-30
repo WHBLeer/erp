@@ -109,20 +109,11 @@ class LogController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     }
 
     /**
-     * action pull
+     * action syslist
      * 
      * @return void
      */
-    public function pullAction()
-    {
-    }
-
-    /**
-     * action push
-     * 
-     * @return void
-     */
-    public function pushAction()
+    public function syslistAction()
     {
     }
 }

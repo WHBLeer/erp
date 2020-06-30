@@ -17,6 +17,13 @@ namespace ERP\ErpManagementDict\Domain\Model;
  */
 class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
+    
+    /**
+     * 类别 0商品分类 1分类模板
+     * 
+     * @var int
+     */
+    protected $ctype = 0;
 
     /**
      * 名称
@@ -59,6 +66,27 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var \ERP\ErpManagementDict\Domain\Model\Category
      */
     protected $parent = null;
+
+    /**
+     * Returns the ctype
+     * 
+     * @return int ctype
+     */
+    public function getCtype()
+    {
+        return $this->ctype;
+    }
+
+    /**
+     * Sets the ctype
+     * 
+     * @param int $ctype
+     * @return void
+     */
+    public function setCtype($ctype)
+    {
+        $this->ctype = $ctype;
+    }
 
     /**
      * Returns the name

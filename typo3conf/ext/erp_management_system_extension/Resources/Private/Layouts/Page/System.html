@@ -1,0 +1,22 @@
+<div id="wrapper">
+    <f:render partial="HeaderSystem" arguments="{_all}" />
+    <f:render partial="Navbar" arguments="{_all}" />
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container-fluid">
+                <!-- <f:cObject typoscriptObjectPath="lib.navigation.breadcrumb" /> -->
+                <f:render section="Main" />
+            </div>
+            <!-- content -->
+
+            <f:render partial="Footer" arguments="{_all}" />
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+
+    </div>
+</div>

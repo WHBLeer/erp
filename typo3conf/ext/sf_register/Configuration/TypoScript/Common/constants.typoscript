@@ -1,0 +1,36 @@
+plugin.tx_sfregister.minified =
+[applicationContext == 'Production']
+  plugin.tx_sfregister.minified = .min
+[end]
+
+plugin.tx_sfregister.view {
+  # cat=sf_register.settings/file; type=string; label=LLL:EXT:sf_register/Resources/Private/Language/locallang_ts.xlf:templateRootPath
+  templateRootPath = EXT:sf_register/Resources/Private/Templates/
+
+  # cat=sf_register.settings/file; type=string; label=LLL:EXT:sf_register/Resources/Private/Language/locallang_ts.xlf:partialRootPath
+  partialRootPath = EXT:sf_register/Resources/Private/Partials/
+
+  # cat=sf_register.settings/file; type=string; label=LLL:EXT:sf_register/Resources/Private/Language/locallang_ts.xlf:layoutRootPath
+  layoutRootPath = EXT:sf_register/Resources/Private/Layouts/
+}
+
+
+plugin.tx_sfregister.settings {
+  # cat=sf_register.settings//10; type=int+; label=LLL:EXT:sf_register/Resources/Private/Language/locallang_ts.xlf:common.createPid
+  createPid = 0
+
+  # cat=sf_register.settings//10; type=int+; label=LLL:EXT:sf_register/Resources/Private/Language/locallang_ts.xlf:common.editPid
+  editPid = 0
+
+  # cat=sf_register.settings//10; type=int+; label=LLL:EXT:sf_register/Resources/Private/Language/locallang_ts.xlf:common.passwordPid
+  passwordPid = 0
+
+  # cat=sf_register.settings//10; type=int+; label=LLL:EXT:sf_register/Resources/Private/Language/locallang_ts.xlf:common.invitePid
+  invitePid = 0
+
+  # cat=sf_register.settings//10; type=int+; label=LLL:EXT:sf_register/Resources/Private/Language/locallang_ts.xlf:common.resendPid
+  resendPid = 0
+
+  # cat=sf_register.settings//30; type=text; label= LLL:EXT:sf_register/Resources/Private/Language/locallang_ts.xlf:common.captchaId
+  captchaId = recaptcha
+}

@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file source-language="en" target-language="ch" datatype="plaintext" original="messages" date="2020-06-02T02:48:49Z">
+		<header/>
+		<body>
+			<trans-unit id="action.add" resname="action.add">
+				<source>Add task</source>
+				<target>添加任务</target>
+			</trans-unit>
+			<trans-unit id="action.edit" resname="action.edit">
+				<source>Edit task</source>
+				<target>编辑任务</target>
+			</trans-unit>
+			<trans-unit id="button.cancel" resname="button.cancel">
+				<source>Cancel</source>
+				<target>返回</target>
+			</trans-unit>
+			<trans-unit id="function.scheduler" resname="function.scheduler">
+				<source>Scheduled tasks</source>
+				<target>计划任务</target>
+			</trans-unit>
+			<trans-unit id="function.check" resname="function.check">
+				<source>Setup check</source>
+				<target>设置检查</target>
+			</trans-unit>
+			<trans-unit id="function.info" resname="function.info">
+				<source>Information</source>
+				<target>任务列表</target>
+			</trans-unit>
+			<trans-unit id="hdg.cliScript" resname="hdg.cliScript">
+				<source>CLI script</source>
+				<target>CLI脚本</target>
+			</trans-unit>
+			<trans-unit id="hdg.composerMode" resname="hdg.composerMode">
+				<source>System is running in Composer Mode</source>
+				<target>系统正在composer模式下运行</target>
+			</trans-unit>
+			<trans-unit id="msg.composerMode" resname="msg.composerMode">
+				<source>
+					The system is running in composer mode, the path to the `typo3` executable could not be reliably determined.
+					By default, the command to run in composer mode is `vendor/bin/typo3 scheduler:run`.
+				</source>
+				<target>系统以编写器模式运行，无法可靠地确定 `typo3` 可执行文件的路径。默认情况下，要在composer模式下运行的命令是 `vendor/bin/typo3 scheduler:run`.</target>
+			</trans-unit>
+			<trans-unit id="hdg.lastRun" resname="hdg.lastRun">
+				<source>Last run</source>
+				<target>最后运行</target>
+			</trans-unit>
+			<trans-unit id="label.automatically" resname="label.automatically">
+				<source>automatically</source>
+				<target>自动地</target>
+			</trans-unit>
+			<trans-unit id="label.cachingFrameworkGarbageCollection.selectBackends" resname="label.cachingFrameworkGarbageCollection.selectBackends">
+				<source>Backend types</source>
+				<target>后台类型</target>
+			</trans-unit>
+			<trans-unit id="label.recyclerGarbageCollection.numberOfDays" resname="label.recyclerGarbageCollection.numberOfDays">
+				<source>Number of days until removing files</source>
+				<target>删除文件之前的天数</target>
+			</trans-unit>
+			<trans-unit id="label.checkAll" resname="label.checkAll">
+				<source>Check/uncheck all</source>
+				<target>全部选中/全部取消</target>
+			</trans-unit>
+			<trans-unit id="label.class" resname="label.class">
+				<source>Class</source>
+				<target>Class</target>
+			</trans-unit>
+			<trans-unit id="label.cron" resname="label.cron">
+				<source>Cron</source>
+				<target>Cron</target>
+			</trans-unit>
+			<trans-unit id="label.defType" resname="label.defType">
+				<source>Definition type</source>
+				<target>定义类型</target>
+			</trans-unit>
+			<trans-unit id="label.defType.interval" resname="label.defType.interval">
+				<source>Interval</source>
+				<target>间隔</target>
+			</trans-unit>
+			<trans-unit id="label.defType.cron" resname="label.defType.cron">
+				<source>Cron command</source>
+				<target>Cron 命令</target>
+			</trans-unit>
+			<trans-unit id="label.description" resname="label.description">
+				<source>description</source>
+				<target>简介</target>
+			</trans-unit>
+			<trans-unit id="label.email" resname="label.email">
+				<source>email</source>
+				<target>邮箱</target>
+			</trans-unit>
+			<trans-unit id="label.end" resname="label.end">
+				<source>End (HH:MM DD-MM-YYYY)</source>
+				<target>结束 (HH:MM DD-MM-YYYY)</target>
+			</trans-unit>
+			<trans-unit id="label.executeSelected" resname="label.executeSelected">
+				<source>Execute selected tasks</source>
+				<target>运行已选任务</target>
+			</trans-unit>
+			<trans-unit id="label.cronjobSelected" resname="label.cronjobSelected">
+				<source>Execute selected tasks on next cron job</source>
+				<target>在下一个cron作业上运行已选任务</target>
+			</trans-unit>
+			<trans-unit id="label.extension" resname="label.extension">
+				<source>Extension</source>
+				<target>扩展</target>
+			</trans-unit>
+			<trans-unit id="label.frequency" resname="label.frequency">
+				<source>Frequency</source>
+				<target>频率</target>
+			</trans-unit>
+			<trans-unit id="label.frequency.long" resname="label.frequency.long">
+				<source>Frequency (seconds or cron command)</source>
+				<target>频率（秒或cron命令）</target>
+			</trans-unit>
+			<trans-unit id="label.id" resname="label.id">
+				<source>ID</source>
+				<target>ID</target>
+			</trans-unit>
+			<trans-unit id="label.lastExecution" resname="label.lastExecution">
+				<source>Last Execution</source>
+				<target>最后执行</target>
+			</trans-unit>
+			<trans-unit id="label.manual" resname="label.manual">
+				<source>Manual</source>
+				<target>手册</target>
+			</trans-unit>
+			<trans-unit id="label.manually" resname="label.manually">
+				<source>Manually</source>
+				<target>手动地</target>
+			</trans-unit>
+			<trans-unit id="label.name" resname="label.name">
+				<source>Name</source>
+				<target>名称</target>
+			</trans-unit>
+			<trans-unit id="label.nextExecution" resname="label.nextExecution">
+				<source>Next Execution</source>
+				<target>下次执行</target>
+			</trans-unit>
+			<trans-unit id="label.parallel" resname="label.parallel">
+				<source>Parallel Execution</source>
+				<target>并行执行</target>
+			</trans-unit>
+			<trans-unit id="label.parallel.long" resname="label.parallel.long">
+				<source>Allow Parallel Execution</source>
+				<target>允许并行执行</target>
+			</trans-unit>
+			<trans-unit id="label.serverTime" resname="label.serverTime">
+				<source>Server time</source>
+				<target>当前服务器时间</target>
+			</trans-unit>
+			<trans-unit id="label.sleepTime" resname="label.sleepTime">
+				<source>Sleep time</source>
+				<target>休眠时间</target>
+			</trans-unit>
+			<trans-unit id="label.start" resname="label.start">
+				<source>START (HH:MM DD-MM-YYYY)</source>
+				<target>开始 (HH:MM DD-MM-YYYY)</target>
+			</trans-unit>
+			<trans-unit id="label.fileStorageIndexing.storage" resname="label.fileStorageIndexing.storage">
+				<source>Storage to index</source>
+				<target>存储到</target>
+			</trans-unit>
+			<trans-unit id="label.fileStorageExtraction.fileCount" resname="label.fileStorageExtraction.fileCount">
+				<source>Number of files per run</source>
+				<target>每次运行的文件数</target>
+			</trans-unit>
+			<trans-unit id="label.fileStorageExtraction.registeredExtractors" resname="label.fileStorageExtraction.registeredExtractors">
+				<source>Registered extractors</source>
+				<target>注册提取器</target>
+			</trans-unit>
+			<trans-unit id="label.fileStorageExtraction.registeredExtractors.extractor" resname="label.fileStorageExtraction.registeredExtractors.extractor">
+				<source>%1$s with priority %2$d</source>
+				<target>%1$s，优先级为%2$d</target>
+			</trans-unit>
+			<trans-unit id="label.fileStorageExtraction.registeredExtractors.with_extractors" resname="label.fileStorageExtraction.registeredExtractors.with_extractors">
+				<source>Following extractors have been registered and will be used when running this task</source>
+				<target>以下提取器已注册，将在运行此任务时使用</target>
+			</trans-unit>
+			<trans-unit id="label.fileStorageExtraction.registeredExtractors.without_extractors" resname="label.fileStorageExtraction.registeredExtractors.without_extractors">
+				<source>There currently is no extractor registered. This task will have no effect!</source>
+				<target>当前没有注册提取器。此任务将无效！</target>
+			</trans-unit>
+			<trans-unit id="label.tableGarbageCollection.allTables" resname="label.tableGarbageCollection.allTables">
+				<source>Clean all available tables</source>
+				<target>整理所有可用表</target>
+			</trans-unit>
+			<trans-unit id="label.tableGarbageCollection.table" resname="label.tableGarbageCollection.table">
+				<source>Table to clean up</source>
+				<target>整理表</target>
+			</trans-unit>
+			<trans-unit id="label.tableGarbageCollection.additionalInformationTable" resname="label.tableGarbageCollection.additionalInformationTable">
+				<source>Table: %s</source>
+				<target>表: %s</target>
+			</trans-unit>
+			<trans-unit id="label.tableGarbageCollection.additionalInformationAllTables" resname="label.tableGarbageCollection.additionalInformationAllTables">
+				<source>All tables</source>
+				<target>全部表</target>
+			</trans-unit>
+			<trans-unit id="label.tableGarbageCollection.numberOfDays" resname="label.tableGarbageCollection.numberOfDays">
+				<source>Delete entries older than given number of days</source>
+				<target>删除早于给定天数的压缩文件</target>
+			</trans-unit>
+			<trans-unit id="label.optimizeDatabaseTables.selectTables" resname="label.optimizeDatabaseTables.selectTables">
+				<source>Database tables</source>
+				<target>数据库表</target>
+			</trans-unit>
+			<trans-unit id="label.type" resname="label.type">
+				<source>Type</source>
+				<target>类型</target>
+			</trans-unit>
+			<trans-unit id="label.type.recurring" resname="label.type.recurring">
+				<source>Recurring</source>
+				<target>重复执行</target>
+			</trans-unit>
+			<trans-unit id="label.type.single" resname="label.type.single">
+				<source>Single</source>
+				<target>执行一次</target>
+			</trans-unit>
+			<trans-unit id="label.group" resname="label.group">
+				<source>Task group</source>
+				<target>任务组</target>
+			</trans-unit>
+			<trans-unit id="label.group.taskCount" resname="label.group.taskCount">
+				<source>Amount of tasks in this scheduler task group</source>
+			    <target>此调度程序任务组中的任务数量</target>
+			</trans-unit>
+			<trans-unit id="label.noGroup" resname="label.noGroup">
+				<source>(no task group defined)</source>
+				<target>(未定义任务组)</target>
+			</trans-unit>
+			<trans-unit id="label.noGroup.taskCount" resname="label.noGroup.taskCount">
+				<source>Amount of tasks that are not assigned to any scheduler task group</source>
+				<target>未分配给任何调度程序任务组的任务数量</target>
+			</trans-unit>
+			<trans-unit id="label.noClass" resname="label.noClass">
+				<source>Tasks without registered classes</source>
+				<target>没有注册该类的任务</target>
+			</trans-unit>
+			<trans-unit id="label.noClass.taskCount" resname="label.noClass.taskCount">
+				<source>Amount of tasks without found class</source>
+				<target>该类没有任何任务</target>
+			</trans-unit>
+			<trans-unit id="label.schedulableCommandName" resname="label.schedulableCommandName">
+				<source><![CDATA[Schedulable Command. <em>Save and reopen to define command arguments</em>]]></source>
+				<target><![CDATA[Schedulable Command. <em>保存并重新打开以定义命令参数</em>]]></target>
+			</trans-unit>
+			<trans-unit id="label.saveAndCreateNewTask" resname="label.saveAndCreateNewTask">
+				<source>Save and create new task</source>
+				<target>保存并创建新任务</target>
+			</trans-unit>
+			<trans-unit id="msg.addError" resname="msg.addError">
+				<source>Add option</source>
+				<target>添加选项</target>
+			</trans-unit>
+			<trans-unit id="msg.addSuccess" resname="msg.addSuccess">
+				<source>The task could not be added.</source>
+				<target>无法添加任务</target>
+			</trans-unit>
+			<trans-unit id="msg.cliScript" resname="msg.cliScript">
+				<source>The script to execute the Scheduler from the command line is: &lt;strong&gt;"%s scheduler:run"&lt;/strong&gt;.</source>
+				<target>从命令行执行计划程序的脚本是：&lt;strong&gt;"%s scheduler:run"&lt;/strong&gt;.</target>
+			</trans-unit>
+			<trans-unit id="msg.cliScriptExecutable" resname="msg.cliScriptExecutable">
+				<source>The webserver user is allowed execute this script.</source>
+				<target>网络服务器用户临时执行此脚本.</target>
+			</trans-unit>
+			<trans-unit id="msg.cliScriptNotExecutable" resname="msg.cliScriptNotExecutable">
+				<source>The webserver user is not allowed to execute this script.</source>
+				<target>不允许Web服务器用户执行此脚本。?</target>
+			</trans-unit>
+			<trans-unit id="msg.delete" resname="msg.delete">
+				<source>Are you sure you want to delete this task?</source>
+				<target>您确定要删除此任务吗?</target>
+			</trans-unit>
+			<trans-unit id="msg.deleteError" resname="msg.deleteError">
+				<source>The task could not be deleted.</source>
+				<target>无法删除任务.</target>
+			</trans-unit>
+			<trans-unit id="msg.deleteSuccess" resname="msg.deleteSuccess">
+				<source>The task was successfully deleted.</source>
+				<target>任务已成功删除.</target>
+			</trans-unit>
+			<trans-unit id="msg.endDateSmallerThanStartDate" resname="msg.endDateSmallerThanStartDate">
+				<source>The end date is before the start date.</source>
+				<target>结束日期早于开始日期.</target>
+			</trans-unit>
+			<trans-unit id="msg.executed" resname="msg.executed">
+				<source>Executed: %s</source>
+				<target>已执行: %s</target>
+			</trans-unit>
+			<trans-unit id="msg.frequencyError" resname="msg.frequencyError">
+				<source>Invalid frequency. Please enter either a number of seconds or a valid cron command. The cron parser said: %1$s [code: %2$d].</source>
+				<target>无效的频率。请输入秒数或有效的cron命令. cron分析器抛出: %1$s [code: %2$d].</target>
+			</trans-unit>
+			<trans-unit id="msg.incompleteLastRun" resname="msg.incompleteLastRun">
+				<source>The information about the last execution of the Scheduler is incomplete.</source>
+				<target>有关上一次执行调度程序的信息不完整.</target>
+			</trans-unit>
+			<trans-unit id="msg.infoScreenIntro" resname="msg.infoScreenIntro">
+				<source>This is the list of all available tasks in this TYPO3 installation. Click on the icon at the far right to directly create a new scheduled task of the chosen type.</source>
+				<target>这是此TYPO3安装中所有可用任务的列表。单击最右边的图标，直接创建所选类型的新计划任务。</target>
+			</trans-unit>
+			<trans-unit id="msg.invalidFrequency" resname="msg.invalidFrequency">
+				<source>Invalid frequency. Please enter either a number of seconds or a valid cron command.</source>
+				<target>无效的频率。请输入秒数或有效的cron命令.</target>
+			</trans-unit>
+			<trans-unit id="msg.invalidSleepTime" resname="msg.invalidSleepTime">
+				<source>Please enter a sleep time greater or equal to 0 (zero).</source>
+				<target>请输入大于或等于的睡眠时间 0 (zero).</target>
+			</trans-unit>
+			<trans-unit id="msg.lastRun" resname="msg.lastRun">
+				<source>The Scheduler was last started (%1$s) on %2$s at %3$s and ended on %4$s at %5$s.</source>
+				<target>调试程序最后一次在%2$s上(%1$s)）在%3$s结束，在%4$s上结束于%5$s。</target>
+			</trans-unit>
+			<trans-unit id="msg.maynotDeleteRunningTask" resname="msg.maynotDeleteRunningTask">
+				<source>A running task may not be deleted.</source>
+				<target>正在运行的任务可能不会被删除。</target>
+			</trans-unit>
+			<trans-unit id="msg.maynotEditRunningTask" resname="msg.maynotEditRunningTask">
+				<source>A running task may not be edited.</source>
+				<target>正在运行的任务可能无法编辑。</target>
+			</trans-unit>
+			<trans-unit id="msg.maynotStopNonRunningTask" resname="msg.maynotStopNonRunningTask">
+				<source>The task is not running. There are no executions to unmark.</source>
+				<target>任务未运行。没有要取消标记的执行。</target>
+			</trans-unit>
+			<trans-unit id="msg.noEmail" resname="msg.noEmail">
+				<source>Please enter an email address.</source>
+				<target>请输入电子邮件地址。</target>
+			</trans-unit>
+			<trans-unit id="msg.noFrequency" resname="msg.noFrequency">
+				<source>No frequency was defined, either as an interval or as a cron command.</source>
+				<target>没有将频率定义为间隔或cron命令。</target>
+			</trans-unit>
+			<trans-unit id="msg.noLastRun" resname="msg.noLastRun">
+				<source>The Scheduler has never yet run or the information about the last run has been lost.</source>
+				<target>调度程序尚未运行，或者有关上次运行的信息已丢失。</target>
+			</trans-unit>
+			<trans-unit id="msg.noTasksDefined" resname="msg.noTasksDefined">
+				<source>There are currently no task classes available at all. To be able to create new tasks, you must either enable the samples provided by the Scheduler or install some other extension that relies on the Scheduler.</source>
+				<target>当前根本没有可用的任务类。要创建新任务，必须启用计划程序提供的示例，或者安装依赖于计划程序的其他扩展。</target>
+			</trans-unit>
+			<trans-unit id="msg.noTaskClassFound" resname="msg.noTaskClassFound">
+				<source>The selected task class could not be found. You should probably contact the task's developers.</source>
+				<target>找不到选定的任务类。您可能应该联系任务的开发人员。</target>
+			</trans-unit>
+			<trans-unit id="msg.noTasks" resname="msg.noTasks">
+				<source>No tasks defined yet.</source>
+				<target>尚未定义任务。</target>
+			</trans-unit>
+			<trans-unit id="msg.notExecuted" resname="msg.notExecuted">
+				<source>Not executed: %s</source>
+				<target>未执行: %s</target>
+			</trans-unit>
+			<trans-unit id="msg.executionFailed" resname="msg.executionFailed">
+				<source>Execution of task "%1$s" failed with the following message: %2$s</source>
+				<target>任务%1$s的执行失败，出现以下消息：%2$s</target>
+			</trans-unit>
+			<trans-unit id="msg.executionFailureDefault" resname="msg.executionFailureDefault">
+				<source>The execution failed, but the error message could not be retrieved (it was probably too large). Sorry.</source>
+				<target>执行失败，但无法检索错误消息（可能太大）。对不起。</target>
+			</trans-unit>
+			<trans-unit id="msg.executionFailureReport" resname="msg.executionFailureReport">
+				<source>Execution failed: %1$d, %2$s</source>
+				<target>执行失败：%1$d、%2$s</target>
+			</trans-unit>
+			<trans-unit id="msg.noStartDate" resname="msg.noStartDate">
+				<source>Please define a start date.</source>
+				<target>请定义开始日期。</target>
+			</trans-unit>
+			<trans-unit id="msg.invalidStartDate" resname="msg.invalidStartDate">
+				<source>Start date is invalid.</source>
+				<target>开始时间无效</target>
+			</trans-unit>
+			<trans-unit id="msg.invalidEndDate" resname="msg.invalidEndDate">
+				<source>End date is invalid.</source>
+				<target>结束时间无效</target>
+			</trans-unit>
+			<trans-unit id="msg.invalidNumberOfDays" resname="msg.invalidNumberOfDays">
+				<source>Number of days is invalid.</source>
+				<target>天数无效。</target>
+			</trans-unit>
+			<trans-unit id="msg.selectionOfNonExistingCacheBackends" resname="msg.selectionOfNonExistingCacheBackends">
+				<source>Some of the selected cache backends do not exist. Please select valid backends only.</source>
+				<target>某些选定的缓存后端不存在。请仅选择有效的后端。</target>
+			</trans-unit>
+			<trans-unit id="msg.noCacheBackendSelected" resname="msg.noCacheBackendSelected">
+				<source>Please select at least one cache backend.</source>
+				<target>请至少选择一个缓存后端。</target>
+			</trans-unit>
+			<trans-unit id="msg.invalidTaskClass" resname="msg.invalidTaskClass">
+				<source><![CDATA[<strong>The following tasks can not be executed. No related class could be found for none of the following listed tasks.</strong> You should consider reinstalling the extension that provided them or simply deleting the tasks. Please check also if any of the listed tasks have to be recreated manually (which can be necessary after an extension update due to breaking changes or missing migration scripts).]]></source>
+				<target><![CDATA[<strong>无法执行以下任务。找不到下列任何任务的相关类。</strong> 您应该考虑重新安装提供它们的扩展或只是删除任务。还请检查是否必须手动重新创建列出的任何任务（由于中断更改或缺少迁移脚本，在扩展更新后可能需要重新创建）。]]></target>
+			</trans-unit>
+			<trans-unit id="msg.invalidTaskClassEdit" resname="msg.invalidTaskClassEdit">
+				<source>The current class (%s) could not be found. Change it below or consider deleting this task altogether.</source>
+				<target>找不到当前 Class %s。请在下面更改或考虑完全删除此任务。</target>
+			</trans-unit>
+			<trans-unit id="msg.invalidTaskClass.infobox.title" resname="msg.invalidTaskClass.infobox.title">
+				<source>%s registered scheduler tasks can not be executed</source>
+				<target>无法执行注册的计划程序任务 %s</target>
+			</trans-unit>
+			<trans-unit id="msg.invalidTaskClass.infobox.message" resname="msg.invalidTaskClass.infobox.message">
+				<source><![CDATA[<a href="#recordlist-task-group-missing">Please check the erroneous tasks!</a>]]></source>
+				<target><![CDATA[<a href="#recordlist-task-group-missing">请检查错误的任务！</a>]]></target>
+			</trans-unit>
+			<trans-unit id="msg.schedulerSetupCheck" resname="msg.schedulerSetupCheck">
+				<source>This screen checks if the requisites for running the Scheduler as a cron job are fulfilled. It also displays information about the last run of the Scheduler.</source>
+				<target>此屏幕检查是否满足将调度程序作为cron作业运行的必要条件。它还显示有关调度程序最后一次运行的信息。</target>
+			</trans-unit>
+			<trans-unit id="msg.serverTime" resname="msg.serverTime">
+				<source>Current server time is %s.</source>
+				<target>当前服务器时间是 %s。</target>
+			</trans-unit>
+			<trans-unit id="msg.serverTimeHelp" resname="msg.serverTimeHelp">
+				<source>All dates and times in the Scheduler are measured according to the server's time, as the Scheduler is run purely on the server-side.</source>
+				<target>调度程序中的所有日期和时间都是根据服务器的时间来度量的，因为调度程序完全在服务器端运行。</target>
+			</trans-unit>
+			<trans-unit id="msg.stop" resname="msg.stop">
+				<source>Are you sure you want to mark this task as not running? Note that this will not stop the actual script (if unsure please refer to the manual).</source>
+				<target>是否确定要将此任务标记为未运行？请注意，这不会停止实际的脚本（如果不确定，请参阅手册）。</target>
+			</trans-unit>
+			<trans-unit id="msg.stopError" resname="msg.stopError">
+				<source>The task could not be marked as non-running.</source>
+				<target>无法将任务标记为未运行。</target>
+			</trans-unit>
+			<trans-unit id="msg.stopSuccess" resname="msg.stopSuccess">
+				<source>The task was successfully marked as non-running.</source>
+				<target>任务已成功标记为未运行。</target>
+			</trans-unit>
+			<trans-unit id="msg.taskNotFound" resname="msg.taskNotFound">
+				<source>The requested task (UID: %d) was not found.</source>
+				<target>找不到请求的任务（UID: %d）。</target>
+			</trans-unit>
+			<trans-unit id="msg.updateSuccess" resname="msg.updateSuccess">
+				<source>The task was updated successfully.</source>
+				<target>任务已成功更新。</target>
+			</trans-unit>
+			<trans-unit id="msg.updateError" resname="msg.updateError">
+				<source>The task could not be updated.</source>
+				<target>任务无法更新。</target>
+			</trans-unit>
+			<trans-unit id="msg.selectionOfNonExistingDatabaseTables" resname="msg.selectionOfNonExistingDatabaseTables">
+				<source>Some of the selected database tables do not exist. Please select only valid tables.</source>
+				<target>某些预期的数据库表不存在。请仅选择有效的表格。</target>
+			</trans-unit>
+			<trans-unit id="msg.noDatabaseTablesSelected" resname="msg.noDatabaseTablesSelected">
+				<source>Please select at least one database table.</source>
+				<target>请至少选择一个数据库表。</target>
+			</trans-unit>
+			<trans-unit id="msg.unregisteredCommand" resname="msg.unregisteredCommand">
+				<source>Command with identifier "%s" has not been registered.</source>
+				<target>标识符为 "%s" 的命令尚未注册。</target>
+			</trans-unit>
+			<trans-unit id="msg.mandatoryArgumentMissing" resname="msg.mandatoryArgumentMissing">
+				<source>Error parsing current set of arguments: "%s".</source>
+				<target>参数 "%s" 是必需的</target>
+			</trans-unit>
+			<trans-unit id="none" resname="none">
+				<source>Error parsing current set of options: "%s".</source>
+				<target>无</target>
+			</trans-unit>
+			<trans-unit id="status" resname="status">
+				<source>Argument "%s" is mandatory</source>
+				<target>状态</target>
+			</trans-unit>
+			<trans-unit id="status.progress" resname="status.progress">
+				<source>None</source>
+				<target>进展</target>
+			</trans-unit>
+			<trans-unit id="status.disabled" resname="status.disabled">
+				<source>Status</source>
+				<target>禁用</target>
+			</trans-unit>
+			<trans-unit id="status.failure" resname="status.failure">
+				<source>Progress</source>
+				<target>失败</target>
+			</trans-unit>
+			<trans-unit id="status.late" resname="status.late">
+				<source>disabled</source>
+				<target>推迟</target>
+			</trans-unit>
+			<trans-unit id="status.running" resname="status.running">
+				<source>failure</source>
+				<target>运行中</target>
+			</trans-unit>
+			<trans-unit id="status.scheduled" resname="status.scheduled">
+				<source>scheduled</source>
+				<target>预执行</target>
+			</trans-unit>
+			<trans-unit id="task" resname="task">
+				<source>Task</source>
+				<target>任务</target>
+			</trans-unit>
+			<trans-unit id="title" resname="title">
+				<source>TYPO3 Scheduler administration module</source>
+				<target>TYPO3 Scheduler管理模块</target>
+			</trans-unit>
+			<trans-unit id="action.run_task" resname="action.run_task">
+				<source>Run task</source>
+				<target>运行任务</target>
+			</trans-unit>
+			<trans-unit id="action.run_task_cron" resname="action.run_task_cron">
+				<source>Run task on next cron job</source>
+				<target>在下一个cron作业上运行任务</target>
+			</trans-unit>
+			<trans-unit id="testTask.name" resname="testTask.name">
+				<source>Scheduler test task</source>
+				<target>计划程序测试任务</target>
+			</trans-unit>
+			<trans-unit id="testTask.description" resname="testTask.description">
+				<source>The Scheduler test task just sends a mail to a given email address. It is designed to be used for testing purposes.</source>
+				<target>Scheduler测试任务只是将邮件发送到给定的电子邮件地址。它用于测试目的。</target>
+			</trans-unit>
+			<trans-unit id="sleepTask.name" resname="sleepTask.name">
+				<source>Scheduler sleep task</source>
+				<target>调度程序睡眠任务</target>
+			</trans-unit>
+			<trans-unit id="sleepTask.description" resname="sleepTask.description">
+				<source>This task does nothing but put PHP to sleep for a number of seconds. It is designed to test multiple executions.</source>
+				<target>这个任务只会让PHP休眠几秒钟。它是为测试多个执行而设计的。</target>
+			</trans-unit>
+			<trans-unit id="cachingFrameworkGarbageCollection.name" resname="cachingFrameworkGarbageCollection.name">
+				<source>Caching framework garbage collection</source>
+				<target>缓存框架垃圾回收</target>
+			</trans-unit>
+			<trans-unit id="cachingFrameworkGarbageCollection.description" resname="cachingFrameworkGarbageCollection.description">
+				<source>This task calls the garbage collection of configured caching framework caches which use one of the selected backends. This will free some space in cache backends which do not have an internal garbage collection. In case of the default database backend it is advisable to run this task once a day when the database is mostly idle.</source>
+				<target>此任务调用使用选定后端之一的已配置缓存框架缓存的垃圾回收。这将在没有内部垃圾回收的缓存后端释放一些空间。对于默认的数据库后端，建议在数据库基本处于空闲状态时每天运行一次此任务。</target>
+			</trans-unit>
+			<trans-unit id="fileIndexing.name" resname="fileIndexing.name">
+				<source>[OBSOLETE] File Abstraction Layer: Indexing job</source>
+				<target>[OBSOLETE] 文件抽象层：索引作业</target>
+			</trans-unit>
+			<trans-unit id="fileIndexing.description" resname="fileIndexing.description">
+				<source>Runs indexing tasks based on an indexing configuration and a storage/folder information.</source>
+				<target>基于索引配置和存储/文件夹信息运行索引任务。</target>
+			</trans-unit>
+			<trans-unit id="fileStorageIndexing.name" resname="fileStorageIndexing.name">
+				<source>File Abstraction Layer: Update storage index</source>
+				<target>文件抽象层：更新存储索引</target>
+			</trans-unit>
+			<trans-unit id="fileStorageIndexing.description" resname="fileStorageIndexing.description">
+				<source>Updates the Index/Cache Data of a Storage; only needed if changes to the storage are possible outside the backend (FTP, RemoteStorages).</source>
+				<target>更新存储的索引/缓存数据；仅当可以在后端（FTP、远程存储）之外更改存储时才需要。</target>
+			</trans-unit>
+			<trans-unit id="fileStorageExtraction.name" resname="fileStorageExtraction.name">
+				<source>File Abstraction Layer: Extract metadata in storage</source>
+				<target>文件抽象层：提取存储中的元数据</target>
+			</trans-unit>
+			<trans-unit id="fileStorageExtraction.description" resname="fileStorageExtraction.description">
+				<source>Extracts metadata for all files in storage which have been changed since last run.</source>
+				<target>提取自上次运行以来已更改的存储中所有文件的元数据。</target>
+			</trans-unit>
+			<trans-unit id="tableGarbageCollection.name" resname="tableGarbageCollection.name">
+				<source>Table garbage collection</source>
+				<target>表垃圾回收</target>
+			</trans-unit>
+			<trans-unit id="tableGarbageCollection.description" resname="tableGarbageCollection.description">
+				<source>Task to delete old entries from specific tables like sys_log. Use $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']['tx_scheduler_TableGarbageCollection']['options']['tables'] to configure tables. Refer to the manual for more details.</source>
+				<target>从特定表（如sys_log）中删除旧项的任务. 使用 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler'['tasks']['tx_scheduler_TableGarbageCollection']['OPTIONS']['tables'] 配置表。有关详细信息，请参阅手册。</target>
+			</trans-unit>
+			<trans-unit id="recyclerGarbageCollection.name" resname="recyclerGarbageCollection.name">
+				<source>Fileadmin garbage collection</source>
+				<target>文件管理垃圾回收</target>
+			</trans-unit>
+			<trans-unit id="recyclerGarbageCollection.description" resname="recyclerGarbageCollection.description">
+				<source>This task empties all "_recycler_" folders below fileadmin. This helps free some space in the file system.</source>
+				<target>此任务清空文件管理下的所有 "_recycler_" 文件夹。这有助于在文件系统中释放一些空间。</target>
+			</trans-unit>
+			<trans-unit id="executeSchedulableCommandTask.name" resname="executeSchedulableCommandTask.name">
+				<source>Execute console commands</source>
+				<target>执行控制台命令</target>
+			</trans-unit>
+			<trans-unit id="executeSchedulableCommandTask.description" resname="executeSchedulableCommandTask.description">
+				<source>Allows regular console commands to be configured and executed through the scheduler framework.</source>
+				<target>允许通过调度程序框架配置和执行常规控制台命令。</target>
+			</trans-unit>
+			<trans-unit id="optimizeDatabaseTable.name" resname="optimizeDatabaseTable.name">
+				<source>Optimize MySQL database tables</source>
+				<target>优化MySQL数据库表</target>
+			</trans-unit>
+			<trans-unit id="optimizeDatabaseTable.description" resname="optimizeDatabaseTable.description">
+				<source>This task executes "OPTIMIZE TABLE" statements on the selected database tables. This helps to reduce storage space and improve I/O efficiency. Warning! Tables will be locked during the optimization process.</source>
+				<target>此任务对选定的数据库表执行"OPTIMIZE TABLE"语句。这有助于减少存储空间并提高I/O效率。警告！优化过程中将锁定表。</target>
+			</trans-unit>
+			<trans-unit id="ipAnonymization.name" resname="ipAnonymization.name">
+				<source>Anonymize IP addresses in database tables</source>
+				<target>在数据库表中匿名化IP地址</target>
+			</trans-unit>
+			<trans-unit id="ipAnonymization.description" resname="ipAnonymization.description">
+				<source>This task anonymizes the IP addresses to enforce the privacy of the persisted data.</source>
+				<target>此任务将匿名化IP地址，以强制保留数据的隐私。</target>
+			</trans-unit>
+			<trans-unit id="label.ipAnonymization.table" resname="label.ipAnonymization.table">
+				<source>Table to anoymize</source>
+				<target>表命名</target>
+			</trans-unit>
+			<trans-unit id="label.ipAnonymization.additionalInformationTable" resname="label.ipAnonymization.additionalInformationTable">
+				<source>Table: %s after %s days</source>
+				<target>表: %s after %s days</target>
+			</trans-unit>
+			<trans-unit id="label.ipAnonymization.additionalInformationAllTables" resname="label.ipAnonymization.additionalInformationAllTables">
+				<source>All tables</source>
+				<target>所有表</target>
+			</trans-unit>
+			<trans-unit id="label.ipAnonymization.numberOfDays" resname="label.ipAnonymization.numberOfDays">
+				<source>Handle entries older than given number of days</source>
+				<target>处理早于给定天数的压缩</target>
+			</trans-unit>
+			<trans-unit id="label.ipAnonymization.mask" resname="label.ipAnonymization.mask">
+				<source>Mask level</source>
+				<target>Mask level</target>
+			</trans-unit>
+			<trans-unit id="label.ipAnonymization.mask.1" resname="label.ipAnonymization.mask.1">
+				<source>Last byte for IPv4 / Interface ID for IPv6</source>
+				<target>IPv4的最后1个字节/IPv6的接口ID (Last byte for IPv4 / Interface ID for IPv6)</target>
+			</trans-unit>
+			<trans-unit id="label.ipAnonymization.mask.2" resname="label.ipAnonymization.mask.2">
+				<source>Last 2 bytes for IPv4 / Interface &amp; SLA ID for IPv6</source>
+				<target>IPv4的最后2个字节/IPv6的接口和SLA ID (Last 2 bytes for IPv4 / Interface &amp; SLA ID for IPv6)</target>
+			</trans-unit>
+			<trans-unit id="command.example1" resname="command.example1">
+				<source>Every day-of-week from Monday through Friday at 09:00 and 15:00</source>
+				<target>从星期一到星期五的每天09:00和15:00 (Every day-of-week from Monday through Friday. at 09:00 and 15:00)</target>
+			</trans-unit>
+			<trans-unit id="command.example2" resname="command.example2">
+				<source>Every 2 hours</source>
+				<target>每2小时 (Every 2 hours)</target>
+			</trans-unit>
+			<trans-unit id="command.example3" resname="command.example3">
+				<source>Every 20 minutes</source>
+				<target>每20分钟 (Every 20 minutes)</target>
+			</trans-unit>
+			<trans-unit id="command.example4" resname="command.example4">
+				<source>Every Tuesday at 07:00</source>
+				<target>每周二07:00 (Every Tuesday at 07:00)</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

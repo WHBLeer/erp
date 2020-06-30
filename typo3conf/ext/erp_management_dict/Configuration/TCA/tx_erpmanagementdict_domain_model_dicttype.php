@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'name,code',
+        'searchFields' => 'name,code,devid',
         'iconfile' => 'EXT:erp_management_dict/Resources/Public/Icons/tx_erpmanagementdict_domain_model_dicttype.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, code',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, code,devid',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, code, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, code,devid, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -128,6 +128,15 @@ return [
         'code' => [
             'exclude' => true,
             'label' => 'LLL:EXT:erp_management_dict/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementdict_domain_model_dicttype.code',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'devid' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_dict/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementdict_domain_model_dicttype.devid',
             'config' => [
                 'type' => 'input',
                 'size' => 30,

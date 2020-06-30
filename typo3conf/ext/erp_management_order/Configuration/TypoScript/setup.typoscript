@@ -34,7 +34,7 @@ plugin.tx_erpmanagementorder_pi1 {
     }
     settings {
         paginate {
-            itemsPerPage = 10
+            itemsPerPage = 20
             insertAbove = 0
             insertBelow = 1
             prevNextHeaderTags = 8

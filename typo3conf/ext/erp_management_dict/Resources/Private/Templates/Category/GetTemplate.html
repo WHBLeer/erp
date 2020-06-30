@@ -1,0 +1,118 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+<f:layout name="Api" />
+<f:section name="content">
+	<div id="templateCategory" class="jstree jstree-1 jstree-default">
+	</div>
+	<f:link.action action="ajax" id="ajaxurl"></f:link.action>
+	<script type="text/javascript">
+		var url = $("#ajaxurl").attr('href');
+
+		$(function () {
+			//初始化树
+			getTmplateCategory()
+			//邦定树单击节点方法
+			$('#templateCategory').bind("activate_node.jstree", function (obj, e) {
+				var currentNode = e.node;
+				var currentNodeId = currentNode.id;
+				var str = currentNode.text
+				if ($('#templateCategory').jstree("is_parent", currentNode)) {
+					parent.layer.msg("请选择正确的子类目")
+				} else {
+					getName(currentNode, str);
+					parent.$("#uploadType").val(str1)
+					parent.$("#uploadTypeId").val(currentNodeId)
+					if (parent.$("#languageType").val() != "") {
+						$.ajax({
+							url: '/ymx/uploadAttribute/selectAttribute',
+							type: 'post',
+							async: false,
+							data: {
+								classificationAttribute: currentNodeId
+							},
+							success: function (data) {
+								if (data.length == 0) {
+									parent.$("#dishidiv").hide();
+								} else {
+									parent.$("#dishidiv").show();
+									var str1 = ""
+									//加载数据
+									for (var i = 0; i < data.length; i++) {
+										str1 += '<div class="input-group">'
+											+ '<div class="input-group-addon" id="deediv">' + data[i].zwAttribute + '' + data[i].ywAttribute + '</div>'
+											+ '<input class="form-control" type="text" id="' + data[i].ywAttribute.toLowerCase() + '" name="' + data[i].ywAttribute.toLowerCase() + '"></div>'
+											+ '<div id="dediv">可选值：';
+										$.ajax({
+											url: '/ymx/uploadAttribute/selectAllattrib',
+											type: 'post',
+											async: false,
+											data: {
+												ywAttribute: data[i].ywAttribute,
+												languages: parent.$("#languageType").val()
+											},
+											success: function (data) {
+												//加载数据
+												for (var j = 0; j < data.length; j++) {
+													str1 += '<label onclick="setAttrVal(this)" data="' + data[j].ywOptional + '" data-where="' + data[j].ywAttribute + '" id="' + data[j].ywOptional + '">' + data[j].zwOptional + '</label>';
+												}
+											}
+										});
+									}
+									str1 += '</div><div></div>';
+									parent.$("#cat_attr_box").html(str1);
+								}
+
+							}
+						});
+					}
+					var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
+					parent.layer.close(index);
+				}
+
+
+			})
+
+		})
+
+		//反填数据到文本框
+		function getName(currentNode, str) {
+			str1 = str;
+			var nodeid = $('#templateCategory').jstree("get_parent", currentNode);
+			var node = $('#templateCategory').jstree("get_node", nodeid);
+			if (node.id == '-1') {
+				return;
+			} else {
+				str1 = node.text + "/" + str;
+				getName(node, str1);
+			};
+		}
+		//请求树数据
+		function getTmplateCategory() {
+			$.ajax({
+				type: "POST",
+				url: url,
+				data: {cmd: 'getTemplate' },
+				success: function (menuTree) {
+					loadMenuTree(menuTree);
+				}
+			});
+		}
+		//加载树结构
+		function loadMenuTree(menuTree) {
+			$('#templateCategory').jstree({
+				'core': {
+					'data': menuTree,
+					'themes': {
+						'icons': false,
+					},
+				},
+
+			});
+
+		}
+
+	</script>
+	<div class="layui-layer-move"></div>
+</f:section>
+
+</html>

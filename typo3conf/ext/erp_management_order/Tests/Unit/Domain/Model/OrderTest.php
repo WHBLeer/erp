@@ -202,31 +202,6 @@ class OrderTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
     /**
      * @test
      */
-    public function getShipperNameReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getShipperName()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setShipperNameForStringSetsShipperName()
-    {
-        $this->subject->setShipperName('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'shipperName',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
     public function getShipperAddressLine1ReturnsInitialValueForString()
     {
         self::assertSame(
@@ -627,56 +602,6 @@ class OrderTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
     /**
      * @test
      */
-    public function getBuyerEmailReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getBuyerEmail()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setBuyerEmailForStringSetsBuyerEmail()
-    {
-        $this->subject->setBuyerEmail('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'buyerEmail',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getBuyerNameReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getBuyerName()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setBuyerNameForStringSetsBuyerName()
-    {
-        $this->subject->setBuyerName('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'buyerName',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
     public function getShipmentServiceLevelCategoryReturnsInitialValueForString()
     {
         self::assertSame(
@@ -1025,5 +950,83 @@ class OrderTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function setErpuserForErpUserSetsErpuser()
     {
+    }
+
+    /**
+     * @test
+     */
+    public function getAddressReturnsInitialValueForAddress()
+    {
+        self::assertEquals(
+            null,
+            $this->subject->getAddress()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setAddressForAddressSetsAddress()
+    {
+        $addressFixture = new \ERP\ErpManagementOrder\Domain\Model\Address();
+        $this->subject->setAddress($addressFixture);
+
+        self::assertAttributeEquals(
+            $addressFixture,
+            'address',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getShipperReturnsInitialValueForShipper()
+    {
+        self::assertEquals(
+            null,
+            $this->subject->getShipper()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setShipperForShipperSetsShipper()
+    {
+        $shipperFixture = new \ERP\ErpManagementOrder\Domain\Model\Shipper();
+        $this->subject->setShipper($shipperFixture);
+
+        self::assertAttributeEquals(
+            $shipperFixture,
+            'shipper',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getRevenueReturnsInitialValueForRevenue()
+    {
+        self::assertEquals(
+            null,
+            $this->subject->getRevenue()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setRevenueForRevenueSetsRevenue()
+    {
+        $revenueFixture = new \ERP\ErpManagementOrder\Domain\Model\Revenue();
+        $this->subject->setRevenue($revenueFixture);
+
+        self::assertAttributeEquals(
+            $revenueFixture,
+            'revenue',
+            $this->subject
+        );
     }
 }

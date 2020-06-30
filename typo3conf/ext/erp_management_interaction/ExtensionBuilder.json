@@ -1,0 +1,93 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    53,
+                    46
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": [
+                        "ajax",
+                        "callback"
+                    ]
+                },
+                "name": "Interaction",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u63a5\u53e3\u7ba1\u7406",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "191394461021"
+                },
+                "propertyGroup": {
+                    "properties": []
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "\u63a5\u53e3\u7ba1\u7406",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": true,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "erp_management_interaction",
+        "name": "\u63a5\u53e3\u7ba1\u7406",
+        "originalExtensionKey": "erp_management_interface",
+        "originalVendorName": "ERP",
+        "persons": [
+            {
+                "company": "",
+                "email": "wanghongbin816@gmail.com",
+                "name": "\u738b\u5b8f\u5f6c",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Interaction=>ajax,callback",
+                    "noncacheableActions": "Interaction=>ajax,callback",
+                    "switchableActions": "\u6570\u636e\u4ea4\u4e92\nInteraction->ajax\n\u6570\u636e\u56de\u8c03\nInteraction->callback\n"
+                },
+                "description": "",
+                "key": "pi1",
+                "name": "\u63a5\u53e3\u7ba1\u7406"
+            }
+        ],
+        "vendorName": "ERP"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2020-06-02 02:28",
+        "extension_builder_version": "9.10.2",
+        "be_user": "\u7ba1\u7406\u5458 (1)"
+    }
+}

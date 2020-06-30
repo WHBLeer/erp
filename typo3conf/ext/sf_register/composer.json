@@ -1,0 +1,58 @@
+{
+	"name": "evoweb/sf-register",
+	"type": "typo3-cms-extension",
+	"description": "Frontend User Registration: Offers the possibility to maintain the fe_user data in frontend.",
+	"homepage": "https://github.com/evoWeb/sf_register/",
+
+	"license": "GPL-2.0-or-later",
+
+	"support": {
+		"docs": "https://docs.typo3.org/p/evoweb/sf-register/master/en-us/",
+		"issues": "https://github.com/evoWeb/sf_register/issues"
+	},
+
+	"keywords": [
+		"TYPO3 CMS",
+		"User registration",
+		"Frontend",
+		"Edit user data",
+		"Double-optin",
+		"Delete account",
+		"Resend optin mail"
+	],
+
+	"require": {
+		"typo3/cms-core": "^10.4",
+		"typo3/cms-extbase": "^10.4",
+		"typo3/cms-fluid": "^10.4"
+	},
+	"suggest": {
+		"evoweb/recaptcha": "^10.0"
+	},
+
+	"autoload": {
+		"psr-4": {
+			"Evoweb\\SfRegister\\": "Classes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Evoweb\\SfRegister\\Tests\\": "Tests/"
+		}
+	},
+
+	"config": {
+		"vendor-dir": ".Build/Web/vendor"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "sf_register",
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"web-dir": ".Build/Web"
+		}
+	},
+
+	"scripts": {
+		"post-autoload-dump": "mkdir -p .Build/Web/typo3conf/ext/ && ln -snf ../../../.. .Build/Web/typo3conf/ext/sf_register"
+	}
+}

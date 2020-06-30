@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:erp_management_wallet/Resources/Public/Icons/tx_erpmanagementwallet_domain_model_wallet.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, wallet_number, balance, password, name, alipay, wxpay, log, record, erpuser',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, wallet_number, balance, password, name, alipay, wxpay, erpuser',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, wallet_number, balance, password, name, alipay, wxpay, log, record, erpuser, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, wallet_number, balance, password, name, alipay, wxpay, erpuser, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -169,42 +169,6 @@ return [
                 'size' => 30,
                 'eval' => 'trim'
             ],
-        ],
-        'log' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_wallet/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementwallet_domain_model_wallet.log',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_erpmanagementwallet_domain_model_log',
-                'foreign_field' => 'wallet',
-                'maxitems' => 9999,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
-            ],
-
-        ],
-        'record' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_wallet/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementwallet_domain_model_wallet.record',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => '',
-                'foreign_field' => 'wallet',
-                'maxitems' => 9999,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
-            ],
-
         ],
         'erpuser' => [
             'exclude' => true,

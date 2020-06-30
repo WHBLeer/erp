@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-15T15:56:42Z" product-name="erp_management_user">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-23T15:48:07Z" product-name="erp_management_user">
 		<header/>
 		<body>
-			<trans-unit id="authcode.description">
-				<source>授权码</source>
+			<trans-unit id="account_id.description">
+				<source>用户唯一编码</source>
 			</trans-unit>
 			<trans-unit id="wxopenid.description">
 				<source>微信openid</source>
@@ -20,6 +20,12 @@
 			</trans-unit>
 			<trans-unit id="province.description">
 				<source>所在省份</source>
+			</trans-unit>
+			<trans-unit id="auth.description">
+				<source>授权</source>
+			</trans-unit>
+			<trans-unit id="position.description">
+				<source>位置信息</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -227,7 +227,7 @@ function diedai(i,array){
 			}else{
 				arr[arr.length]=array[int3]+"-"+$("#valueli>li").eq(i).children().eq(1).children().eq(int2).html();
 			}
-		}
+		} 
 	}
 	// 迭代次数等于迭代变体个数，返回所有变体组合
 	if(i==$("#valueli>li").length-1){

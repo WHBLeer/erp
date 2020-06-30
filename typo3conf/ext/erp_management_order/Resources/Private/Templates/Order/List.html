@@ -25,70 +25,102 @@ data-namespace-typo3-fluid="true">
 		</f:flashMessages>
 
 		<div class="dataTables_wrapper dt-bootstrap4">
-            <div class="row mb-10">
-                <div class="col-sm-12 col-md-9">
-					<f:link.action action="new" class="btn btn-info">New Order</f:link.action>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <f:form action="list" name="search" object="{search}">
-                        <div class="input-group justify-content-end">
-							<f:form.textfield name="keyword" value="{keyword}" class="form-control" placeholder="关键字" />
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="ti-search"></i></span>
-                            </div>
-                        </div>
-                    </f:form>
-                </div>
-            </div><br/>
+            <f:form action="list" name="search" object="{search}" class="search">
+            	<div class="row">
+                	<div class="col-md-2 mb-1" title="按国家查询">
+						<f:form.select id="country" name="country" options="{countrys}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--选择国家--" class="form-control" />
+					</div>
+                	<div class="col-md-2 mb-1" title="按订单状态查询">
+						<f:form.select id="orderStatus" name="orderStatus" options="{orderStatuss}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--订单状态--" class="form-control" />
+					</div>
+                	<div class="col-md-2 mb-1" title="按支付状态查询">
+						<f:form.select id="payment" name="payment" options="{payments}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--支付状态--" class="form-control" />
+					</div>
+                	<div class="col-md-2 mb-1" title="查询国内物流">
+						<f:form.select id="gnShipper" name="gnShipper" options="{gnShippers}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--国内物流--" class="form-control" />
+					</div>
+                	<div class="col-md-2 mb-1" title="查询国际物流">
+						<f:form.select id="gjShipper" name="gjShipper" options="{gjShippers}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--国际物流--" class="form-control" />
+					</div>
+                	<div class="col-md-2 mb-1" title="查询异常">
+						<f:form.select id="abnormal" name="abnormal" options="{abnormals}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--异常状态--" class="form-control" />
+					</div>
+				</div>
+            	<div class="row">
+					<div class="col-md-2 mb-1" title="按订单编号查询">
+						<input class="form-control" name="tx_erpmanagementorder_pi1[orderid]" type="number" value="{orderid}" placeholder="订单ID" >
+					</div>
+					<div class="col-md-2 mb-1" title="按Amazon订单号查询">
+						<f:form.textfield name="ymxNumber" value="{ymxNumber}" class="form-control" placeholder="Amazon订单号" />
+					</div>
+					<div class="col-md-2 mb-1" title="按国内运单号查询">
+						<f:form.textfield name="gnWaybill" value="{gnWaybill}" class="form-control" placeholder="国内运单号" />
+					</div>
+					<div class="col-md-2 mb-1" title="按国际运单号查询">
+						<f:form.textfield name="gjWaybill" value="{gjWaybill}" class="form-control" placeholder="国际运单号" />
+					</div>
+					<div class="col-md-2 mb-1" title="按国际追踪号查询">
+						<f:form.textfield name="gjTracking" value="{gjTracking}" class="form-control" placeholder="国际追踪号" />
+					</div>
+					<div class="col-md-2 mb-1" title="按产品SKU查询">
+						<f:form.textfield name="productSku" value="{productSku}" class="form-control" placeholder="产品SKU" />
+					</div>
+				</div>
+            	<div class="row">
+					<div class="col-md-2 mb-1" title="开始时间">
+						<input class="form-control" name="tx_erpmanagementorder_pi1[starttime]" type="date" value="{starttime}">
+					</div>
+					<div class="col-md-2 mb-1" title="结束时间">
+						<input class="form-control" name="tx_erpmanagementorder_pi1[endtime]" type="date" value="{endtime}">
+					</div>
+					<div class="col-md-8 mb-1 text-right">
+						<f:link.action action="new" class="btn btn-default">重置</f:link.action>
+						<f:link.action action="new" class="btn btn-info">查询</f:link.action>
+					</div>
+				</div>
+			</f:form><br/>
+			<div class="row">
+				<div class="col-md-10 mb-1">
+					<p class="statistics">
+						核算订单数：<span>125</span> 
+						总金额：<span>37954.47</span> 
+						利润：<span>8044.52</span> 
+						运费：<span>7810.19</span> 
+						采购：<span>11447.50</span> 
+						退款数：<span>2</span> 
+						退款成本：<span>342.53</span> 
+						退款金额：<span>-646.90</span>
+					</p>
+				</div>
+				<div class="col-md-2 mb-1 text-right">
+					<f:link.action action="new" class="btn btn-success">更新</f:link.action>
+					<f:link.action action="new" class="btn btn-success">添加</f:link.action>
+				</div>
+			</div>
             <div class="row">
                 <div class="col-sm-12">
                     <div class="table-responsive">
                         <sll:widget.paginateBe objects="{orders}" as="orderPagination"  configuration="{settings.paginate}">
                             <table class="table table-hover mb-10">
                                 <thead> 
-									<tr>
+									<tr style="font-size: 90%;">
 										<th></th>
-                                        <th>#</th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.amazon_order_id" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.purchase_date" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.last_update_date" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.order_status" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.fulfillment_channel" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.ship_service_level" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.sales_channel" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipper_name" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipper_address_line1" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipper_address_line2" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipper_address_line3" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipper_city" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipper_state_or_region" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipper_country_code" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipper_phone" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipper_address_type" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipper_is_address_sharing_confidential" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.currency_code" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.amount" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.number_of_items_shipped" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.number_of_items_unshipped" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.payment_method" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.payment_method_details" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.marketplace_id" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.buyer_email" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.buyer_name" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipment_service_level_category" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.shipped_by_amazon_t_f_m" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.order_type" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.earliest_ship_date" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.latest_ship_date" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.earliest_delivery_date" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.latest_delivery_date" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.business_order" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.prime" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.global_express_enabled" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.premium_order" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.replacement_order" /></th>
-										<th><f:translate key="tx_erpmanagementorder_domain_model_order.sold_by_a_b" /></th>
-										<th>操作</th>
+                                        <th>ID</th>
+										<!-- <th>商品</th> -->
+										<th width="180">订单号</th>
+										<th>下单时间</th>
+										<th>Amazon</th>
+										<th>国际</th>
+										<th>国际单号</th>
+										<th>国内</th>
+										<th>国内单号</th>
+										<th>数量</th>
+										<th>金额</th>
+										<th>实际金额</th>
+										<th>采购</th>
+										<th>运费</th>
+										<th>利润</th>
+										<th>毛利率</th>
 									</tr>
 								</thead>
                                 <tbody>
@@ -97,21 +129,48 @@ data-namespace-typo3-fluid="true">
                                         <td>
 											<input type="checkbox" name="test" class="custom-checkbox-input" id="chk-{order.uid}" value="{order.uid}">
 										</td>
-										<td>lib.calc</td>
-										<td>{order.amazonOrderId}</td><td>{order.purchaseDate}</td><td>{order.lastUpdateDate}</td><td>{order.orderStatus}</td><td>{order.fulfillmentChannel}</td><td>{order.shipServiceLevel}</td><td>{order.salesChannel}</td><td>{order.shipperName}</td><td>{order.shipperAddressLine1}</td><td>{order.shipperAddressLine2}</td><td>{order.shipperAddressLine3}</td><td>{order.shipperCity}</td><td>{order.shipperStateOrRegion}</td><td>{order.shipperCountryCode}</td><td>{order.shipperPhone}</td><td>{order.shipperAddressType}</td><td>{order.shipperIsAddressSharingConfidential}</td><td>{order.currencyCode}</td><td>{order.amount}</td><td>{order.numberOfItemsShipped}</td><td>{order.numberOfItemsUnshipped}</td><td>{order.paymentMethod}</td><td>{order.paymentMethodDetails}</td><td>{order.marketplaceId}</td><td>{order.buyerEmail}</td><td>{order.buyerName}</td><td>{order.shipmentServiceLevelCategory}</td><td>{order.shippedByAmazonTFM}</td><td>{order.orderType}</td><td>{order.earliestShipDate}</td><td>{order.latestShipDate}</td><td>{order.earliestDeliveryDate}</td><td>{order.latestDeliveryDate}</td><td>{order.businessOrder}</td><td>{order.prime}</td><td>{order.globalExpressEnabled}</td><td>{order.premiumOrder}</td><td>{order.replacementOrder}</td><td>{order.soldByAB}</td>
+										<td>{order.uid} <f:link.action action="pull" arguments="{order : order}"><i class="ti-reload"></i></f:link.action></td>
+										<!-- <td>{order.goodsTitle}</td> -->
 										<td>
-											<f:link.action action="list" class="btn btn-sm btn-info" arguments="{order : order}"><i class="ti-reload"></i></f:link.action>
-											<f:link.action action="show" class="btn btn-sm btn-default" arguments="{order : order}"><i class="ti-eye"></i></f:link.action>
-											<f:link.action action="edit" class="btn btn-sm btn-info" arguments="{order : order}"><i class="ti-pencil-alt"></i></f:link.action>
-											<f:link.action action="delete" class="btn btn-sm btn-danger" arguments="{order : order}"><i class="ti-close"></i></f:link.action>
+											{order.amazonOrderId}<f:link.action action="edit" arguments="{order : order}"><i class="ti-pencil-alt"></i></f:link.action><br>
+											<img src="/typo3conf/ext/erp_management_order/Resources/Public/Images/amazonbiao.jpg">{order.erpuser.username}({order.salesChannelName})
 										</td>
+										<td>{f:format.date(date: order.purchaseDate, format: 'Y-m-d H:i:s')}</td>
+										<td class="status-{order.orderStatus}">
+											<f:translate key="order_status.{order.orderStatus}" />
+										</td>
+										<td class="status-{order.shipper.gjStatus}">
+											<f:translate key="shipper_status.{order.shipper.gjStatus}" />
+										</td>
+										<td>
+											<f:if condition="{order.shipper.gjWaybill}==0">
+												<f:then>--</f:then>
+												<f:else>{order.shipper.gjWaybill}</f:else>
+											</f:if>
+										</td>
+										<td class="status-{order.shipper.gjStatus}">
+											<f:translate key="shipper_status.{order.shipper.gnStatus}" />
+										</td>
+										<td>
+											<f:if condition="{order.shipper.gnWaybill}==0">
+												<f:then>--</f:then>
+												<f:else>{order.shipper.gnWaybill}</f:else>
+											</f:if>
+										</td>
+										<td>{f:cObject(typoscriptObjectPath:'lib.calc',data:'{order.numberOfItemsShipped}+{order.numberOfItemsUnshipped}')}</td>
+										<td>{order.revenue.orderAmount}</td>
+										<td>{order.revenue.actualAmount}</td>
+										<td>{order.revenue.costAmount}</td>
+										<td>{order.revenue.freight}</td>
+										<td>{order.revenue.profit}</td>
+										<td>{order.revenue.profitMargin}</td>
 									</tr>
 									</f:for>
                                     <tr>
                                         <td>
 											<input type="checkbox" name="test" class="selectall custom-checkbox-input" id="chkall" value="uid">
                                         </td>
-                                        <td colspan="8">
+                                        <td colspan="16">
 											<f:form action="multi" name="datas" >
                                                 <f:form.hidden id="multidelete-items" property="items" value="" />
 												<f:form.submit class="btn btn-danger btn-sm delete btn-del btn-delete-all" value="删除选中" />

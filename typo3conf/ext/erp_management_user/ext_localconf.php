@@ -9,11 +9,11 @@ call_user_func(
             'ERP.ErpManagementUser',
             'Pi1',
             [
-                'ErpUser' => 'list, show, new, create, edit, update, delete, register, profile, oauth, changepwd, retrievepwd, check, ajaxdata'
+                'ErpUser' => 'list, show, new, create, edit, update, delete, register, profile, oauth, saveoauth, changepwd, retrievepwd, check, oauthrequest, ajaxdata'
             ],
             // non-cacheable actions
             [
-                'ErpUser' => 'list, show, new, create, edit, update, delete, register, profile, oauth, changepwd, retrievepwd, check, ajaxdata'
+                'ErpUser' => 'list, show, new, create, edit, update, delete, register, profile, oauth, saveoauth, changepwd, retrievepwd, check, oauthrequest, ajaxdata'
             ]
         );
 

@@ -55,9 +55,15 @@ class CategoryRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $queryBuilder->addSelectLiteral("code,name,name_en,parent_id");
         $queryBuilder->from('tx_erpmanagementdict_domain_model_category');
         if ($pid != 0) {
-            $queryBuilder->where($queryBuilder->expr()->eq('parent_id', $queryBuilder->createNamedParameter($pid)));
+            $queryBuilder->where(
+                $queryBuilder->expr()->eq('ctype', $queryBuilder->createNamedParameter(0)),
+                $queryBuilder->expr()->eq('parent_id', $queryBuilder->createNamedParameter($pid))
+            );
         } else {
-            $queryBuilder->where($queryBuilder->expr()->lte('uid', $queryBuilder->createNamedParameter(24)));
+            $queryBuilder->where(
+                $queryBuilder->expr()->eq('ctype', $queryBuilder->createNamedParameter(0)),
+                $queryBuilder->expr()->lte('uid', $queryBuilder->createNamedParameter(24))
+            );
         }
         $queryBuilder->orderBy('uid', "ASC");
         $datas = $queryBuilder->execute()->fetchAll();
@@ -74,6 +80,74 @@ class CategoryRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             'hasParent' => false, 
             'hasChildren' => true
             );
+        }
+        return $category;
+    }
+
+    /**
+     * 查询类别
+     * 
+     * @author wanghongbin
+     * @param $pid
+     * @return void
+     */
+    public function findTemplate($pid=0)
+    {
+        $datas = array();
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_erpmanagementdict_domain_model_category');
+        $queryBuilder->addSelectLiteral("code,name,name_en,parent_id");
+        $queryBuilder->from('tx_erpmanagementdict_domain_model_category');
+        $queryBuilder->where(
+            $queryBuilder->expr()->eq('ctype', $queryBuilder->createNamedParameter(1)),
+            $queryBuilder->expr()->eq('parent_id', $queryBuilder->createNamedParameter($pid))
+        );
+        
+        $queryBuilder->orderBy('uid', "ASC");
+        $datas = $queryBuilder->execute()->fetchAll();
+        return $datas;
+    }
+
+    public function getTemplateTree()
+    {
+        $category = array(
+            'attributes'=> null,
+            'checked'=> true,
+            'hasChildren'=> true,
+            'hasParent'=> false,
+            'id'=> "-1",
+            'parentId'=> "",
+            'state'=> ['opened'=> true],
+            'text'=> "顶级节点",
+        );
+        $datas = $this->findTemplate();
+        for ($i = 0; $i < count($datas); $i++) {
+            $children = array(
+                'attributes' => null, 
+                'checked' => false, 
+                'hasChildren' => true,
+                'hasParent' => true, 
+                'id' => $datas[$i]['code'], 
+                'parentId' => $datas[$i]['parent_id'], 
+                'state' => ['opened' => false], 
+                'text' => $datas[$i]['name'] . ' ' . ' ' . $datas[$i]['name_en'], 
+            );
+            $child = $this->findTemplate($children['id']);
+            for ($j=0; $j < count($child); $j++) { 
+                $cnode = array(
+                    'attributes' => null, 
+                    'checked' => false, 
+                    'hasChildren' => true,
+                    'hasParent' => true, 
+                    'id' => $child[$j]['code'], 
+                    'parentId' => $child[$j]['parent_id'], 
+                    'state' => ['opened' => false], 
+                    'text' => $child[$j]['name'] . ' ' . ' ' . $child[$j]['name_en'],
+                    'children' => []
+                );
+                $children['children'][] = $cnode;
+            }
+            $category['children'][] = $children;
+            
         }
         return $category;
     }

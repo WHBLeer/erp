@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:form action="update" name="config" object="{config}" enctype="multipart/form-data">
+		<f:form.hidden name="label" value="pay" />
+		<div class="row">
+			
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="account">支付宝帐户</label>
+					<input type="text" id="account" name="TYPO3_CONF_VARS[PAYMENT][alipay][account]" value="{TYPO3_CONF_VARS.PAYMENT.alipay.account}"
+						class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="partnerid">合作者身份</label>
+					<input type="text" id="partnerid" name="TYPO3_CONF_VARS[PAYMENT][alipay][partnerid]" value="{TYPO3_CONF_VARS.PAYMENT.alipay.partnerid}"
+						class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="private_key">私钥(private_key)</label>
+					<textarea id="private_key" name="TYPO3_CONF_VARS[PAYMENT][alipay][private_key]" class="form-control">{TYPO3_CONF_VARS.PAYMENT.alipay.private_key}</textarea>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="public_key">公钥(public_key)</label>
+					<textarea id="public_key" name="TYPO3_CONF_VARS[PAYMENT][alipay][public_key]" class="form-control" >{TYPO3_CONF_VARS.PAYMENT.alipay.public_key}</textarea>
+				</div>
+			</div>
+		</div>
+		<div class="well">
+			这是全局支付宝支付(充值账号设置),非本系统管理员请勿动! 非本系统管理员请勿动! 非本系统管理员请勿动!
+		</div>
+		<f:form.submit value="保存" class="btn btn-secondary" />
+	</f:form>
+
+</html>

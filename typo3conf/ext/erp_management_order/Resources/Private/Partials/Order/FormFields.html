@@ -1,158 +1,592 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<label for="amazonOrderId">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.amazon_order_id" />
-</label><br />
-	<f:form.textfield property="amazonOrderId" /><br />
-<label for="purchaseDate">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.purchase_date" />
-</label><br />
-	<f:form.textfield property="purchaseDate" /><br />
-<label for="lastUpdateDate">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.last_update_date" />
-</label><br />
-	<f:form.textfield property="lastUpdateDate" /><br />
-<label for="orderStatus">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.order_status" />
-</label><br />
-	<f:form.textfield property="orderStatus" /><br />
-<label for="fulfillmentChannel">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.fulfillment_channel" />
-</label><br />
-	<f:form.textfield property="fulfillmentChannel" /><br />
-<label for="shipServiceLevel">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.ship_service_level" />
-</label><br />
-	<f:form.textfield property="shipServiceLevel" /><br />
-<label for="salesChannel">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.sales_channel" />
-</label><br />
-	<f:form.textfield property="salesChannel" /><br />
-<label for="shipperName">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipper_name" />
-</label><br />
-	<f:form.textfield property="shipperName" /><br />
-<label for="shipperAddressLine1">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipper_address_line1" />
-</label><br />
-	<f:form.textarea property="shipperAddressLine1" cols="40" rows="15" /><br />
-<label for="shipperAddressLine2">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipper_address_line2" />
-</label><br />
-	<f:form.textfield property="shipperAddressLine2" /><br />
-<label for="shipperAddressLine3">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipper_address_line3" />
-</label><br />
-	<f:form.textfield property="shipperAddressLine3" /><br />
-<label for="shipperCity">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipper_city" />
-</label><br />
-	<f:form.textfield property="shipperCity" /><br />
-<label for="shipperStateOrRegion">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipper_state_or_region" />
-</label><br />
-	<f:form.textfield property="shipperStateOrRegion" /><br />
-<label for="shipperCountryCode">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipper_country_code" />
-</label><br />
-	<f:form.textfield property="shipperCountryCode" /><br />
-<label for="shipperPhone">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipper_phone" />
-</label><br />
-	<f:form.textfield property="shipperPhone" /><br />
-<label for="shipperAddressType">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipper_address_type" />
-</label><br />
-	<f:form.textfield property="shipperAddressType" /><br />
-<label for="shipperIsAddressSharingConfidential">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipper_is_address_sharing_confidential" />
-</label><br />
-	<f:form.textfield property="shipperIsAddressSharingConfidential" /><br />
-<label for="currencyCode">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.currency_code" />
-</label><br />
-	<f:form.textfield property="currencyCode" /><br />
-<label for="amount">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.amount" />
-</label><br />
-	<f:form.textfield property="amount" /><br />
-<label for="numberOfItemsShipped">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.number_of_items_shipped" />
-</label><br />
-	<f:form.textfield property="numberOfItemsShipped" /><br />
-<label for="numberOfItemsUnshipped">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.number_of_items_unshipped" />
-</label><br />
-	<f:form.textfield property="numberOfItemsUnshipped" /><br />
-<label for="paymentMethod">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.payment_method" />
-</label><br />
-	<f:form.textfield property="paymentMethod" /><br />
-<label for="paymentMethodDetails">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.payment_method_details" />
-</label><br />
-	<f:form.textarea property="paymentMethodDetails" cols="40" rows="15" /><br />
-<label for="marketplaceId">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.marketplace_id" />
-</label><br />
-	<f:form.textfield property="marketplaceId" /><br />
-<label for="buyerEmail">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.buyer_email" />
-</label><br />
-	<f:form.textfield property="buyerEmail" /><br />
-<label for="buyerName">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.buyer_name" />
-</label><br />
-	<f:form.textfield property="buyerName" /><br />
-<label for="shipmentServiceLevelCategory">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipment_service_level_category" />
-</label><br />
-	<f:form.textfield property="shipmentServiceLevelCategory" /><br />
-<label for="shippedByAmazonTFM">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.shipped_by_amazon_t_f_m" />
-</label><br />
-	<f:form.textfield property="shippedByAmazonTFM" /><br />
-<label for="orderType">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.order_type" />
-</label><br />
-	<f:form.textfield property="orderType" /><br />
-<label for="earliestShipDate">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.earliest_ship_date" />
-</label><br />
-	<f:form.textfield property="earliestShipDate" /><br />
-<label for="latestShipDate">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.latest_ship_date" />
-</label><br />
-	<f:form.textfield property="latestShipDate" /><br />
-<label for="earliestDeliveryDate">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.earliest_delivery_date" />
-</label><br />
-	<f:form.textfield property="earliestDeliveryDate" /><br />
-<label for="latestDeliveryDate">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.latest_delivery_date" />
-</label><br />
-	<f:form.textfield property="latestDeliveryDate" /><br />
-<label for="businessOrder">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.business_order" />
-</label><br />
-	<f:form.textfield property="businessOrder" /><br />
-<label for="prime">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.prime" />
-</label><br />
-	<f:form.textfield property="prime" /><br />
-<label for="globalExpressEnabled">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.global_express_enabled" />
-</label><br />
-	<f:form.textfield property="globalExpressEnabled" /><br />
-<label for="premiumOrder">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.premium_order" />
-</label><br />
-	<f:form.textfield property="premiumOrder" /><br />
-<label for="replacementOrder">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.replacement_order" />
-</label><br />
-	<f:form.textfield property="replacementOrder" /><br />
-<label for="soldByAB">
-	<f:translate key="tx_erpmanagementorder_domain_model_order.sold_by_a_b" />
-</label><br />
-	<f:form.textfield property="soldByAB" /><br />
-</html>
+<link rel="stylesheet" type="text/css" href="{f:uri.resource(path:'Css/style(2).css')}" />
+<div class="main_info">
+	<!-- 店铺信息 -->
+	<div class="block_item">
+		<h6>
+			店铺:<span id="shopName">{order.erpuser.username}({order.salesChannelName})</span>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			Amazon:<span><f:translate key="order_status.{order.orderStatus}" /></span>&nbsp;&nbsp;&nbsp;&nbsp;
+			购买日期:<span>{f:format.date(date: order.purchaseDate, format: 'Y-m-d H:i:s')}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+			AmazonID:<span>{order.amazonOrderId}</span>
+
+			<span style="float: right;">待签收</span>
+		</h6>
+		<ul class="order_flow"></ul>
+	</div>
+	<hr class="border-top-line">
+	<!-- 产品信息 -->
+	<div>
+		<div>
+			<div class="block_item">
+				<div class="data_goods_item">
+					<!-- <p id="block_purchase_action_" order_item_id="19774">
+						<a href="javascript:" class="bt_supplierOrder_add hide" order_item_id="19774">去采购</a>
+						<a href="javascript:" class="bt_supplierOrder_edit hide" order_item_id="19774">已采购</a>
+					</p> -->
+					<div class="item_goods_info">
+						<table class="table">
+							<tr>
+								<td rowspan="5">
+									<img data-url="" style="width: 100px;" onmousemove="img_view(this)" onmouseout="normalImg(this)"
+										src="{f:uri.resource(path:'Images/41jpfEUWw0L._SL75_.jpg')}">
+								</td>
+							</tr>
+							<tr>
+								<th>名称:</th>
+								<td colspan="8">
+									<a class="item_goods_tit" target="_blank" href="https://www.{order.salesChannel}/gp/product/{order.asinNum}">
+										{order.goodsTitle}
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<th>SKU:</th>
+								<td colspan="3">
+									<a href="javascript:void(0);" onclick="gotoProductInfo(this)">{order.sellerSku}</a>
+								</td>
+								<th>数量:</th>
+								<td colspan="4">
+									{f:cObject(typoscriptObjectPath:'lib.calc',data:'{order.numberOfItemsShipped}+{order.numberOfItemsUnshipped}')}
+								</td>
+							</tr>
+							<tr>
+								<th>采购价(¥):</th>
+								<td><span id="txt_caigou_price_" class="txt_caigou_price_" order_item_id="18029"><span>100</span></span></td>
+								<th>国内运单号:</th>
+								<td><span class="txt_caigou_express_num_" id="txt_caigou_express_num_" order_item_id="18029"><span>4303507322649</span></span></td>
+								<th>物流:</th>
+								<td>已发货</td>
+								<th>发货日期:</th>
+								<td>2020-06-06</td>
+								<td>
+									<a href="javascript:void(0);" order_item_id="19774" class="bt_purchase_edit">采购编辑</a>
+									<a href="javascript:void(0);" order_item_id="19774" class="bt_purchase_save hide">保存</a>
+									<a href="javascript:void(0);" order_item_id="19774" class="bt_purchase_cancle hide">取消</a>
+								</td>
+							</tr>
+							<tr>
+								<th>补发价(¥):</th>
+								<td>58</td>
+								<th>补发运单号:</th>
+								<td>NUMBEROFITEMSUNSHIPPED</td>
+								<th>物流:</th>
+								<td>已发货</td>
+								<th>发货日期:</th>
+								<td>2020-06-06</td>
+								<td>
+									<a href="javascript:void(0);" order_item_id="19774" class="bt_replacement_edit">补发编辑</a>
+									<a href="javascript:void(0);" order_item_id="19774" class="bt_replacement_save hide">保存</a>
+									<a href="javascript:void(0);" order_item_id="19774" class="bt_replacement_cancle hide">取消</a>
+								</td>
+							</tr>
+						</table>
+						<div class="block_info_purchase_edit_" id="block_info_purchase_edit_"
+							style="display: none;" order_item_id="19774">
+							<div class="form-inline">
+								<div class="input-group">
+									<div class="input-group-addon">采购价:(¥)</div>
+									<input type="text" id="piFreight" name="cost[yf]" class="form-control replacement_price_" placeholder="采购价 ¥" size='39' value="{product.cost.yf}" />
+								</div>
+								<div class="input-group">
+									<div class="input-group-addon">运单号:</div>
+									<input type="text" id="piDiscount" name="cost[zk]" class="form-control replacement_price_" placeholder="为避免影响国际物流发货，请填写国内物流运单号（如有多个单号以英文逗号分割）" size='99' value="{product.cost.zk}" />
+								</div>
+							</div>
+						</div>
+						<p></p>
+						<div class="block_info_replacement_edit_hide hide"
+							id="block_info_replacement_edit_">
+							<div class="form-inline">
+								<div class="input-group">
+									<div class="input-group-addon">采购价:(¥)</div>
+									<input type="text" id="piFreight" name="cost[yf]" class="form-control replacement_price_" placeholder="采购价 ¥"
+										value="{product.cost.yf}" />
+								</div>
+								<div class="input-group">
+									<div class="input-group-addon">运单号:</div>
+									<input type="text" id="piDiscount" name="cost[zk]" class="form-control replacement_price_"
+										placeholder="为避免影响国际物流发货，请填写国内物流运单号（如有多个单号以英文逗号分割）" additionalAttributes="{size:'90'}"
+										value="{product.cost.zk}" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clea"></div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<hr style="border-top: 2px solid #eee">
+	<!-- 收件人/地址 -->
+	<div class="block_item">
+		<h6>收件人/地址： <span id="countryName">英国</span>
+			<a href="javascript:" id="bt_addr_edit">编辑</a>
+			<a href="javascript:" id="bt_addr_cancle">取消</a>
+			<a href="javascript:" id="bt_addr_save">保存</a>
+		</h6>
+		<div id="block_info_addr" order_id="72443" class="show block_info_addr">
+			<table class="table table-border">
+				<tr>
+					<th>收件人:</th>
+					<td>Abd Aafjgg</td>
+					<th>TEL:</th>
+					<td>1231-3123141111</td>
+					<th>ZIP:</th>
+					<td>N4 2BX</td>
+				</tr>
+				<tr>
+					<th>州:</th>
+					<td>London</td>
+					<th>市:</th>
+					<td>London</td>
+					<th>街道:</th>
+					<td>London-1-3</td>
+					
+				</tr>
+				<tr>
+					<th>地址:</th>
+					<td colspan="5">爱上简单的扣篮是到了看看啦水泥道路喀什阿萨的那份八十多斤啊</td>
+				</tr>
+			</table>
+			
+		</div>
+		<div id="block_info_addr_edit" class="hide">
+			<div class="form-inline">
+				<div class="input-group">
+					<div class="input-group-addon">联系人</div>
+					<input type="text" id="lianxiren" name="cost[yf]" class="form-control replacement_price_" placeholder="联系人" size='39' value="{product.cost.yf}" />
+				</div>
+				<div class="input-group">
+					<div class="input-group-addon">电话号:</div>
+					<input type="text" id="dianhua" name="cost[zk]" class="form-control replacement_price_" placeholder="电话号码" size='39' value="{product.cost.zk}" />
+				</div>
+				<div class="input-group">
+					<div class="input-group-addon">邮编:</div>
+					<input type="text" id="youbian" name="cost[zk]" class="form-control replacement_price_" placeholder="邮编" size='39' value="{product.cost.zk}" />
+				</div>
+			</div>
+			<div class="space_5"></div>
+			<div class="form-inline">
+				<div class="input-group">
+					<div class="input-group-addon">州</div>
+					<input type="text" id="zhouzhou" name="cost[yf]" class="form-control replacement_price_" placeholder="州" size='39' value="{product.cost.yf}" />
+				</div>
+				<div class="input-group">
+					<div class="input-group-addon">市:</div>
+					<input type="text" id="shishi" name="cost[zk]" class="form-control replacement_price_" placeholder="市" size='39' value="{product.cost.zk}" />
+				</div>
+				<div class="input-group">
+					<div class="input-group-addon">街道门牌:</div>
+					<input type="text" id="jiedao" name="cost[zk]" class="form-control replacement_price_" placeholder="街道门牌" size='39' value="{product.cost.zk}" />
+				</div>
+			</div>
+			<div class="space_5"></div>
+			<div class="form-inline">
+				<div class="input-group">
+					<div class="input-group-addon">地址</div>
+					<input type="text" id="shipping_addressline2" name="cost[yf]" class="form-control replacement_price_" placeholder="详细地址" size='160' value="{product.cost.yf}" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr class="border-top-line">
+	<!-- 订单财务 -->
+	<div class="block_item">
+		<p>
+			<label>订单金额:</label>[<span>EUR</span>]<span>{order.revenue.orderAmount}</span>&nbsp;&nbsp;-&nbsp;&nbsp;
+			<label>Amazon佣金:</label>[<span>EUR</span>]<span>{order.revenue.commission}</span>&nbsp;&nbsp;=&nbsp;&nbsp;
+			<label>到账:</label>[<span>EUR</span>]<span>{order.revenue.actualAmount}</span>&nbsp;&nbsp;=&nbsp;&nbsp;
+			[<span>CNY</span>]<span>319.08</span>&nbsp;&nbsp;-&nbsp;&nbsp;
+			<label>采购成本:</label>[<span>CNY</span>]<span>58.0</span>&nbsp;&nbsp;-&nbsp;&nbsp;
+			<label>运费:</label>[<span>CNY</span>]<span></span>&nbsp;&nbsp;-&nbsp;&nbsp;
+			<label>服务费:</label>[<span>CNY</span>]<span></span>&nbsp;&nbsp;=&nbsp;&nbsp;
+			<label>利润:</label>[<span>CNY</span>]<span></span>&nbsp;&nbsp;
+		</p>
+	</div>
+	<hr class="border-top-line">
+	<!-- 国际运单 -->
+	<div class="block_item">
+		<h6>国际运单<a href="javascript:" id="bt_add_waybill" class="mar-lef-10">添加</a> <a
+				class="mar-lef-10" onclick="preview()">物流发货流程</a></h6>
+		<div class="block_waybill_item">
+			<p>
+				<label>运单号:</label><span></span><input class="inpabrohid" type="hidden" value=""><label
+					class="mar-lef-15">追踪号:</label><span></span><label class="ydhtime">2020-03-12
+					01:17:45</label>
+				<label class="wfh">未发货</label>
+				<label class="tbyundan wtb">未同步</label>
+				<label class="delea"></label>
+			</p>
+			<p>
+				<label>线路:</label><span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+				<label>发货日期:</label><span></span>
+				<label class="pull-right mar-rig-10 pull-left-xs">
+					<a href="javascript:" class="bt_waybill_del deleb" data-waybill-id="19033"
+						onclick="DeleteYundan(this)">作废</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="bt_waybill_del" onclick="printYundan(this)">打印</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="javascript:" class="bt_waybill_edit" data-waybill-id="19033"
+						onclick="getMingxi(this)">明细</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="bt_waybill_tongbu" onclick="tongbu(this);">同步运单</a>
+					<a class="bt_waybill_ongoing hide" onclick="#">同步进行</a>
+					<a class="bt_waybill_shuaxin hide" onclick="shuaxin(this);">同步刷新</a>
+				</label>
+			</p>
+			<div class="block_in_line"></div>
+			<input class="yundanUploadId" type="hidden" value="">
+		</div>
+	</div>
+	<!-- 添加运单表单 -->
+	<div id="block_waybill_edit" class="hide">
+		<div class="data_goods_item" style="margin-bottom: 40px">
+			<div class="box_waybill_num_action layui-form" data-item-id="63914">
+				<div class="layui-form-item">
+					<div class="layui-inline pull-right width-60">
+						<div class="layui-input-inline">
+							<label>运输数量</label><br>
+							<input type="text" class="waybill_num width-40" value="1">
+						</div>
+					</div>
+				</div>
+				<div class="waybill_num_edit_text">
+					<label>运输数量</label>
+					<span class="yssl">1</span>
+				</div>
+			</div>
+			<div class="item_goods_img" data-item-id="63914" data-asin="B07GL4VNCS"
+				data-marketplace-id="3224"><img style="width: 100px;"
+					src="{f:uri.resource(path:'Images/41jpfEUWw0L._SL75_.jpg')}"></div>
+			<div class="item_goods_info">
+				<a class="item_goods_tit tan" target="_blank"
+					href="https://www.amazon.es/gp/product/B06Y5XWLR6"><span>Zapatillas de Hombres de
+						Cuero de Ante de Cuero Genuino para Hombres Aumento de la Altura de Zapatos para
+						Hombre (42, Negro)</span></a>
+				<p>
+					<label>SKU:</label><span>31aabe6a</span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<label>数量:</label><label style="color:green;"><span class="spannum"
+							id="totalNum">1</span></label>
+				</p>
+			</div>
+			<div class="clea"></div>
+		</div>
+		<div class="waybill_deliver_action">
+			<span class="waybill_deliver_action_item">
+				<label id="text_waybill_sync">未同步亚马逊</label>&nbsp;&nbsp;&nbsp;&nbsp;<a
+					href="javascript:" id="bt_waybill_sync">同步</a>
+			</span>
+			<span class="waybill_deliver_action_item">
+				&nbsp;&nbsp;&nbsp;&nbsp;<label id="text_deliver_confirm"></label>
+			</span>
+		</div>
+		<table width="90%" id="block_waybill_table" align="center" class="table">
+			<tbody>
+				<tr>
+					<td style="width: 481.5px">
+						<div>
+							<div class="form-group form-group-sm col-sm-2"><label>中文:</label></div>
+							<div class="form-group form-group-sm col-sm-8">
+								<input type="text" class="form-control goods_title_short_cn"
+									name="goods_title_short_cn" size="20" placeholder="中文简称">
+							</div>
+						</div>
+					</td>
+					<td style="width: 481.5px">
+						<div>
+							<div class="form-group form-group-sm col-sm-2"><label>英文:</label></div>
+							<div class="form-group form-group-sm col-sm-8">
+								<input type="text" class="form-control goods_title_short_en"
+									name="goods_title_short_en" size="20" placeholder="英文简称">
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 481.5px">
+						<div>
+							<div class="form-group form-group-sm col-sm-2"><label>重量:</label></div>
+							<div class="form-group form-group-sm col-sm-8">
+								<input type="text" class="form-control goods_weight" name="goods_weight"
+									size="20" placeholder="Kg" value="1.00">
+							</div>
+						</div>
+					</td>
+					<td style="width: 481.5px">
+						` <div class="form-group form-group-sm col-sm-2"><label>体积:</label></div>
+						<div class="form-group form-group-sm col-sm-3">
+							<input type="text" class="form-control goods_size_l" name="goods_size_l"
+								size="5" placeholder="长(CM)" value="40">
+						</div>
+						<div class="form-group form-group-sm col-sm-1"><i class="fa fa-close"></i></div>
+						<div class="form-group form-group-sm col-sm-3">
+							<input type="text" class="form-control goods_size_w" name="goods_size_w"
+								size="5" placeholder="宽(CM)" value="20">
+						</div>
+						<div class="form-group form-group-sm col-sm-1"><i class="fa fa-close"></i></div>
+						<div class="form-group form-group-sm col-sm-3">
+							<input type="text" class="form-control goods_size_h" name="goods_size_h"
+								size="5" placeholder="高(CM)" value="8">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 481.5px">
+						<div>
+							<div class="form-group form-group-sm col-sm-2"><label>收件人Email:</label>
+							</div>
+							<div class="form-group form-group-sm col-sm-8">
+								<input type="text" class="form-control recipientEmail"
+									name="recipientEmail" size="20" placeholder="如生成运单提示需要收件人邮箱，请在此处填写">
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr id="btns_waybill_action">
+					<td colspan="2">
+						<div class="form-group form-group-sm col-sm-1">
+							<label>物流:</label>
+						</div>
+						<div class="form-group form-group-sm col-sm-4">
+							<select class="form-control" name="shipping_method" id="shipping_method"
+								onchange="getload()">
+								<option value="1" selected="selected">小件商品路线</option>
+								<option value="2">大件商品路线</option>
+								<option value="3">其他路线</option>
+								<option value="4">淘呗国际路线</option>
+							</select>
+							<select class="form-control" name="shipping_method_code"
+								id="shipping_method_code">
+							</select>
+						</div>
+						<a class="btn btn-success btn-sm" style="display:;margin:0 0 0 10px;"
+							id="btn_waybill_make" onclick="addYundan()">生成运单</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="form-group form-group-sm col-sm-2">
+							<label>运单:</label>
+						</div>
+						<div class="form-group form-group-sm col-sm-8">
+							<input type="text" class="form-control tanyun" disabled=""
+								name="waybill_number" size="20" id="tanyun" placeholder="运单号">
+						</div>
+					</td>
+					<td>
+						<div class="form-group form-group-sm col-sm-2">
+							<label>追踪:</label>
+						</div>
+						<div class="form-group form-group-sm col-sm-8">
+							<input type="text" class="form-control tanzhui" disabled=""
+								name="tracking_number" size="20" id="tanzhui" placeholder="追踪号">
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- 日志备注 -->
+<div class="block_item">
+	<ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+		<li class="nav-item">
+			<a class="nav-link active" data-toggle="tab" id="label_remark" href="#tab_remark" role="tab">
+				<span class="d-none d-sm-block">内部备注</span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" id="label_mail" href="#tab_mail" role="tab">
+				<span class="d-none d-sm-block">客户邮件</span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" id="label_log" href="#tab_log" role="tab">
+				<span class="d-none d-sm-block">操作日志</span>
+			</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane p-3 active" id="tab_remark" role="tabpanel">
+			<div id="remark_action" class="row">
+				<div class="col-md-10">
+					<textarea id="content_remark" class="form-control" rows="4" placeholder="留言备注"
+						style="border: 1px solid #e5e6e7"></textarea>
+				</div>
+				<div class="col-md-2">
+					<div class="nbbz">
+						<select id="remark_type" name="remark_type" class="form-control">
+							<option value="" selected="selected">内部备注</option>
+							<option value="收件人地址">收件人地址异常</option>
+							<option value="采购">采购异常</option>
+							<option value="国内快递">国内快递异常</option>
+							<option value="国际物流">国际物流异常</option>
+						</select><br><br>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="tab-pane p-3" id="tab_mail" role="tabpanel">
+			无客户邮件
+		</div>
+		<div class="tab-pane p-3" id="tab_log" role="tabpanel">
+			<ul id="log_list" order_id="72443">
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="block_waybill_edit" style="display: none;">
+	<div class="data_goods_item" style="margin-bottom: 40px">
+		<div class="box_waybill_num_action layui-form" data-item-id="63914">
+			<div class="layui-form-item">
+				<div class="layui-inline" style="width: 60px;float: right;">
+					<div class="layui-input-inline">
+						<label>运输数量</label><br>
+						<input type="hidden" name="waybill_item_id[]" value="63914">
+						<input type="hidden" name="waybill_item_sku[]" value="FCBDAN-FCBDXN-1335351-08">
+						<input type="hidden" name="waybill_item_ordered[]" value="1">
+						<!-- <select name="waybill_item_num[]" class="selectnum">
+			                                                  <option value="0">0</option>
+			                                                  <option value="1">1</option>
+			                                          </select> -->
+						<input type="text" class="waybill_num" style="width: 40px" value="1">
+					</div>
+				</div>
+			</div>
+			<div class="waybill_num_edit_text"
+				style="float: right;font-weight: 700;margin-right: 50px;margin-top: 10px;">
+				<label>运输数量</label>
+				<span style="color: green;font-size: 22px;">1</span>
+			</div>
+		</div>
+		<div class="item_goods_img" data-item-id="63914" data-asin="B07GL4VNCS" data-marketplace-id="3224"><img
+				style="width: 100px;" src="http://ecx.images-amazon.com/images/I/41jpfEUWw0L._SL75_.jpg"></div>
+		<div class="item_goods_info" style="margin-left: 100px;margin-top: -80px;">
+			<a class="item_goods_tit tan" target="_blank"
+				href="https://www.amazon.es/gp/product/B06Y5XWLR6"><span>Zapatillas de Hombres de Cuero de Ante de Cuero
+					Genuino para Hombres Aumento de la Altura de Zapatos para Hombre (42, Negro)</span></a>
+			<p>
+				<label>SKU:</label><span>31aabe6a</span>&nbsp;&nbsp;&nbsp;&nbsp;
+				<label>数量:</label><label style="color:green;"><span class="spannum" id="totalNum">1</span></label>
+			</p>
+		</div>
+		<div class="clea"></div>
+	</div>
+	<div class="waybill_deliver_action">
+		<span class="waybill_deliver_action_item">
+			<label id="text_waybill_sync">未同步亚马逊</label>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:"
+				id="bt_waybill_sync">同步</a>
+		</span>
+		<span class="waybill_deliver_action_item">
+			&nbsp;&nbsp;&nbsp;&nbsp;<label id="text_deliver_confirm"></label>
+		</span>
+	</div>
+	<table width="90%" id="block_waybill_table" align="center" class="table">
+		<tbody>
+			<tr>
+				<td style="width: 481.5px">
+					<div>
+						<div class="form-group form-group-sm col-sm-2"><label>中文:</label></div>
+						<div class="form-group form-group-sm col-sm-8">
+							<input type="text" class="form-control goods_title_short_cn" name="goods_title_short_cn"
+								size="20" placeholder="中文简称">
+						</div>
+					</div>
+				</td>
+				<td style="width: 481.5px">
+					<div>
+						<div class="form-group form-group-sm col-sm-2"><label>英文:</label></div>
+						<div class="form-group form-group-sm col-sm-8">
+							<input type="text" class="form-control goods_title_short_en" name="goods_title_short_en"
+								size="20" placeholder="英文简称">
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 481.5px">
+					<div>
+						<div class="form-group form-group-sm col-sm-2"><label>重量:</label></div>
+						<div class="form-group form-group-sm col-sm-8">
+							<input type="text" class="form-control goods_weight" name="goods_weight" size="20"
+								placeholder="Kg" value="1.00">
+						</div>
+					</div>
+				</td>
+				<td style="width: 481.5px">
+					` <div class="form-group form-group-sm col-sm-2"><label>体积:</label></div>
+					<div class="form-group form-group-sm col-sm-3">
+						<input type="text" class="form-control goods_size_l" name="goods_size_l" size="5"
+							placeholder="长(CM)" value="40">
+					</div>
+					<div class="form-group form-group-sm col-sm-1"><i class="fa fa-close"></i></div>
+					<div class="form-group form-group-sm col-sm-3">
+						<input type="text" class="form-control goods_size_w" name="goods_size_w" size="5"
+							placeholder="宽(CM)" value="20">
+					</div>
+					<div class="form-group form-group-sm col-sm-1"><i class="fa fa-close"></i></div>
+					<div class="form-group form-group-sm col-sm-3">
+						<input type="text" class="form-control goods_size_h" name="goods_size_h" size="5"
+							placeholder="高(CM)" value="8">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 481.5px">
+					<div>
+						<div class="form-group form-group-sm col-sm-2"><label>收件人Email:</label></div>
+						<div class="form-group form-group-sm col-sm-8">
+							<input type="text" class="form-control recipientEmail" name="recipientEmail" size="20"
+								placeholder="如生成运单提示需要收件人邮箱，请在此处填写">
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr id="btns_waybill_action">
+				<td colspan="2">
+					<div class="form-group form-group-sm col-sm-1">
+						<label>物流:</label>
+					</div>
+					<div class="form-group form-group-sm col-sm-4">
+						<select class="form-control" name="shipping_method" id="shipping_method" onchange="getload()"
+							style="line-height: 34px;width:34%;float: left;margin-right: 10px">
+							<option value="1" selected="selected">小件商品路线</option>
+							<option value="2">大件商品路线</option>
+							<option value="3">其他路线</option>
+							<option value="4">淘呗国际路线</option>
+						</select>
+						<select class="form-control" name="shipping_method_code" id="shipping_method_code"
+							style="line-height: 34px;width:60%;float: left;">
+							<!-- <option value="">-线路-</option> -->
+							<!-- <option  th:value="${shippingMethodModel.Code}" th:text="${shippingMethodModel.FullName}" ></option> -->
+						</select>
+					</div>
+					<a class="btn btn-success btn-sm" style="display:;margin:0 0 0 10px;" id="btn_waybill_make"
+						onclick="addYundan()">生成运单</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="form-group form-group-sm col-sm-2">
+						<label>运单:</label>
+					</div>
+					<div class="form-group form-group-sm col-sm-8">
+						<input type="text" class="form-control tanyun" disabled="" name="waybill_number" size="20"
+							id="tanyun" placeholder="运单号">
+					</div>
+				</td>
+				<td>
+					<div class="form-group form-group-sm col-sm-2">
+						<label>追踪:</label>
+					</div>
+					<div class="form-group form-group-sm col-sm-8">
+						<input type="text" class="form-control tanzhui" disabled="" name="tracking_number" size="20"
+							id="tanzhui" placeholder="追踪号">
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div id="img_viewer" style="left: 160px; top: 10.6px; display: none;"><img src="{f:uri.resource(path:'Images/41jpfEUWw0L._SL500_.jpg')}"></div>
+<script type="text/javascript" src="{f:uri.resource(path:'JavaScript/edit.js')}"></script>

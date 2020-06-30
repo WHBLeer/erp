@@ -9,11 +9,17 @@ call_user_func(
             'ERP.ErpManagementOrder',
             'Pi1',
             [
-                'Order' => 'list, show, new, create, edit, update, delete, api, push, pull'
+                'Order' => 'list, show, new, create, edit, update, delete, pull',
+                'Address' => 'list, show, new, create, edit, update, delete, pull',
+                'Shipper' => 'list, show, new, create, edit, update, delete',
+                'Revenue' => 'list, show, new, create, edit, update, delete'
             ],
             // non-cacheable actions
             [
-                'Order' => 'list, show, new, create, edit, update, delete, api, push, pull'
+                'Order' => 'list, show, new, edit',
+                'Address' => 'list, show, new, edit',
+                'Shipper' => 'list, show, new, edit',
+                'Revenue' => 'list, show, new, edit'
             ]
         );
 

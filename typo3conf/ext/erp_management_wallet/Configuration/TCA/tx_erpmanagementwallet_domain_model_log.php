@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:erp_management_wallet/Resources/Public/Icons/tx_erpmanagementwallet_domain_model_log.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, balance, chmoney, remark',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, balance, chmoney, remark, walletid, erpuser',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, balance, chmoney, remark, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, balance, chmoney, remark, walletid, erpuser, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -144,11 +144,32 @@ return [
                 'eval' => 'trim'
             ]
         ],
-    
-        'wallet' => [
+        'walletid' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_wallet/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementwallet_domain_model_log.walletid',
             'config' => [
-                'type' => 'passthrough',
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int'
+            ]
+        ],
+        'erpuser' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_wallet/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementwallet_domain_model_log.erpuser',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'fe_users',
+                'minitems' => 0,
+                'maxitems' => 1,
+                'appearance' => [
+                    'collapseAll' => 0,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
             ],
         ],
+    
     ],
 ];

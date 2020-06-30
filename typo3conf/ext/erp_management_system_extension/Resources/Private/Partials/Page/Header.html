@@ -1,3 +1,4 @@
+{namespace sll=Sll\Common\ViewHelpers}
 <!-- navbar -->
 <div class="topbar">
 
@@ -32,59 +33,19 @@
             </li>
 
             <!-- notification -->
-            <li class="dropdown notification-list list-inline-item">
-                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                    <i class="mdi mdi-bell-outline noti-icon"></i>
-                    <span class="badge badge-pill badge-danger noti-icon-badge">3</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
-                    <!-- item-->
-                    <h6 class="dropdown-item-text">消息通知【0】</h6>
-                    <div class="slimscroll notification-item-list">
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                            <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                            <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
-                        </a>
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <div class="notify-icon bg-warning"><i class="mdi mdi-message-text-outline"></i></div>
-                            <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span></p>
-                        </a>
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>
-                            <p class="notify-details">Your item is shipped<span class="text-muted">It is a long established fact that a reader will</span></p>
-                        </a>
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
-                            <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
-                        </a>
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item">
-                            <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i></div>
-                            <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span></p>
-                        </a>
-                    </div>
-                    <!-- All-->
-                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
-                            View all <i class="fi-arrow-right"></i>
-                        </a>
-                </div>
-            </li>
+            <sll:notify receiver="{USERUID}" />
+
             <li class="dropdown notification-list list-inline-item">
                 <div class="dropdown notification-list nav-pro-img">
                     <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <img src="typo3conf/ext/erp_management_system_extension/Resources/Public/Main/images/users/user-4.jpg" alt="user" class="rounded-circle">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                        <!-- item-->
                         <a class="dropdown-item" href="system/profile"><i class="mdi mdi-account-circle m-r-5"></i> 个人信息</a>
-                        <a class="dropdown-item" href="system/wallet"><i class="mdi mdi-wallet m-r-5"></i> 我的钱包</a>
+                        <a class="dropdown-item" href="system/wallet"><i class="mdi mdi-wallet m-r-5"></i> 我的账户</a>
                         <a class="dropdown-item" href="system/awsauth"><i class="mdi mdi-settings m-r-5"></i> 我的授权</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="logout"><i class="mdi mdi-power text-danger"></i> 注销登录</a>
+                        <a class="dropdown-item text-danger" href="/logout"><i class="mdi mdi-power text-danger"></i> 注销登录</a>
                     </div>
                 </div>
             </li>
@@ -98,23 +59,9 @@
                 </button>
             </li>
         </ul>
-        <div class="system-navigation">
-            <span>
-                <a href="product">产品中心</a>
-            </span>
-            <span>
-                <a href="orders">订单中心</a>
-            </span>
-            <span>
-                <a href="logistics">物流服务</a>
-            </span>
-            <span>
-                <a href="helper">帮助中心</a>
-            </span>
-            <span>
-                <a href="system">系统管理</a>
-            </span>
-        </div>
+
+        <!-- headermenu -->
+        <sll:headmenu parentid="1" />
     </nav>
 </div>
 <!-- end navbar -->

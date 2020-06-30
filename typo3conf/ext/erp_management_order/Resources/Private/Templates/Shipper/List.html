@@ -1,0 +1,112 @@
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+	  
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<f:flashMessages as="flashMessages">
+			<script>
+				<f:for each="{flashMessages}" as="flashMessage">
+					notify("{flashMessage.message}", "{flashMessage.severity}");
+				</f:for>
+			</script>
+		</f:flashMessages>
+
+		<div class="dataTables_wrapper dt-bootstrap4">
+            <div class="row mb-10">
+                <div class="col-sm-12 col-md-9">
+					<f:link.action action="new" class="btn btn-info">New Shipper</f:link.action>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <f:form action="list" name="search" object="{search}">
+                        <div class="input-group justify-content-end">
+							<f:form.textfield name="keyword" value="{keyword}" class="form-control" placeholder="关键字" />
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="ti-search"></i></span>
+                            </div>
+                        </div>
+                    </f:form>
+                </div>
+            </div><br/>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="table-responsive">
+                        <sll:widget.paginateBe objects="{shippers}" as="shipperPagination"  configuration="{settings.paginate}">
+                            <table class="table table-hover mb-10">
+                                <thead> 
+									<tr>
+										<th></th>
+                                        <th>#</th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.name_zh" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.name_en" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.sku" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.number" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.weight" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.length" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.width" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.height" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.email" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.route" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.providers" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.gn_waybill" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.gn_tracking" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.gn_status" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.gj_waybill" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.gj_tracking" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.gj_status" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.delivery_type" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.remark" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.customermail" /></th>
+										<th><f:translate key="tx_erpmanagementorder_domain_model_shipper.logs" /></th>
+										<th>操作</th>
+									</tr>
+								</thead>
+                                <tbody>
+                                    <f:for each="{shipperPagination}" as="shipper" iteration="itemIteration">
+									<tr>
+                                        <td>
+											<input type="checkbox" name="test" class="custom-checkbox-input" id="chk-{shipper.uid}" value="{shipper.uid}">
+										</td>
+										<td>lib.calc</td>
+										<td>{shipper.nameZh}</td><td>{shipper.nameEn}</td><td>{shipper.sku}</td><td>{shipper.number}</td><td>{shipper.weight}</td><td>{shipper.length}</td><td>{shipper.width}</td><td>{shipper.height}</td><td>{shipper.email}</td><td>{shipper.route}</td><td>{shipper.providers}</td><td>{shipper.gnWaybill}</td><td>{shipper.gnTracking}</td><td>{shipper.gnStatus}</td><td>{shipper.gjWaybill}</td><td>{shipper.gjTracking}</td><td>{shipper.gjStatus}</td><td>{shipper.deliveryType}</td><td>{shipper.remark}</td><td>{shipper.customermail}</td><td>{shipper.logs}</td>
+										<td>
+											<f:link.action action="list" class="btn btn-sm btn-info" arguments="{shipper : shipper}"><i class="ti-reload"></i></f:link.action>
+											<f:link.action action="show" class="btn btn-sm btn-default" arguments="{shipper : shipper}"><i class="ti-eye"></i></f:link.action>
+											<f:link.action action="edit" class="btn btn-sm btn-info" arguments="{shipper : shipper}"><i class="ti-pencil-alt"></i></f:link.action>
+											<f:link.action action="delete" class="btn btn-sm btn-danger" arguments="{shipper : shipper}"><i class="ti-close"></i></f:link.action>
+										</td>
+									</tr>
+									</f:for>
+                                    <tr>
+                                        <td>
+											<input type="checkbox" name="test" class="selectall custom-checkbox-input" id="chkall" value="uid">
+                                        </td>
+                                        <td colspan="8">
+											<f:form action="multi" name="datas" >
+                                                <f:form.hidden id="multidelete-items" property="items" value="" />
+												<f:form.submit class="btn btn-danger btn-sm delete btn-del btn-delete-all" value="删除选中" />
+                                            </f:form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </sll:widget.paginateBe>
+                    </div>
+                    
+                </div>
+            </div>
+		</div>
+	</f:section>
+</html>

@@ -453,6 +453,32 @@
 						</tr>
 					</thead>
 					<tbody id="tbAdd">
+						<f:for each="{product.variants}" as="variant" iteration="item">
+							<tr>
+								<td><input onclick="onclikOneChecked()" type="checkbox" /></td>
+								<td>{item.cycle}</td>
+								<td class="com" width:"auto">
+									<input type="hidden" name="tx_erpmanagementproduct_pi1[variants][{item.cycle}][combination]" value="{variant.combination}">{variant.combination}
+								</td>
+								<td>
+									<input class="form-control skuClass updateskuget" style="width:120px" value="{variant.skunew}" readonly name="tx_erpmanagementproduct_pi1[variants][{item.cycle}][skunew]" >
+								</td>
+								<td>
+									<input onchange="addprice(this)" class="form-control"
+										name="tx_erpmanagementproduct_pi1[variants][{item.cycle}][markup]" value="{variant.markup}">
+								</td>
+								<td>
+									<input class="form-control" value="{variant.kucun}" name="tx_erpmanagementproduct_pi1[variants][{item.cycle}][kucun]">
+								</td>
+								<td>
+									<input class="form-control upceanclass" value="{variant.upcean}" name="tx_erpmanagementproduct_pi1[variants][{item.cycle}][upcean]">
+								</td>
+								<td class="imgtd">
+									<input type="hidden" class="variantsimg" name="tx_erpmanagementproduct_pi1[variants][{item.cycle}][images]">
+								</td>
+							</tr>
+						</f:for>
+						
 					</tbody>
 				</table>
 			</td>
@@ -464,6 +490,7 @@
 	//定义图片展示参数
 	<f:format.raw><sll:viewAndDelSetting uids="{product.imageuids}" /></f:format.raw>
 	var fileurl = '{fileurl}';
+	var apiurl = 'https://erp.whongbin.com/api/';
 
 	//获取商品类别
 	function getCategory(){
@@ -473,7 +500,7 @@
 			maxmin : true,
 			shadeClose : false, 
 			area : [ '800px', '620px' ],
-			content :  '/api/getcategory',
+			content :  apiurl+'getcategory',
 		});
 	}
 
@@ -491,7 +518,32 @@
 			maxmin : true,
 			shadeClose : false, // 点击遮罩关闭层
 			area : [ '800px', '520px' ],
-			content :  "/api/getvariant" // iframe的url
+			content :  apiurl +"getvariant" // iframe的url
+		});
+	}
+	
+	// 编辑变体
+	function editVariant(it){
+		$pvaId=$(it).html();
+		var str="";
+		$("#valueli li[data]").each(function(){
+			if($(this).attr("data")==$pvaId){
+				$(this).find("ul").children().each(function(i){
+					if(i==0){
+						str+=$(this).html();
+					}else{
+						str+=","+$(this).html();
+					}
+				});
+			}
+		})
+		layer.open({
+			type : 2,
+			title : '变体',
+			maxmin : true,
+			shadeClose : false, // 点击遮罩关闭层
+			area : [ '800px', '520px' ],
+			content :  apiurl + "getvariant?pvaName="+$pvaId+"&pvNames="+str+"&pvaid="+$(it).attr("data") // iframe的url
 		});
 	}
 	// 删除变体
@@ -537,7 +589,7 @@
 			$("#tbAdd").html("");
 			for (var int = 0; int < arr.length; int++) {
 				$piQuantity=Math.round(Math.random()*10+50);
-				var str='<tr><td><input onclick="onclikOneChecked()" type="checkbox"/></td><td >'+(int+1)+'</td><td class="com" width:"auto"><input type="hidden"  value="'+arr[int]+'">'+arr[int]+'</td><td><input  class="form-control skuClass updateskuget" type="text"  style="width:120px" readonly value="'+$sku+'-'+(int+1)+'"></td><td><input onchange="addprice(this)" class="form-control" type="text"></td><td><input  class="form-control" type="text"  value="'+$piQuantity+'"></td><td><input  class="form-control upceanclass" type="text"></td><td class="imgtd"></td></tr>'
+				var str='<tr><td><input onclick="onclikOneChecked()" type="checkbox"/></td><td >'+(int+1)+'</td><td class="com" width:"auto"><input type="hidden" name="tx_erpmanagementproduct_pi1[variants][' + int +'][combination]" value="'+arr[int]+'">'+arr[int]+'</td><td><input class="form-control skuClass updateskuget" type="text"  style="width:120px" name="tx_erpmanagementproduct_pi1[variants][' + int +'][skunew]" readonly value="'+$sku+'-'+(int+1)+'"></td><td><input onchange="addprice(this)" class="form-control" name="tx_erpmanagementproduct_pi1[variants][' + int +'][markup]" type="text"></td><td><input  class="form-control" type="text" value="'+$piQuantity+'" name="tx_erpmanagementproduct_pi1[variants][' + int +'][kucun]"></td><td><input  class="form-control upceanclass" type="text" name="tx_erpmanagementproduct_pi1[variants][' + int +'][upcean]"></td><td class="imgtd"><input type="hidden" name="tx_erpmanagementproduct_pi1[variants][' + int + '][images]" class="variantsimg"></td></tr>'
 				$("#tbAdd").append(str);
 				i++;
 			}
@@ -575,7 +627,7 @@
 			console.log($productUid);
 			$.ajax({
 				type : "get",
-				url : "/api/getproduct",
+				url : apiurl +"getproduct",
 				data : {
                     cmd:"getVariantImages",
 					dataid:$productUid
@@ -667,8 +719,10 @@
 	// 将图片保存到td中
 	function totd(it){
 		$("#vtable input[type=checkbox]:not(:first)").each(function(){
-			$td=$(this).parent().parent().children().last()
+			$td = $(this).parent().parent().children().last()
+			$img = $(this).parent().parent().children().last().children('.variantsimg');
 			if(this.checked){
+				$img.val($img.val() +','+ $(it).attr("src"));
 				$td.append("<img data='"+$(it).attr("data")+"' src='"+$(it).attr("src")+"' onclick='deleteImg(this)' width='50' height='50'>");
 			}
 		})
@@ -677,9 +731,11 @@
 			var str=lis.eq(0).html();
 			// alert($("#vtable tr td:eq(2)").html());
 			$(".com input").each(function(){
-				$td=$(this).parent().parent().children().last()
+				$td = $(this).parent().parent().children().last()
+				$img = $(this).parent().parent().children().last().children('.variantsimg');
 				var arr = $(this).val().split('-');
 				if($.inArray(str, arr)!=-1){
+					$img.val($img.val() + ',' + $(it).attr("src"));
 					$td.append("<img data='"+$(it).attr("data")+"' src='"+$(it).attr("src")+"' onclick='deleteImg(this)' width='50' height='50'>");
 				}
 			})
@@ -843,32 +899,6 @@
 		});
 	}
 
-
-	// 修改变体值
-	function updateV(it){
-		$pvaId=$(it).html();
-		var str="";
-		$("#valueli li[data]").each(function(){
-			if($(this).attr("data")==$pvaId){
-				$(this).find("ul").children().each(function(i){
-					if(i==0){
-						str+=$(this).html();
-					}else{
-						str+=","+$(this).html();
-					}
-				});
-			}
-		})
-		layer.open({
-			type : 2,
-			title : '变体',
-			maxmin : true,
-			shadeClose : false, // 点击遮罩关闭层
-			area : [ '800px', '520px' ],
-			content :  "/ymx/productSource/editvalue?pvaName="+$pvaId+"&pvNames="+str+"&pvaid="+$(it).attr("data") // iframe的url
-		});
-	}
-
 	function initbianti(){
 		$psoId=$("#psoId").val();
 		$.ajax({
@@ -881,7 +911,7 @@
 			success : function(data) {
 				var str2=""
 				for (var i = 0; i < data.length; i++) {
-					str2+="<li><span class='sku_text' data='"+data[i].pvaId+"' onclick='updateV(this)'>"+data[i].pvaName+"</span><span class='close bt_del_skutype' onclick='removeMyself(this)'>x</span></li>";
+					str2+="<li><span class='sku_text' data='"+data[i].pvaId+"' onclick='editVariant(this)'>"+data[i].pvaName+"</span><span class='close bt_del_skutype' onclick='removeMyself(this)'>x</span></li>";
 					var $pvaId= data[i].pvaId;
 					var $pvaName= data[i].pvaName;
 					$.ajax({

@@ -109,4 +109,19 @@ class DicttypeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         $this->dicttypeRepository->remove($dicttype);
         $this->redirect('list');
     }
+    /**
+     * @param $uid
+     */
+    public function findByUid($uid)
+    {
+        return $this->dicttypeRepository->findByUid($uid);
+    }
+
+    /**
+     * @param $uid
+     */
+    public function findByUids($uids)
+    {
+        return $this->dicttypeRepository->findByUids($uids);
+    }
 }

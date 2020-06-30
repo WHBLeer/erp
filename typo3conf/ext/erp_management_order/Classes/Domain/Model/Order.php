@@ -19,6 +19,62 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
+     * 服务端交互id
+     * 
+     * @var string
+     */
+    protected $accountId = '';
+
+    /**
+     * 服务端主键
+     * 
+     * @var string
+     */
+    protected $srvOrderId = '';
+    
+    /**
+     * 商品名称
+     * 
+     * @var string
+     */
+    protected $goodsTitle ='';
+    
+    /**
+     * 商品图片
+     * 
+     * @var string
+     */
+    protected $goodsImage ='';
+
+    /**
+     * 商品码
+     * 
+     * @var string
+     */
+    protected $asinNum ='';
+
+    /**
+     * 销售SKU
+     * 
+     * @var string
+     */
+    protected $sellerSku ='';
+
+    /**
+     * 商品链接
+     * 
+     * @var string
+     */
+    protected $salesLink='';
+
+    /**
+     * 采购数量
+     * 
+     * @var string
+     */
+    protected $purchase = 0;
+
+    /**
      * 亚马逊订单
      * 
      * 
@@ -32,7 +88,7 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * 
      * @var int
      */
-    protected $purchaseDate = '';
+    protected $purchaseDate = 0;
 
     /**
      * 最后一次更新时间
@@ -40,7 +96,7 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * 
      * @var int
      */
-    protected $lastUpdateDate = 0.0;
+    protected $lastUpdateDate = 0;
 
     /**
      * 订单状态
@@ -48,7 +104,7 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * 
      * @var int
      */
-    protected $orderStatus = 0.0;
+    protected $orderStatus = 0;
 
     /**
      * 履行渠道
@@ -64,7 +120,7 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * 
      * @var int
      */
-    protected $shipServiceLevel = 0.0;
+    protected $shipServiceLevel = 0;
 
     /**
      * 销售渠道
@@ -72,86 +128,16 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * 
      * @var string
      */
-    protected $salesChannel = 0;
+    protected $salesChannel = '';
 
+    
     /**
-     * 送货人
+     * 销售渠道
      * 
      * 
      * @var string
      */
-    protected $shipperName = 0;
-
-    /**
-     * 送货地址1
-     * 
-     * 
-     * @var string
-     */
-    protected $shipperAddressLine1 = 0;
-
-    /**
-     * 送货地址2
-     * 
-     * 
-     * @var int
-     */
-    protected $shipperAddressLine2 = 0;
-
-    /**
-     * 送货地址3
-     * 
-     * @var int
-     */
-    protected $shipperAddressLine3 = 0;
-
-    /**
-     * 发货城市
-     * 
-     * 
-     * @var string
-     */
-    protected $shipperCity = '';
-
-    /**
-     * 发货地区
-     * 
-     * 
-     * @var string
-     */
-    protected $shipperStateOrRegion = '';
-
-    /**
-     * 发货城市代码
-     * 
-     * 
-     * @var string
-     */
-    protected $shipperCountryCode = '';
-
-    /**
-     * 发货人电话
-     * 
-     * 
-     * @var string
-     */
-    protected $shipperPhone = '';
-
-    /**
-     * 地址类型
-     * 
-     * 
-     * @var string
-     */
-    protected $shipperAddressType = '';
-
-    /**
-     * 是否地址共享
-     * 
-     * 
-     * @var int
-     */
-    protected $shipperIsAddressSharingConfidential = 0;
+    protected $salesChannelName = '';
 
     /**
      * 货币代码
@@ -167,7 +153,7 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * 
      * @var string
      */
-    protected $amount = '';
+    protected $amount = 0.0;
 
     /**
      * 已发货数量
@@ -208,22 +194,6 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $marketplaceId = '';
-
-    /**
-     * 买家电子邮件
-     * 
-     * 
-     * @var string
-     */
-    protected $buyerEmail = '';
-
-    /**
-     * 买家姓名
-     * 
-     * 
-     * @var string
-     */
-    protected $buyerName = '';
 
     /**
      * 船货等级
@@ -337,11 +307,187 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $goods = null;
 
     /**
-     * 目的地国家
+     * 订单商户
      * 
      * @var \ERP\ErpManagementUser\Domain\Model\ErpUser
      */
     protected $erpuser = null;
+
+    /**
+     * 发货地址
+     * 
+     * @var \ERP\ErpManagementOrder\Domain\Model\Address
+     */
+    protected $address = null;
+
+    /**
+     * 物流
+     * 
+     * @var \ERP\ErpManagementOrder\Domain\Model\Shipper
+     */
+    protected $shipper = null;
+
+    /**
+     * 营收
+     * 
+     * @var \ERP\ErpManagementOrder\Domain\Model\Revenue
+     */
+    protected $revenue = null;
+
+    var $gj = array(
+        'Amazon.co.uk'=>'英国',
+        'Amazon.es'=>'西班牙',
+        'Amazon.it'=>'意大利',
+        'Amazon.fr'=>'法国',
+        'Amazon.de'=>'德国',
+    );
+
+    /**
+     * Returns the accountId
+     * 
+     * @return string accountId
+     */
+    public function getAccountId()
+    {
+        return $this->accountId;
+    }
+
+    /**
+     * Sets the accountId
+     * 
+     * @param string $accountId
+     * @return void
+     */
+    public function setAccountId($accountId)
+    {
+        $this->accountId = $accountId;
+    }
+
+    /**
+     * Returns the srvOrderId
+     * 
+     * @return string srvOrderId
+     */
+    public function getSrvOrderId()
+    {
+        return $this->srvOrderId;
+    }
+
+    /**
+     * Sets the srvOrderId
+     * 
+     * @param string $srvOrderId
+     * @return void
+     */
+    public function setSrvOrderId($srvOrderId)
+    {
+        $this->srvOrderId = $srvOrderId;
+    }
+
+    /**
+     * Returns the goodsTitle
+     * 
+     * @return string goodsTitle
+     */
+    public function getGoodsTitle()
+    {
+        return $this->goodsTitle;
+    }
+
+    /**
+     * Sets the goodsTitle
+     * 
+     * @param string $goodsTitle
+     * @return void
+     */
+    public function setGoodsTitle($goodsTitle)
+    {
+        $this->goodsTitle = $goodsTitle;
+    }
+    
+    /**
+     * Returns the goodsImage
+     * 
+     * @return string goodsImage
+     */
+    public function getGoodsImage()
+    {
+        return $this->goodsImage;
+    }
+
+    /**
+     * Sets the goodsImage
+     * 
+     * @param string $goodsImage
+     * @return void
+     */
+    public function setGoodsImage($goodsImage)
+    {
+        $this->goodsImage = $goodsImage;
+    }
+
+    /**
+     * Returns the asinNum
+     * 
+     * @return string asinNum
+     */
+    public function getAsinNum()
+    {
+        return $this->asinNum;
+    }
+
+    /**
+     * Sets the asinNum
+     * 
+     * @param string $asinNum
+     * @return void
+     */
+    public function setAsinNum($asinNum)
+    {
+        $this->asinNum = $asinNum;
+    }
+
+    /**
+     * Returns the sellerSku
+     * 
+     * @return string sellerSku
+     */
+    public function getSellerSku()
+    {
+        return $this->sellerSku;
+    }
+
+    /**
+     * Sets the sellerSku
+     * 
+     * @param string $sellerSku
+     * @return void
+     */
+    public function setSellerSku($sellerSku)
+    {
+        $this->sellerSku = $sellerSku;
+    }
+
+    /**
+     * Returns the salesLink
+     * 
+     * @return string salesLink
+     */
+    public function getSalesLink()
+    {
+        return $this->salesLink;
+    }
+
+    /**
+     * Sets the salesLink
+     * 
+     * @param string $salesLink
+     * @return void
+     */
+    public function setSalesLink($salesLink)
+    {
+        $this->salesLink = $salesLink;
+    }
 
     /**
      * Returns the amazonOrderId
@@ -377,7 +523,7 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the purchaseDate
      * 
-     * @param string $purchaseDate
+     * @param int $purchaseDate
      * @return void
      */
     public function setPurchaseDate($purchaseDate)
@@ -398,7 +544,7 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the lastUpdateDate
      * 
-     * @param float $lastUpdateDate
+     * @param int $lastUpdateDate
      * @return void
      */
     public function setLastUpdateDate($lastUpdateDate)
@@ -419,7 +565,7 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the orderStatus
      * 
-     * @param float $orderStatus
+     * @param int $orderStatus
      * @return void
      */
     public function setOrderStatus($orderStatus)
@@ -470,6 +616,17 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * Returns the salesChannelName
+     * 
+     * @return string salesChannelName
+     */
+    public function getSalesChannelName()
+    {
+        $this->salesChannelName = $this->gj[$this->salesChannel];
+        return $this->salesChannelName;
+    }
+
+    /**
      * Returns the salesChannel
      * 
      * @return string salesChannel
@@ -482,222 +639,12 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the salesChannel
      * 
-     * @param int $salesChannel
+     * @param string $salesChannel
      * @return void
      */
     public function setSalesChannel($salesChannel)
     {
         $this->salesChannel = $salesChannel;
-    }
-
-    /**
-     * Returns the shipperName
-     * 
-     * @return string shipperName
-     */
-    public function getShipperName()
-    {
-        return $this->shipperName;
-    }
-
-    /**
-     * Sets the shipperName
-     * 
-     * @param int $shipperName
-     * @return void
-     */
-    public function setShipperName($shipperName)
-    {
-        $this->shipperName = $shipperName;
-    }
-
-    /**
-     * Returns the shipperAddressLine1
-     * 
-     * @return string shipperAddressLine1
-     */
-    public function getShipperAddressLine1()
-    {
-        return $this->shipperAddressLine1;
-    }
-
-    /**
-     * Sets the shipperAddressLine1
-     * 
-     * @param int $shipperAddressLine1
-     * @return void
-     */
-    public function setShipperAddressLine1($shipperAddressLine1)
-    {
-        $this->shipperAddressLine1 = $shipperAddressLine1;
-    }
-
-    /**
-     * Returns the shipperAddressLine2
-     * 
-     * @return int shipperAddressLine2
-     */
-    public function getShipperAddressLine2()
-    {
-        return $this->shipperAddressLine2;
-    }
-
-    /**
-     * Sets the shipperAddressLine2
-     * 
-     * @param int $shipperAddressLine2
-     * @return void
-     */
-    public function setShipperAddressLine2($shipperAddressLine2)
-    {
-        $this->shipperAddressLine2 = $shipperAddressLine2;
-    }
-
-    /**
-     * Returns the shipperAddressLine3
-     * 
-     * @return int shipperAddressLine3
-     */
-    public function getShipperAddressLine3()
-    {
-        return $this->shipperAddressLine3;
-    }
-
-    /**
-     * Sets the shipperAddressLine3
-     * 
-     * @param int $shipperAddressLine3
-     * @return void
-     */
-    public function setShipperAddressLine3($shipperAddressLine3)
-    {
-        $this->shipperAddressLine3 = $shipperAddressLine3;
-    }
-
-    /**
-     * Returns the shipperCity
-     * 
-     * @return string $shipperCity
-     */
-    public function getShipperCity()
-    {
-        return $this->shipperCity;
-    }
-
-    /**
-     * Sets the shipperCity
-     * 
-     * @param string $shipperCity
-     * @return void
-     */
-    public function setShipperCity($shipperCity)
-    {
-        $this->shipperCity = $shipperCity;
-    }
-
-    /**
-     * Returns the shipperStateOrRegion
-     * 
-     * @return string $shipperStateOrRegion
-     */
-    public function getShipperStateOrRegion()
-    {
-        return $this->shipperStateOrRegion;
-    }
-
-    /**
-     * Sets the shipperStateOrRegion
-     * 
-     * @param string $shipperStateOrRegion
-     * @return void
-     */
-    public function setShipperStateOrRegion($shipperStateOrRegion)
-    {
-        $this->shipperStateOrRegion = $shipperStateOrRegion;
-    }
-
-    /**
-     * Returns the shipperCountryCode
-     * 
-     * @return string $shipperCountryCode
-     */
-    public function getShipperCountryCode()
-    {
-        return $this->shipperCountryCode;
-    }
-
-    /**
-     * Sets the shipperCountryCode
-     * 
-     * @param string $shipperCountryCode
-     * @return void
-     */
-    public function setShipperCountryCode($shipperCountryCode)
-    {
-        $this->shipperCountryCode = $shipperCountryCode;
-    }
-
-    /**
-     * Returns the shipperPhone
-     * 
-     * @return string $shipperPhone
-     */
-    public function getShipperPhone()
-    {
-        return $this->shipperPhone;
-    }
-
-    /**
-     * Sets the shipperPhone
-     * 
-     * @param string $shipperPhone
-     * @return void
-     */
-    public function setShipperPhone($shipperPhone)
-    {
-        $this->shipperPhone = $shipperPhone;
-    }
-
-    /**
-     * Returns the shipperAddressType
-     * 
-     * @return string $shipperAddressType
-     */
-    public function getShipperAddressType()
-    {
-        return $this->shipperAddressType;
-    }
-
-    /**
-     * Sets the shipperAddressType
-     * 
-     * @param string $shipperAddressType
-     * @return void
-     */
-    public function setShipperAddressType($shipperAddressType)
-    {
-        $this->shipperAddressType = $shipperAddressType;
-    }
-
-    /**
-     * Returns the shipperIsAddressSharingConfidential
-     * 
-     * @return int $shipperIsAddressSharingConfidential
-     */
-    public function getShipperIsAddressSharingConfidential()
-    {
-        return $this->shipperIsAddressSharingConfidential;
-    }
-
-    /**
-     * Sets the shipperIsAddressSharingConfidential
-     * 
-     * @param int $shipperIsAddressSharingConfidential
-     * @return void
-     */
-    public function setShipperIsAddressSharingConfidential($shipperIsAddressSharingConfidential)
-    {
-        $this->shipperIsAddressSharingConfidential = $shipperIsAddressSharingConfidential;
     }
 
     /**
@@ -740,6 +687,48 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setAmount($amount)
     {
         $this->amount = $amount;
+    }
+
+    /**
+     * Returns the purchase
+     * 
+     * @return int $purchase
+     */
+    public function getPurchase()
+    {
+        return $this->purchase;
+    }
+
+    /**
+     * Sets the purchase
+     * 
+     * @param int $purchase
+     * @return void
+     */
+    public function setPurchase($purchase)
+    {
+        $this->purchase = $purchase;
+    }
+
+    /**
+     * Returns the freight
+     * 
+     * @return string $freight
+     */
+    public function getFreight()
+    {
+        return $this->freight;
+    }
+
+    /**
+     * Sets the freight
+     * 
+     * @param string $freight
+     * @return void
+     */
+    public function setFreight($freight)
+    {
+        $this->freight = $freight;
     }
 
     /**
@@ -845,48 +834,6 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setMarketplaceId($marketplaceId)
     {
         $this->marketplaceId = $marketplaceId;
-    }
-
-    /**
-     * Returns the buyerEmail
-     * 
-     * @return string $buyerEmail
-     */
-    public function getBuyerEmail()
-    {
-        return $this->buyerEmail;
-    }
-
-    /**
-     * Sets the buyerEmail
-     * 
-     * @param string $buyerEmail
-     * @return void
-     */
-    public function setBuyerEmail($buyerEmail)
-    {
-        $this->buyerEmail = $buyerEmail;
-    }
-
-    /**
-     * Returns the buyerName
-     * 
-     * @return string $buyerName
-     */
-    public function getBuyerName()
-    {
-        return $this->buyerName;
-    }
-
-    /**
-     * Sets the buyerName
-     * 
-     * @param string $buyerName
-     * @return void
-     */
-    public function setBuyerName($buyerName)
-    {
-        $this->buyerName = $buyerName;
     }
 
     /**
@@ -1203,4 +1150,69 @@ class Order extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->erpuser = $erpuser;
     }
+
+    /**
+     * Returns the address
+     * 
+     * @return \ERP\ErpManagementOrder\Domain\Model\Address $address
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Sets the address
+     * 
+     * @param \ERP\ErpManagementOrder\Domain\Model\Address $address
+     * @return void
+     */
+    public function setAddress(\ERP\ErpManagementOrder\Domain\Model\Address $address)
+    {
+        $this->address = $address;
+    }
+
+    /**
+     * Returns the shipper
+     * 
+     * @return \ERP\ErpManagementOrder\Domain\Model\Shipper $shipper
+     */
+    public function getShipper()
+    {
+        return $this->shipper;
+    }
+
+    /**
+     * Sets the shipper
+     * 
+     * @param \ERP\ErpManagementOrder\Domain\Model\Shipper $shipper
+     * @return void
+     */
+    public function setShipper(\ERP\ErpManagementOrder\Domain\Model\Shipper $shipper)
+    {
+        $this->shipper = $shipper;
+    }
+
+    /**
+     * Returns the revenue
+     * 
+     * @return \ERP\ErpManagementOrder\Domain\Model\Revenue $revenue
+     */
+    public function getRevenue()
+    {
+        return $this->revenue;
+    }
+
+    /**
+     * Sets the revenue
+     * 
+     * @param \ERP\ErpManagementOrder\Domain\Model\Revenue $revenue
+     * @return void
+     */
+    public function setRevenue(\ERP\ErpManagementOrder\Domain\Model\Revenue $revenue)
+    {
+        $this->revenue = $revenue;
+    }
+
+    
 }

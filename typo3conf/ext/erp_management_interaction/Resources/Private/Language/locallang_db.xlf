@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-02T14:28:33Z" product-name="erp_management_interaction">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementinteraction_domain_model_interaction">
+				<source>Interaction</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_interaction_pi1.name">
+				<source>接口管理</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_interaction_pi1.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -29,14 +29,12 @@ return [
     ],
     'EXT' => [
         'extConf' => [
-            'backend' => 'a:6:{s:14:"backendFavicon";s:0:"";s:11:"backendLogo";s:0:"";s:20:"loginBackgroundImage";s:38:"fileadmin/static_file/img/login_bg.jpg";s:13:"loginFootnote";s:21:"© 2020 by San Li Lin";s:19:"loginHighlightColor";s:7:"#332e2e";s:9:"loginLogo";s:40:"fileadmin/static_file/img/login_logo.svg";}',
-            'cart_events' => 'a:1:{s:19:"categoryRestriction";s:0:"";}',
-            'extension_builder' => 'a:3:{s:9:"backupDir";s:35:"uploads/tx_extensionbuilder/backups";s:15:"backupExtension";s:1:"1";s:15:"enableRoundtrip";s:1:"1";}',
+            'backend' => 'a:6:{s:9:"loginLogo";s:40:"fileadmin/static_file/img/login_logo.svg";s:19:"loginHighlightColor";s:7:"#332e2e";s:20:"loginBackgroundImage";s:38:"fileadmin/static_file/img/login_bg.jpg";s:13:"loginFootnote";s:19:"build by San Li Lin";s:11:"backendLogo";s:0:"";s:14:"backendFavicon";s:0:"";}',
+            'extension_builder' => 'a:3:{s:15:"enableRoundtrip";s:1:"1";s:15:"backupExtension";s:1:"1";s:9:"backupDir";s:35:"uploads/tx_extensionbuilder/backups";}',
             'extensionmanager' => 'a:2:{s:21:"automaticInstallation";s:1:"1";s:11:"offlineMode";s:1:"0";}',
-            'lfeditor' => 'a:9:{s:16:"beMainModuleName";s:4:"user";s:13:"changeXlfDate";s:1:"1";s:15:"defaultLanguage";s:2:"en";s:17:"editModeExtension";s:1:"1";s:9:"extIgnore";s:23:"/^(CVS|.svn|.git|csh_)/";s:12:"extWhitelist";s:0:"";s:27:"pathAdditionalConfiguration";s:37:"typo3conf/AdditionalConfiguration.php";s:11:"searchRegex";s:60:"/^([a-z0-9_]*locallang[a-z0-9_-]*\\.(php|xml)|[^\\.]*\\.xlf)$/i";s:13:"viewLanguages";s:2:"ch";}',
             'scheduler' => 'a:2:{s:11:"maxLifetime";s:4:"1440";s:15:"showSampleTasks";s:1:"1";}',
             'slug' => 'a:11:{s:17:"defaultMaxEntries";s:2:"20";s:14:"defaultOrderBy";s:6:"crdate";s:12:"defaultOrder";s:4:"DESC";s:17:"recordInfoEnabled";s:1:"1";s:11:"treeEnabled";s:1:"1";s:16:"treeDefaultDepth";s:1:"3";s:15:"treeDefaultRoot";s:0:"";s:13:"recordEnabled";s:1:"0";s:16:"recordMaxEntries";s:2:"10";s:13:"recordOrderBy";s:6:"crdate";s:11:"recordOrder";s:4:"DESC";}',
-            'staticfilecache' => 'a:23:{s:18:"backendDisplayMode";s:4:"both";s:9:"boostMode";s:1:"0";s:15:"cacheTagsEnable";s:1:"0";s:23:"clearCacheForAllDomains";s:1:"1";s:12:"debugHeaders";s:1:"0";s:20:"disableInDevelopment";s:1:"0";s:21:"enableGeneratorBrotli";s:1:"0";s:19:"enableGeneratorGzip";s:1:"1";s:23:"enableGeneratorManifest";s:1:"0";s:20:"enableGeneratorPlain";s:1:"0";s:14:"hashUriInCache";s:1:"0";s:20:"htaccessTemplateName";s:61:"EXT:staticfilecache/Resources/Private/Templates/Htaccess.html";s:22:"overrideCacheDirectory";s:0:"";s:25:"rawurldecodeCacheFileName";s:1:"0";s:25:"renameTablesToOtherPrefix";s:1:"0";s:22:"sendCacheControlHeader";s:1:"1";s:47:"sendCacheControlHeaderRedirectAfterCacheTimeout";s:1:"0";s:19:"sendHttp2PushEnable";s:1:"0";s:27:"sendHttp2PushFileExtensions";s:6:"css,js";s:22:"sendHttp2PushFileLimit";s:2:"10";s:21:"useFallbackMiddleware";s:1:"1";s:29:"useReverseUriLengthInPriority";s:1:"1";s:20:"validHtaccessHeaders";s:45:"Content-Type,Content-Language,Link,X-SFC-Tags";}',
+            'staticfilecache' => 'a:23:{s:23:"clearCacheForAllDomains";s:1:"1";s:9:"boostMode";s:1:"0";s:18:"backendDisplayMode";s:4:"both";s:12:"debugHeaders";s:1:"0";s:20:"validHtaccessHeaders";s:45:"Content-Type,Content-Language,Link,X-SFC-Tags";s:20:"disableInDevelopment";s:1:"0";s:25:"renameTablesToOtherPrefix";s:1:"0";s:29:"useReverseUriLengthInPriority";s:1:"1";s:21:"useFallbackMiddleware";s:1:"1";s:14:"hashUriInCache";s:1:"0";s:25:"rawurldecodeCacheFileName";s:1:"0";s:20:"htaccessTemplateName";s:61:"EXT:staticfilecache/Resources/Private/Templates/Htaccess.html";s:22:"overrideCacheDirectory";s:0:"";s:23:"enableGeneratorManifest";s:1:"0";s:20:"enableGeneratorPlain";s:1:"0";s:19:"enableGeneratorGzip";s:1:"1";s:21:"enableGeneratorBrotli";s:1:"0";s:22:"sendCacheControlHeader";s:1:"1";s:47:"sendCacheControlHeaderRedirectAfterCacheTimeout";s:1:"0";s:15:"cacheTagsEnable";s:1:"0";s:19:"sendHttp2PushEnable";s:1:"0";s:27:"sendHttp2PushFileExtensions";s:6:"css,js";s:22:"sendHttp2PushFileLimit";s:2:"10";}',
         ],
     ],
     'EXTCONF' => [
@@ -55,9 +53,6 @@ return [
             'loginHighlightColor' => '#332e2e',
             'loginLogo' => 'fileadmin/static_file/img/login_logo.svg',
         ],
-        'cart_events' => [
-            'categoryRestriction' => '',
-        ],
         'extension_builder' => [
             'backupDir' => 'uploads/tx_extensionbuilder/backups',
             'backupExtension' => '1',
@@ -66,17 +61,6 @@ return [
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
-        ],
-        'lfeditor' => [
-            'beMainModuleName' => 'user',
-            'changeXlfDate' => '1',
-            'defaultLanguage' => 'en',
-            'editModeExtension' => '1',
-            'extIgnore' => '/^(CVS|.svn|.git|csh_)/',
-            'extWhitelist' => '',
-            'pathAdditionalConfiguration' => 'typo3conf/AdditionalConfiguration.php',
-            'searchRegex' => '/^([a-z0-9_]*locallang[a-z0-9_-]*\\.(php|xml)|[^\\.]*\\.xlf)$/i',
-            'viewLanguages' => 'ch',
         ],
         'scheduler' => [
             'maxLifetime' => '1440',
@@ -122,7 +106,7 @@ return [
         ],
     ],
     'FE' => [
-        'baseURL' => 'https://erp.whongbin.com/erp/',
+        'baseURL' => 'https://erp.whongbin.com/',
         'debug' => true,
         'dicp' => '',
         'disableNoCacheParameter' => true,

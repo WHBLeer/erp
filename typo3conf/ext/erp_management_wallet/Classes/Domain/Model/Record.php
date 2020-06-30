@@ -19,11 +19,11 @@ class Record extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
-     * 金额（充值10的整数倍）
+     * 钱包id
      * 
-     * @var float
+     * @var int
      */
-    protected $amount = '';
+    protected $walletid = 0;
 
     /**
      * 交易完成时间
@@ -33,18 +33,11 @@ class Record extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $successTime = '';
 
     /**
-     * 交易方式：0其他 1支付宝 2微信 3银行卡
+     * 金额（充值10的整数倍）
      * 
-     * @var int
+     * @var float
      */
-    protected $payment = 0.0;
-
-    /**
-     * 支付状态：0进行中 -1失败 1成功
-     * 
-     * @var int
-     */
-    protected $status = 0.0;
+    protected $amount = '';
 
     /**
      * 交易流水号
@@ -61,6 +54,20 @@ class Record extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $orderNumber = 0.0;
 
     /**
+     * 交易方式：0其他 1支付宝 2微信 3银行卡
+     * 
+     * @var int
+     */
+    protected $payment = 0.0;
+
+    /**
+     * 支付状态：0进行中 -1失败 1成功
+     * 
+     * @var int
+     */
+    protected $status = 0;
+
+    /**
      * 类型：0其他、1充值、2提现、3交易
      * 
      * @var int
@@ -68,25 +75,18 @@ class Record extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $billtype = 0;
 
     /**
-     * 目的地国家
-     * 
-     * @var \ERP\ErpManagementDict\Domain\Model\Region
-     */
-    protected $country = null;
-
-    /**
-     * 目的地国家
-     * 
-     * @var \ERP\ErpManagementUser\Domain\Model\ErpUser
-     */
-    protected $erpuser = null;
-
-    /**
      * 备注
      * 
      * @var string
      */
     protected $remark = '';
+
+    /**
+     * 操作人
+     * 
+     * @var \ERP\ErpManagementUser\Domain\Model\ErpUser
+     */
+    protected $erpuser = null;
 
     /**
      * Returns the amount
@@ -236,48 +236,6 @@ class Record extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the country
-     * 
-     * @return \ERP\ErpManagementDict\Domain\Model\Region country
-     */
-    public function getCountry()
-    {
-        return $this->country;
-    }
-
-    /**
-     * Sets the country
-     * 
-     * @param string $country
-     * @return void
-     */
-    public function setCountry($country)
-    {
-        $this->country = $country;
-    }
-
-    /**
-     * Returns the erpuser
-     * 
-     * @return \ERP\ErpManagementUser\Domain\Model\ErpUser erpuser
-     */
-    public function getErpuser()
-    {
-        return $this->erpuser;
-    }
-
-    /**
-     * Sets the erpuser
-     * 
-     * @param \ERP\ErpManagementUser\Domain\Model\ErpUser $erpuser
-     * @return void
-     */
-    public function setErpuser(\ERP\ErpManagementUser\Domain\Model\ErpUser $erpuser)
-    {
-        $this->erpuser = $erpuser;
-    }
-
-    /**
      * Returns the remark
      * 
      * @return string $remark
@@ -296,5 +254,47 @@ class Record extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setRemark($remark)
     {
         $this->remark = $remark;
+    }
+
+    /**
+     * Returns the walletid
+     * 
+     * @return int $walletid
+     */
+    public function getWalletid()
+    {
+        return $this->walletid;
+    }
+
+    /**
+     * Sets the walletid
+     * 
+     * @param int $walletid
+     * @return void
+     */
+    public function setWalletid($walletid)
+    {
+        $this->walletid = $walletid;
+    }
+    
+    /**
+     * Returns the erpuser
+     * 
+     * @return \ERP\ErpManagementUser\Domain\Model\ErpUser $erpuser
+     */
+    public function getErpuser()
+    {
+        return $this->erpuser;
+    }
+
+    /**
+     * Sets the erpuser
+     * 
+     * @param \ERP\ErpManagementUser\Domain\Model\ErpUser $erpuser
+     * @return void
+     */
+    public function setErpuser(\ERP\ErpManagementUser\Domain\Model\ErpUser $erpuser)
+    {
+        $this->erpuser = $erpuser;
     }
 }

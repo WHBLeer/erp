@@ -229,15 +229,26 @@ class RecordTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
     /**
      * @test
      */
-    public function getCountryReturnsInitialValueForRegion()
+    public function getWalletidReturnsInitialValueForInt()
     {
+        self::assertSame(
+            0,
+            $this->subject->getWalletid()
+        );
     }
 
     /**
      * @test
      */
-    public function setCountryForRegionSetsCountry()
+    public function setWalletidForIntSetsWalletid()
     {
+        $this->subject->setWalletid(12);
+
+        self::assertAttributeEquals(
+            12,
+            'walletid',
+            $this->subject
+        );
     }
 
     /**

@@ -34,6 +34,10 @@
 										<numIndex index="0">产品变体API</numIndex>
 										<numIndex index="1">Dictitem-&gt;getVariant;Dictitem-&gt;ajax</numIndex>
 									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">分类模板API</numIndex>
+										<numIndex index="1">Category-&gt;getTemplate;Category-&gt;ajax</numIndex>
+									</numIndex>
 								</items>
                                 <maxitems>1</maxitems>
                                 <size>1</size>

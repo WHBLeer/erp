@@ -9,15 +9,15 @@ call_user_func(
             'ERP.ErpManagementWallet',
             'Pi1',
             [
-                'Wallet' => 'list, show, new, create, edit, update, delete,topup,callback， api, push, pull',
-                'Log' => 'list, show, new, create, edit, update, delete, push, pull',
-                'Record' => 'list, show, new, create, edit, update, delete, api, callback, success'
+                'Wallet' => 'list, show, index',
+                'Log' => 'list, syslist, show, new, create, edit, update, delete',
+                'Record' => 'list, syslist, show, new, create, edit, update, delete, callback, success'
             ],
             // non-cacheable actions
             [
-                'Wallet' => 'list, show, new, create, edit, update, delete,topup,callback, api, push, pull',
-                'Log' => 'list, show, new, create, edit, update, delete, push, pull',
-                'Record' => 'list, show, new, create, edit, update, delete, api, callback, success'
+                'Wallet' => 'list, show, index',
+                'Log' => 'list, syslist, show, new, create, edit, update, delete',
+                'Record' => 'list, syslist, show, new, create, edit, update, delete, callback, success'
             ]
         );
 

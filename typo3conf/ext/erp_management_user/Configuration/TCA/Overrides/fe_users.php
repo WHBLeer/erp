@@ -10,9 +10,9 @@ defined('TYPO3_MODE') || die();
 
 $tmp_erp_management_user_columns = [
 
-    'authcode' => [
+    'account_id' => [
         'exclude' => true,
-        'label' => 'LLL:EXT:erp_management_user/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementuser_domain_model_erpuser.authcode',
+        'label' => 'LLL:EXT:erp_management_user/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementuser_domain_model_erpuser.account_id',
         'config' => [
             'type' => 'input',
             'size' => 30,
@@ -47,9 +47,9 @@ $tmp_erp_management_user_columns = [
             'eval' => 'trim'
         ],
     ],
-    'city' => [
+    'citys' => [
         'exclude' => true,
-        'label' => 'LLL:EXT:erp_management_user/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementuser_domain_model_erpuser.city',
+        'label' => 'LLL:EXT:erp_management_user/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementuser_domain_model_erpuser.citys',
         'config' => [
             'type' => 'inline',
             'foreign_table' => 'tx_erpmanagementdict_domain_model_region',
@@ -70,6 +70,41 @@ $tmp_erp_management_user_columns = [
         'config' => [
             'type' => 'inline',
             'foreign_table' => 'tx_erpmanagementdict_domain_model_region',
+            'minitems' => 0,
+            'maxitems' => 1,
+            'appearance' => [
+                'collapseAll' => 0,
+                'levelLinksPosition' => 'top',
+                'showSynchronizationLink' => 1,
+                'showPossibleLocalizationRecords' => 1,
+                'showAllLocalizationLink' => 1
+            ],
+        ],
+    ],
+    'auth' => [
+        'exclude' => true,
+        'label' => 'LLL:EXT:erp_management_user/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementuser_domain_model_erpuser.auth',
+        'config' => [
+            'type' => 'inline',
+            'foreign_table' => 'tx_erpmanagementuser_domain_model_erpuserauth',
+            'foreign_field' => 'erpuser',
+            'maxitems' => 9999,
+            'appearance' => [
+                'collapseAll' => 0,
+                'levelLinksPosition' => 'top',
+                'showSynchronizationLink' => 1,
+                'showPossibleLocalizationRecords' => 1,
+                'showAllLocalizationLink' => 1
+            ],
+        ],
+
+    ],
+    'position' => [
+        'exclude' => true,
+        'label' => 'LLL:EXT:erp_management_user/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementuser_domain_model_erpuser.position',
+        'config' => [
+            'type' => 'inline',
+            'foreign_table' => 'tx_erpmanagementuser_domain_model_position',
             'minitems' => 0,
             'maxitems' => 1,
             'appearance' => [

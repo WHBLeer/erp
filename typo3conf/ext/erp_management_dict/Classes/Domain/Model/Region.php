@@ -19,11 +19,32 @@ class Region extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
-     * 区域名称
+     * 名称
      * 
      * @var string
      */
     protected $name = '';
+
+    /**
+     * 简称
+     * 
+     * @var string
+     */
+    protected $short = '';
+
+    /**
+     * 代码
+     * 
+     * @var string
+     */
+    protected $code = '';
+
+    /**
+     * 分级
+     * 
+     * @var int
+     */
+    protected $level = 0;
 
     /**
      * 上级区域
@@ -51,6 +72,69 @@ class Region extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * Returns the short
+     * 
+     * @return string $short
+     */
+    public function getShort()
+    {
+        return $this->short;
+    }
+
+    /**
+     * Sets the short
+     * 
+     * @param string $short
+     * @return void
+     */
+    public function setShort($short)
+    {
+        $this->short = $short;
+    }
+
+    /**
+     * Returns the code
+     * 
+     * @return string $code
+     */
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * Sets the code
+     * 
+     * @param string $code
+     * @return void
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+    }
+
+    /**
+     * Returns the level
+     * 
+     * @return int $level
+     */
+    public function getLevel()
+    {
+        return $this->level;
+    }
+
+    /**
+     * Sets the level
+     * 
+     * @param int $level
+     * @return void
+     */
+    public function setLevel($level)
+    {
+        $this->level = $level;
     }
 
     /**

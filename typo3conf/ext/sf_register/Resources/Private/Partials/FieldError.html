@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:form.validationResults for="{for}.{field}">
+	<f:for each="{validationResults.flattenedErrors}" as="propertyErrors">
+		<f:for each="{propertyErrors}" as="propertyError">
+			<div class="error errorMessage errorField field{field}">
+				<f:format.printf arguments="{field: '{f:translate(key: \'{field}\')}'}">
+					{propertyError.message}
+				</f:format.printf>
+			</div>
+		</f:for>
+	</f:for>
+</f:form.validationResults>
+
+</html>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-26T12:30:25Z" product-name="erp_management_wallet">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-21T17:08:50Z" product-name="erp_management_wallet">
 		<header/>
 		<body>
 			<trans-unit id="success_time.description">
@@ -27,11 +27,11 @@
 			<trans-unit id="remark.description">
 				<source>备注</source>
 			</trans-unit>
-			<trans-unit id="country.description">
-				<source>目的地国家</source>
+			<trans-unit id="walletid.description">
+				<source>钱包id</source>
 			</trans-unit>
 			<trans-unit id="erpuser.description">
-				<source>目的地国家</source>
+				<source>操作人</source>
 			</trans-unit>
 		</body>
 	</file>

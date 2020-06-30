@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-09T23:21:07Z" product-name="erp_management_order">
+		<header/>
+		<body>
+			<trans-unit id="order_amount.description">
+				<source>订单金额</source>
+			</trans-unit>
+			<trans-unit id="commission.description">
+				<source>佣金</source>
+			</trans-unit>
+			<trans-unit id="arrive.description">
+				<source>到账</source>
+			</trans-unit>
+			<trans-unit id="cost_amount.description">
+				<source>成本</source>
+			</trans-unit>
+			<trans-unit id="freight.description">
+				<source>运费</source>
+			</trans-unit>
+			<trans-unit id="service_fee.description">
+				<source>服务费</source>
+			</trans-unit>
+			<trans-unit id="profit.description">
+				<source>利润</source>
+			</trans-unit>
+			<trans-unit id="profit_margin.description">
+				<source>利润率</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

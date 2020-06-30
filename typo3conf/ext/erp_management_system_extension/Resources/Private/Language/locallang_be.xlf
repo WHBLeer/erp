@@ -18,6 +18,9 @@
             <trans-unit id="backend_layout.main" approved="yes">
                 <source>后台-通用</source>
             </trans-unit>
+            <trans-unit id="backend_layout.system" approved="yes">
+                <source>后台-系统</source>
+            </trans-unit>
             <trans-unit id="backend_layout.dashboard" approved="yes">
                 <source>后台-仪表板</source>
             </trans-unit>

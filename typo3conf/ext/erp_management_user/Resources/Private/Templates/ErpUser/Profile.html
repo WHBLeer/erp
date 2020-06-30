@@ -1,29 +1,45 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-	<f:layout name="Default" />
+<f:layout name="Default" />
+<f:section name="content">
+	<f:flashMessages as="flashMessages">
+		<script>
+			<f:for each="{flashMessages}" as="flashMessage">
+				notify("{flashMessage.message}", "{flashMessage.severity}");
+			</f:for>
+		</script>
+	</f:flashMessages>
+	<div class="dataTables_wrapper dt-bootstrap4">
+		<div class="row mb-10">
+			<div class="col-sm-12 col-md-9">
+				<h4 class="mt-0 header-title">账号基本信息管理</h4>
+				<p class="text-muted m-b-30">您可以再这个页面中对您的基本信息进行修改</p>
+			</div>
+		</div>
 
-	This Template is responsible for displaying a single view for a domain object
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" id="base-tab-justify" href="#base-justify" role="tab">
+					<span class="d-none d-sm-block">  基本资料</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" id="pwd-tab-justify" href="#pwd-justify" role="tab">
+					<span class="d-none d-sm-block">  密码修改</span>
+				</a>
+			</li>
+		</ul>
 
-	If you modify this template, do not forget to change the overwrite settings
-	in /Configuration/ExtensionBuilder/settings.yaml:
-	  Resources:
-		Private:
-		  Templates:
-			Show.html: keep
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div class="tab-pane active p-3" id="base-justify" role="tabpanel">
+				<f:render partial="ErpUser/BaseFormFields" arguments="{_all}" />
+			</div>
+			<div class="tab-pane p-3" id="pwd-justify" role="tabpanel">
+				<f:render partial="ErpUser/PwdFormFields" arguments="{_all}" />
+			</div>
+		</div>
+	</div>
+</f:section>
 
-	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
-	<f:section name="content">
-		<h1>Single View for ErpUser</h1>
-
-		<f:flashMessages as="flashMessages">
-			<script>
-				<f:for each="{flashMessages}" as="flashMessage">
-					notify("{flashMessage.message}", "{flashMessage.severity}");
-				</f:for>
-			</script>
-		</f:flashMessages>
-		<f:render partial="ErpUser/Properties" arguments="{erpUser:erpUser}" />
-		<f:link.action action="list">Back to list</f:link.action><br />
-		<f:link.action action="new">New ErpUser</f:link.action>
-	</f:section>
 </html>

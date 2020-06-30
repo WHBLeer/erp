@@ -16,17 +16,9 @@
 								<items>
 									<numIndex index="0">
 										<numIndex index="0">订单管理</numIndex>
-										<numIndex index="1">Order-&gt;list;Order-&gt;show;Order-&gt;new;Order-&gt;create;Order-&gt;edit;Order-&gt;update;Order-&gt;delete;Order-&gt;api</numIndex>
+										<numIndex index="1">Order-&gt;list;Order-&gt;show;Order-&gt;new;Order-&gt;create;Order-&gt;edit;Order-&gt;update;Order-&gt;delete</numIndex>
 									</numIndex>
 									<numIndex index="1">
-										<numIndex index="0">订单回调</numIndex>
-										<numIndex index="1">Order-&gt;api</numIndex>
-									</numIndex>
-									<numIndex index="2">
-										<numIndex index="0">提交订单</numIndex>
-										<numIndex index="1">Order-&gt;push</numIndex>
-									</numIndex>
-									<numIndex index="3">
 										<numIndex index="0">拉取订单</numIndex>
 										<numIndex index="1">Order-&gt;pull</numIndex>
 									</numIndex>

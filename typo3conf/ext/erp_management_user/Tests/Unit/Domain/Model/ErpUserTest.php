@@ -27,24 +27,24 @@ class ErpUserTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
     /**
      * @test
      */
-    public function getAuthcodeReturnsInitialValueForString()
+    public function getAccountIdReturnsInitialValueForString()
     {
         self::assertSame(
             '',
-            $this->subject->getAuthcode()
+            $this->subject->getAccountId()
         );
     }
 
     /**
      * @test
      */
-    public function setAuthcodeForStringSetsAuthcode()
+    public function setAccountIdForStringSetsAccountId()
     {
-        $this->subject->setAuthcode('Conceived at T3CON10');
+        $this->subject->setAccountId('Conceived at T3CON10');
 
         self::assertAttributeEquals(
             'Conceived at T3CON10',
-            'authcode',
+            'accountId',
             $this->subject
         );
     }
@@ -150,5 +150,94 @@ class ErpUserTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
      */
     public function setProvinceForRegionSetsProvince()
     {
+    }
+
+    /**
+     * @test
+     */
+    public function getAuthReturnsInitialValueForErpUserAuth()
+    {
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
+            $this->subject->getAuth()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setAuthForObjectStorageContainingErpUserAuthSetsAuth()
+    {
+        $auth = new \ERP\ErpManagementUser\Domain\Model\ErpUserAuth();
+        $objectStorageHoldingExactlyOneAuth = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneAuth->attach($auth);
+        $this->subject->setAuth($objectStorageHoldingExactlyOneAuth);
+
+        self::assertAttributeEquals(
+            $objectStorageHoldingExactlyOneAuth,
+            'auth',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function addAuthToObjectStorageHoldingAuth()
+    {
+        $auth = new \ERP\ErpManagementUser\Domain\Model\ErpUserAuth();
+        $authObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $authObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($auth));
+        $this->inject($this->subject, 'auth', $authObjectStorageMock);
+
+        $this->subject->addAuth($auth);
+    }
+
+    /**
+     * @test
+     */
+    public function removeAuthFromObjectStorageHoldingAuth()
+    {
+        $auth = new \ERP\ErpManagementUser\Domain\Model\ErpUserAuth();
+        $authObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $authObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($auth));
+        $this->inject($this->subject, 'auth', $authObjectStorageMock);
+
+        $this->subject->removeAuth($auth);
+    }
+
+    /**
+     * @test
+     */
+    public function getPositionReturnsInitialValueForPosition()
+    {
+        self::assertEquals(
+            null,
+            $this->subject->getPosition()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setPositionForPositionSetsPosition()
+    {
+        $positionFixture = new \ERP\ErpManagementUser\Domain\Model\Position();
+        $this->subject->setPosition($positionFixture);
+
+        self::assertAttributeEquals(
+            $positionFixture,
+            'position',
+            $this->subject
+        );
     }
 }

@@ -9,11 +9,11 @@ call_user_func(
             'ERP.ErpManagementProduct',
             'Pi1',
             [
-                'Product' => 'list, listZX, listCJ, listSC, listHS, listZY, listRX, show, new, create, edit, update, delete, ajax, batch, translate'
+                'Product' => 'list, listZX, listCJ, listSC, listHS, listZY, listRX, show, new, create, edit, update, delete, ajax, batch, translate,uploadProduct'
             ],
             // non-cacheable actions
             [
-                'Product' => 'list, listZX, listCJ, listSC, listHS, listZY, listRX, show, new, create, edit, update, delete, ajax, batch, translate'
+                'Product' => 'list, listZX, listCJ, listSC, listHS, listZY, listRX, show, new, create, edit, update, delete, ajax, batch, translate,uploadProduct'
             ]
         );
 

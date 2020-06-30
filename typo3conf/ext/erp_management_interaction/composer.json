@@ -1,0 +1,28 @@
+{
+    "name": "erp/erp-management-interaction",
+    "type": "typo3-cms-extension",
+    "description": "\u63a5\u53e3\u7ba1\u7406",
+    "authors": [
+        {
+            "name": "\u738b\u5b8f\u5f6c",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ERP\\ErpManagementInteraction\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ERP\\ErpManagementInteraction\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "erp/erp-management-interaction": "self.version",
+        "typo3-ter/erp-management-interaction": "self.version"
+    }
+}

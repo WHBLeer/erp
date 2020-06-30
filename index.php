@@ -38,6 +38,20 @@ function dump($res=null)
 }
 
 /**
+ * typo3输出
+ *
+ * @param [type] $res
+ * @return void
+ * @author wanghongbin
+ * tstamp: 2020-03-19
+ */
+function dd($res=null)
+{
+    \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($res);
+    exit;
+}
+
+/**
  * 请求SQL输出
  *
  * @param [type] $query

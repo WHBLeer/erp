@@ -56,22 +56,53 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function listAction()
     {
-
-        /*
-        $id = $_GET['cat'];
-        $jsonstr = file_get_contents("cat/listJsonSize.json");
+        $categories = $this->categoryRepository->getTemplateTree();
+        dump($categories);exit;
+        
+        /* $id = $_GET['cat'];
+        $jsonstr = file_get_contents("temp.json");
         $jsonarr = json_decode($jsonstr, true);
-        dump($jsonarr);
+        // dump($jsonarr);
+        $data = $jsonarr['children'];
+        for ($i = 0; $i < count($data); $i++) {
+            $category = new \ERP\ErpManagementDict\Domain\Model\Category();
+            $category->setName($data[$i]['text']);
+            $category->setNameEn($this->get_between($data[$i]['text'],'(',')'));
+            $category->setCode($data[$i]['id']);
+            $category->setParentId($data[$i]['parentId']);
+            $category->setCtype(1);
+            // dump($category);
+            // exit;
+            $this->categoryRepository->add($category);
+            $this->persistenceManager->persistAll();
+            if (!empty($data[$i]['children'])) {
+                $child = $data[$i]['children'];
+                for ($j = 0; $j < count($child); $j++) {
+                    $category1 = new \ERP\ErpManagementDict\Domain\Model\Category();
+                    $category1->setName($child[$j]['text']);
+                    $category1->setNameEn($this->get_between($child[$j]['text'],'(',')'));
+                    $category1->setCode($child[$j]['id']);
+                    $category1->setParent($category);
+                    $category1->setParentId($child[$j]['parentId']);
+                    $category1->setCtype(1);
+                    // dump($category1);
+                    // exit;
+                    $this->categoryRepository->add($category1);
+                    $this->persistenceManager->persistAll();
+                }
+            }
+            
+        } *//* 
         // if ($id == 0) {
-            $this->addDictitem($jsonarr,'5');
+            $this->addDictitem($jsonarr,'5');$data[$i]['parentId']
         // } else {
         //     for ($i = 0; $i < count($jsonarr); $i++) {
         //         $this->addCategory($jsonarr['data' . $i]);
         //     }
-        // }
+        // } */
         exit;
 
-        */
+       
         $keyword = $this->request->hasArgument('keyword') ? $this->request->getArgument('keyword') : '';
         if ($_GET["tx_erpmanagementdict_pi1"]["@widget_0"]["currentPage"]) {
             $page = $_GET["tx_erpmanagementdict_pi1"]["@widget_0"]["currentPage"];
@@ -86,6 +117,10 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         // dump($categories);
     }
 
+    public function get_between($input, $start, $end) {
+        $substr = substr($input, strlen($start)+strpos($input, $start),(strlen($input) - strpos($input, $end))*(-1));
+        return $substr;
+    }
     /**
      * @param $data
      */
@@ -232,6 +267,9 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         } elseif ($cmd == 'getColor') {
             $categories = $this->categoryRepository->findCategory();
             JSON($categories);
+        } elseif ($cmd == 'getTemplate') {
+            $categories = $this->categoryRepository->getTemplateTree();
+            JSON($categories);
         } else {
             $pid = GeneralUtility::_GP('pid');
             $children = $this->categoryRepository->findCategory($pid);
@@ -241,6 +279,10 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     public function getCategoryAction()
     {
     }
+    public function getTemplateAction()
+    {
+    }
+    
     public function getCategory()
     {
         return $this->categoryRepository->findCategory();

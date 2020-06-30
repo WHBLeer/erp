@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-08T09:41:15Z" product-name="erp_management_notify">
+		<header/>
+		<body>
+			<trans-unit id="user.description">
+				<source>接收人</source>
+			</trans-unit>
+			<trans-unit id="gettime.description">
+				<source>接收时间戳</source>
+			</trans-unit>
+			<trans-unit id="readtime.description">
+				<source>已读时间戳</source>
+			</trans-unit>
+			<trans-unit id="status.description">
+				<source>已读状态</source>
+			</trans-unit>
+			<trans-unit id="message.description">
+				<source>通知内容</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

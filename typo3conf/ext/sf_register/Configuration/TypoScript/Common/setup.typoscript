@@ -1,0 +1,176 @@
+page.includeCSS.sf_register = EXT:sf_register/Resources/Public/Stylesheets/sf_register{$plugin.tx_sfregister.minified}.css
+page.includeJSFooter.sf_register = EXT:sf_register/Resources/Public/JavaScript/sf_register{$plugin.tx_sfregister.minified}.js
+
+plugin.tx_sfregister.view {
+  templateRootPaths {
+    0 = EXT:sf_register/Resources/Private/Templates/
+    1 = {$plugin.tx_sfregister.view.templateRootPath}
+  }
+
+  partialRootPaths {
+    0 = EXT:sf_register/Resources/Private/Partials/
+    1 = {$plugin.tx_sfregister.view.partialRootPath}
+  }
+
+  layoutRootPaths {
+    0 = EXT:sf_register/Resources/Private/Layouts/
+    1 = {$plugin.tx_sfregister.view.layoutRootPath}
+  }
+}
+
+plugin.tx_sfregister.settings {
+  dateFormat = d-m-Y
+
+  createPid = {$plugin.tx_sfregister.settings.createPid}
+  editPid = {$plugin.tx_sfregister.settings.editPid}
+  passwordPid = {$plugin.tx_sfregister.settings.passwordPid}
+  invitePid = {$plugin.tx_sfregister.settings.invitePid}
+  resendPid = {$plugin.tx_sfregister.settings.resendPid}
+
+  # comma separated list of words used in bad word validator
+  badWordList = {$plugin.tx_sfregister.settings.badWordList}
+
+  validation.create {
+    username {
+      1 = "Evoweb.SfRegister:Required"
+      2 = "StringLength", options={"minimum": 4, "maximum": 80}
+      3 = "Evoweb.SfRegister:Unique"
+      4 = "Evoweb.SfRegister:Unique", options={"global": 1}
+    }
+    password {
+      1 = "Evoweb.SfRegister:Required"
+      2 = "StringLength", options={"minimum": 8, "maximum": 40}
+      3 = "Evoweb.SfRegister:BadWord"
+    }
+    passwordRepeat = "Evoweb.SfRegister:Repeat"
+    firstName = "Evoweb.SfRegister:Required"
+    lastName = "Evoweb.SfRegister:Required"
+    email {
+      1 = "Evoweb.SfRegister:Required"
+      2 = "EmailAddress"
+    }
+    emailRepeat = "Evoweb.SfRegister:Repeat"
+    gtc {
+      1 = "Evoweb.SfRegister:Required"
+      2 = "Evoweb.SfRegister:IsTrue"
+    }
+    image = "Evoweb.SfRegister:ImageUpload"
+    captcha = "Evoweb.SfRegister:Captcha", options={"type": "{$plugin.tx_sfregister.settings.captchaId}"}
+  }
+
+  validation.edit {
+    firstName = "Evoweb.SfRegister:Required"
+    lastName = "Evoweb.SfRegister:Required"
+    email = "EmailAddress"
+    gtc = "Evoweb.SfRegister:IsTrue"
+    image = "Evoweb.SfRegister:ImageUpload"
+  }
+
+  validation.password {
+    password {
+      1 = "Evoweb.SfRegister:Required"
+      2 = "StringLength", options={"minimum": 2, "maximum": 40}
+      3 = "Evoweb.SfRegister:BadWord"
+    }
+    passwordRepeat {
+      1 = "Evoweb.SfRegister:Required"
+      2 = "StringLength", options={"minimum": 2, "maximum": 40}
+      3 = "Evoweb.SfRegister:Repeat"
+    }
+    oldPassword {
+      1 = "Evoweb.SfRegister:Required"
+      2 = "StringLength", options={"minimum": 2, "maximum": 40}
+      3 = "Evoweb.SfRegister:EqualCurrentPassword"
+    }
+  }
+
+  validation.invite {
+    username {
+      1 = "Evoweb.SfRegister:Required"
+      2 = "StringLength", options={"minimum": 4, "maximum": 80}
+    }
+    invitationEmail {
+      1 = "Evoweb.SfRegister:Required"
+      2 = "EmailAddress"
+    }
+    captcha = "Evoweb.SfRegister:Captcha", options={"type": "{$plugin.tx_sfregister.settings.captchaId}"}
+  }
+
+  validation.delete {
+  }
+
+  validation.resend {
+    email {
+      1 = "Evoweb.SfRegister:Required"
+      2 = "EmailAddress"
+    }
+  }
+
+  # integer usergroup set if no activation is needed
+  usergroup = {$plugin.tx_sfregister.settings.usergroup}
+
+  # integer usergroups set if confirmation is needed
+  usergroupPostSave = {$plugin.tx_sfregister.settings.usergroupPostSave}
+  usergroupPostConfirm = {$plugin.tx_sfregister.settings.usergroupPostConfirm}
+  usergroupPostAccept = {$plugin.tx_sfregister.settings.usergroupPostAccept}
+
+  # string name of the site used in subject
+  sitename = {$plugin.tx_sfregister.settings.emailSitename}
+
+  imageFolder = 1:frontendusers
+
+  captcha {
+    # Needs EXT:jm_recaptcha to be installed
+    jmrecaptcha = Evoweb\SfRegister\Services\Captcha\JmRecaptchaAdapter
+    # Needs EXT:sr_freecap to be installed
+    srfreecap = Evoweb\SfRegister\Services\Captcha\SrFreecapAdapter
+    # Needs EXT:recaptcha to be installed
+    recaptcha = Evoweb\Recaptcha\Adapter\SfRegisterAdapter
+  }
+
+  processInitializeActionEvent = 0
+}
+
+plugin.tx_sfregister.features {
+  rewrittenPropertyMapper = 1
+}
+
+plugin.tx_sfregister._LOCAL_LANG.default {
+  title_none = Please select
+  title_dr = Dr.
+  title_prof = Prof.
+  title_profdr = Prof. Dr.
+}
+
+config.tx_extbase {
+  persistence.classes {
+    Evoweb\SfRegister\Domain\Model\FrontendUser {
+      mapping {
+        tableName = fe_users
+      }
+    }
+    Evoweb\SfRegister\Domain\Model\FrontendUserGroup {
+      mapping {
+        tableName = fe_groups
+        columns {
+          felogin_redirectPid.mapOnProperty = feloginRedirectPid
+        }
+      }
+    }
+    Evoweb\SfRegister\Domain\Model\StaticCountry {
+      mapping {
+        tableName = static_countries
+      }
+    }
+    Evoweb\SfRegister\Domain\Model\StaticCountryZone {
+      mapping {
+        tableName = static_country_zones
+      }
+    }
+    Evoweb\SfRegister\Domain\Model\StaticLanguage {
+      mapping {
+        tableName = static_languages
+      }
+    }
+  }
+}

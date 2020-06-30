@@ -20,11 +20,11 @@
 									</numIndex>
 									<numIndex index="1">
 										<numIndex index="0">账户充值</numIndex>
-										<numIndex index="1">Wallet-&gt;topup;Wallet-&gt;index;Wallet-&gt;callback</numIndex>
+										<numIndex index="1">Record-&gt;new;Record-&gt;create;Record-&gt;update;Record-&gt;show;Record-&gt;success</numIndex>
 									</numIndex>
 									<numIndex index="2">
 										<numIndex index="0">支付回调</numIndex>
-										<numIndex index="1">Record-&gt;callback;Record-&gt;success;Record-&gt;list</numIndex>
+										<numIndex index="1">Record-&gt;callback;Record-&gt;success;Wallet-&gt;index</numIndex>
 									</numIndex>
 									<numIndex index="3">
 										<numIndex index="0">钱包日志</numIndex>
@@ -34,13 +34,36 @@
 										<numIndex index="0">动账记录</numIndex>
 										<numIndex index="1">Record-&gt;list;Record-&gt;show</numIndex>
 									</numIndex>
-									
+									<numIndex index="5">
+										<numIndex index="0">动账记录(SYS)</numIndex>
+										<numIndex index="1">Record-&gt;syslist;Record-&gt;show</numIndex>
+									</numIndex>
 								</items>
                                 <maxitems>1</maxitems>
                                 <size>1</size>
 							</config>
 						</TCEforms>
 					</switchableControllerActions> 
+					<settings.topupPid>
+						<TCEforms>
+							<label>充值页面</label>
+							<displayCond>FIELD:switchableControllerActions:=:Wallet-&gt;index;Log-&gt;list;Record-&gt;list</displayCond>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.topupPid>
 					<settings.previewPid>
 						<TCEforms>
 							<label>预览页面</label>

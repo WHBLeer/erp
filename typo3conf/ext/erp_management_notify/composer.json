@@ -1,0 +1,28 @@
+{
+    "name": "erp/erp-management-notify",
+    "type": "typo3-cms-extension",
+    "description": "\u901a\u77e5,\u5305\u62ec\u4fe1\u606f\u516c\u544a,\u7528\u6237\u63d0\u9192,\u7ad9\u5185\u4fe1",
+    "authors": [
+        {
+            "name": "\u738b\u5b8f\u5f6c",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ERP\\ErpManagementNotify\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ERP\\ErpManagementNotify\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "erp/erp-management-notify": "self.version",
+        "typo3-ter/erp-management-notify": "self.version"
+    }
+}

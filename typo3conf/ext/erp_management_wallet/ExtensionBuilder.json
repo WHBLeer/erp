@@ -16,7 +16,7 @@
                     "_default3_edit_update": true,
                     "_default4_delete": true,
                     "customActions": [
-                        "api",
+                        "syslist",
                         "callback",
                         "success"
                     ]
@@ -124,32 +124,32 @@
                             "propertyName": "remark",
                             "propertyType": "Text",
                             "uid": "265733879080"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u94b1\u5305id",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "walletid",
+                            "propertyType": "Integer",
+                            "uid": "1466635829801"
                         }
                     ]
                 },
                 "relationGroup": {
                     "relations": [
                         {
-                            "foreignRelationClass": "\\ERP\\ErpManagementDict\\Domain\\Model\\Region",
-                            "lazyLoading": false,
-                            "propertyIsExcludeField": true,
-                            "relationDescription": "\u76ee\u7684\u5730\u56fd\u5bb6",
-                            "relationName": "country",
-                            "relationType": "zeroToOne",
-                            "relationWire": "",
-                            "renderType": "selectSingle",
-                            "uid": "847447107300"
-                        },
-                        {
                             "foreignRelationClass": "\\ERP\\ErpManagementUser\\Domain\\Model\\ErpUser",
                             "lazyLoading": false,
                             "propertyIsExcludeField": true,
-                            "relationDescription": "\u76ee\u7684\u5730\u56fd\u5bb6",
+                            "relationDescription": "\u64cd\u4f5c\u4eba",
                             "relationName": "erpuser",
                             "relationType": "zeroToOne",
                             "relationWire": "",
-                            "renderType": "selectSingle",
-                            "uid": "1240966170006"
+                            "renderType": "selectSingleBox",
+                            "uid": "1068704771735"
                         }
                     ]
                 }
@@ -171,8 +171,7 @@
                     "_default3_edit_update": true,
                     "_default4_delete": true,
                     "customActions": [
-                        "pull",
-                        "push"
+                        "syslist"
                     ]
                 },
                 "name": "Log",
@@ -223,11 +222,34 @@
                             "propertyName": "remark",
                             "propertyType": "Text",
                             "uid": "1297224057781"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u94b1\u5305id",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "walletid",
+                            "propertyType": "Integer",
+                            "uid": "570717914314"
                         }
                     ]
                 },
                 "relationGroup": {
-                    "relations": []
+                    "relations": [
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementUser\\Domain\\Model\\ErpUser",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u64cd\u4f5c\u4eba",
+                            "relationName": "erpuser",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingleBox",
+                            "uid": "1423663069717"
+                        }
+                    ]
                 }
             }
         },
@@ -246,7 +268,9 @@
                     "_default2_new_create": false,
                     "_default3_edit_update": false,
                     "_default4_delete": false,
-                    "customActions": []
+                    "customActions": [
+                        "index"
+                    ]
                 },
                 "name": "Wallet",
                 "objectsettings": {
@@ -335,36 +359,14 @@
                 "relationGroup": {
                     "relations": [
                         {
-                            "foreignRelationClass": "",
-                            "lazyLoading": false,
-                            "propertyIsExcludeField": true,
-                            "relationDescription": "\u94b1\u5305\u52a8\u8d26\u8bb0\u5f55",
-                            "relationName": "log",
-                            "relationType": "zeroToMany",
-                            "relationWire": "[wired]",
-                            "renderType": "inline",
-                            "uid": "991226800305"
-                        },
-                        {
-                            "foreignRelationClass": "",
-                            "lazyLoading": false,
-                            "propertyIsExcludeField": true,
-                            "relationDescription": "\u94b1\u5305\u4ea4\u6613\u8bb0\u5f55\u8868",
-                            "relationName": "record",
-                            "relationType": "zeroToMany",
-                            "relationWire": "",
-                            "renderType": "inline",
-                            "uid": "1450655239524"
-                        },
-                        {
                             "foreignRelationClass": "\\ERP\\ErpManagementUser\\Domain\\Model\\ErpUser",
                             "lazyLoading": false,
                             "propertyIsExcludeField": true,
-                            "relationDescription": "\u6570\u636e\u6240\u5c5e",
+                            "relationDescription": "\u64cd\u4f5c\u4eba",
                             "relationName": "erpuser",
                             "relationType": "zeroToOne",
                             "relationWire": "",
-                            "renderType": "selectSingleBox",
+                            "renderType": "selectSingle",
                             "uid": "997468699038"
                         }
                     ]
@@ -389,7 +391,7 @@
         },
         "extensionKey": "erp_management_wallet",
         "name": "\u94b1\u5305\u6a21\u5757\u7ba1\u7406",
-        "originalExtensionKey": "erp_management_logistics",
+        "originalExtensionKey": "erp_management_wallet",
         "originalVendorName": "ERP",
         "persons": [
             {
@@ -402,9 +404,9 @@
         "plugins": [
             {
                 "actions": {
-                    "controllerActionCombinations": "Wallet=>list,show,new,create,edit,update,delete,api,push,pull\nLog=>list,show,new,create,edit,update,delete,push,pull\nRecord=>list,show,new,create,edit,update,delete,api,callback,success",
-                    "noncacheableActions": "Wallet=>list,show,new,create,edit,update,delete,api,push,pull\nLog=>list,show,new,create,edit,update,delete,push,pull\nRecord=>list,show,new,create,edit,update,delete,api,callback,success",
-                    "switchableActions": "\u94b1\u5305\u7ba1\u7406\nWallet->index;Log->list;Record->list\n\u652f\u4ed8\u56de\u8c03\nRecord->callback;Record->success;Record->list\n\u94b1\u5305\u65e5\u5fd7\nLog->list;Log->show\n\u52a8\u8d26\u8bb0\u5f55\nRecord->list;Record->show"
+                    "controllerActionCombinations": "Wallet=>list,show,index\nLog=>list,syslist,show,new,create,edit,update,delete\nRecord=>list,syslist,show,new,create,edit,update,delete,callback,success",
+                    "noncacheableActions": "Wallet=>list,show,index\nLog=>list,syslist,show,new,create,edit,update,delete\nRecord=>list,syslist,show,new,create,edit,update,delete,callback,success",
+                    "switchableActions": "\u94b1\u5305\u7ba1\u7406\nWallet->index;Log->list;Record->list\n\u8d26\u6237\u5145\u503c\nRecord->new;Record->create;Record->update;Record->show;Record->success\n\u652f\u4ed8\u56de\u8c03\nRecord->callback;Record->success;Wallet->index\n\u94b1\u5305\u65e5\u5fd7\nLog->list;Log->show\n\u52a8\u8d26\u8bb0\u5f55\nRecord->list;Record->show\n\u52a8\u8d26\u8bb0\u5f55(SYS)\nRecord->syslist;Record->show"
                 },
                 "description": "\u94b1\u5305\u7ba1\u7406",
                 "key": "pi1",
@@ -413,22 +415,9 @@
         ],
         "vendorName": "ERP"
     },
-    "wires": [
-        {
-            "src": {
-                "moduleId": 2,
-                "terminal": "relationWire_0",
-                "uid": "991226800305"
-            },
-            "tgt": {
-                "moduleId": 1,
-                "terminal": "SOURCES",
-                "uid": "286852368559"
-            }
-        }
-    ],
+    "wires": [],
     "log": {
-        "last_modified": "2020-05-26 12:30",
+        "last_modified": "2020-06-21 05:08",
         "extension_builder_version": "9.10.2",
         "be_user": "\u7ba1\u7406\u5458 (1)"
     }

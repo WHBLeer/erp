@@ -192,6 +192,7 @@ page {
         js2 = {$page.includePath.plugins}layer/layer.js
         js3 = {$page.includePath.plugins}uikit/dist/js/uikit.min.js
         js4 = {$page.includePath.plugins}uikit/dist/js/components/notify.min.js
+        js5 = {$page.includePath.plugins}parsleyjs/parsley.min.js
         js100 = {$page.includePath.layout}JavaScript/scripts.js
     }
 
@@ -229,7 +230,6 @@ page {
         js12 = {$page.includePath.main}pages/form-advanced.js
         js13 = {$page.includePath.plugins}magnific-popup/jquery.magnific-popup.min.js
         js14 = {$page.includePath.main}pages/lightbox.js  
-
         #<!-- App js -->
         js100 = {$page.includePath.main}js/app.js
     }

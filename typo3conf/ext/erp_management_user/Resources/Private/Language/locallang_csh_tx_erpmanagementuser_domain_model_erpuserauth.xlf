@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-23T15:48:07Z" product-name="erp_management_user">
+		<header/>
+		<body>
+			<trans-unit id="developer_id.description">
+				<source>开发者id</source>
+			</trans-unit>
+			<trans-unit id="shopalias.description">
+				<source>店铺别名</source>
+			</trans-unit>
+			<trans-unit id="awsaccount.description">
+				<source>亚马逊账号</source>
+			</trans-unit>
+			<trans-unit id="authcountry.description">
+				<source>授权国家</source>
+			</trans-unit>
+			<trans-unit id="authtime.description">
+				<source>授权时间</source>
+			</trans-unit>
+			<trans-unit id="amazon_id.description">
+				<source>卖家编号</source>
+			</trans-unit>
+			<trans-unit id="amazon_token.description">
+				<source>授权令牌</source>
+			</trans-unit>
+			<trans-unit id="authtype.description">
+				<source>授权平台 0亚马逊 1shopee</source>
+			</trans-unit>
+			<trans-unit id="market.description">
+				<source>绑定市场</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

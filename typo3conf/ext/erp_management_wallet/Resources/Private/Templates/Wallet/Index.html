@@ -1,0 +1,127 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+	<f:flashMessages as="flashMessages">
+		<script>
+			<f:for each="{flashMessages}" as="flashMessage">
+				notify("{flashMessage.message}", "{flashMessage.severity}");
+				</f:for>
+		</script>
+	</f:flashMessages>
+	
+    <f:if condition="{wallet.name}=='' && {wallet.password}==''">
+        <f:then>
+            <div id="uploadForm" class="hide">
+                <f:form action="index" enctype="multipart/form-data" name="erpUser" object="{erpUser}" arguments="{txdata:1}">
+                    <table class="table table-bordered mb-10">
+                        <tbody>
+                            <tr>
+                                <th colspan="2">请先填写以下信息后方可使用钱包功能</th>
+                            </tr>
+                            <tr>
+                                <th>提现名称：</th>
+                                <td>
+                                    <f:form.textfield class="form-control" name="name" placeholder="请输入提现名称" required="true" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>提现密码：</th>
+                                <td>
+                                    <f:form.password class="form-control" name="password" placeholder="请输入提现密码"  />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="container-fluid text-right">
+                        <f:form.submit class="btn btn-space btn-success checkuser" value="确定" />
+                        <a href="javascript:void(0);" onclick="layer.closeAll();" class="btn btn-space btn-danger">取消</a>
+                    </div>
+                </f:form>
+            </div>
+            <script>
+                layer.open({
+                    type: 1,
+                    title: '提现信息补全',
+                    maxmin: true,
+                    shadeClose: false,
+                    area: ['600px', '270px'],
+                    content: $("#uploadForm"),
+                })
+            </script>
+        </f:then>
+        <f:else>
+            <div class="dataTables_wrapper dt-bootstrap4">
+                <div class="row mb-10">
+                    <div class="col-sm-12 col-md-6">
+                        <f:link.page pageUid="{settings.topupPid}" class="btn btn-info">充值</f:link.page>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <f:form action="list" name="search" object="{search}">
+                            <div class="input-group justify-content-end">
+                                <input class="form-control" name="tx_erpmanagementorder_pi1[starttime]" type="date" value="{starttime}">
+                                <input class="form-control" name="tx_erpmanagementorder_pi1[endtime]" type="date" value="{endtime}">
+                                <f:form.textfield name="keyword" value="{keyword}" class="form-control" placeholder="关键字" />
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="ti-search"></i></span>
+                                </div>
+                            </div>
+                        </f:form>
+                    </div>
+                </div><br />
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-10">
+                                <thead>
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>授权用户</th>
+                                        <th>充值金额</th>
+                                        <th>充值渠道</th>
+                                        <th>当前余额</th>
+                                        <th>充值时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <f:for each="{wallet.record}" as="record" iteration="itemIteration">
+                                        <tr>
+                                            <td>{f:cObject(typoscriptObjectPath:'lib.calc',data:'{itemIteration.cycle}+({page}-1)*{settings.paginate.itemsPerPage}')}
+                                            </td>
+                                            <td>{wallet.erpuser.username}({wallet.erpuser.name})</td>
+                                            <td>{record.amount}</td>
+                                            <td>{record.payment}</td>
+                                            <td>{wallet.balance}</td>
+                                            <td>{f:format.date(date: record.successTime, format: 'Y-m-d H:i:s')}</td>
+                                            <td>
+                                                <f:link.action action="show" class="btn btn-sm btn-info" title="交易详情"
+                                                    arguments="{record : record}"><i class="ti-eye"></i></f:link.action>
+                                            </td>
+                                        </tr>
+                                    </f:for>
+                                </tbody>
+                            </table>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </f:else>
+    </f:if>
+	
+</f:section>
+
+</html>

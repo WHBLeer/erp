@@ -633,7 +633,7 @@ dt {
 }
 
 .submenu > li > a {
-  padding-left: 40px;
+  padding-left: 30px;
 }
 
 .submenu li.mm-active > a {
@@ -655,7 +655,7 @@ dt {
   text-align: center;
   height: 50px;
   position: relative;
-  width: 190px;
+  width: 160px;
   z-index: 1;
 }
 
@@ -672,7 +672,7 @@ dt {
   border-radius: 0;
   margin-bottom: 0;
   padding: 0 10px 0 0;
-  margin-left: 190px;
+  margin-left: 160px;
   min-height: 50px;
 }
 
@@ -697,7 +697,7 @@ dt {
 }
 
 .side-menu {
-  width: 190px;
+  width: 160px;
   z-index: 10;
   background: #333547;
   bottom: 0;
@@ -716,7 +716,7 @@ dt {
 }
 
 .content-page {
-  margin-left: 190px;
+  margin-left: 160px;
   overflow: hidden;
 }
 
@@ -898,7 +898,7 @@ dt {
   display: block;
   left: 70px;
   position: absolute;
-  width: 190px;
+  width: 160px;
   height: auto !important;
 }
 
@@ -907,7 +907,7 @@ dt {
           box-shadow: none;
   padding: 8px 20px;
   position: relative;
-  width: 190px;
+  width: 160px;
   z-index: 6;
 }
 
@@ -921,10 +921,10 @@ dt {
 
 .enlarged #wrapper .left.side-menu #sidebar-menu ul ul li:hover > ul {
   display: block;
-  left: 190px;
+  left: 160px;
   margin-top: -36px;
   position: absolute;
-  width: 190px;
+  width: 160px;
 }
 
 .enlarged #wrapper .left.side-menu #sidebar-menu ul ul li > a span.float-right {
@@ -988,7 +988,7 @@ dt {
   position: absolute;
   background-color: #f1f2f5;
   right: 0;
-  left: 190px;
+  left: 160px;
   font-family: "Sarabun", sans-serif;
 }
 
@@ -3951,8 +3951,8 @@ Invoice
 
 input[type=checkbox] {
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
   z-index: auto !important;
   opacity: unset !important;
@@ -3961,8 +3961,8 @@ input[type=checkbox] {
 input[type=checkbox]:after {
   display: inline-block;
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 3px;
   background: #fff;
   border: 1px solid #ddd;

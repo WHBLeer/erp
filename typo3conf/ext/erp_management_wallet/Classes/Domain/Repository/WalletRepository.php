@@ -17,4 +17,31 @@ namespace ERP\ErpManagementWallet\Domain\Repository;
  */
 class WalletRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+    public function initializeObject()
+    {
+        $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\QuerySettingsInterface');
+        $querySettings->setRespectStoragePage(FALSE);
+        $this->setDefaultQuerySettings($querySettings);
+    }
+    
+    /**
+     * 查询用户钱包信息
+     *
+     * @param [type] $userid
+     * @return void
+     * @author wanghongbin
+     * tstamp: 2020-06-20
+     */
+    public function findByUser($userid)
+    {
+        $query = $this->createQuery();
+        $condition = array();
+        $condition[] = $query->equals('erpuser.uid', $userid);
+        $query->matching($query->logicalAnd($condition));
+        $result = $query->execute();
+        if ($result->count() > 0) {
+            return $result->getFirst();
+        }
+        return null;
+    }
 }

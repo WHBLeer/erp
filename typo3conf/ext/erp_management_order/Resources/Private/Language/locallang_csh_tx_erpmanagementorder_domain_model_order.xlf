@@ -1,168 +1,109 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-21T17:32:13Z" product-name="erp_management_order">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-09T23:21:07Z" product-name="erp_management_order">
 		<header/>
 		<body>
 			<trans-unit id="amazon_order_id.description">
-				<source>亚马逊订单
-</source>
+				<source>亚马逊订单</source>
+			</trans-unit>
+			<trans-unit id="amazon_order_id.description">
+				<source>亚马逊订单</source>
+			</trans-unit>
+			<trans-unit id="amazon_order_id.description">
+				<source>亚马逊订单</source>
 			</trans-unit>
 			<trans-unit id="purchase_date.description">
-				<source>购买日期
-</source>
+				<source>购买日期</source>
 			</trans-unit>
 			<trans-unit id="last_update_date.description">
-				<source>最后一次更新时间
-</source>
+				<source>最后一次更新时间</source>
 			</trans-unit>
 			<trans-unit id="order_status.description">
-				<source>订单状态
-</source>
+				<source>订单状态 </source>
 			</trans-unit>
 			<trans-unit id="fulfillment_channel.description">
-				<source>履行渠道
-</source>
+				<source>履行渠道</source>
 			</trans-unit>
 			<trans-unit id="ship_service_level.description">
-				<source>服务等级
-</source>
+				<source>服务等级</source>
 			</trans-unit>
 			<trans-unit id="sales_channel.description">
-				<source>销售渠道
-</source>
-			</trans-unit>
-			<trans-unit id="shipper_name.description">
-				<source>送货人
-</source>
-			</trans-unit>
-			<trans-unit id="shipper_address_line1.description">
-				<source>送货地址1
-</source>
-			</trans-unit>
-			<trans-unit id="shipper_address_line2.description">
-				<source>送货地址2
-</source>
-			</trans-unit>
-			<trans-unit id="shipper_address_line3.description">
-				<source>送货地址3</source>
-			</trans-unit>
-			<trans-unit id="shipper_city.description">
-				<source>发货城市
-</source>
-			</trans-unit>
-			<trans-unit id="shipper_state_or_region.description">
-				<source>发货地区
-</source>
-			</trans-unit>
-			<trans-unit id="shipper_country_code.description">
-				<source>发货城市代码
-</source>
-			</trans-unit>
-			<trans-unit id="shipper_phone.description">
-				<source>发货人电话
-</source>
-			</trans-unit>
-			<trans-unit id="shipper_address_type.description">
-				<source>地址类型
-</source>
-			</trans-unit>
-			<trans-unit id="shipper_is_address_sharing_confidential.description">
-				<source>是否地址共享
-</source>
+				<source>销售渠道</source>
 			</trans-unit>
 			<trans-unit id="currency_code.description">
-				<source>货币代码
-</source>
+				<source>货币代码</source>
 			</trans-unit>
 			<trans-unit id="amount.description">
-				<source>金额
-</source>
+				<source>金额</source>
 			</trans-unit>
 			<trans-unit id="number_of_items_shipped.description">
-				<source>已发货数量
-</source>
+				<source>已发货数量</source>
 			</trans-unit>
 			<trans-unit id="number_of_items_unshipped.description">
-				<source>未发货数量
-</source>
+				<source>未发货数量</source>
 			</trans-unit>
 			<trans-unit id="payment_method.description">
-				<source>支付方式
-</source>
+				<source>支付方式</source>
 			</trans-unit>
 			<trans-unit id="payment_method_details.description">
-				<source>付款方式详情
-</source>
+				<source>付款方式详情</source>
 			</trans-unit>
 			<trans-unit id="marketplace_id.description">
-				<source>市场
-</source>
-			</trans-unit>
-			<trans-unit id="buyer_email.description">
-				<source>买家电子邮件
-</source>
-			</trans-unit>
-			<trans-unit id="buyer_name.description">
-				<source>买家姓名
-</source>
+				<source>市场</source>
 			</trans-unit>
 			<trans-unit id="shipment_service_level_category.description">
-				<source>船货等级
-</source>
+				<source>船货等级</source>
 			</trans-unit>
 			<trans-unit id="shipped_by_amazon_t_f_m.description">
-				<source>是否亚马逊TFM发货
-</source>
+				<source>是否亚马逊TFM发货</source>
 			</trans-unit>
 			<trans-unit id="order_type.description">
-				<source>订单类型
-</source>
+				<source>订单类型</source>
 			</trans-unit>
 			<trans-unit id="earliest_ship_date.description">
-				<source>最早装运日期
-</source>
+				<source>最早装运日期</source>
 			</trans-unit>
 			<trans-unit id="latest_ship_date.description">
-				<source>最迟装载日期
-</source>
+				<source>最迟装载日期</source>
 			</trans-unit>
 			<trans-unit id="earliest_delivery_date.description">
-				<source>最早交货日期
-</source>
+				<source>最早交货日期</source>
 			</trans-unit>
 			<trans-unit id="latest_delivery_date.description">
-				<source>最新交货日期
-</source>
+				<source>最新交货日期</source>
 			</trans-unit>
 			<trans-unit id="business_order.description">
-				<source>是否商业订单
-</source>
+				<source>是否商业订单</source>
 			</trans-unit>
 			<trans-unit id="prime.description">
-				<source>是否是黄金
-</source>
+				<source>是否是黄金</source>
 			</trans-unit>
 			<trans-unit id="global_express_enabled.description">
-				<source>是否启用全球快递
-</source>
+				<source>是否启用全球快递</source>
 			</trans-unit>
 			<trans-unit id="premium_order.description">
-				<source>是否是高级订单
-</source>
+				<source>是否是高级订单</source>
 			</trans-unit>
 			<trans-unit id="replacement_order.description">
-				<source>是否是替换单
-</source>
+				<source>是否是替换单</source>
 			</trans-unit>
 			<trans-unit id="sold_by_a_b.description">
-				<source>由AB出售
-</source>
+				<source>由AB出售</source>
 			</trans-unit>
 			<trans-unit id="goods.description">
 				<source>订单商品</source>
 			</trans-unit>
 			<trans-unit id="erpuser.description">
-				<source>目的地国家</source>
+				<source>订单商户</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>发货地址</source>
+			</trans-unit>
+			<trans-unit id="shipper.description">
+				<source>物流</source>
+			</trans-unit>
+			<trans-unit id="revenue.description">
+				<source>营收</source>
 			</trans-unit>
 		</body>
 	</file>

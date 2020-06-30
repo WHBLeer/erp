@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-15T16:28:23Z" product-name="erp_management_prupload">
+		<header/>
+		<body>
+			<trans-unit id="market.description">
+				<source>上传的店铺</source>
+			</trans-unit>
+			<trans-unit id="lang.description">
+				<source>上传语言</source>
+			</trans-unit>
+			<trans-unit id="category_text.description">
+				<source>分类</source>
+			</trans-unit>
+			<trans-unit id="category_node.description">
+				<source>分类节点</source>
+			</trans-unit>
+			<trans-unit id="template.description">
+				<source>分类模板</source>
+			</trans-unit>
+			<trans-unit id="uploadtime.description">
+				<source>上传时间</source>
+			</trans-unit>
+			<trans-unit id="cp_status.description">
+				<source>上传状态 0上传中 1上传成功 2上传失败</source>
+			</trans-unit>
+			<trans-unit id="gx_status.description">
+				<source>关系状态 0上传中 1上传成功 2上传失败</source>
+			</trans-unit>
+			<trans-unit id="tp_status.description">
+				<source>图片状态 0上传中 1上传成功 2上传失败</source>
+			</trans-unit>
+			<trans-unit id="kc_status.description">
+				<source>库存状态 0上传中 1上传成功 2上传失败</source>
+			</trans-unit>
+			<trans-unit id="jg_status.description">
+				<source>价格状态 0上传中 1上传成功 2上传失败</source>
+			</trans-unit>
+			<trans-unit id="product.description">
+				<source>产品</source>
+			</trans-unit>
+			<trans-unit id="user.description">
+				<source>操作人</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

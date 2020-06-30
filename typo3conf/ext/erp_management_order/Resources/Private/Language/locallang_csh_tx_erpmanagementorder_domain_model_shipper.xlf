@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-09T23:21:07Z" product-name="erp_management_order">
+		<header/>
+		<body>
+			<trans-unit id="name_zh.description">
+				<source>中文名称</source>
+			</trans-unit>
+			<trans-unit id="name_en.description">
+				<source>英文名称</source>
+			</trans-unit>
+			<trans-unit id="sku.description">
+				<source>货物SKU</source>
+			</trans-unit>
+			<trans-unit id="number.description">
+				<source>运输数量</source>
+			</trans-unit>
+			<trans-unit id="weight.description">
+				<source>重量 kg</source>
+			</trans-unit>
+			<trans-unit id="length.description">
+				<source>长度 cm</source>
+			</trans-unit>
+			<trans-unit id="width.description">
+				<source>宽度 cm</source>
+			</trans-unit>
+			<trans-unit id="height.description">
+				<source>高度 cm</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>收货人邮箱</source>
+			</trans-unit>
+			<trans-unit id="route.description">
+				<source>物流路线</source>
+			</trans-unit>
+			<trans-unit id="providers.description">
+				<source>物流商</source>
+			</trans-unit>
+			<trans-unit id="gn_waybill.description">
+				<source>国内运单号</source>
+			</trans-unit>
+			<trans-unit id="gn_tracking.description">
+				<source>国内追踪号</source>
+			</trans-unit>
+			<trans-unit id="gn_status.description">
+				<source>国际发货状态 0:未发货 1:已发货 2:运输中 3:待签收 4已签收 5拒签后</source>
+			</trans-unit>
+			<trans-unit id="gj_waybill.description">
+				<source>国际运单号</source>
+			</trans-unit>
+			<trans-unit id="gj_tracking.description">
+				<source>国际追踪号</source>
+			</trans-unit>
+			<trans-unit id="gj_status.description">
+				<source>国际发货状态 0:未发货 1:已发货 2:运输中 3:待签收 4已签收 5拒签后</source>
+			</trans-unit>
+			<trans-unit id="shipper_address_line1.description">
+				<source>送货地址1</source>
+			</trans-unit>
+			<trans-unit id="shipper_address_line2.description">
+				<source>送货地址2</source>
+			</trans-unit>
+			<trans-unit id="shipper_address_line3.description">
+				<source>送货地址3</source>
+			</trans-unit>
+			<trans-unit id="shipper_city.description">
+				<source>发货城市</source>
+			</trans-unit>
+			<trans-unit id="shipper_state_or_region.description">
+				<source>发货地区</source>
+			</trans-unit>
+			<trans-unit id="shipper_country_code.description">
+				<source>发货城市代码</source>
+			</trans-unit>
+			<trans-unit id="shipper_phone.description">
+				<source>发货人电话</source>
+			</trans-unit>
+			<trans-unit id="shipper_address_type.description">
+				<source>地址类型</source>
+			</trans-unit>
+			<trans-unit id="shipper_is_address_sharing_confidential.description">
+				<source>是否地址共享</source>
+			</trans-unit>
+			<trans-unit id="delivery_type.description">
+				<source>0:正常发货 1:补发货</source>
+			</trans-unit>
+			<trans-unit id="remark.description">
+				<source>备注</source>
+			</trans-unit>
+			<trans-unit id="customermail.description">
+				<source>邮件</source>
+			</trans-unit>
+			<trans-unit id="logs.description">
+				<source>操作日志 json</source>
+			</trans-unit>
+			<trans-unit id="reissue.description">
+				<source>补发 ,重新生成运单号,追踪号</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

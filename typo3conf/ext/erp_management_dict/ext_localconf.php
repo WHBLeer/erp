@@ -12,14 +12,14 @@ call_user_func(
                 'Dicttype' => 'list, show, new, create, edit, update, delete',
                 'Dictitem' => 'list, show, new, create, edit, update, delete,getVariant,ajax',
                 'Region' => 'list, show, new, create, edit, update, delete',
-                'Category' => 'list, show, new, create, edit, update, delete,getCategory,ajax'
+                'Category' => 'list, show, new, create, edit, update, delete,getCategory,getTemplate,ajax'
             ],
             // non-cacheable actions
             [
                 'Dicttype' => 'list, show, new, create, edit, update, delete',
                 'Dictitem' => 'list, show, new, create, edit, update, delete,getVariant,ajax',
                 'Region' => 'list, show, new, create, edit, update, delete',
-                'Category' => 'list, show, new, create, edit, update, delete,getCategory,ajax'
+                'Category' => 'list, show, new, create, edit, update, delete,getCategory,getTemplate,ajax'
             ]
         );
 

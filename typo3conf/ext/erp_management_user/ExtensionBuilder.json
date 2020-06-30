@@ -17,9 +17,13 @@
                     "_default4_delete": true,
                     "customActions": [
                         "register",
+                        "profile",
+                        "oauth",
+                        "saveoauth",
                         "changepwd",
                         "retrievepwd",
                         "check",
+                        "oauthrequest",
                         "ajaxdata"
                     ]
                 },
@@ -42,11 +46,11 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "\u6388\u6743\u7801",
+                            "propertyDescription": "\u7528\u6237\u552f\u4e00\u7f16\u7801",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
-                            "propertyName": "authcode",
+                            "propertyName": "accountId",
                             "propertyType": "String",
                             "uid": "1259916140747"
                         },
@@ -108,6 +112,28 @@
                             "relationWire": "",
                             "renderType": "selectSingle",
                             "uid": "196473110532"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u6388\u6743",
+                            "relationName": "auth",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "863873001162"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u4f4d\u7f6e\u4fe1\u606f",
+                            "relationName": "position",
+                            "relationType": "zeroToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "569859509525"
                         }
                     ]
                 }
@@ -151,6 +177,274 @@
                     "relations": []
                 }
             }
+        },
+        {
+            "config": {
+                "position": [
+                    418,
+                    258
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "ErpUserAuth",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u7528\u6237\u6388\u6743",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "272371756010"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5f00\u53d1\u8005id",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "developerId",
+                            "propertyType": "String",
+                            "uid": "416194316326"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5e97\u94fa\u522b\u540d",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "shopalias",
+                            "propertyType": "String",
+                            "uid": "422641315584"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4e9a\u9a6c\u900a\u8d26\u53f7",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "awsaccount",
+                            "propertyType": "String",
+                            "uid": "454165686516"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6388\u6743\u56fd\u5bb6",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "authcountry",
+                            "propertyType": "String",
+                            "uid": "649572684738"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6388\u6743\u65f6\u95f4",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "authtime",
+                            "propertyType": "Integer",
+                            "uid": "1057805722249"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5356\u5bb6\u7f16\u53f7",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "amazonId",
+                            "propertyType": "String",
+                            "uid": "348707074633"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6388\u6743\u4ee4\u724c",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "amazonToken",
+                            "propertyType": "String",
+                            "uid": "1147669635913"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6388\u6743\u5e73\u53f0 0\u4e9a\u9a6c\u900a 1shopee",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "authtype",
+                            "propertyType": "Integer",
+                            "uid": "674999145072"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementDict\\Domain\\Model\\Dictitem",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u7ed1\u5b9a\u5e02\u573a",
+                            "relationName": "market",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingle",
+                            "uid": "298686469864"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    118,
+                    314
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Position",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u7528\u6237\u4f4d\u7f6e\u4fe1\u606f",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "594059823677"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "ip",
+                            "propertyType": "String",
+                            "uid": "274484837736"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "locatlat",
+                            "propertyType": "String",
+                            "uid": "172045946799"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "locatLng",
+                            "propertyType": "String",
+                            "uid": "241296567515"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "nation",
+                            "propertyType": "String",
+                            "uid": "1330268082679"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "province",
+                            "propertyType": "String",
+                            "uid": "477471584755"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "city",
+                            "propertyType": "String",
+                            "uid": "79740849390"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "district",
+                            "propertyType": "String",
+                            "uid": "1039382224463"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "adcode",
+                            "propertyType": "Integer",
+                            "uid": "89618282872"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
         }
     ],
     "properties": {
@@ -183,9 +477,9 @@
         "plugins": [
             {
                 "actions": {
-                    "controllerActionCombinations": "UserManagement=>list,show,new,create,edit,update,delete,register,changepwd,retrievepwd,check,ajaxdata",
-                    "noncacheableActions": "UserManagement=>list,show,new,create,edit,update,delete,register,changepwd,retrievepwd,check,ajaxdata",
-                    "switchableActions": "\u7528\u6237\u7ba1\u7406\nUserManagement->list;UserManagement->show;UserManagement->new;UserManagement->create;UserManagement->edit;UserManagement->update;UserManagement->delete;UserManagement->check;UserManagement->ajaxdata;\n\u7528\u6237\u6ce8\u518c\nUserManagement->register;\n\u4fee\u6539\u5bc6\u7801\nUserManagement->changepwd;"
+                    "controllerActionCombinations": "UserManagement=>list, show, new, create, edit, update, delete, register, profile, oauth, saveoauth, changepwd, retrievepwd, check, oauthrequest, ajaxdata",
+                    "noncacheableActions": "UserManagement=>list, show, new, create, edit, update, delete, register, profile, oauth, saveoauth, changepwd, retrievepwd, check, oauthrequest, ajaxdata",
+                    "switchableActions": "\u7528\u6237\u6ce8\u518c\nErpUser->register\n\u4fee\u6539\u5bc6\u7801\nErpUser->changepwd\n\u7528\u6237\u4e2d\u5fc3\nErpUser->profile;ErpUser->ajaxdata;ErpUser->update;ErpUser->changepwd\n\u5546\u6237\u6388\u6743\nErpUser->oauth;ErpUser->saveoauth\n\u7528\u6237\u7ba1\u7406\nErpUser->list;ErpUser->show;ErpUser->new;ErpUser->create;ErpUser->edit;ErpUser->update;ErpUser->delete;ErpUser->check;ErpUser->oauthrequest;ErpUser->ajaxdata"
                 },
                 "description": "\u7528\u6237\u7ba1\u7406\u6a21\u5757",
                 "key": "pi1",
@@ -194,9 +488,34 @@
         ],
         "vendorName": "ERP"
     },
-    "wires": [],
+    "wires": [
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_2",
+                "uid": "863873001162"
+            },
+            "tgt": {
+                "moduleId": 2,
+                "terminal": "SOURCES",
+                "uid": "272371756010"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_3",
+                "uid": "569859509525"
+            },
+            "tgt": {
+                "moduleId": 3,
+                "terminal": "SOURCES",
+                "uid": "594059823677"
+            }
+        }
+    ],
     "log": {
-        "last_modified": "2020-05-15 03:56",
+        "last_modified": "2020-06-23 03:48",
         "extension_builder_version": "9.10.2",
         "be_user": "\u7ba1\u7406\u5458 (1)"
     }

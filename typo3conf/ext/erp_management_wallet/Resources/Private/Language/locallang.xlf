@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-26T12:30:25Z" product-name="erp_management_wallet">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-21T17:08:50Z" product-name="erp_management_wallet">
 		<header/>
 		<body>
 			<trans-unit id="tx_erpmanagementwallet_domain_model_record">
@@ -30,8 +30,8 @@
 			<trans-unit id="tx_erpmanagementwallet_domain_model_record.remark">
 				<source>Remark</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementwallet_domain_model_record.country">
-				<source>Country</source>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_record.walletid">
+				<source>Walletid</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementwallet_domain_model_record.erpuser">
 				<source>Erpuser</source>
@@ -47,6 +47,12 @@
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementwallet_domain_model_log.remark">
 				<source>Remark</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_log.walletid">
+				<source>Walletid</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementwallet_domain_model_log.erpuser">
+				<source>Erpuser</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet">
 				<source>Wallet</source>
@@ -68,12 +74,6 @@
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.wxpay">
 				<source>Wxpay</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.log">
-				<source>Log</source>
-			</trans-unit>
-			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.record">
-				<source>Record</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementwallet_domain_model_wallet.erpuser">
 				<source>Erpuser</source>

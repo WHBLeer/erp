@@ -123,7 +123,7 @@ class DictitemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
                     'code' => $item->getCode(),
                     'parent' => $item->getDicttype()->getUid()
                 );
-            }
+            } 
             JSON($datas);
         } 
         JSON(array('code'=>-1,'message'=>'没有请求的动作'));

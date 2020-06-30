@@ -19,6 +19,13 @@ class Log extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
+     * 操作人
+     * 
+     * @var \ERP\ErpManagementUser\Domain\Model\ErpUser
+     */
+    protected $erpuser = null;
+
+    /**
      * 动账后余额
      * 
      * @var float
@@ -38,6 +45,13 @@ class Log extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $remark = '';
+
+    /**
+     * 钱包id
+     * 
+     * @var int
+     */
+    protected $walletid = 0;
 
     /**
      * Returns the balance
@@ -100,5 +114,47 @@ class Log extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setRemark($remark)
     {
         $this->remark = $remark;
+    }
+
+    /**
+     * Returns the walletid
+     * 
+     * @return int $walletid
+     */
+    public function getWalletid()
+    {
+        return $this->walletid;
+    }
+
+    /**
+     * Sets the walletid
+     * 
+     * @param int $walletid
+     * @return void
+     */
+    public function setWalletid($walletid)
+    {
+        $this->walletid = $walletid;
+    }
+
+    /**
+     * Returns the erpuser
+     * 
+     * @return \ERP\ErpManagementUser\Domain\Model\ErpUser $erpuser
+     */
+    public function getErpuser()
+    {
+        return $this->erpuser;
+    }
+
+    /**
+     * Sets the erpuser
+     * 
+     * @param \ERP\ErpManagementUser\Domain\Model\ErpUser $erpuser
+     * @return void
+     */
+    public function setErpuser(\ERP\ErpManagementUser\Domain\Model\ErpUser $erpuser)
+    {
+        $this->erpuser = $erpuser;
     }
 }

@@ -1,0 +1,239 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    112,
+                    61
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": [
+                        "batch",
+                        "ajax",
+                        "pull"
+                    ]
+                },
+                "name": "Upload",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u4ea7\u54c1\u4e0a\u4f20",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "191394461021"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4e0a\u4f20\u7684\u5e97\u94fa",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "market",
+                            "propertyType": "String",
+                            "uid": "321719641255"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4e0a\u4f20\u8bed\u8a00",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "lang",
+                            "propertyType": "String",
+                            "uid": "1330297310801"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5206\u7c7b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "categoryText",
+                            "propertyType": "String",
+                            "uid": "338862609053"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5206\u7c7b\u8282\u70b9",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "categoryNode",
+                            "propertyType": "String",
+                            "uid": "680114671911"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5206\u7c7b\u6a21\u677f",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "template",
+                            "propertyType": "String",
+                            "uid": "644967836523"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4e0a\u4f20\u65f6\u95f4",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "uploadtime",
+                            "propertyType": "String",
+                            "uid": "1255133185589"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4e0a\u4f20\u72b6\u6001 0\u4e0a\u4f20\u4e2d 1\u4e0a\u4f20\u6210\u529f 2\u4e0a\u4f20\u5931\u8d25",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "cpStatus",
+                            "propertyType": "Integer",
+                            "uid": "1337187050593"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5173\u7cfb\u72b6\u6001 0\u4e0a\u4f20\u4e2d 1\u4e0a\u4f20\u6210\u529f 2\u4e0a\u4f20\u5931\u8d25",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "gxStatus",
+                            "propertyType": "String",
+                            "uid": "23997415112"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u56fe\u7247\u72b6\u6001 0\u4e0a\u4f20\u4e2d 1\u4e0a\u4f20\u6210\u529f 2\u4e0a\u4f20\u5931\u8d25",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "tpStatus",
+                            "propertyType": "String",
+                            "uid": "856754299489"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5e93\u5b58\u72b6\u6001 0\u4e0a\u4f20\u4e2d 1\u4e0a\u4f20\u6210\u529f 2\u4e0a\u4f20\u5931\u8d25",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "kcStatus",
+                            "propertyType": "String",
+                            "uid": "1210219568686"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4ef7\u683c\u72b6\u6001 0\u4e0a\u4f20\u4e2d 1\u4e0a\u4f20\u6210\u529f 2\u4e0a\u4f20\u5931\u8d25",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "jgStatus",
+                            "propertyType": "Integer",
+                            "uid": "883946479220"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementProduct\\Domain\\Model\\Product",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u4ea7\u54c1",
+                            "relationName": "product",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingle",
+                            "uid": "1393728727387"
+                        },
+                        {
+                            "foreignRelationClass": "\\ERP\\ErpManagementDict\\Domain\\Model\\Region",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u64cd\u4f5c\u4eba",
+                            "relationName": "user",
+                            "relationType": "zeroToOne",
+                            "relationWire": "",
+                            "renderType": "selectSingle",
+                            "uid": "196473110532"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "\u4ea7\u54c1\u4e0a\u4f20",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": true,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "erp_management_prupload",
+        "name": "\u4ea7\u54c1\u4e0a\u4f20",
+        "originalExtensionKey": "erp_management_prupload",
+        "originalVendorName": "ERP",
+        "persons": [
+            {
+                "company": "",
+                "email": "wanghongbin816@gmail.com",
+                "name": "\u738b\u5b8f\u5f6c",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Upload=>list,show,new,create,edit,update,delete,batch,ajax,pull",
+                    "noncacheableActions": "Upload=>list,show,new,create,edit,update,delete,batch,ajax,pull",
+                    "switchableActions": "\u4ea7\u54c1\u4e0a\u4f20\u7ba1\u7406\nUpload->list;Upload->show;Upload->new;Upload->create;Upload->edit;Upload->update;Upload->delete;Upload->batch;Upload->ajax;\n\u4e0a\u4f20\u72b6\u6001\u66f4\u65b0\nUpload->pull;"
+                },
+                "description": "",
+                "key": "pi1",
+                "name": "\u4ea7\u54c1\u4e0a\u4f20"
+            }
+        ],
+        "vendorName": "ERP"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2020-06-15 04:28",
+        "extension_builder_version": "9.10.2",
+        "be_user": "\u7ba1\u7406\u5458 (1)"
+    }
+}

@@ -66,11 +66,9 @@ page {
         }
     }
     meta {
-        
-        viewport = {$page.meta.viewport}
-        robots = {$page.meta.robots}
-        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
-        X-UA-Compatible = {$page.meta.compatible}
+        viewport = width=device-width,initial-scale=1.0
+        apple-mobile-web-app-capable =
+        X-UA-Compatible = IE=edge,chrome=1
         X-UA-Compatible {
             attribute = http-equiv
         }
@@ -125,11 +123,10 @@ page {
     }
 
     includeCSS {
-        css0 = {$page.includePath.main}index/layui/css/layui.css
-        css1 = {$page.includePath.main}index/css/main.css
-        css2 = 
-        css3 = 
-        css4 = 
+        css1 = {$page.includePath.main}index/css/bootstrap.css
+        css2 = {$page.includePath.main}index/css/bootsnav.css
+        css3 = {$page.includePath.main}index/css/font-awesome.css
+        css4 = {$page.includePath.main}index/css/style.css
         css5 = 
         css6 = 
         css7 = 
@@ -152,8 +149,9 @@ page {
     }
 
     includeJSFooterlibs {
-        js1 = {$page.includePath.main}index/layui/layui.all.js
-        js2 = {$page.includePath.main}index/js/common.js
+        js1 = https://cdn.bootcss.com/jquery/3.4.1/jquery.js
+        js2 = {$page.includePath.main}index/js/bootstrap.js
+        js3 = {$page.includePath.main}index/js/bootsnav.js
     }
 
     includeJSFooter {
@@ -176,31 +174,23 @@ page {
     jsFooterInline {
         10 = TEXT
         10.value (
-    layui.use(['form'], function () {
-        var $ = layui.jquery;
-        var form = layui.form;
+jQuery(document).ready(function($){
+	var offset = 300,
+		offset_opacity = 1200,
+		scroll_top_duration = 700,
+		$back_to_top = $('.cd-top');
 
-        // 留言反馈
-        form.on('submit(submitMessage)', function (data) {
-            var loadIndex = layer.msg('请求中...', { icon: 16, shade: 0.01, time: false });
-            $.post('leaveMessage/add', data.field, function (res) {
-                if (res.code == 200) {
-                    layer.msg(res.msg, { icon: 1 });
-                    $('[lay-filter="submitMessage"]').parents('form')[0].reset();
-                } else {
-                    layer.close(loadIndex);
-                    layer.msg(res.msg, { icon: 2 });
-                }
-            }, 'json');
-            return false;
-        });
+	$(window).scroll(function(){
+		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+		if( $(this).scrollTop() > offset_opacity ) { $back_to_top.addClass('cd-fade-out');}
+	});
 
-        //
-        $('.tip-no-demo').click(function () {
-            layui.layer.msg('暂无演示地址', { icon: 5 });
-        });
+	$back_to_top.on('click', function(event){
+		event.preventDefault();
+		$('body,html').animate({scrollTop: 0}, scroll_top_duration);
+	});
 
-    });
+});
         )
     }
 

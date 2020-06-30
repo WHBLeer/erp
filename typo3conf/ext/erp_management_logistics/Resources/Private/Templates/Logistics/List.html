@@ -27,7 +27,7 @@ data-namespace-typo3-fluid="true">
 		<div class="dataTables_wrapper dt-bootstrap4">
             <div class="row mb-10">
                 <div class="col-sm-12 col-md-9">
-					<f:link.action action="new" class="btn btn-info">New Logistics</f:link.action>
+					<!-- <f:link.action action="new" class="btn btn-info">New Logistics</f:link.action> -->
                 </div>
                 <div class="col-sm-12 col-md-3">
                     <f:form action="list" name="search" object="{search}">
@@ -49,17 +49,15 @@ data-namespace-typo3-fluid="true">
 									<tr>
 										<th></th>
                                         <th>#</th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.domestic_waybill" /></th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.international_waybill" /></th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.estimate_freight" /></th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.actual_freight" /></th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.aging" /></th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.weight" /></th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.length" /></th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.width" /></th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.height" /></th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.quantity" /></th>
-										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.goodstype" /></th>
+										<th>国际运单号</th>
+										<th>预计运费</th>
+										<th>实际运费</th>
+										<th>重量(kg)</th>
+										<th>体积<small>(长x宽x高)</small></th>
+										<th>商品数量</th>
+										<th>货物类型</th>
+										<th>目的地国家</th>
+										<th>操作人</th>
 										<th>操作</th>
 									</tr>
 								</thead>
@@ -69,13 +67,21 @@ data-namespace-typo3-fluid="true">
                                         <td>
 											<input type="checkbox" name="test" class="custom-checkbox-input" id="chk-{logistics.uid}" value="{logistics.uid}">
 										</td>
-										<td>lib.calc</td>
-										<td>{logistics.domesticWaybill}</td><td>{logistics.internationalWaybill}</td><td>{logistics.estimateFreight}</td><td>{logistics.actualFreight}</td><td>{logistics.aging}</td><td>{logistics.weight}</td><td>{logistics.length}</td><td>{logistics.width}</td><td>{logistics.height}</td><td>{logistics.quantity}</td><td>{logistics.goodstype}</td>
+										<td>{order.uid}</td>
+										<td>{logistics.internationalWaybill}</td>
+										<td>{logistics.estimateFreight}</td>
+										<td>{logistics.actualFreight}</td>
+										<td>{logistics.weight}</td>
+										<td>{logistics.length}x{logistics.width}x{logistics.height}</td>
+										<td>{logistics.quantity}</td>
+										<td>{logistics.goodstype}</td>
+										<td>{logistics.country.name}</td>
+										<td>{logistics.erpuser.name}</td>
 										<td>
-											<f:link.action action="list" class="btn btn-sm btn-info" arguments="{logistics : logistics}"><i class="ti-reload"></i></f:link.action>
-											<f:link.action action="show" class="btn btn-sm btn-default" arguments="{logistics : logistics}"><i class="ti-eye"></i></f:link.action>
-											<f:link.action action="edit" class="btn btn-sm btn-info" arguments="{logistics : logistics}"><i class="ti-pencil-alt"></i></f:link.action>
-											<f:link.action action="delete" class="btn btn-sm btn-danger" arguments="{logistics : logistics}"><i class="ti-close"></i></f:link.action>
+											<f:link.action action="show" class="btn btn-sm btn-success" arguments="{logistics : logistics}" title="轨迹"><i class="ti-eye"></i></f:link.action>
+											<f:link.action action="update" class="btn btn-sm btn-default" arguments="{logistics : logistics,intercept:1}" title="拦截"><i class="ion ion-md-close-circle-outline"></i></f:link.action>
+											<f:link.action action="edit" class="btn btn-sm btn-info" arguments="{logistics : logistics,updateweight:1}" title="修改预报重量"><i class="ti-pencil-alt"></i></f:link.action>
+											<f:link.action action="delete" class="btn btn-sm btn-danger" arguments="{logistics : logistics}" title="删除"><i class="ti-close"></i></f:link.action>
 										</td>
 									</tr>
 									</f:for>

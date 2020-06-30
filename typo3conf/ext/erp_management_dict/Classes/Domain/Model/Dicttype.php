@@ -33,6 +33,13 @@ class Dicttype extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $code = '';
 
     /**
+     * 开发者
+     * 
+     * @var string
+     */
+    protected $devid = '';
+
+    /**
      * Returns the name
      * 
      * @return string name
@@ -72,5 +79,26 @@ class Dicttype extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setCode($code)
     {
         $this->code = $code;
+    }
+    
+    /**
+     * Returns the devid
+     * 
+     * @return string devid
+     */
+    public function getDevid()
+    {
+        return $this->devid;
+    }
+
+    /**
+     * Sets the devid
+     * 
+     * @param string $devid
+     * @return void
+     */
+    public function setDevid($devid)
+    {
+        $this->devid = $devid;
     }
 }

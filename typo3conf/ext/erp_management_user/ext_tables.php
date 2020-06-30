@@ -17,5 +17,8 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('erp_management_user', 'Configuration/TypoScript', '用户管理');
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_erpmanagementuser_domain_model_erpuserauth', 'EXT:erp_management_user/Resources/Private/Language/locallang_csh_tx_erpmanagementuser_domain_model_erpuserauth.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_erpmanagementuser_domain_model_erpuserauth');
+
     }
 );

@@ -19,11 +19,11 @@ class ErpUser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
 {
 
     /**
-     * 授权码
+     * 用户唯一编码
      * 
      * @var string
      */
-    protected $authcode = '';
+    protected $accountId = '';
 
     /**
      * 微信openid
@@ -51,7 +51,7 @@ class ErpUser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
      * 
      * @var \ERP\ErpManagementDict\Domain\Model\Region
      */
-    protected $city = null;
+    protected $citys = null;
 
     /**
      * 所在省份
@@ -61,40 +61,62 @@ class ErpUser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
     protected $province = null;
 
     /**
-     * crdate
-     * 创建时间
-     *
-     * @var \DateTime
-     */
-    protected $crdate = null;
-
-    /**
-     * tstamp
-     * 修改时间
-     *
-     * @var \DateTime
-     */
-    protected $tstamp = null;
-
-    /**
-     * Returns the authcode
+     * 授权
      * 
-     * @return string $authcode
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ERP\ErpManagementUser\Domain\Model\ErpUserAuth>
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
-    public function getAuthcode()
+    protected $auth = null;
+
+    /**
+     * 位置信息
+     * 
+     * @var \ERP\ErpManagementUser\Domain\Model\Position
+     */
+    protected $position = null;
+
+    /**
+     * __construct
+     */
+    public function __construct()
     {
-        return $this->authcode;
+
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
     }
 
     /**
-     * Sets the authcode
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
      * 
-     * @param string $authcode
      * @return void
      */
-    public function setAuthcode($authcode)
+    protected function initStorageObjects()
     {
-        $this->authcode = $authcode;
+        $this->auth = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
+
+    /**
+     * Returns the accountId
+     * 
+     * @return string $accountId
+     */
+    public function getAccountId()
+    {
+        return $this->accountId;
+    }
+
+    /**
+     * Sets the accountId
+     * 
+     * @param string $accountId
+     * @return void
+     */
+    public function setAccountId($accountId)
+    {
+        $this->accountId = $accountId;
     }
 
     /**
@@ -161,24 +183,24 @@ class ErpUser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
     }
 
     /**
-     * Returns the city
+     * Returns the citys
      * 
-     * @return \ERP\ErpManagementDict\Domain\Model\Region $city
+     * @return \ERP\ErpManagementDict\Domain\Model\Region $citys
      */
-    public function getCity()
+    public function getCitys()
     {
-        return $this->city;
+        return $this->citys;
     }
 
     /**
-     * Sets the city
+     * Sets the citys
      * 
-     * @param \ERP\ErpManagementDict\Domain\Model\Region $city
+     * @param \ERP\ErpManagementDict\Domain\Model\Region $citys
      * @return void
      */
-    public function setCity(\ERP\ErpManagementDict\Domain\Model\Region $city)
+    public function setCitys(\ERP\ErpManagementDict\Domain\Model\Region $citys)
     {
-        $this->city = $city;
+        $this->citys = $citys;
     }
 
     /**
@@ -203,22 +225,66 @@ class ErpUser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
     }
 
     /**
-     * Returns the crdate
-     *
-     * @return \DateTime $crdate
+     * Adds a ErpUserAuth
+     * 
+     * @param \ERP\ErpManagementUser\Domain\Model\ErpUserAuth $auth
+     * @return void
      */
-    public function getCrdate()
+    public function addAuth(\ERP\ErpManagementUser\Domain\Model\ErpUserAuth $auth)
     {
-        return $this->crdate;
+        $this->auth->attach($auth);
     }
 
     /**
-     * Returns the tstamp
-     *
-     * @return \DateTime $tstamp
+     * Removes a ErpUserAuth
+     * 
+     * @param \ERP\ErpManagementUser\Domain\Model\ErpUserAuth $authToRemove The ErpUserAuth to be removed
+     * @return void
      */
-    public function getTstamp()
+    public function removeAuth(\ERP\ErpManagementUser\Domain\Model\ErpUserAuth $authToRemove)
     {
-        return $this->tstamp;
+        $this->auth->detach($authToRemove);
+    }
+
+    /**
+     * Returns the auth
+     * 
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ERP\ErpManagementUser\Domain\Model\ErpUserAuth> $auth
+     */
+    public function getAuth()
+    {
+        return $this->auth;
+    }
+
+    /**
+     * Sets the auth
+     * 
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ERP\ErpManagementUser\Domain\Model\ErpUserAuth> $auth
+     * @return void
+     */
+    public function setAuth(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $auth)
+    {
+        $this->auth = $auth;
+    }
+
+    /**
+     * Returns the position
+     * 
+     * @return \ERP\ErpManagementUser\Domain\Model\Position $position
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * Sets the position
+     * 
+     * @param \ERP\ErpManagementUser\Domain\Model\Position $position
+     * @return void
+     */
+    public function setPosition(\ERP\ErpManagementUser\Domain\Model\Position $position)
+    {
+        $this->position = $position;
     }
 }

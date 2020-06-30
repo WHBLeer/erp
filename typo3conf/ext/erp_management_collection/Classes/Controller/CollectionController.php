@@ -132,8 +132,7 @@ class CollectionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
      */
     public function apiAction()
     {
-        file_put_contents('/var/www/html/erp.whongbin.com/logs/get.log', date('Y-m-d H:i:s') .'===='. json_encode( $_GET ). chr(10) . chr(10), FILE_APPEND | LOCK_EX);
-        file_put_contents('/var/www/html/erp.whongbin.com/logs/post.log', date('Y-m-d H:i:s') .'===='. json_encode( $_POST ) . chr(10) . chr(10), FILE_APPEND | LOCK_EX);
+        
         $cmd = GeneralUtility::_GP('cmd');
 
         // 检查用户登录

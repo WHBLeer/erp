@@ -1,0 +1,282 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    53,
+                    46
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": [
+                        "ajax"
+                    ]
+                },
+                "name": "Message",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u516c\u544a,\u63d0\u9192,\u7ad9\u5185\u4fe1",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "191394461021"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u901a\u77e5\u7c7b\u578b\n0:\u672a\u6307\u5b9a\n1:\u516c\u544a\n2:\u63d0\u9192\n3:\u7ad9\u5185\u4fe1",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "msgType",
+                            "propertyType": "Integer",
+                            "uid": "1494966746486"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u63a5\u6536\u7c7b\u578b\n0:\u6240\u6709\u7cfb\u7edf\u7528\u6237\u63a5\u6536\n1:\u6307\u5b9a\u7528\u6237\u7ec4\u63a5\u6536\n2:\u9009\u4e2d\u90e8\u5206\u7528\u6237\u63a5\u6536\n3:\u6307\u5b9a\u7528\u6237\u63a5\u6536",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "reType",
+                            "propertyType": "Integer",
+                            "uid": "1242782503311"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u901a\u77e5\u540d\u79f0",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "title",
+                            "propertyType": "String",
+                            "uid": "876409375789"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u901a\u77e5\u5185\u5bb9",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "bodytext",
+                            "propertyType": "Text",
+                            "uid": "603604699200"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u53d1\u9001\u65f6\u95f4",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "sendtime",
+                            "propertyType": "Integer",
+                            "uid": "155150523658"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u53d1\u9001\u8005",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "sender",
+                            "propertyType": "Integer",
+                            "uid": "1569810648544"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u63a5\u6536\u8005,\u6309\u7167\u7c7b\u578b\u8fdb\u884c\u5b58\u50a8,\u5b58\u50a8\u9009\u4e2d\u7528\u6237\u65f6\u7528\u6237\u4ee5','\u5206\u9694",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "receiver",
+                            "propertyType": "String",
+                            "uid": "986309415632"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    319,
+                    53
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": [
+                        "index",
+                        "ajax"
+                    ]
+                },
+                "name": "Receive",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u63a5\u6536\u4eba",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "792290570976"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u63a5\u6536\u4eba",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "user",
+                            "propertyType": "Integer",
+                            "uid": "741369149556"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u63a5\u6536\u65f6\u95f4\u6233",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "gettime",
+                            "propertyType": "Integer",
+                            "uid": "488219352245"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5df2\u8bfb\u65f6\u95f4\u6233",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "readtime",
+                            "propertyType": "Integer",
+                            "uid": "1177002234374"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5df2\u8bfb\u72b6\u6001",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "status",
+                            "propertyType": "Integer",
+                            "uid": "762493598289"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u901a\u77e5\u5185\u5bb9",
+                            "relationName": "message",
+                            "relationType": "zeroToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingleBox",
+                            "uid": "663462965072"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "\u901a\u77e5,\u5305\u62ec\u4fe1\u606f\u516c\u544a,\u7528\u6237\u63d0\u9192,\u7ad9\u5185\u4fe1",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": true,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "erp_management_notify",
+        "name": "\u6d88\u606f\u901a\u77e5\u7cfb\u7edf",
+        "originalExtensionKey": "erp_management_dashboard",
+        "originalVendorName": "ERP",
+        "persons": [
+            {
+                "company": "",
+                "email": "wanghongbin816@gmail.com",
+                "name": "\u738b\u5b8f\u5f6c",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Message=>list,show,new,create,edit,update,delete,ajax\nReceive=>index,ajax",
+                    "noncacheableActions": "Message=>list,show,new,create,edit,update,delete,ajax\nReceive=>index,ajax",
+                    "switchableActions": "\u901a\u77e5\u7ba1\u7406(add)\nMessage->list;Message->show;Message->new;Message->create;Message->edit;Message->update;Message->delete;Message->ajax;\n\u901a\u77e5\u7ba1\u7406(show)\nReceive->index;Receive->ajax;"
+                },
+                "description": "\u4fe1\u606f\u516c\u544a",
+                "key": "pi1",
+                "name": "\u6d88\u606f\u901a\u77e5\u7cfb\u7edf"
+            }
+        ],
+        "vendorName": "ERP"
+    },
+    "wires": [
+        {
+            "src": {
+                "moduleId": 1,
+                "terminal": "relationWire_0",
+                "uid": "663462965072"
+            },
+            "tgt": {
+                "moduleId": 0,
+                "terminal": "SOURCES",
+                "uid": "191394461021"
+            }
+        }
+    ],
+    "log": {
+        "last_modified": "2020-06-08 09:41",
+        "extension_builder_version": "9.10.2",
+        "be_user": "\u7ba1\u7406\u5458 (1)"
+    }
+}

@@ -20,5 +20,14 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_erpmanagementorder_domain_model_order', 'EXT:erp_management_order/Resources/Private/Language/locallang_csh_tx_erpmanagementorder_domain_model_order.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_erpmanagementorder_domain_model_order');
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_erpmanagementorder_domain_model_address', 'EXT:erp_management_order/Resources/Private/Language/locallang_csh_tx_erpmanagementorder_domain_model_address.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_erpmanagementorder_domain_model_address');
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_erpmanagementorder_domain_model_revenue', 'EXT:erp_management_order/Resources/Private/Language/locallang_csh_tx_erpmanagementorder_domain_model_revenue.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_erpmanagementorder_domain_model_revenue');
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_erpmanagementorder_domain_model_shipper', 'EXT:erp_management_order/Resources/Private/Language/locallang_csh_tx_erpmanagementorder_domain_model_shipper.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_erpmanagementorder_domain_model_shipper');
+
     }
 );

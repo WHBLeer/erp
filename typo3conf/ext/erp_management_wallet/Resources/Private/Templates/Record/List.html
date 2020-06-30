@@ -57,6 +57,7 @@ data-namespace-typo3-fluid="true">
 										<th><f:translate key="tx_erpmanagementwallet_domain_model_record.status" /></th>
 										<th><f:translate key="tx_erpmanagementwallet_domain_model_record.billtype" /></th>
 										<th><f:translate key="tx_erpmanagementwallet_domain_model_record.remark" /></th>
+										<th><f:translate key="tx_erpmanagementwallet_domain_model_record.walletid" /></th>
 										<th>操作</th>
 									</tr>
 								</thead>
@@ -67,7 +68,7 @@ data-namespace-typo3-fluid="true">
 											<input type="checkbox" name="test" class="custom-checkbox-input" id="chk-{record.uid}" value="{record.uid}">
 										</td>
 										<td>lib.calc</td>
-										<td>{record.successTime}</td><td>{record.amount}</td><td>{record.serialNumber}</td><td>{record.orderNumber}</td><td>{record.payment}</td><td>{record.status}</td><td>{record.billtype}</td><td>{record.remark}</td>
+										<td>{record.successTime}</td><td>{record.amount}</td><td>{record.serialNumber}</td><td>{record.orderNumber}</td><td>{record.payment}</td><td>{record.status}</td><td>{record.billtype}</td><td>{record.remark}</td><td>{record.walletid}</td>
 										<td>
 											<f:link.action action="list" class="btn btn-sm btn-info" arguments="{record : record}"><i class="ti-reload"></i></f:link.action>
 											<f:link.action action="show" class="btn btn-sm btn-default" arguments="{record : record}"><i class="ti-eye"></i></f:link.action>

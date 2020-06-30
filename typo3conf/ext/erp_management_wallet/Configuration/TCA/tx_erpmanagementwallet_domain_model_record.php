@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:erp_management_wallet/Resources/Public/Icons/tx_erpmanagementwallet_domain_model_record.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, success_time, amount, serial_number, order_number, payment, status, billtype, remark, country, erpuser',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, success_time, amount, serial_number, order_number, payment, status, billtype, remark, walletid, erpuser',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, success_time, amount, serial_number, order_number, payment, status, billtype, remark, country, erpuser, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, success_time, amount, serial_number, order_number, payment, status, billtype, remark, walletid, erpuser, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -189,22 +189,14 @@ return [
                 'eval' => 'trim'
             ]
         ],
-        'country' => [
+        'walletid' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_wallet/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementwallet_domain_model_record.country',
+            'label' => 'LLL:EXT:erp_management_wallet/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementwallet_domain_model_record.walletid',
             'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_erpmanagementdict_domain_model_region',
-                'minitems' => 0,
-                'maxitems' => 1,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
-            ],
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int'
+            ]
         ],
         'erpuser' => [
             'exclude' => true,

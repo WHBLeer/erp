@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-08T09:41:15Z" product-name="erp_management_notify">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_message">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_message.msg_type">
+				<source>Msg Type</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_message.re_type">
+				<source>Re Type</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_message.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_message.bodytext">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_message.sendtime">
+				<source>Sendtime</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_message.sender">
+				<source>Sender</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_message.receiver">
+				<source>Receiver</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_receive">
+				<source>Receive</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_receive.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_receive.gettime">
+				<source>Gettime</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_receive.readtime">
+				<source>Readtime</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_receive.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementnotify_domain_model_receive.message">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_notify_pi1.name">
+				<source>消息通知系统</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_notify_pi1.description">
+				<source>信息公告</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

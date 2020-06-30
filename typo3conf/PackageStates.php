@@ -44,9 +44,6 @@ return [
         'backend' => [
             'packagePath' => 'typo3/sysext/backend/',
         ],
-        'reports' => [
-            'packagePath' => 'typo3/sysext/reports/',
-        ],
         'setup' => [
             'packagePath' => 'typo3/sysext/setup/',
         ],
@@ -98,9 +95,6 @@ return [
         'common' => [
             'packagePath' => 'typo3conf/ext/common/',
         ],
-        'erp_manage_product_template' => [
-            'packagePath' => 'typo3conf/ext/erp_manage_product_template/',
-        ],
         'erp_management_collection' => [
             'packagePath' => 'typo3conf/ext/erp_management_collection/',
         ],
@@ -113,14 +107,23 @@ return [
         'erp_management_images' => [
             'packagePath' => 'typo3conf/ext/erp_management_images/',
         ],
+        'erp_management_interaction' => [
+            'packagePath' => 'typo3conf/ext/erp_management_interaction/',
+        ],
         'erp_management_logistics' => [
             'packagePath' => 'typo3conf/ext/erp_management_logistics/',
+        ],
+        'erp_management_notify' => [
+            'packagePath' => 'typo3conf/ext/erp_management_notify/',
         ],
         'erp_management_order' => [
             'packagePath' => 'typo3conf/ext/erp_management_order/',
         ],
         'erp_management_product' => [
             'packagePath' => 'typo3conf/ext/erp_management_product/',
+        ],
+        'erp_management_prupload' => [
+            'packagePath' => 'typo3conf/ext/erp_management_prupload/',
         ],
         'erp_management_system_extension' => [
             'packagePath' => 'typo3conf/ext/erp_management_system_extension/',

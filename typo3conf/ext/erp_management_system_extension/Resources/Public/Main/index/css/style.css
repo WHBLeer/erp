@@ -1,0 +1,209 @@
+body,html{height:100%; font-family:"微软雅黑";}
+body{ background:#fff}
+* {  margin: 0;  padding: 0;}
+ a{ -webkit-transition: all 1s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;}
+   a:hover{ text-decoration:none}
+   ul,li{ list-style:none}
+.header{ height:100px; background:#fff; position:fixed; top:0;width:100%; left:0; z-index:99999999999; border-bottom:1px #eee solid;}
+.banner{margin-top:100px; width:100%; position:relative}
+.banner .item{ height:500px;}
+.carousel-control{ width:60px; height:60px; text-align:center; line-height:54px; font-size:40px; border-radius:100px; background:rgba(0,0,0,.1); top:45%; box-shadow:none; opacity:1; font-weight:normal;}
+.carousel-control.left{ left:20px; background-image:none;}
+.carousel-control.right{ right:20px; background-image:none;}
+nav.navbar.bootsnav ul.nav > li > a.regist{ color:#27af7a; background:url(../img/zhuce.png) no-repeat left center; text-indent:5px;}
+nav.navbar.bootsnav ul.nav > li > a.regist:hover{ font-weight:bold; text-decoration:underline}
+.item-text{ position:absolute; width:60%; left:20%; top:30%; color:#fff;}
+.item-text h3{ font-size:42px; letter-spacing:6px; padding:10px 0;}
+.item-text p{ margin:5px 0; font-size:14px; font-weight:lighter; letter-spacing:4px;}
+.item-text a{ border:1px #fff solid; color:#fff; display:block; width:160px; height:40px; text-align:center; line-height:40px; clear:both; margin-top:20px;}
+.item-text a:hover{ background:#fff; color:#2269f5;}
+.navbar-collapse{ position:absolute; top:0; width:100%;}
+.logo{ width:369px; float:left; height:73px; margin-top:15px; }
+.logo img{ width:369px; display:block; height:73px;}
+.navbar-nav{ text-align:right; float:none}
+.nav > li{ display:inline-block; margin-top:20px;}
+.navbar-nav > li{ float:none}
+.title{ text-align:center; border-bottom:1px #eee solid; padding:20px 0; position:relative}
+.title h3{ font-size:24px; letter-spacing:4px;}
+.title p{ font-size:14px; font-weight:lighter; color:#666; letter-spacing:2px;}
+.title i{ width:100px; height:3px; background:#2269f5; position:relative; display:block; margin:0 auto; bottom:-22px;}
+.solution{ padding:20px 0 40px 0}
+.solution .s-list{position:relative; margin-top:20px; border-radius:10px; overflow:hidden}
+.solution .container{ margin-top:20px;}
+.s-list .s-img{ width:100%;}
+.s-list img{ display:block; width:100%; transition: all 0.6s;  }
+.s-text{ position:absolute; left:0; top:0;width:100%; height:100%; background:rgba(0,0,0,.6); color:#fff; text-align:center;}
+.s-text b{ width:60px; height:60px; display:block; margin:20px auto 0 auto;}
+.s-text h4{ font-size:16px; font-weight:bold; padding-top:10px;}
+.s-text p{ width:80%; margin:0 auto; opacity:.9}
+.s-list:hover .s-text{ background:rgba(34,105,245,.8); cursor:pointer}
+.s-list:hover .s-list img{ transform: scale(1.2); }
+.more{ clear:both; text-align:center; padding-top:60px;}
+.more a{ padding:15px 45px; background:#fff; border:2px #2269f5 solid; border-radius:100px; color:#2269f5;}
+.more a:hover{ background:#2269f5; color:#fff}
+.advantage{ background:#f5f5f5; padding:30px 0 50px 0; margin-top:30px; clear:both}
+.a-top{ position:relative; height:200px;}
+.a-line{ width:100%; height:1px; background:#eee; position:absolute; top:100px;}
+.a-list{ position:absolute;}
+.a-list span{ width:60px; height:20px; background:#2269f5; color:#fff; display:block; border-radius:4px; text-align:center}
+.a-list p{ color:#333; padding-top:15px;}
+.a-1{ left:0; top:45px;}
+.a-2{ left:30%; top:90px;}
+.a-3{ left:50%;top:45px;}
+.a-4{ left:75%;top:90px;}
+.a-bot{ clear:both; padding-top:30px}
+.b-list{ float:left;}
+.b-text{ width:150px; height:160px; background:#aaa; border-radius:10px; margin:0 8px; position:relative}
+.b-text i{ width:80px; height:80px; background:#f5f5f5; border-radius:100px; border:2px #fff solid; left:35px; top:-30px; display:block; text-align:center; position:absolute; line-height:80px;  font-weight:bold; font-style:normal; font-size:24px; color:#fff;}
+.b-text p{ padding-top:80px; color:#fff; font-weight:bold; width:80%; text-align:center; margin:0 auto;}
+.pricing{ padding:20px 0 40px 0}
+.map{padding-bottom:30px;}
+.b-1 .b-text{ background:#2269f5}
+.b-1 .b-text i{color:#2269f5}
+.b-2 .b-text{ background:#6c22f5}
+.b-2 .b-text i{color:#6c22f5}
+.b-3 .b-text{ background:#07a4bb}
+.b-3 .b-text i{color:#07a4bb}
+.b-4 .b-text{ background:#cd9818}
+.b-4 .b-text i{color:#cd9818}
+.b-5 .b-text{ background:#15bc67}
+.b-5 .b-text i{color:#15bc67}
+.b-6 .b-text{ background:#cd1da6}
+.b-6 .b-text i{color:#cd1da6}
+.b-7 .b-text{ background:#1cb2a9}
+.b-7 .b-text i{color:#1cb2a9}
+.about{ background:url(../img/about-bg.jpg) no-repeat center; width:100%;height:600px; color:#fff}
+.about h3{ padding-top:100px; font-size:54px; letter-spacing:2px;}
+.about h4{ font-size:24px; letter-spacing:4px; padding:15px 0}
+.about p{ width:80%; opacity:.6; line-height:26px;}
+.about a{ border:1px #fff solid; border-radius:100px; color:#fff;  opacity:.6; margin-top:25px; display:block; text-align:center; line-height:40px; width:160px;}
+.about a:hover{ opacity:1; background:#fff; color:#2269f5}
+.p-list{ background:#fff; border-radius:10px; box-shadow:2px 10px 20px #eee; height:500px; margin-top:50px; padding-top:30px;}
+.p-list h5{ font-size:24px; padding:20px 0; text-align:center}
+.p-list em{ width:40px; height:3px; background:#aaa; margin:0 auto; display:block}
+.p-list .p-text{ width:80%; height:220px; border:1px #eee dotted; border-radius:10px; margin:0 auto; padding:20px 15px; margin-top:20px; color:#666}
+.p-list a{ background:#aaa; width:200px; height:50px; display:block; border-radius:100px; text-align:center; line-height:50px; display:block;margin:0 auto; margin-top:40px; color:#fff; font-size:16px;}
+.p-1 h5{ color:#ff3c5c}
+.p-1 em{ background:#ff3c5c}
+.p-1 a{ background:#ff3c5c}
+.p-2 h5{ color:#2269f5}
+.p-2 em{ background:#2269f5}
+.p-2 a{ background:#2269f5}
+.p-3 h5{ color:#20ac74}
+.p-3 em{ background:#20ac74}
+.p-3 a{ background:#20ac74}
+.p-list a:hover{ width:240px; font-weight:bold}
+.map-box{ background:url(../img/map.jpg) no-repeat center; height:540px; border-radius:10px; margin-top:50px; position:relative}
+.gps{ position:absolute; left:20%; top:20%; background:rgba(72,255,0,.1); width:50px; height:50px; border-radius:100px;}
+.gps-1{background:rgba(72,255,0,.3);width:34px; height:34px; border-radius:100px; margin:8px; padding:10px;}
+.gps-2{background:rgba(72,255,0,1);width:14px; height:14px; border-radius:100px;}
+.map-bot{ clear:both}
+.map-bot h5{ text-align:center; font-size:24px; padding:35px 0 15px 0}
+.map-bot h4{ text-align:center}
+.map-bot p{ text-align:center; color:#999}
+.cooperation{ background:url(../img/dl-bg.jpg) no-repeat center; width:100%; height:480px; text-align:center}
+.cooperation h3{ font-size:28px; padding-top:80px; border-bottom:1px rgba(255,255,255,.6) solid; paddding-bottom:40px; height:150px;}
+.cooperation em{width:100px; height:3px; background:#2269f5; position:relative; display:block; margin:0 auto; bottom:-38px;}
+.cooperation p{ font-size:24px;   font-weight:lighter; padding:20px 0}
+.cooperation span{ display:block; line-height:28px; color:#666}
+.cooperation a{ width:160px; height:40px; display:block; text-align:center; line-height:40px; background:#2269f5; color:#fff; border-radius:100px; margin:20px auto}
+.cooperation a:hover{ width:200px;}
+.foot{ background:#333; clear:both; padding-top:50px;}
+.f-input{ width:100%; height:50px; border:none; background:#434343; outline:none; text-indent:20px; color:#fff; font-weight:normal}
+label{ margin-top:10px;}
+.foot button{width:160px; height:40px; display:block; text-align:center; line-height:40px; background:#2269f5; color:#fff; border-radius:100px; border:none; margin-top:20px;margin-bottom:30px;}
+.foot button:hover{ cursor:pointer; background:#1d60e3}
+.copyright{ border-top:1px #3d3d3d solid; margin-top:40px; padding:20px 0; clear:both;color:#666; text-align:center}
+.foot textarea{ height:200px; padding-top:20px;}
+.foot p{ color:#eee; margin-top:5px;}
+@media (max-width: 767px) {
+	.header{ height:80px; position:absolute; top:0px;}
+	.logo{ width:100%; position:absolute; left:0; top:25px; margin:0}
+	.logo img{ width:200px; height:40px;margin-left:15px;}
+	nav.navbar.bootsnav .navbar-toggle{ float:right; margin-right:0; margin-top:30px;}
+	.attr-nav{top:-55px; left:10px; position:absolute; z-index:9}
+	.attr-nav i{color:#333}
+	.navbar-header i{ font-size:24px;}
+	.navbar-toggle{ top:10px; z-index:99999; margin-left:20px;}
+	.carousel-control{ display:none}
+	.banner{margin-top:80px;}
+	.banner .item{ height:300px;}
+	.item-text{ left:5%; top:10%; text-align:center; width:90%;}
+	.item-text h3{ font-size:20px;}
+	.item-text p{font-size:12px;}
+	.item-text a{ margin:0 auto}
+	.title{ width:90%; margin:0 auto}
+	.a-line{ display:none}
+	.a-top{ height:auto}
+	.a-list{ width:100%; position:static;border-bottom:1px #eee solid; padding:20px 0}
+	.a-list span{display:none}
+	.b-list{ width:100%; margin:10px 0}
+	.b-text{ width:100%; float:inherit}
+	.b-text i{ left:20px; top:40px;}
+	.b-text p{ width:auto; padding-left:120px; text-align:left; padding-right:20px; padding-top:60px;}
+	.about h3{ text-align:center; font-size:32px; padding:0}
+	.about h4{ text-align:center; font-size:18px;}
+	.about p{ width:90%; margin:0 auto; height:120px; overflow:hidden; line-height:30px;}
+	.about a{ margin:20px auto}
+	.about{ height:auto; padding:50px 0}
+	.map-bot div{ border-bottom:1px #f5f5f5 solid; padding:20px 0;}
+	.cooperation{  height:auto; padding-bottom:30px;}
+	.cooperation h3{ padding-top:40px; font-size:24px; border-bottom:none; height:100px}
+	.cooperation p{ font-size:14px; width:90%; margin:0 auto}
+	.cooperation span{ font-size:12px; width:90%; margin:5px auto}
+	.foot button{ margin:20px auto}
+	.foot p{ text-align:center; color:#aaa}
+	.foot b img{ width:120px; height:120px; display:block; margin:15px auto;}
+	
+nav.navbar.bootsnav ul.nav > li > a.regist{ color:#27af7a; background:url(../img/zhuce.png) no-repeat 15px center; text-indent:20px;}
+
+.navbar-nav{ text-align:left; float:none}
+.nav > li{ display:block;}
+		}
+	
+	
+.cd-top {
+  display: inline-block;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden; 
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.cd-top a{ width:60px; height:60px; display:block; background:#2269f5; text-align:center; line-height:50px; color:#fff; font-size:32px; color:#fff; border-radius:10px;}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* 如果用户继续向下滚动,这个按钮的透明度会变得更低 */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}

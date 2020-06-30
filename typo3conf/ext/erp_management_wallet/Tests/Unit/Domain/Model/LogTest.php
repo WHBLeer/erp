@@ -102,4 +102,43 @@ class LogTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
             $this->subject
         );
     }
+
+    /**
+     * @test
+     */
+    public function getWalletidReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
+            $this->subject->getWalletid()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setWalletidForIntSetsWalletid()
+    {
+        $this->subject->setWalletid(12);
+
+        self::assertAttributeEquals(
+            12,
+            'walletid',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getErpuserReturnsInitialValueForErpUser()
+    {
+    }
+
+    /**
+     * @test
+     */
+    public function setErpuserForErpUserSetsErpuser()
+    {
+    }
 }

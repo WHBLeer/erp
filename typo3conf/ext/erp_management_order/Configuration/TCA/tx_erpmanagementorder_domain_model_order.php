@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'amazon_order_id,sales_channel,shipper_name,shipper_address_line1,shipper_city,shipper_state_or_region,shipper_country_code,shipper_phone,shipper_address_type,currency_code,amount,payment_method,payment_method_details,marketplace_id,buyer_email,buyer_name,shipment_service_level_category,order_type',
+        'searchFields' => 'amazon_order_id,goods_title,goods_image,asin_num,seller_sku,sales_link,sales_channel,currency_code,amount,payment_method,payment_method_details,marketplace_id,shipment_service_level_category,order_type',
         'iconfile' => 'EXT:erp_management_order/Resources/Public/Icons/tx_erpmanagementorder_domain_model_order.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, amazon_order_id, purchase_date, last_update_date, order_status, fulfillment_channel, ship_service_level, sales_channel, shipper_name, shipper_address_line1, shipper_address_line2, shipper_address_line3, shipper_city, shipper_state_or_region, shipper_country_code, shipper_phone, shipper_address_type, shipper_is_address_sharing_confidential, currency_code, amount, number_of_items_shipped, number_of_items_unshipped, payment_method, payment_method_details, marketplace_id, buyer_email, buyer_name, shipment_service_level_category, shipped_by_amazon_t_f_m, order_type, earliest_ship_date, latest_ship_date, earliest_delivery_date, latest_delivery_date, business_order, prime, global_express_enabled, premium_order, replacement_order, sold_by_a_b, goods, erpuser',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, amazon_order_id,goods_title,goods_image,asin_num,seller_sku,sales_link, purchase_date, last_update_date, order_status, fulfillment_channel, ship_service_level, sales_channel, currency_code, amount, number_of_items_shipped, number_of_items_unshipped, payment_method, payment_method_details, marketplace_id, shipment_service_level_category, shipped_by_amazon_t_f_m, order_type, earliest_ship_date, latest_ship_date, earliest_delivery_date, latest_delivery_date, business_order, prime, global_express_enabled, premium_order, replacement_order, sold_by_a_b, goods, erpuser, address, shipper, revenue',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, amazon_order_id, purchase_date, last_update_date, order_status, fulfillment_channel, ship_service_level, sales_channel, shipper_name, shipper_address_line1, shipper_address_line2, shipper_address_line3, shipper_city, shipper_state_or_region, shipper_country_code, shipper_phone, shipper_address_type, shipper_is_address_sharing_confidential, currency_code, amount, number_of_items_shipped, number_of_items_unshipped, payment_method, payment_method_details, marketplace_id, buyer_email, buyer_name, shipment_service_level_category, shipped_by_amazon_t_f_m, order_type, earliest_ship_date, latest_ship_date, earliest_delivery_date, latest_delivery_date, business_order, prime, global_express_enabled, premium_order, replacement_order, sold_by_a_b, goods, erpuser, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, amazon_order_id,goods_title,goods_image,asin_num,seller_sku,sales_link, purchase_date, last_update_date, order_status, fulfillment_channel, ship_service_level, sales_channel, currency_code, amount, number_of_items_shipped, number_of_items_unshipped, payment_method, payment_method_details, marketplace_id, shipment_service_level_category, shipped_by_amazon_t_f_m, order_type, earliest_ship_date, latest_ship_date, earliest_delivery_date, latest_delivery_date, business_order, prime, global_express_enabled, premium_order, replacement_order, sold_by_a_b, goods, erpuser, address, shipper, revenue, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -125,6 +125,51 @@ return [
                 'eval' => 'trim'
             ],
         ],
+        'goods_title' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.goods_title',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'goods_image' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.goods_image',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'asin_num' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.asin_num',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'seller_sku' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.seller_sku',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'sales_link' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.sales_link',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
         'purchase_date' => [
             'exclude' => true,
             'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.purchase_date',
@@ -178,97 +223,6 @@ return [
                 'size' => 30,
                 'eval' => 'trim'
             ],
-        ],
-        'shipper_name' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper_name',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
-        'shipper_address_line1' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper_address_line1',
-            'config' => [
-                'type' => 'text',
-                'cols' => 40,
-                'rows' => 15,
-                'eval' => 'trim'
-            ]
-        ],
-        'shipper_address_line2' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper_address_line2',
-            'config' => [
-                'type' => 'input',
-                'size' => 4,
-                'eval' => 'int'
-            ]
-        ],
-        'shipper_address_line3' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper_address_line3',
-            'config' => [
-                'type' => 'input',
-                'size' => 4,
-                'eval' => 'int'
-            ]
-        ],
-        'shipper_city' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper_city',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
-        'shipper_state_or_region' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper_state_or_region',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
-        'shipper_country_code' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper_country_code',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
-        'shipper_phone' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper_phone',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
-        'shipper_address_type' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper_address_type',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
-        'shipper_is_address_sharing_confidential' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper_is_address_sharing_confidential',
-            'config' => [
-                'type' => 'input',
-                'size' => 4,
-                'eval' => 'int'
-            ]
         ],
         'currency_code' => [
             'exclude' => true,
@@ -328,24 +282,6 @@ return [
         'marketplace_id' => [
             'exclude' => true,
             'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.marketplace_id',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
-        'buyer_email' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.buyer_email',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
-        'buyer_name' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.buyer_name',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -492,6 +428,57 @@ return [
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => 'fe_users',
+                'minitems' => 0,
+                'maxitems' => 1,
+                'appearance' => [
+                    'collapseAll' => 0,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
+        ],
+        'address' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.address',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_erpmanagementorder_domain_model_address',
+                'minitems' => 0,
+                'maxitems' => 1,
+                'appearance' => [
+                    'collapseAll' => 0,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
+        ],
+        'shipper' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.shipper',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_erpmanagementorder_domain_model_shipper',
+                'minitems' => 0,
+                'maxitems' => 1,
+                'appearance' => [
+                    'collapseAll' => 0,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
+        ],
+        'revenue' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_order/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementorder_domain_model_order.revenue',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_erpmanagementorder_domain_model_revenue',
                 'minitems' => 0,
                 'maxitems' => 1,
                 'appearance' => [

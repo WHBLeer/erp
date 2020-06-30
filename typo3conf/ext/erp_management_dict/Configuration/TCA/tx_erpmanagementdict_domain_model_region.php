@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:erp_management_dict/Resources/Public/Icons/tx_erpmanagementdict_domain_model_region.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, parent',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, short, code, level, parent',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, parent, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, short, code, level, parent, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -124,6 +124,33 @@ return [
                 'size' => 30,
                 'eval' => 'trim'
             ],
+        ],
+        'short' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_dict/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementdict_domain_model_region.short',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'code' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_dict/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementdict_domain_model_region.code',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'level' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_dict/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementdict_domain_model_region.level',
+            'config' => [
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int'
+            ]
         ],
         'parent' => [
             'exclude' => true,

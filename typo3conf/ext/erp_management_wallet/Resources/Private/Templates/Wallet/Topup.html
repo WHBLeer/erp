@@ -1,0 +1,177 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <f:flashMessages as="flashMessages">
+        <script>
+            <f:for each="{flashMessages}" as="flashMessage">notify("{flashMessage.message}", "{flashMessage.severity}");</f:for>
+        </script> 
+    </f:flashMessages>
+
+    <div class="dataTables_wrapper dt-bootstrap4">
+        <div class="row mb-10">
+            <div class="col-sm-12 col-md-12">
+                <div class="panel-body topup-header">
+                    <p class="mt-0 topup-header-title"><img src="{f:uri.resource(path:'Img/coin.png')}" alt="" /> 充值前提醒</p>
+                    <p>1.本系统充值的地方只有这一处, 任何其他个人或企业提供的充值不会充值到您的账户!</p>
+                    <p>2.支付时请认准唯一收款方 <span>威海环联网络科技有限公司</span> 若您发现收款方不是此账户, 请立即联系我们 <span><a href="mailto:huanlianguoji@163.com">huanlianguoji@163.com</a></span></p>
+                </div>
+            </div>
+        </div><br />
+        <div class="row mb-10">
+            <div class="col-sm-12 col-md-12">
+                <div class="panel-body topup-body">
+                    <f:form action="callback" class="am-form" id="doc-vld-msg" name="wallet" object="{wallet}">
+                        <div class="topup-rechbox">
+                            <div class="topup-rechhead">
+                                <img src="{f:uri.resource(path:'Img/ys_head2.jpg')}" />
+                                <p class="mb-0">充值帐号：
+                                    <a>{wallet.erpuser.username} ({wallet.erpuser.name})</a>
+                                </p>
+                                <div class="topup-rechheadcion">
+                                    <img src="{f:uri.resource(path:'Img/coin.png')}" alt="" />
+                                    <span>当前余额：<f:format.currency currencySign="￥" decimalSeparator="." thousandsSeparator="," prependCurrency="TRUE"
+                                        separateCurrency="FALSE">{wallet.balance}</f:format.currency></span>
+                                </div>
+                                
+                            </div>
+                            <div class="topup-rechli am-form-group">
+                                <ul class="ui-choose am-form-group" id="uc_01">
+                                    <li>
+                                        <label class="am-radio-inline">
+                                            <input type="radio" class="feeradio" value="500" name="topupfee" required
+                                                oninvalid="validate(this,'请选择充值金额')">
+                                            500￥
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="am-radio-inline">
+                                            <input type="radio" class="feeradio" value="1000" name="topupfee" required
+                                                oninvalid="validate(this,'请选择充值金额')"> 1000￥
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="am-radio-inline">
+                                            <input type="radio" class="feeradio" value="5000" name="topupfee" required
+                                                oninvalid="validate(this,'请选择充值金额')"> 5000￥
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="am-radio-inline">
+                                            <input type="radio" class="feeradio" value="10000" name="topupfee" required
+                                                oninvalid="validate(this,'请选择充值金额')"> 10000￥
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="am-radio-inline">
+                                            <input type="radio" class="feeradio" name="topupfee" value="" required
+                                                oninvalid="validate(this,'请选择充值金额')"> 其他金额
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="topup-rechoth am-form-group">
+                                <span>其他金额：</span>
+                                <input type="number" class="form-control othbox" min="100" max="100000" value="100.00元"
+                                    pattern="^[^0]\d{3,5}$|^100000$" oninvalid="validate(this,'充值金额范围：100-100000元')">
+                            </div>
+                            <div class="topup-rechcho am-form-group">
+                                <span>充值方式：</span>
+                                <!-- <label class="am-radio" style="margin-right:30px;">
+                                    <input type="radio" name="payment" value="wechatpay" required><img src="{f:uri.resource(path:'Img/wechatpay.png')}">
+                                </label> -->
+                                <label class="am-radio" style="margin-right:30px;">
+                                    <input type="radio" name="payment" checked value="zfbpay" required><img
+                                        src="{f:uri.resource(path:'Img/zfbpay.png')}">
+                                </label>
+                            </div>
+                            <div class="topup-rechnum">
+                                <span>应付金额：</span>
+                                <p class="rechnum">0.00元</p>
+                            </div>
+                        </div>
+                        <div class="topup-paybox">
+                            <input type="hidden" name="userid" id="">
+                            <input type="hidden" name="username" id="">
+                            <input type="hidden" name="" id="">
+                            <input type="hidden" name="" id="">
+                            <input type="submit" value="确认支付" class="topup-pay am-btn" />
+                            <span>温馨提示：您的充值金额可用于正常物流发货，遇到问题请拨打联系电话。010-12345678</span>
+                        </div>
+                    </f:form>
+                </div>
+            </div>
+        </div><br />
+    </div>
+    <script type="text/javascript" src="{f:uri.resource(path:'Js/ui-choose.js')}"></script>
+    <script type="text/javascript">
+        // 将所有.ui-choose实例化
+        $('.ui-choose').ui_choose();
+        // uc_01 ul 单选
+        var uc_01 = $('#uc_01').data('ui-choose'); // 取回已实例化的对象
+        uc_01.click = function (index, item) {
+            console.log('click', index, item.text())
+        }
+        uc_01.change = function (index, item) {
+            console.log('change', index, item.text())
+        }
+        
+        $(function () {
+            $('#uc_01 li:eq(0)').click(function () {
+                var fee = $(this).find('.feeradio').val();
+                $('.topup-rechoth').hide();
+                $('.rechnum').text(fee+'.00元');
+            })
+            $('#uc_01 li:eq(1)').click(function () {
+                $('.topup-rechoth').hide();
+                $('.rechnum').text('1,000.00元');
+                $('.othbox').val('');
+            })
+            $('#uc_01 li:eq(2)').click(function () {
+                $('.topup-rechoth').hide();
+                $('.rechnum').text('5,000.00元');
+                $('.othbox').val('');
+            })
+            $('#uc_01 li:eq(3)').click(function () {
+                $('.topup-rechoth').hide();
+                $('.rechnum').text('10,000.00元');
+                $('.othbox').val('');
+            })
+            $('#uc_01 li:eq(4)').click(function () {
+                $('.topup-rechoth').show();
+                $('.topup-rechoth').find("input").attr('required', 'true')
+                $('.rechnum').text('100.00元');
+            })
+            $(document).ready(function () {
+                // $('form').parsley();
+                $('.othbox').on('input propertychange', function () {
+                    var num = $(this).val();
+                    $('.rechnum').html(num + ".00元");
+                });
+            });
+        })
+
+        function validate(inputelement,err) {
+            if (inputelement.validity.patternMismatch) {
+                inputelement.setCustomValidity(err);
+            } else {
+                inputelement.setCustomValidity("");
+                return true;
+            }
+        }
+    </script>
+</f:section>
+
+</html>

@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:form action="changepwd" enctype="multipart/form-data" name="erpUser" object="{erpUser}">
+		<f:form.hidden name="label" value="ftp" />
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>原始密码</label>
+					<f:form.textfield name="oldpassword" class="form-control" placeholder="输入原始密码" />
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>新密码</label>
+					<f:form.textfield name="newpassword" class="form-control" placeholder="输入新密码"/>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>确认新密码</label>
+					<f:form.textfield name="repassword" class="form-control" placeholder="再次输入新密码" />
+				</div>
+			</div>
+		</div>
+		<f:form.submit class="btn btn-secondary checkuser" value="修改" />
+	</f:form>
+
+</html>

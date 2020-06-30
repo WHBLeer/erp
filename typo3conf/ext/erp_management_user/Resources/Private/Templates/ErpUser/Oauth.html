@@ -1,29 +1,118 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-	<f:layout name="Default" />
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
 
-	This Template is responsible for displaying a single view for a domain object
+This Template is responsible for creating a table of domain objects.
 
-	If you modify this template, do not forget to change the overwrite settings
-	in /Configuration/ExtensionBuilder/settings.yaml:
-	  Resources:
-		Private:
-		  Templates:
-			Show.html: keep
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
 
-	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
-	<f:section name="content">
-		<h1>Single View for ErpUser</h1>
+<f:section name="content">
+	<f:flashMessages as="flashMessages">
+		<script>
+			<f: for each="{flashMessages}" as="flashMessage">
+				notify("{flashMessage.message}", "{flashMessage.severity}");
+				</f: for>
+		</script>
+	</f:flashMessages>
 
-		<f:flashMessages as="flashMessages">
-			<script>
-				<f:for each="{flashMessages}" as="flashMessage">
-					notify("{flashMessage.message}", "{flashMessage.severity}");
-				</f:for>
-			</script>
-		</f:flashMessages>
-		<f:render partial="ErpUser/Properties" arguments="{erpUser:erpUser}" />
-		<f:link.action action="list">Back to list</f:link.action><br />
-		<f:link.action action="new">New ErpUser</f:link.action>
-	</f:section>
+	<div class="dataTables_wrapper dt-bootstrap4">
+		<div class="row mb-10">
+			<div class="col-sm-12 col-md-12">
+				<a href="javascript:void(0);" onclick="amazonAuthForm()" class="btn btn-success">授权</a>
+			</div>
+		</div><br />
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="table-responsive">
+					<table class="table table-hover mb-10">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>授权用户</th>
+								<th>店铺名称</th>
+								<th>Amazon账号</th>
+								<th>授权国家</th>
+								<th>授权时间</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<f:for each="{erpUser.auth}" as="auth" iteration="itemIteration">
+								<tr>
+									<td>{f:cObject(typoscriptObjectPath:'lib.calc',data:'{itemIteration.cycle}+({page}-1)*{settings.paginate.itemsPerPage}')}</td>
+									<td>{erpUser.nickname}({erpUser.name})</td>
+									<td>{auth.shopalias}</td>
+									<td>{auth.awsaccount}</td>
+									<td>{auth.authcountry}</td>
+									<td>{f:format.date(date: auth.authtime, format: 'Y-m-d H:i:s')}</td>
+									<td>
+										<f:link.action action="delete" class="btn btn-sm btn-danger" arguments="{erpUser : erpUser}"><i class="ti-close"></i></f:link.action>
+									</td>
+								</tr>
+							</f:for>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div id="uploadForm" class="hide">
+		<f:form action="saveoauth" enctype="multipart/form-data" name="erpUser" object="{erpUser}">
+			<table class="table table-bordered mb-10">
+				<tbody>
+					<tr>
+						<th style="width:120px">店铺别名：</th>
+						<td><f:form.textfield class="form-control" name="auth[shopalias]" placeholder="请输入英文店铺名称" required="true" additionalAttributes="{onkeyup: 'this.value=this.value.replace(/[^a-zA-Z]/g,\'\')'}"/></td>
+					</tr>
+					<tr>
+						<th>亚马逊账户：</th>
+						<td><f:form.textfield class="form-control" name="auth[awsaccount]" placeholder="请输入亚马逊账户" required="true" />
+						<span class="help-block m-b-none">您在亚马逊注册的账户，一般为邮箱</span></td>
+					</tr>
+					<tr>
+						<th>开户 区域 <span class="error">*</span>：</th>
+						<td><f:form.select class="form-control" name="auth[market]" id="market" options="{markets}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--选择您店铺的开户区域--" required="true" />
+						<span class="help-block m-b-none">即您亚马逊账户的开户市场</span></td>
+					</tr>
+					<tr>
+						<th>卖家 编号 <span class="error">*</span>：</th>
+						<td><f:form.textfield class="form-control" name="auth[amazon_id]" placeholder="请输入卖家编号" required="true" />
+						<span class="help-block m-b-none">销售者id：在亚马逊绑定开发者权限的时候生成的id值</span></td>
+					</tr>
+					<tr>
+						<th>授权 令牌 <span class="error">*</span>：</th>
+						<td><f:form.textfield class="form-control" name="auth[amazon_token]" placeholder="请输入授权令牌" required="true" />
+						<span class="help-block m-b-none">销售者token：在亚马逊绑定开发者权限的时候生成的token值</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="container-fluid text-right">
+				<f:form.submit class="btn btn-space btn-success checkuser" value="确认授权" />
+				<a href="javascript:void(0);" onclick="layer.closeAll();" class="btn btn-space btn-danger">取消</a>
+			</div>
+		</f:form>
+	</div>
+	<script>
+		//上传商品
+		function amazonAuthForm() {
+			layer.open({
+				type: 1,
+				title: '商品上传',
+				maxmin: true,
+				shadeClose: false,
+				area: ['600px', '400px'],
+				content: $("#uploadForm"),
+			});
+		}
+	</script>
+</f:section>
+
 </html>

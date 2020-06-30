@@ -49,7 +49,7 @@ data-namespace-typo3-fluid="true">
 									<tr>
 										<th></th>
                                         <th>#</th>
-										<th><f:translate key="tx_erpmanagementuser_domain_model_erpuser.authcode" /></th>
+										<th><f:translate key="tx_erpmanagementuser_domain_model_erpuser.account_id" /></th>
 										<th><f:translate key="tx_erpmanagementuser_domain_model_erpuser.wxopenid" /></th>
 										<th><f:translate key="tx_erpmanagementuser_domain_model_erpuser.bindip" /></th>
 										<th><f:translate key="tx_erpmanagementuser_domain_model_erpuser.nickname" /></th>
@@ -63,7 +63,7 @@ data-namespace-typo3-fluid="true">
 											<input type="checkbox" name="test" class="custom-checkbox-input" id="chk-{erpUser.uid}" value="{erpUser.uid}">
 										</td>
 										<td>lib.calc</td>
-										<td>{erpUser.authcode}</td><td>{erpUser.wxopenid}</td><td>{erpUser.bindip}</td><td>{erpUser.nickname}</td>
+										<td>{erpUser.accountId}</td><td>{erpUser.wxopenid}</td><td>{erpUser.bindip}</td><td>{erpUser.nickname}</td>
 										<td>
 											<f:link.action action="list" class="btn btn-sm btn-info" arguments="{erpUser : erpUser}"><i class="ti-reload"></i></f:link.action>
 											<f:link.action action="show" class="btn btn-sm btn-default" arguments="{erpUser : erpUser}"><i class="ti-eye"></i></f:link.action>

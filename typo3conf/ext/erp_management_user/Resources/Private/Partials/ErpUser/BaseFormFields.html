@@ -1,0 +1,84 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:form action="update" enctype="multipart/form-data" name="erpUser" object="{erpUser}">
+		<f:form.hidden name="actionname" value="profile" />
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>昵称</label>
+					<f:form.textfield property="nickname" class="form-control" placeholder="填写昵称"/>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>公司名称/员工名称</label>
+					<f:form.textfield property="name" class="form-control" placeholder="填写昵称" />
+					<f:form.hidden property="company" id="company"/>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>联系电话</label>
+					<f:form.textfield property="telephone" class="form-control" placeholder="填写昵称" />
+					<span class="help-block m-b-none">用以接受相关信息，请确保该联系电话畅通</span>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>联系邮箱</label>
+					<f:form.textfield property="email" class="form-control" placeholder="填写邮箱地址 aa@bb.cc" />
+					<span class="help-block m-b-none">用以接受相关信息，请确保该联系邮箱地址可用</span>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label>所在省</label>
+					<f:form.select id="province" property="province" options="{provinces}" optionValueField="uid" optionLabelField="name"
+						prependOptionLabel="--选择省份--" class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<label>所在市</label>
+					<f:form.select id="city" property="citys" options="{citys}" optionValueField="uid" optionLabelField="name"
+						prependOptionLabel="--选择城市--" class="form-control" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>详细地址</label>
+					<f:form.textfield property="address" class="form-control" placeholder="填写详细地址" />
+				</div>
+			</div>
+		</div>
+		<f:form.submit value="保存" class="btn btn-secondary" />
+	</f:form>
+	<f:link.action action="ajaxdata" id="ajaxurl"></f:link.action>
+	<script>
+		var ajaxurl = $("#ajaxurl").attr('href');
+		//获取城市信息
+		if ($('#province').length > 0 && $('#city').length > 0) {
+			$('#province').bind('change', function () {
+				var provice = $(this).val();
+				$.ajax({
+					type: "POST",
+					url: ajaxurl,
+					data: "cmd=get_city&provice=" + provice,
+					timeout: function () {
+						alert('请求超时');
+					},
+					success: function (data) {
+						console.log(data);
+						if (data.code == 1) {
+							var datas = data.data;
+							var html = '<option  value="">--选择城市--</option>';
+							for (var o in datas) {
+								html += '<option value="' + datas[o].uid + '">' + datas[o].name + '</option>';
+							}
+						}
+						$('#city').html(html);
+					}
+				});
+			});
+		}
+	</script>
+</html>

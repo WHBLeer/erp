@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-09T23:21:07Z" product-name="erp_management_order">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>联系人</source>
+			</trans-unit>
+			<trans-unit id="telephone.description">
+				<source>电话</source>
+			</trans-unit>
+			<trans-unit id="postcode.description">
+				<source>邮编</source>
+			</trans-unit>
+			<trans-unit id="state.description">
+				<source>州</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>市</source>
+			</trans-unit>
+			<trans-unit id="street_number.description">
+				<source>街道门牌</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>地址</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

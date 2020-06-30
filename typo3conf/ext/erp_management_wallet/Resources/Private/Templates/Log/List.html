@@ -52,6 +52,7 @@ data-namespace-typo3-fluid="true">
 										<th><f:translate key="tx_erpmanagementwallet_domain_model_log.balance" /></th>
 										<th><f:translate key="tx_erpmanagementwallet_domain_model_log.chmoney" /></th>
 										<th><f:translate key="tx_erpmanagementwallet_domain_model_log.remark" /></th>
+										<th><f:translate key="tx_erpmanagementwallet_domain_model_log.walletid" /></th>
 										<th>操作</th>
 									</tr>
 								</thead>
@@ -62,7 +63,7 @@ data-namespace-typo3-fluid="true">
 											<input type="checkbox" name="test" class="custom-checkbox-input" id="chk-{log.uid}" value="{log.uid}">
 										</td>
 										<td>lib.calc</td>
-										<td>{log.balance}</td><td>{log.chmoney}</td><td>{log.remark}</td>
+										<td>{log.balance}</td><td>{log.chmoney}</td><td>{log.remark}</td><td>{log.walletid}</td>
 										<td>
 											<f:link.action action="list" class="btn btn-sm btn-info" arguments="{log : log}"><i class="ti-reload"></i></f:link.action>
 											<f:link.action action="show" class="btn btn-sm btn-default" arguments="{log : log}"><i class="ti-eye"></i></f:link.action>

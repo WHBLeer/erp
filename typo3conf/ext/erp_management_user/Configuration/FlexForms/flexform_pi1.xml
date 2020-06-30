@@ -24,15 +24,15 @@
 									</numIndex>
 									<numIndex index="2">
 										<numIndex index="0">用户中心</numIndex>
-										<numIndex index="1">ErpUser-&gt;profile</numIndex>
+										<numIndex index="1">ErpUser-&gt;profile;ErpUser-&gt;ajaxdata;ErpUser-&gt;update;ErpUser-&gt;changepwd</numIndex>
 									</numIndex>
 									<numIndex index="3">
 										<numIndex index="0">商户授权</numIndex>
-										<numIndex index="1">ErpUser-&gt;oauth</numIndex>
+										<numIndex index="1">ErpUser-&gt;oauth;ErpUser-&gt;saveoauth</numIndex>
 									</numIndex>
 									<numIndex index="4">
 										<numIndex index="0">用户管理</numIndex>
-										<numIndex index="1">ErpUser-&gt;list;ErpUser-&gt;show;ErpUser-&gt;new;ErpUser-&gt;create;ErpUser-&gt;edit;ErpUser-&gt;update;ErpUser-&gt;delete;ErpUser-&gt;check;ErpUser-&gt;ajaxdata</numIndex>
+										<numIndex index="1">ErpUser-&gt;list;ErpUser-&gt;show;ErpUser-&gt;new;ErpUser-&gt;create;ErpUser-&gt;edit;ErpUser-&gt;update;ErpUser-&gt;delete;ErpUser-&gt;check;ErpUser-&gt;oauthrequest;ErpUser-&gt;ajaxdata</numIndex>
 									</numIndex>
 								</items>
                                 <maxitems>1</maxitems>

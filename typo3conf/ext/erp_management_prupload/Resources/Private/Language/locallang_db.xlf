@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-15T16:28:23Z" product-name="erp_management_prupload">
+		<header/>
+		<body>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload">
+				<source>Upload</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.market">
+				<source>Market</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.lang">
+				<source>Lang</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.category_text">
+				<source>Category Text</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.category_node">
+				<source>Category Node</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.template">
+				<source>Template</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.uploadtime">
+				<source>Uploadtime</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.cp_status">
+				<source>Cp Status</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.gx_status">
+				<source>Gx Status</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.tp_status">
+				<source>Tp Status</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.kc_status">
+				<source>Kc Status</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.jg_status">
+				<source>Jg Status</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_prupload_pi1.name">
+				<source>产品上传</source>
+			</trans-unit>
+			<trans-unit id="tx_erp_management_prupload_pi1.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
