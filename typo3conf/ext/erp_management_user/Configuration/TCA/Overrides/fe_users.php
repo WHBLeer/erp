@@ -134,6 +134,15 @@ $tmp_erp_management_user_columns = [
             'eval' => 'datetime'
         ],
     ],
+    'order_lasttime' => [
+        'exclude' => true,
+        'label' => 'LLL:EXT:erp_management_user/Resources/Private/Language/locallang_db.xlf:tx_sllusermanager_domain_model_user.order_lasttime',
+        'config' => [
+            'type' => 'input',
+            'size' => 4,
+            'eval' => 'int'
+        ]
+    ],
 
 ];
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-26T23:14:08Z" product-name="erp_management_logistics">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-30T23:51:26Z" product-name="erp_management_logistics">
 		<header/>
 		<body>
 			<trans-unit id="domestic_waybill.description">
@@ -9,38 +9,71 @@
 			<trans-unit id="international_waybill.description">
 				<source>国际运单号</source>
 			</trans-unit>
-			<trans-unit id="estimate_freight.description">
-				<source>预计运费</source>
+			<trans-unit id="customer_order_number.description">
+				<source>客户订单号,不能重复</source>
 			</trans-unit>
-			<trans-unit id="actual_freight.description">
-				<source>实际运费</source>
+			<trans-unit id="shipping_method_code.description">
+				<source>运输方式代码</source>
 			</trans-unit>
-			<trans-unit id="aging.description">
-				<source>预计时效,工作日</source>
+			<trans-unit id="tracking_number.description">
+				<source>包裹跟踪号，可以不填写</source>
 			</trans-unit>
-			<trans-unit id="weight.description">
-				<source>重量(kg)</source>
+			<trans-unit id="transaction_number.description">
+				<source>平台交易号（wish 邮）</source>
+			</trans-unit>
+			<trans-unit id="tax_number.description">
+				<source>收件人税号，巴西国家必填 CPF 或 CNPJ，CPF 码格式为 000.000.000-00,CNPJ 码格式为 00.000.000/0000-00，欧盟可以填 EORI</source>
 			</trans-unit>
 			<trans-unit id="length.description">
-				<source>体积-长(cm)</source>
+				<source>预估包裹单边长，单位 cm，非必填，默认1</source>
 			</trans-unit>
 			<trans-unit id="width.description">
-				<source>体积-宽(cm)</source>
+				<source>预估包裹单边宽，单位 cm，非必填，默认1</source>
 			</trans-unit>
 			<trans-unit id="height.description">
-				<source>体积-高(cm)</source>
+				<source>预估包裹单边高，单位 cm，非必填，默认1</source>
 			</trans-unit>
-			<trans-unit id="quantity.description">
-				<source>商品数量</source>
+			<trans-unit id="package_count.description">
+				<source>运单包裹的件数，必须大于 0 的整数</source>
 			</trans-unit>
-			<trans-unit id="goodstype.description">
-				<source>货物类型</source>
+			<trans-unit id="weight.description">
+				<source>预估包裹总重量，单位 kg,最多 3 位小数</source>
 			</trans-unit>
-			<trans-unit id="country.description">
-				<source>目的地国家</source>
+			<trans-unit id="application_type.description">
+				<source>申报类型, 用于打印 CN22，1-Gift,2-Sameple,3-Documents,4-Others, 默认 4-Other</source>
+			</trans-unit>
+			<trans-unit id="return_option.description">
+				<source>是否退回,包裹无人签收时是否退回，1-退回，0-不退回，默认 0</source>
+			</trans-unit>
+			<trans-unit id="tariff_prepay.description">
+				<source>关税预付服务费，1-参加关税预付，0-不参加关税预付，默认 0 (渠道需开通关税预付服务)</source>
+			</trans-unit>
+			<trans-unit id="insurance_option.description">
+				<source>包裹投保类型，0-不参保，1-按件，2-按比例，默认 0，表示不参加运输保险，具体参考包裹运输</source>
+			</trans-unit>
+			<trans-unit id="coverage.description">
+				<source>保险的最高额度，单位 RMB</source>
+			</trans-unit>
+			<trans-unit id="sensitive_type_i_d.description">
+				<source>包裹中特殊货品类型，可调用货品类型查询服务查询，可以不填写，表示普通货品</source>
+			</trans-unit>
+			<trans-unit id="source_code.description">
+				<source>订单来源代码</source>
 			</trans-unit>
 			<trans-unit id="erpuser.description">
 				<source>目的地国家</source>
+			</trans-unit>
+			<trans-unit id="receiver.description">
+				<source>收件人</source>
+			</trans-unit>
+			<trans-unit id="sender.description">
+				<source>发件人</source>
+			</trans-unit>
+			<trans-unit id="parcels.description">
+				<source>申报信息</source>
+			</trans-unit>
+			<trans-unit id="child_orders.description">
+				<source>箱子明细信息，FBA 订单必填</source>
 			</trans-unit>
 		</body>
 	</file>

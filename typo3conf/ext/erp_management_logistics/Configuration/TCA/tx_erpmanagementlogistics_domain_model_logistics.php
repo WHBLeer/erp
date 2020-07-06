@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'domestic_waybill,international_waybill',
+        'searchFields' => 'domestic_waybill,international_waybill,customer_order_number,shipping_method_code,tracking_number,transaction_number,tax_number,source_code',
         'iconfile' => 'EXT:erp_management_logistics/Resources/Public/Icons/tx_erpmanagementlogistics_domain_model_logistics.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, domestic_waybill, international_waybill, estimate_freight, actual_freight, aging, weight, length, width, height, quantity, goodstype, country, erpuser',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, domestic_waybill, international_waybill, customer_order_number, shipping_method_code, tracking_number, transaction_number, tax_number, length, width, height, package_count, weight, application_type, return_option, tariff_prepay, insurance_option, coverage, sensitive_type_i_d, source_code, erpuser, receiver, sender, parcels, child_orders',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, domestic_waybill, international_waybill, estimate_freight, actual_freight, aging, weight, length, width, height, quantity, goodstype, country, erpuser, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, domestic_waybill, international_waybill, customer_order_number, shipping_method_code, tracking_number, transaction_number, tax_number, length, width, height, package_count, weight, application_type, return_option, tariff_prepay, insurance_option, coverage, sensitive_type_i_d, source_code, erpuser, receiver, sender, parcels, child_orders, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -134,41 +134,50 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'estimate_freight' => [
+        'customer_order_number' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.estimate_freight',
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.customer_order_number',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'double2'
-            ]
+                'eval' => 'trim'
+            ],
         ],
-        'actual_freight' => [
+        'shipping_method_code' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.actual_freight',
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.shipping_method_code',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'double2'
-            ]
+                'eval' => 'trim'
+            ],
         ],
-        'aging' => [
+        'tracking_number' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.aging',
-            'config' => [
-                'type' => 'input',
-                'size' => 4,
-                'eval' => 'int'
-            ]
-        ],
-        'weight' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.weight',
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.tracking_number',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'double2'
-            ]
+                'eval' => 'trim'
+            ],
+        ],
+        'transaction_number' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.transaction_number',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'tax_number' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.tax_number',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
         ],
         'length' => [
             'exclude' => true,
@@ -197,39 +206,85 @@ return [
                 'eval' => 'int'
             ]
         ],
-        'quantity' => [
+        'package_count' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.quantity',
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.package_count',
             'config' => [
                 'type' => 'input',
                 'size' => 4,
                 'eval' => 'int'
             ]
         ],
-        'goodstype' => [
+        'weight' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.goodstype',
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.weight',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'double2'
+            ]
+        ],
+        'application_type' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.application_type',
             'config' => [
                 'type' => 'input',
                 'size' => 4,
                 'eval' => 'int'
             ]
         ],
-        'country' => [
+        'return_option' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.country',
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.return_option',
             'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_erpmanagementdict_domain_model_region',
-                'minitems' => 0,
-                'maxitems' => 1,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int'
+            ]
+        ],
+        'tariff_prepay' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.tariff_prepay',
+            'config' => [
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int'
+            ]
+        ],
+        'insurance_option' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.insurance_option',
+            'config' => [
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int'
+            ]
+        ],
+        'coverage' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.coverage',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'double2'
+            ]
+        ],
+        'sensitive_type_i_d' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.sensitive_type_i_d',
+            'config' => [
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int'
+            ]
+        ],
+        'source_code' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.source_code',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
             ],
         ],
         'erpuser' => [
@@ -248,6 +303,76 @@ return [
                     'showAllLocalizationLink' => 1
                 ],
             ],
+        ],
+        'receiver' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.receiver',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_erpmanagementlogistics_domain_model_receiver',
+                'minitems' => 0,
+                'maxitems' => 1,
+                'appearance' => [
+                    'collapseAll' => 0,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
+        ],
+        'sender' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.sender',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_erpmanagementlogistics_domain_model_sender',
+                'minitems' => 0,
+                'maxitems' => 1,
+                'appearance' => [
+                    'collapseAll' => 0,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
+        ],
+        'parcels' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.parcels',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_erpmanagementlogistics_domain_model_parcels',
+                'foreign_field' => 'logistics',
+                'maxitems' => 9999,
+                'appearance' => [
+                    'collapseAll' => 0,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
+
+        ],
+        'child_orders' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_logistics/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementlogistics_domain_model_logistics.child_orders',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_erpmanagementlogistics_domain_model_childorders',
+                'foreign_field' => 'logistics',
+                'maxitems' => 9999,
+                'appearance' => [
+                    'collapseAll' => 0,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
+
         ],
     
     ],

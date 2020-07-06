@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-30T23:51:26Z" product-name="erp_management_logistics">
+		<header/>
+		<body>
+			<trans-unit id="country_code.description">
+				<source>收件人所在国家，填写国际通用标准 2 位简码，可通过国家查询服务查询</source>
+			</trans-unit>
+			<trans-unit id="first_name.description">
+				<source>姓</source>
+			</trans-unit>
+			<trans-unit id="last_name.description">
+				<source>名</source>
+			</trans-unit>
+			<trans-unit id="company.description">
+				<source>公司</source>
+			</trans-unit>
+			<trans-unit id="street.description">
+				<source>详细地址</source>
+			</trans-unit>
+			<trans-unit id="street_address1.description">
+				<source>详细地址1</source>
+			</trans-unit>
+			<trans-unit id="street_address2.description">
+				<source>详细地址2</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>所在城市</source>
+			</trans-unit>
+			<trans-unit id="state.description">
+				<source>州/省</source>
+			</trans-unit>
+			<trans-unit id="zip.description">
+				<source>邮编</source>
+			</trans-unit>
+			<trans-unit id="phone.description">
+				<source>收件人电话</source>
+			</trans-unit>
+			<trans-unit id="house_number.description">
+				<source>街道门牌号</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>邮箱</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

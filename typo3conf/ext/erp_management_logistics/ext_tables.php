@@ -20,5 +20,17 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_erpmanagementlogistics_domain_model_logistics', 'EXT:erp_management_logistics/Resources/Private/Language/locallang_csh_tx_erpmanagementlogistics_domain_model_logistics.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_erpmanagementlogistics_domain_model_logistics');
 
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_erpmanagementlogistics_domain_model_receiver', 'EXT:erp_management_logistics/Resources/Private/Language/locallang_csh_tx_erpmanagementlogistics_domain_model_receiver.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_erpmanagementlogistics_domain_model_receiver');
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_erpmanagementlogistics_domain_model_sender', 'EXT:erp_management_logistics/Resources/Private/Language/locallang_csh_tx_erpmanagementlogistics_domain_model_sender.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_erpmanagementlogistics_domain_model_sender');
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_erpmanagementlogistics_domain_model_parcels', 'EXT:erp_management_logistics/Resources/Private/Language/locallang_csh_tx_erpmanagementlogistics_domain_model_parcels.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_erpmanagementlogistics_domain_model_parcels');
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_erpmanagementlogistics_domain_model_childorders', 'EXT:erp_management_logistics/Resources/Private/Language/locallang_csh_tx_erpmanagementlogistics_domain_model_childorders.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_erpmanagementlogistics_domain_model_childorders');
+
     }
 );

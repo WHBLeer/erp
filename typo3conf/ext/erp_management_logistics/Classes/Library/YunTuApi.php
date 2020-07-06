@@ -3,8 +3,8 @@ namespace ERP\Api\Logistics;
 
 class LogisticsCommon
 {
-    const APIKEY     = 'C06901';
-	const APISECRET  = '3VniAsdO6mU=';
+    const APIKEY     = 'C03237';
+	const APISECRET  = 'Df/IW+axsTU=';
 	const HOSTSERVER = 'http://oms.api.yunexpress.com/api'; 
     
 	function __construct() {

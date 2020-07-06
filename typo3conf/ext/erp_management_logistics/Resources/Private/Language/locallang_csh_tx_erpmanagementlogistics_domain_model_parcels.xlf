@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-30T23:51:26Z" product-name="erp_management_logistics">
+		<header/>
+		<body>
+			<trans-unit id="e_name.description">
+				<source>包裹申报名称(英文)必填</source>
+			</trans-unit>
+			<trans-unit id="c_name.description">
+				<source>包裹申报名称</source>
+			</trans-unit>
+			<trans-unit id="h_s_code.description">
+				<source>海关编码</source>
+			</trans-unit>
+			<trans-unit id="quantity.description">
+				<source>申报数量</source>
+			</trans-unit>
+			<trans-unit id="unit_price.description">
+				<source>申报价格(单价),单位 USD,必填</source>
+			</trans-unit>
+			<trans-unit id="unit_weight.description">
+				<source>申报重量(单重)，单位 kg</source>
+			</trans-unit>
+			<trans-unit id="remark.description">
+				<source>备注</source>
+			</trans-unit>
+			<trans-unit id="product_url.description">
+				<source>产品销售链接地址</source>
+			</trans-unit>
+			<trans-unit id="sku.description">
+				<source>用于填写商品SKU，FBA订单必填</source>
+			</trans-unit>
+			<trans-unit id="invoice_remark.description">
+				<source>配货信息</source>
+			</trans-unit>
+			<trans-unit id="currency_code.description">
+				<source>申报币种，默认：USD</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

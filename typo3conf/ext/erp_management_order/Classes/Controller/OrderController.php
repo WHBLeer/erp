@@ -2,6 +2,7 @@
 namespace ERP\ErpManagementOrder\Controller;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 
@@ -31,6 +32,7 @@ class OrderController extends ComController
      */
     public function listAction()
     {
+        $this->pullOrderByAccountId($this->user['account_id']);
         $orders = $this->orderRepository->findAll();
         $this->view->assign('orders', $orders);
         $this->view->assign('page', $this->page);
@@ -127,13 +129,29 @@ class OrderController extends ComController
     public function pullAction()
     {
 
+        
+    }
+
+    /**
+     * 获取用户订单信息
+     *
+     * @param [type] $accountid
+     * @return void
+     * @author wanghongbin
+     * tstamp: 2020-06-30
+     */
+    public function pullOrderByAccountId($accountid)
+    {
+        //判断用户订单更新间隔 超过两小时再请求数据
+        if ((abs($this->user['order_lasttime']-time()) <= 7200)) return;
+
         //与服务端数据对接
-        $params = array(
-            'accountId' => '11cac887243b45f1aee986ac7e04c171'
-        );
         $ErpServer = new \ERP\Api\ErpServer\ErpOrderApi();
-        $res = $ErpServer->getOrdersList($params);
+        $res = $ErpServer->getOrdersList(['accountId'=>$accountid]);
         if ($res['rspCode'] == 0) {
+            //更新用户订单最后写入时间
+            $this->updateOrderLasttime();
+
             $orderres = $res['data'];
             dump($orderres);
             foreach ($orderres as $key => $result) {
@@ -229,28 +247,29 @@ class OrderController extends ComController
                     $this->orderRepository->add($order);
                     $this->refreshObject();
 
-                    // if ($result['amazonOrderId']=='206-7976928-4029128') {
-                    //     dump($order);
-                    // }
                 }
             }
         }
-        exit;
     }
 
     /**
-     * 获取用户订单信息
+     * 写入用户订单最后更新时间
      *
-     * @param [type] $accountid
      * @return void
      * @author wanghongbin
      * tstamp: 2020-06-30
      */
-    public function pullOrderByAccountId($accountid)
+    public function updateOrderLasttime()
     {
-        # code...
+        $result = GeneralUtility::makeInstance(ConnectionPool::class)
+        ->getConnectionForTable('fe_users')
+        ->update(
+            'fe_users',
+            ['order_lasttime'=>time()],
+            ['uid'=>$this->user['uid']]
+        );
+        return ;
     }
-
     /**
      * 更新地址
      *

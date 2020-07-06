@@ -47,6 +47,13 @@ class ErpUser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
     protected $nickname = '';
 
     /**
+     * 订单最后更新时间
+     * 
+     * @var int
+     */
+    protected $orderLasttime=0;
+
+    /**
      * 所在市
      * 
      * @var \ERP\ErpManagementDict\Domain\Model\Region
@@ -180,6 +187,27 @@ class ErpUser extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
     public function setNickname($nickname)
     {
         $this->nickname = $nickname;
+    }
+
+    /**
+     * Returns the orderLasttime
+     * 
+     * @return int $orderLasttime
+     */
+    public function getOrderLasttime()
+    {
+        return $this->orderLasttime;
+    }
+
+    /**
+     * Sets the orderLasttime
+     * 
+     * @param int $orderLasttime
+     * @return void
+     */
+    public function setOrderLasttime($orderLasttime)
+    {
+        $this->orderLasttime = $orderLasttime;
     }
 
     /**

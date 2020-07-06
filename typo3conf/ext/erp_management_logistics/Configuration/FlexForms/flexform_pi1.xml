@@ -19,8 +19,16 @@
 										<numIndex index="1">Logistics-&gt;list;Logistics-&gt;show;Logistics-&gt;new;Logistics-&gt;create;Logistics-&gt;edit;Logistics-&gt;update;Logistics-&gt;delete;Logistics-&gt;api</numIndex>
 									</numIndex>
 									<numIndex index="1">
-										<numIndex index="0">物流API</numIndex>
+										<numIndex index="0">物流回调</numIndex>
 										<numIndex index="1">Logistics-&gt;api</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">提交物流信息</numIndex>
+										<numIndex index="1">Logistics-&gt;push</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">拉取物流信息</numIndex>
+										<numIndex index="1">Logistics-&gt;pull</numIndex>
 									</numIndex>
 								</items>
                                 <maxitems>1</maxitems>

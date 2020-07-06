@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-05-26T23:14:08Z" product-name="erp_management_logistics">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-30T23:51:26Z" product-name="erp_management_logistics">
 		<header/>
 		<body>
 			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics">
@@ -12,17 +12,20 @@
 			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.international_waybill">
 				<source>International Waybill</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.estimate_freight">
-				<source>Estimate Freight</source>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.customer_order_number">
+				<source>Customer Order Number</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.actual_freight">
-				<source>Actual Freight</source>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.shipping_method_code">
+				<source>Shipping Method Code</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.aging">
-				<source>Aging</source>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.tracking_number">
+				<source>Tracking Number</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.weight">
-				<source>Weight</source>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.transaction_number">
+				<source>Transaction Number</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.tax_number">
+				<source>Tax Number</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.length">
 				<source>Length</source>
@@ -33,17 +36,176 @@
 			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.height">
 				<source>Height</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.quantity">
-				<source>Quantity</source>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.package_count">
+				<source>Package Count</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.goodstype">
-				<source>Goodstype</source>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.weight">
+				<source>Weight</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.country">
-				<source>Country</source>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.application_type">
+				<source>Application Type</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.return_option">
+				<source>Return Option</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.tariff_prepay">
+				<source>Tariff Prepay</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.insurance_option">
+				<source>Insurance Option</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.coverage">
+				<source>Coverage</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.sensitive_type_i_d">
+				<source>Sensitive Type I D</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.source_code">
+				<source>Source Code</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.erpuser">
 				<source>Erpuser</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.receiver">
+				<source>Receiver</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.sender">
+				<source>Sender</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.parcels">
+				<source>Parcels</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_logistics.child_orders">
+				<source>Child Orders</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver">
+				<source>Receiver</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.country_code">
+				<source>Country Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.street_address1">
+				<source>Street Address1</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.street_address2">
+				<source>Street Address2</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.state">
+				<source>State</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.house_number">
+				<source>House Number</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_receiver.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_sender">
+				<source>Sender</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_sender.country_code">
+				<source>Country Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_sender.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_sender.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_sender.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_sender.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_sender.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_sender.state">
+				<source>State</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_sender.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_sender.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels">
+				<source>Parcels</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.e_name">
+				<source>E Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.c_name">
+				<source>C Name</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.h_s_code">
+				<source>H S Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.quantity">
+				<source>Quantity</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.unit_price">
+				<source>Unit Price</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.unit_weight">
+				<source>Unit Weight</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.remark">
+				<source>Remark</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.product_url">
+				<source>Product Url</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.sku">
+				<source>Sku</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.invoice_remark">
+				<source>Invoice Remark</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_parcels.currency_code">
+				<source>Currency Code</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_childorders">
+				<source>Child Orders</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_childorders.box_number">
+				<source>Box Number</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_childorders.length">
+				<source>Length</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_childorders.width">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_childorders.height">
+				<source>Height</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_childorders.box_weight">
+				<source>Box Weight</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementlogistics_domain_model_childorders.child_details">
+				<source>Child Details</source>
 			</trans-unit>
 			<trans-unit id="tx_erp_management_logistics_pi1.name">
 				<source>物流管理</source>

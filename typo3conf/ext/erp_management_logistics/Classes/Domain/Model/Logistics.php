@@ -33,81 +33,165 @@ class Logistics extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $internationalWaybill = '';
 
     /**
-     * 预计运费
+     * 客户订单号,不能重复
      * 
-     * @var float
+     * @var string
      */
-    protected $estimateFreight = 0.0;
+    protected $customerOrderNumber = 0.0;
 
     /**
-     * 实际运费
+     * 运输方式代码
      * 
-     * @var float
+     * @var string
      */
-    protected $actualFreight = 0.0;
+    protected $shippingMethodCode = 0.0;
 
     /**
-     * 预计时效,工作日
+     * 包裹跟踪号，可以不填写
      * 
-     * @var int
+     * @var string
      */
-    protected $aging = 0;
+    protected $trackingNumber = 0;
 
     /**
-     * 重量(kg)
+     * 平台交易号（wish 邮）
      * 
-     * @var float
+     * @var string
      */
-    protected $weight = 0.0;
+    protected $transactionNumber = 0.0;
 
     /**
-     * 体积-长(cm)
+     * 收件人税号，巴西国家必填 CPF 或 CNPJ，CPF 码格式为
+     * 000.000.000-00,CNPJ 码格式为 00.000.000/0000-00，欧盟可以填 EORI
+     * 
+     * @var string
+     */
+    protected $taxNumber = 0;
+
+    /**
+     * 预估包裹单边长，单位 cm，非必填，默认1
      * 
      * @var int
      */
     protected $length = 0;
 
     /**
-     * 体积-宽(cm)
+     * 预估包裹单边宽，单位 cm，非必填，默认1
      * 
      * @var int
      */
     protected $width = 0;
 
     /**
-     * 体积-高(cm)
+     * 预估包裹单边高，单位 cm，非必填，默认1
      * 
      * @var int
      */
     protected $height = 0;
 
     /**
-     * 商品数量
+     * 运单包裹的件数，必须大于 0 的整数
      * 
      * @var int
      */
-    protected $quantity = 0;
+    protected $packageCount = 0;
 
     /**
-     * 货物类型
+     * 预估包裹总重量，单位 kg,最多 3 位小数
+     * 
+     * @var float
+     */
+    protected $weight = 0.0;
+
+    /**
+     * 申报类型, 用于打印 CN22，1-Gift,2-Sameple,3-Documents,4-Others, 默认
+     * 4-Other
      * 
      * @var int
      */
-    protected $goodstype = 0;
+    protected $applicationType = 0;
 
     /**
-     * 目的地国家
+     * 是否退回,包裹无人签收时是否退回，1-退回，0-不退回，默认
+     * 0
      * 
-     * @var \ERP\ErpManagementDict\Domain\Model\Region
+     * @var int
      */
-    protected $country = null;
+    protected $returnOption = 0;
 
     /**
-     * 目的地国家
+     * 关税预付服务费，1-参加关税预付，0-不参加关税预付，默认
+     * 0 (渠道需开通关税预付服务)
+     * 
+     * @var int
+     */
+    protected $tariffPrepay = 0;
+
+    /**
+     * 包裹投保类型，0-不参保，1-按件，2-按比例，默认
+     * 0，表示不参加运输保险，具体参考包裹运输
+     * 
+     * @var int
+     */
+    protected $insuranceOption = 0;
+
+    /**
+     * 保险的最高额度，单位 RMB
+     * 
+     * @var float
+     */
+    protected $coverage = 0.0;
+
+    /**
+     * 包裹中特殊货品类型，可调用货品类型查询服务查询，可以不填写，表示普通货品
+     * 
+     * @var int
+     */
+    protected $sensitiveTypeID = 0;
+
+    /**
+     * 订单来源代码
+     * 
+     * @var string
+     */
+    protected $sourceCode = '';
+
+    /**
+     * 用户
      * 
      * @var \ERP\ErpManagementUser\Domain\Model\ErpUser
      */
     protected $erpuser = null;
+
+    /**
+     * 收件人
+     * 
+     * @var \ERP\ErpManagementLogistics\Domain\Model\Receiver
+     */
+    protected $receiver = null;
+
+    /**
+     * 发件人
+     * 
+     * @var \ERP\ErpManagementLogistics\Domain\Model\Sender
+     */
+    protected $sender = null;
+
+    /**
+     * 申报信息
+     * 
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ERP\ErpManagementLogistics\Domain\Model\Parcels>
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     */
+    protected $parcels = null;
+
+    /**
+     * 箱子明细信息，FBA 订单必填
+     * 
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ERP\ErpManagementLogistics\Domain\Model\ChildOrders>
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     */
+    protected $childOrders = null;
 
     /**
      * Returns the domesticWaybill
@@ -152,66 +236,216 @@ class Logistics extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the estimateFreight
+     * Returns the customerOrderNumber
      * 
-     * @return float $estimateFreight
+     * @return string customerOrderNumber
      */
-    public function getEstimateFreight()
+    public function getCustomerOrderNumber()
     {
-        return $this->estimateFreight;
+        return $this->customerOrderNumber;
     }
 
     /**
-     * Sets the estimateFreight
+     * Sets the customerOrderNumber
      * 
-     * @param float $estimateFreight
+     * @param float $customerOrderNumber
      * @return void
      */
-    public function setEstimateFreight($estimateFreight)
+    public function setCustomerOrderNumber($customerOrderNumber)
     {
-        $this->estimateFreight = $estimateFreight;
+        $this->customerOrderNumber = $customerOrderNumber;
     }
 
     /**
-     * Returns the actualFreight
+     * Returns the shippingMethodCode
      * 
-     * @return float $actualFreight
+     * @return string shippingMethodCode
      */
-    public function getActualFreight()
+    public function getShippingMethodCode()
     {
-        return $this->actualFreight;
+        return $this->shippingMethodCode;
     }
 
     /**
-     * Sets the actualFreight
+     * Sets the shippingMethodCode
      * 
-     * @param float $actualFreight
+     * @param float $shippingMethodCode
      * @return void
      */
-    public function setActualFreight($actualFreight)
+    public function setShippingMethodCode($shippingMethodCode)
     {
-        $this->actualFreight = $actualFreight;
+        $this->shippingMethodCode = $shippingMethodCode;
     }
 
     /**
-     * Returns the aging
+     * Returns the trackingNumber
      * 
-     * @return int $aging
+     * @return string trackingNumber
      */
-    public function getAging()
+    public function getTrackingNumber()
     {
-        return $this->aging;
+        return $this->trackingNumber;
     }
 
     /**
-     * Sets the aging
+     * Sets the trackingNumber
      * 
-     * @param int $aging
+     * @param int $trackingNumber
      * @return void
      */
-    public function setAging($aging)
+    public function setTrackingNumber($trackingNumber)
     {
-        $this->aging = $aging;
+        $this->trackingNumber = $trackingNumber;
+    }
+
+    /**
+     * Returns the transactionNumber
+     * 
+     * @return string transactionNumber
+     */
+    public function getTransactionNumber()
+    {
+        return $this->transactionNumber;
+    }
+
+    /**
+     * Sets the transactionNumber
+     * 
+     * @param float $transactionNumber
+     * @return void
+     */
+    public function setTransactionNumber($transactionNumber)
+    {
+        $this->transactionNumber = $transactionNumber;
+    }
+
+    /**
+     * Returns the taxNumber
+     * 
+     * @return string taxNumber
+     */
+    public function getTaxNumber()
+    {
+        return $this->taxNumber;
+    }
+
+    /**
+     * Sets the taxNumber
+     * 
+     * @param int $taxNumber
+     * @return void
+     */
+    public function setTaxNumber($taxNumber)
+    {
+        $this->taxNumber = $taxNumber;
+    }
+
+    /**
+     * Returns the length
+     * 
+     * @return int length
+     */
+    public function getLength()
+    {
+        return $this->length;
+    }
+
+    /**
+     * Sets the length
+     * 
+     * @param int $length
+     * @return void
+     */
+    public function setLength($length)
+    {
+        $this->length = $length;
+    }
+
+    /**
+     * Returns the width
+     * 
+     * @return int width
+     */
+    public function getWidth()
+    {
+        return $this->width;
+    }
+
+    /**
+     * Sets the width
+     * 
+     * @param int $width
+     * @return void
+     */
+    public function setWidth($width)
+    {
+        $this->width = $width;
+    }
+
+    /**
+     * Returns the height
+     * 
+     * @return int height
+     */
+    public function getHeight()
+    {
+        return $this->height;
+    }
+
+    /**
+     * Sets the height
+     * 
+     * @param int $height
+     * @return void
+     */
+    public function setHeight($height)
+    {
+        $this->height = $height;
+    }
+
+    /**
+     * Returns the packageCount
+     * 
+     * @return int packageCount
+     */
+    public function getPackageCount()
+    {
+        return $this->packageCount;
+    }
+
+    /**
+     * Sets the packageCount
+     * 
+     * @param int $packageCount
+     * @return void
+     */
+    public function setPackageCount($packageCount)
+    {
+        $this->packageCount = $packageCount;
+    }
+
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     * 
+     * @return void
+     */
+    protected function initStorageObjects()
+    {
+        $this->parcels = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->childOrders = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -236,131 +470,152 @@ class Logistics extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the length
+     * Returns the applicationType
      * 
-     * @return int $length
+     * @return int $applicationType
      */
-    public function getLength()
+    public function getApplicationType()
     {
-        return $this->length;
+        return $this->applicationType;
     }
 
     /**
-     * Sets the length
+     * Sets the applicationType
      * 
-     * @param int $length
+     * @param int $applicationType
      * @return void
      */
-    public function setLength($length)
+    public function setApplicationType($applicationType)
     {
-        $this->length = $length;
+        $this->applicationType = $applicationType;
     }
 
     /**
-     * Returns the width
+     * Returns the returnOption
      * 
-     * @return int $width
+     * @return int $returnOption
      */
-    public function getWidth()
+    public function getReturnOption()
     {
-        return $this->width;
+        return $this->returnOption;
     }
 
     /**
-     * Sets the width
+     * Sets the returnOption
      * 
-     * @param int $width
+     * @param int $returnOption
      * @return void
      */
-    public function setWidth($width)
+    public function setReturnOption($returnOption)
     {
-        $this->width = $width;
+        $this->returnOption = $returnOption;
     }
 
     /**
-     * Returns the height
+     * Returns the tariffPrepay
      * 
-     * @return int $height
+     * @return int $tariffPrepay
      */
-    public function getHeight()
+    public function getTariffPrepay()
     {
-        return $this->height;
+        return $this->tariffPrepay;
     }
 
     /**
-     * Sets the height
+     * Sets the tariffPrepay
      * 
-     * @param int $height
+     * @param int $tariffPrepay
      * @return void
      */
-    public function setHeight($height)
+    public function setTariffPrepay($tariffPrepay)
     {
-        $this->height = $height;
+        $this->tariffPrepay = $tariffPrepay;
     }
 
     /**
-     * Returns the quantity
+     * Returns the insuranceOption
      * 
-     * @return int $quantity
+     * @return int $insuranceOption
      */
-    public function getQuantity()
+    public function getInsuranceOption()
     {
-        return $this->quantity;
+        return $this->insuranceOption;
     }
 
     /**
-     * Sets the quantity
+     * Sets the insuranceOption
      * 
-     * @param int $quantity
+     * @param int $insuranceOption
      * @return void
      */
-    public function setQuantity($quantity)
+    public function setInsuranceOption($insuranceOption)
     {
-        $this->quantity = $quantity;
+        $this->insuranceOption = $insuranceOption;
     }
 
     /**
-     * Returns the goodstype
+     * Returns the coverage
      * 
-     * @return int $goodstype
+     * @return float $coverage
      */
-    public function getGoodstype()
+    public function getCoverage()
     {
-        return $this->goodstype;
+        return $this->coverage;
     }
 
     /**
-     * Sets the goodstype
+     * Sets the coverage
      * 
-     * @param int $goodstype
+     * @param float $coverage
      * @return void
      */
-    public function setGoodstype($goodstype)
+    public function setCoverage($coverage)
     {
-        $this->goodstype = $goodstype;
+        $this->coverage = $coverage;
     }
 
     /**
-     * Returns the country
+     * Returns the sensitiveTypeID
      * 
-     * @return \ERP\ErpManagementDict\Domain\Model\Region country
+     * @return int $sensitiveTypeID
      */
-    public function getCountry()
+    public function getSensitiveTypeID()
     {
-        return $this->country;
+        return $this->sensitiveTypeID;
     }
 
     /**
-     * Sets the country
+     * Sets the sensitiveTypeID
      * 
-     * @param string $country
+     * @param int $sensitiveTypeID
      * @return void
      */
-    public function setCountry($country)
+    public function setSensitiveTypeID($sensitiveTypeID)
     {
-        $this->country = $country;
+        $this->sensitiveTypeID = $sensitiveTypeID;
     }
 
+    /**
+     * Returns the sourceCode
+     * 
+     * @return string $sourceCode
+     */
+    public function getSourceCode()
+    {
+        return $this->sourceCode;
+    }
+
+    /**
+     * Sets the sourceCode
+     * 
+     * @param string $sourceCode
+     * @return void
+     */
+    public function setSourceCode($sourceCode)
+    {
+        $this->sourceCode = $sourceCode;
+    }
+    
     /**
      * Returns the erpuser
      * 
@@ -380,5 +635,133 @@ class Logistics extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setErpuser(\ERP\ErpManagementUser\Domain\Model\ErpUser $erpuser)
     {
         $this->erpuser = $erpuser;
+    }
+
+    /**
+     * Returns the receiver
+     * 
+     * @return \ERP\ErpManagementLogistics\Domain\Model\Receiver receiver
+     */
+    public function getReceiver()
+    {
+        return $this->receiver;
+    }
+
+    /**
+     * Sets the receiver
+     * 
+     * @param \ERP\ErpManagementLogistics\Domain\Model\Receiver $receiver
+     * @return void
+     */
+    public function setReceiver(\ERP\ErpManagementLogistics\Domain\Model\Receiver $receiver)
+    {
+        $this->receiver = $receiver;
+    }
+
+    /**
+     * Returns the sender
+     * 
+     * @return \ERP\ErpManagementLogistics\Domain\Model\Sender $sender
+     */
+    public function getSender()
+    {
+        return $this->sender;
+    }
+
+    /**
+     * Sets the sender
+     * 
+     * @param \ERP\ErpManagementLogistics\Domain\Model\Sender $sender
+     * @return void
+     */
+    public function setSender(\ERP\ErpManagementLogistics\Domain\Model\Sender $sender)
+    {
+        $this->sender = $sender;
+    }
+
+    /**
+     * Adds a Parcels
+     * 
+     * @param \ERP\ErpManagementLogistics\Domain\Model\Parcels $parcel
+     * @return void
+     */
+    public function addParcel(\ERP\ErpManagementLogistics\Domain\Model\Parcels $parcel)
+    {
+        $this->parcels->attach($parcel);
+    }
+
+    /**
+     * Removes a Parcels
+     * 
+     * @param \ERP\ErpManagementLogistics\Domain\Model\Parcels $parcelToRemove The Parcels to be removed
+     * @return void
+     */
+    public function removeParcel(\ERP\ErpManagementLogistics\Domain\Model\Parcels $parcelToRemove)
+    {
+        $this->parcels->detach($parcelToRemove);
+    }
+
+    /**
+     * Returns the parcels
+     * 
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ERP\ErpManagementLogistics\Domain\Model\Parcels> $parcels
+     */
+    public function getParcels()
+    {
+        return $this->parcels;
+    }
+
+    /**
+     * Sets the parcels
+     * 
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ERP\ErpManagementLogistics\Domain\Model\Parcels> $parcels
+     * @return void
+     */
+    public function setParcels(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $parcels)
+    {
+        $this->parcels = $parcels;
+    }
+
+    /**
+     * Adds a ChildOrders
+     * 
+     * @param \ERP\ErpManagementLogistics\Domain\Model\ChildOrders $childOrder
+     * @return void
+     */
+    public function addChildOrder(\ERP\ErpManagementLogistics\Domain\Model\ChildOrders $childOrder)
+    {
+        $this->childOrders->attach($childOrder);
+    }
+
+    /**
+     * Removes a ChildOrders
+     * 
+     * @param \ERP\ErpManagementLogistics\Domain\Model\ChildOrders $childOrderToRemove The ChildOrders to be removed
+     * @return void
+     */
+    public function removeChildOrder(\ERP\ErpManagementLogistics\Domain\Model\ChildOrders $childOrderToRemove)
+    {
+        $this->childOrders->detach($childOrderToRemove);
+    }
+
+    /**
+     * Returns the childOrders
+     * 
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ERP\ErpManagementLogistics\Domain\Model\ChildOrders> $childOrders
+     */
+    public function getChildOrders()
+    {
+        return $this->childOrders;
+    }
+
+    /**
+     * Sets the childOrders
+     * 
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\ERP\ErpManagementLogistics\Domain\Model\ChildOrders> $childOrders
+     * @return void
+     */
+    public function setChildOrders(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $childOrders)
+    {
+        $this->childOrders = $childOrders;
     }
 }

@@ -69,6 +69,7 @@ class ComController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     protected $revenueController = null;
     protected $shipperController = null;
     protected $page = 1;
+    protected $user = [];
     public function initializeAction()
     {
         $this->dictitemController = $this->objectManager->get(\ERP\ErpManagementDict\Controller\DictitemController::class);
@@ -80,6 +81,8 @@ class ComController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         if ($_GET['tx_erpmanagemenorder_pi1']['@widget_0']['currentPage']) {
             $this->page = $_GET['tx_erpmanagemenorder_pi1']['@widget_0']['currentPage'];
         }
+        $this->user = $GLOBALS['TSFE']->fe_user->user;
+
     }
 
     /**

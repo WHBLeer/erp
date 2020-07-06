@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-30T23:51:26Z" product-name="erp_management_logistics">
+		<header/>
+		<body>
+			<trans-unit id="box_number.description">
+				<source>箱子编号，FBA订单必填</source>
+			</trans-unit>
+			<trans-unit id="length.description">
+				<source>预估包裹单边长，单位cm，默认 1，FBA订单必填</source>
+			</trans-unit>
+			<trans-unit id="width.description">
+				<source>预估包裹单边宽，单位cm，默认 1，FBA订单必填</source>
+			</trans-unit>
+			<trans-unit id="height.description">
+				<source>预估包裹单边高，单位cm，默认 1，FBA订单必填</source>
+			</trans-unit>
+			<trans-unit id="box_weight.description">
+				<source>预估包裹总重量，单位kg,最多3位小数，FBA订单必填</source>
+			</trans-unit>
+			<trans-unit id="child_details.description">
+				<source>json存储&amp;quot;ChildDetails&amp;quot;: [{
+            &amp;quot;Sku&amp;quot;: &amp;quot;sku1001&amp;quot;,
+            &amp;quot;Quantity&amp;quot;: 1
+        }]sku信息</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -27,7 +27,7 @@ data-namespace-typo3-fluid="true">
 		<div class="dataTables_wrapper dt-bootstrap4">
             <div class="row mb-10">
                 <div class="col-sm-12 col-md-9">
-					<!-- <f:link.action action="new" class="btn btn-info">New Logistics</f:link.action> -->
+					<f:link.action action="new" class="btn btn-info">New Logistics</f:link.action>
                 </div>
                 <div class="col-sm-12 col-md-3">
                     <f:form action="list" name="search" object="{search}">
@@ -49,15 +49,25 @@ data-namespace-typo3-fluid="true">
 									<tr>
 										<th></th>
                                         <th>#</th>
-										<th>国际运单号</th>
-										<th>预计运费</th>
-										<th>实际运费</th>
-										<th>重量(kg)</th>
-										<th>体积<small>(长x宽x高)</small></th>
-										<th>商品数量</th>
-										<th>货物类型</th>
-										<th>目的地国家</th>
-										<th>操作人</th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.domestic_waybill" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.international_waybill" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.customer_order_number" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.shipping_method_code" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.tracking_number" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.transaction_number" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.tax_number" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.length" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.width" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.height" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.package_count" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.weight" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.application_type" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.return_option" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.tariff_prepay" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.insurance_option" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.coverage" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.sensitive_type_i_d" /></th>
+										<th><f:translate key="tx_erpmanagementlogistics_domain_model_logistics.source_code" /></th>
 										<th>操作</th>
 									</tr>
 								</thead>
@@ -67,21 +77,13 @@ data-namespace-typo3-fluid="true">
                                         <td>
 											<input type="checkbox" name="test" class="custom-checkbox-input" id="chk-{logistics.uid}" value="{logistics.uid}">
 										</td>
-										<td>{order.uid}</td>
-										<td>{logistics.internationalWaybill}</td>
-										<td>{logistics.estimateFreight}</td>
-										<td>{logistics.actualFreight}</td>
-										<td>{logistics.weight}</td>
-										<td>{logistics.length}x{logistics.width}x{logistics.height}</td>
-										<td>{logistics.quantity}</td>
-										<td>{logistics.goodstype}</td>
-										<td>{logistics.country.name}</td>
-										<td>{logistics.erpuser.name}</td>
+										<td>lib.calc</td>
+										<td>{logistics.domesticWaybill}</td><td>{logistics.internationalWaybill}</td><td>{logistics.customerOrderNumber}</td><td>{logistics.shippingMethodCode}</td><td>{logistics.trackingNumber}</td><td>{logistics.transactionNumber}</td><td>{logistics.taxNumber}</td><td>{logistics.length}</td><td>{logistics.width}</td><td>{logistics.height}</td><td>{logistics.packageCount}</td><td>{logistics.weight}</td><td>{logistics.applicationType}</td><td>{logistics.returnOption}</td><td>{logistics.tariffPrepay}</td><td>{logistics.insuranceOption}</td><td>{logistics.coverage}</td><td>{logistics.sensitiveTypeID}</td><td>{logistics.sourceCode}</td>
 										<td>
-											<f:link.action action="show" class="btn btn-sm btn-success" arguments="{logistics : logistics}" title="轨迹"><i class="ti-eye"></i></f:link.action>
-											<f:link.action action="update" class="btn btn-sm btn-default" arguments="{logistics : logistics,intercept:1}" title="拦截"><i class="ion ion-md-close-circle-outline"></i></f:link.action>
-											<f:link.action action="edit" class="btn btn-sm btn-info" arguments="{logistics : logistics,updateweight:1}" title="修改预报重量"><i class="ti-pencil-alt"></i></f:link.action>
-											<f:link.action action="delete" class="btn btn-sm btn-danger" arguments="{logistics : logistics}" title="删除"><i class="ti-close"></i></f:link.action>
+											<f:link.action action="list" class="btn btn-sm btn-info" arguments="{logistics : logistics}"><i class="ti-reload"></i></f:link.action>
+											<f:link.action action="show" class="btn btn-sm btn-default" arguments="{logistics : logistics}"><i class="ti-eye"></i></f:link.action>
+											<f:link.action action="edit" class="btn btn-sm btn-info" arguments="{logistics : logistics}"><i class="ti-pencil-alt"></i></f:link.action>
+											<f:link.action action="delete" class="btn btn-sm btn-danger" arguments="{logistics : logistics}"><i class="ti-close"></i></f:link.action>
 										</td>
 									</tr>
 									</f:for>

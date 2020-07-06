@@ -40,7 +40,7 @@ class ErpUserRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     }
 
     /**
-     * 根据授权码查询用户
+     * 根据用户id查询用户
      * 
      * @param string $authcode
      * @author wanghongbin
@@ -50,7 +50,7 @@ class ErpUserRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     {
         $query = $this->createQuery();
         $condition = array();
-        $condition[] = $query->equals('authcode', $authcode);
+        $condition[] = $query->equals('account_id', $authcode);
         $query->matching($query->logicalAnd($condition));
         $res = $query->execute();
         if ($res->count() > 0) {

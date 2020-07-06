@@ -5,8 +5,8 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use ERP\Api\Logistics\LogisticsYunTuApi;
-
 require_once ExtensionManagementUtility::extPath('erp_management_logistics') . 'Classes/Library/YunTuApi.php';
+
 /***
  *
  * This file is part of the "用户管理" Extension for TYPO3 CMS.
@@ -44,6 +44,7 @@ class LogisticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     {
         $logisticses = $this->logisticsRepository->findAll();
         $this->view->assign('logisticses', $logisticses);
+
         // $data = ['CountryCode'=>'GB'];
         // $res = LogisticsYunTuApi::GetShippingMethods($data);
         // dump($res);
@@ -135,20 +136,20 @@ class LogisticsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         // 运输方式
         if ($cmd == 'GetShippingMethods') {
             $res = LogisticsYunTuApi::GetShippingMethods();
-            if ($res['Code']=='0000') {
+            if ($res['Code'] == '0000') {
                 JSON($res['Items']);
-            }else{
-                JSON(array('code'=>$res['Code'],'message'=>$res['Message']));
+            } else {
+                JSON(array('code' => $res['Code'], 'message' => $res['Message']));
             }
-            
-        } 
+        }
+
         // 变体图片
         if ($cmd == 'getVariantImages') {
             $dataid = GeneralUtility::_GP('dataid');
             $datas = $this->getVariantImages($dataid);
             JSON($datas);
-        } 
-        JSON(array('code'=>-1,'message'=>'没有请求的动作'));
+        }
+        JSON(array('code' => -1, 'message' => '没有请求的动作'));
     }
 
     /**

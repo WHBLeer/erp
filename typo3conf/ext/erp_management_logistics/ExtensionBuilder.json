@@ -3,8 +3,8 @@
         {
             "config": {
                 "position": [
-                    53,
-                    46
+                    12,
+                    47.6666259765625
                 ]
             },
             "name": "New Model Object",
@@ -62,117 +62,194 @@
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "\u9884\u8ba1\u8fd0\u8d39",
+                            "propertyDescription": "\u5ba2\u6237\u8ba2\u5355\u53f7,\u4e0d\u80fd\u91cd\u590d",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
-                            "propertyName": "estimateFreight",
-                            "propertyType": "Float",
+                            "propertyName": "customerOrderNumber",
+                            "propertyType": "String",
                             "uid": "830584758539"
                         },
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "\u5b9e\u9645\u8fd0\u8d39",
+                            "propertyDescription": "\u8fd0\u8f93\u65b9\u5f0f\u4ee3\u7801",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
-                            "propertyName": "actualFreight",
-                            "propertyType": "Float",
+                            "propertyName": "shippingMethodCode",
+                            "propertyType": "String",
                             "uid": "793175247227"
                         },
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "\u9884\u8ba1\u65f6\u6548,\u5de5\u4f5c\u65e5",
+                            "propertyDescription": "\u5305\u88f9\u8ddf\u8e2a\u53f7\uff0c\u53ef\u4ee5\u4e0d\u586b\u5199",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
-                            "propertyName": "aging",
-                            "propertyType": "Integer",
+                            "propertyName": "trackingNumber",
+                            "propertyType": "String",
                             "uid": "1375110392563"
                         },
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "\u91cd\u91cf(kg)",
+                            "propertyDescription": "\u5e73\u53f0\u4ea4\u6613\u53f7\uff08wish \u90ae\uff09",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
-                            "propertyName": "weight",
-                            "propertyType": "Float",
+                            "propertyName": "transactionNumber",
+                            "propertyType": "String",
                             "uid": "252079344085"
                         },
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "\u4f53\u79ef-\u957f(cm)",
+                            "propertyDescription": "\u6536\u4ef6\u4eba\u7a0e\u53f7\uff0c\u5df4\u897f\u56fd\u5bb6\u5fc5\u586b CPF \u6216 CNPJ\uff0cCPF \u7801\u683c\u5f0f\u4e3a 000.000.000-00,CNPJ \u7801\u683c\u5f0f\u4e3a 00.000.000\/0000-00\uff0c\u6b27\u76df\u53ef\u4ee5\u586b EORI",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
-                            "propertyName": "length",
-                            "propertyType": "Integer",
+                            "propertyName": "taxNumber",
+                            "propertyType": "String",
                             "uid": "1293018991174"
                         },
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "\u4f53\u79ef-\u5bbd(cm)",
+                            "propertyDescription": "\u9884\u4f30\u5305\u88f9\u5355\u8fb9\u957f\uff0c\u5355\u4f4d cm\uff0c\u975e\u5fc5\u586b\uff0c\u9ed8\u8ba41",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
-                            "propertyName": "width",
+                            "propertyName": "length",
                             "propertyType": "Integer",
                             "uid": "1377417431363"
                         },
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "\u4f53\u79ef-\u9ad8(cm)",
+                            "propertyDescription": "\u9884\u4f30\u5305\u88f9\u5355\u8fb9\u5bbd\uff0c\u5355\u4f4d cm\uff0c\u975e\u5fc5\u586b\uff0c\u9ed8\u8ba41",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
-                            "propertyName": "height",
+                            "propertyName": "width",
                             "propertyType": "Integer",
                             "uid": "601331868023"
                         },
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "\u5546\u54c1\u6570\u91cf",
+                            "propertyDescription": "\u9884\u4f30\u5305\u88f9\u5355\u8fb9\u9ad8\uff0c\u5355\u4f4d cm\uff0c\u975e\u5fc5\u586b\uff0c\u9ed8\u8ba41",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
-                            "propertyName": "quantity",
+                            "propertyName": "height",
                             "propertyType": "Integer",
                             "uid": "923721544229"
                         },
                         {
                             "allowedFileTypes": "",
                             "maxItems": "1",
-                            "propertyDescription": "\u8d27\u7269\u7c7b\u578b",
+                            "propertyDescription": "\u8fd0\u5355\u5305\u88f9\u7684\u4ef6\u6570\uff0c\u5fc5\u987b\u5927\u4e8e 0 \u7684\u6574\u6570",
                             "propertyIsExcludeField": true,
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
-                            "propertyName": "goodstype",
+                            "propertyName": "packageCount",
                             "propertyType": "Integer",
                             "uid": "860079310568"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9884\u4f30\u5305\u88f9\u603b\u91cd\u91cf\uff0c\u5355\u4f4d kg,\u6700\u591a 3 \u4f4d\u5c0f\u6570",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "weight",
+                            "propertyType": "Float",
+                            "uid": "445654714749"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u7533\u62a5\u7c7b\u578b, \u7528\u4e8e\u6253\u5370 CN22\uff0c1-Gift,2-Sameple,3-Documents,4-Others, \u9ed8\u8ba4 4-Other",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "applicationType",
+                            "propertyType": "Integer",
+                            "uid": "669982583432"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u662f\u5426\u9000\u56de,\u5305\u88f9\u65e0\u4eba\u7b7e\u6536\u65f6\u662f\u5426\u9000\u56de\uff0c1-\u9000\u56de\uff0c0-\u4e0d\u9000\u56de\uff0c\u9ed8\u8ba4 0",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "returnOption",
+                            "propertyType": "Integer",
+                            "uid": "1278121149465"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5173\u7a0e\u9884\u4ed8\u670d\u52a1\u8d39\uff0c1-\u53c2\u52a0\u5173\u7a0e\u9884\u4ed8\uff0c0-\u4e0d\u53c2\u52a0\u5173\u7a0e\u9884\u4ed8\uff0c\u9ed8\u8ba4 0 (\u6e20\u9053\u9700\u5f00\u901a\u5173\u7a0e\u9884\u4ed8\u670d\u52a1)",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "tariffPrepay",
+                            "propertyType": "Integer",
+                            "uid": "636049710017"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5305\u88f9\u6295\u4fdd\u7c7b\u578b\uff0c0-\u4e0d\u53c2\u4fdd\uff0c1-\u6309\u4ef6\uff0c2-\u6309\u6bd4\u4f8b\uff0c\u9ed8\u8ba4 0\uff0c\u8868\u793a\u4e0d\u53c2\u52a0\u8fd0\u8f93\u4fdd\u9669\uff0c\u5177\u4f53\u53c2\u8003\u5305\u88f9\u8fd0\u8f93",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "insuranceOption",
+                            "propertyType": "Integer",
+                            "uid": "245515268443"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4fdd\u9669\u7684\u6700\u9ad8\u989d\u5ea6\uff0c\u5355\u4f4d RMB",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "coverage",
+                            "propertyType": "Float",
+                            "uid": "1167075230047"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5305\u88f9\u4e2d\u7279\u6b8a\u8d27\u54c1\u7c7b\u578b\uff0c\u53ef\u8c03\u7528\u8d27\u54c1\u7c7b\u578b\u67e5\u8be2\u670d\u52a1\u67e5\u8be2\uff0c\u53ef\u4ee5\u4e0d\u586b\u5199\uff0c\u8868\u793a\u666e\u901a\u8d27\u54c1",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "sensitiveTypeID",
+                            "propertyType": "Integer",
+                            "uid": "1065950949823"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8ba2\u5355\u6765\u6e90\u4ee3\u7801",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "sourceCode",
+                            "propertyType": "String",
+                            "uid": "1276598591772"
                         }
                     ]
                 },
                 "relationGroup": {
                     "relations": [
-                        {
-                            "foreignRelationClass": "\\ERP\\ErpManagementDict\\Domain\\Model\\Region",
-                            "lazyLoading": false,
-                            "propertyIsExcludeField": true,
-                            "relationDescription": "\u76ee\u7684\u5730\u56fd\u5bb6",
-                            "relationName": "country",
-                            "relationType": "zeroToOne",
-                            "relationWire": "",
-                            "renderType": "selectSingle",
-                            "uid": "847447107300"
-                        },
                         {
                             "foreignRelationClass": "\\ERP\\ErpManagementUser\\Domain\\Model\\ErpUser",
                             "lazyLoading": false,
@@ -183,8 +260,641 @@
                             "relationWire": "",
                             "renderType": "selectSingle",
                             "uid": "1240966170006"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u6536\u4ef6\u4eba",
+                            "relationName": "receiver",
+                            "relationType": "zeroToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingle",
+                            "uid": "847447107300"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u53d1\u4ef6\u4eba",
+                            "relationName": "sender",
+                            "relationType": "zeroToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingle",
+                            "uid": "722832326460"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u7533\u62a5\u4fe1\u606f",
+                            "relationName": "parcels",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "623707618512"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "\u7bb1\u5b50\u660e\u7ec6\u4fe1\u606f\uff0cFBA \u8ba2\u5355\u5fc5\u586b",
+                            "relationName": "childOrders",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "787185495643"
                         }
                     ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    232,
+                    50.6666259765625
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": []
+                },
+                "name": "Receiver",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u6536\u4ef6\u4eba\u4fe1\u606f",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "12134904348"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6536\u4ef6\u4eba\u6240\u5728\u56fd\u5bb6\uff0c\u586b\u5199\u56fd\u9645\u901a\u7528\u6807\u51c6 2 \u4f4d\u7b80\u7801\uff0c\u53ef\u901a\u8fc7\u56fd\u5bb6\u67e5\u8be2\u670d\u52a1\u67e5\u8be2",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "countryCode",
+                            "propertyType": "String",
+                            "uid": "264640732862"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u59d3",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "firstName",
+                            "propertyType": "String",
+                            "uid": "297312106349"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u540d",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "lastName",
+                            "propertyType": "String",
+                            "uid": "1159522005902"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u516c\u53f8",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "company",
+                            "propertyType": "String",
+                            "uid": "1100754514819"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8be6\u7ec6\u5730\u5740",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "street",
+                            "propertyType": "String",
+                            "uid": "731825970774"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8be6\u7ec6\u5730\u57401",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "streetAddress1",
+                            "propertyType": "String",
+                            "uid": "572766327501"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8be6\u7ec6\u5730\u57402",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "streetAddress2",
+                            "propertyType": "String",
+                            "uid": "1440230403262"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6240\u5728\u57ce\u5e02",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "city",
+                            "propertyType": "String",
+                            "uid": "542071284587"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5dde\/\u7701",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "state",
+                            "propertyType": "String",
+                            "uid": "1381067827348"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u90ae\u7f16",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "zip",
+                            "propertyType": "String",
+                            "uid": "212435854125"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6536\u4ef6\u4eba\u7535\u8bdd",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "phone",
+                            "propertyType": "String",
+                            "uid": "1019945207148"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8857\u9053\u95e8\u724c\u53f7",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "houseNumber",
+                            "propertyType": "String",
+                            "uid": "1569010448676"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u90ae\u7bb1",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "email",
+                            "propertyType": "String",
+                            "uid": "578411202089"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    451,
+                    49.6666259765625
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": []
+                },
+                "name": "Sender",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u53d1\u4ef6\u4eba\u4fe1\u606f",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "531490085637"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6536\u4ef6\u4eba\u6240\u5728\u56fd\u5bb6\uff0c\u586b\u5199\u56fd\u9645\u901a\u7528\u6807\u51c6 2 \u4f4d\u7b80\u7801\uff0c\u53ef\u901a\u8fc7\u56fd\u5bb6\u67e5\u8be2\u670d\u52a1\u67e5\u8be2",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "countryCode",
+                            "propertyType": "String",
+                            "uid": "1367370279295"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u59d3",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "firstName",
+                            "propertyType": "String",
+                            "uid": "377393658225"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u540d",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "lastName",
+                            "propertyType": "String",
+                            "uid": "1445412010000"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u516c\u53f8",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "company",
+                            "propertyType": "String",
+                            "uid": "22685634500"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u8be6\u7ec6\u5730\u5740",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "street",
+                            "propertyType": "String",
+                            "uid": "1162289090876"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6240\u5728\u57ce\u5e02",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "city",
+                            "propertyType": "String",
+                            "uid": "1230564956783"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5dde\/\u7701",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "state",
+                            "propertyType": "String",
+                            "uid": "88970191335"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u90ae\u7f16",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "zip",
+                            "propertyType": "String",
+                            "uid": "876725270099"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6536\u4ef6\u4eba\u7535\u8bdd",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "phone",
+                            "propertyType": "String",
+                            "uid": "143048727196"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    683,
+                    56.6666259765625
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": []
+                },
+                "name": "Parcels",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u7533\u62a5\u4fe1\u606f",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1245907329636"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5305\u88f9\u7533\u62a5\u540d\u79f0(\u82f1\u6587)\u5fc5\u586b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "eName",
+                            "propertyType": "String",
+                            "uid": "425197786466"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5305\u88f9\u7533\u62a5\u540d\u79f0",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "cName",
+                            "propertyType": "String",
+                            "uid": "321921520982"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6d77\u5173\u7f16\u7801",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "hSCode",
+                            "propertyType": "String",
+                            "uid": "1107372443740"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u7533\u62a5\u6570\u91cf",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "quantity",
+                            "propertyType": "Integer",
+                            "uid": "1115538498513"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u7533\u62a5\u4ef7\u683c(\u5355\u4ef7),\u5355\u4f4d USD,\u5fc5\u586b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "unitPrice",
+                            "propertyType": "Float",
+                            "uid": "329532708465"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u7533\u62a5\u91cd\u91cf(\u5355\u91cd)\uff0c\u5355\u4f4d kg",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "unitWeight",
+                            "propertyType": "Float",
+                            "uid": "337141473220"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u5907\u6ce8",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "remark",
+                            "propertyType": "Text",
+                            "uid": "453820217534"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4ea7\u54c1\u9500\u552e\u94fe\u63a5\u5730\u5740",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "productUrl",
+                            "propertyType": "String",
+                            "uid": "220570517588"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u7528\u4e8e\u586b\u5199\u5546\u54c1SKU\uff0cFBA\u8ba2\u5355\u5fc5\u586b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "sku",
+                            "propertyType": "String",
+                            "uid": "609042560082"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u914d\u8d27\u4fe1\u606f",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "invoiceRemark",
+                            "propertyType": "String",
+                            "uid": "1208673824935"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u7533\u62a5\u5e01\u79cd\uff0c\u9ed8\u8ba4\uff1aUSD",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "currencyCode",
+                            "propertyType": "String",
+                            "uid": "23075021524"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    6,
+                    342.6666259765625
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": []
+                },
+                "name": "ChildOrders",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "\u7bb1\u5b50\u660e\u7ec6\u4fe1\u606f",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "841338805802"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u7bb1\u5b50\u7f16\u53f7\uff0cFBA\u8ba2\u5355\u5fc5\u586b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "boxNumber",
+                            "propertyType": "String",
+                            "uid": "929315436678"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9884\u4f30\u5305\u88f9\u5355\u8fb9\u957f\uff0c\u5355\u4f4dcm\uff0c\u9ed8\u8ba4 1\uff0cFBA\u8ba2\u5355\u5fc5\u586b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "length",
+                            "propertyType": "Integer",
+                            "uid": "1152186383986"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9884\u4f30\u5305\u88f9\u5355\u8fb9\u5bbd\uff0c\u5355\u4f4dcm\uff0c\u9ed8\u8ba4 1\uff0cFBA\u8ba2\u5355\u5fc5\u586b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "width",
+                            "propertyType": "Integer",
+                            "uid": "1511391523208"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9884\u4f30\u5305\u88f9\u5355\u8fb9\u9ad8\uff0c\u5355\u4f4dcm\uff0c\u9ed8\u8ba4 1\uff0cFBA\u8ba2\u5355\u5fc5\u586b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "height",
+                            "propertyType": "Integer",
+                            "uid": "1184602274870"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u9884\u4f30\u5305\u88f9\u603b\u91cd\u91cf\uff0c\u5355\u4f4dkg,\u6700\u591a3\u4f4d\u5c0f\u6570\uff0cFBA\u8ba2\u5355\u5fc5\u586b",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "boxWeight",
+                            "propertyType": "Float",
+                            "uid": "888903400740"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "json\u5b58\u50a8\"ChildDetails\": [{\n            \"Sku\": \"sku1001\",\n            \"Quantity\": 1\n        }]sku\u4fe1\u606f",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "childDetails",
+                            "propertyType": "Text",
+                            "uid": "282886938787"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
                 }
             }
         }
@@ -230,9 +940,58 @@
         ],
         "vendorName": "ERP"
     },
-    "wires": [],
+    "wires": [
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_1",
+                "uid": "847447107300"
+            },
+            "tgt": {
+                "moduleId": 1,
+                "terminal": "SOURCES",
+                "uid": "12134904348"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_2",
+                "uid": "722832326460"
+            },
+            "tgt": {
+                "moduleId": 2,
+                "terminal": "SOURCES",
+                "uid": "531490085637"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_3",
+                "uid": "623707618512"
+            },
+            "tgt": {
+                "moduleId": 3,
+                "terminal": "SOURCES",
+                "uid": "1245907329636"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_4",
+                "uid": "787185495643"
+            },
+            "tgt": {
+                "moduleId": 4,
+                "terminal": "SOURCES",
+                "uid": "841338805802"
+            }
+        }
+    ],
     "log": {
-        "last_modified": "2020-05-26 11:14",
+        "last_modified": "2020-06-30 11:51",
         "extension_builder_version": "9.10.2",
         "be_user": "\u7ba1\u7406\u5458 (1)"
     }

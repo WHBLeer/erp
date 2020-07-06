@@ -4,6 +4,7 @@
 CREATE TABLE fe_users (
 
 	account_id varchar(255) DEFAULT '' NOT NULL,
+	order_lasttime int(11) DEFAULT '0' NOT NULL,
 	wxopenid varchar(255) DEFAULT '' NOT NULL,
 	bindip text,
 	nickname varchar(255) DEFAULT '' NOT NULL,
