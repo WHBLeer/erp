@@ -49,15 +49,73 @@ class OrderRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
     //     $query->getQuerySettings()->setRespectStoragePage(FALSE);
     //     // the same functions as shown in initializeObject can be applied.
     //     return $query->execute();
-    // }
+    // } 
     /**
-     * @param $keyword
+     * 查询订单
+     *
+     * @param array $keywords
+     * @return void
+     * @author wanghongbin
+     * tstamp: 2020-07-06
      */
-    public function findAlls($keyword = '')
+    public function findAlls($keywords = array())
     {
         $query = $this->createQuery();
-        $query->matching($query->equals('uid', $uid));
-        return $query->execute()->getFirst();
+        $condition = [];
+        if ($keywords['country']!='') {
+            $condition[] = $query->equals('salesChannelName', $keywords['country']);
+        }
+        if ($keywords['orderStatus']!='') {
+            $condition[] = $query->equals('orderStatus', $keywords['orderStatus']);
+        }
+        if ($keywords['payment']!='') {
+            $condition[] = $query->equals('paymentMethod', $keywords['payment']);
+        }
+        if ($keywords['gnShipper']!='') {
+            $condition[] = $query->equals('shipper.gnStatus', $keywords['gnShipper']);
+        }
+        if ($keywords['gjShipper']!='') {
+            $condition[] = $query->equals('shipper.gjStatus', $keywords['gjShipper']);
+        }
+        if ($keywords['abnormal']!='') {
+            $condition[] = $query->equals('orderStatus', $keywords['abnormal']);
+        }
+        if ($keywords['amazonid']!='') {
+            $condition[] = $query->equals('amazonOrderId', $keywords['amazonid']);
+        }
+        if ($keywords['orderuid']!='') {
+            $condition[] = $query->equals('uid', $keywords['orderuid']);
+        }
+        if ($keywords['gnWaybill']!='') {
+            $condition[] = $query->equals('shipper.gnWaybill', $keywords['gnWaybill']);
+        }
+        if ($keywords['gjWaybill']!='') {
+            $condition[] = $query->equals('shipper.gjWaybill', $keywords['gjWaybill']);
+        }
+        if ($keywords['gjTracking']!='') {
+            $condition[] = $query->equals('shipper.gjTracking', $keywords['gjTracking']);
+        }
+        if ($keywords['productSku']!='') {
+            $condition[] = $query->equals('shipper.sku', $keywords['productSku']);
+        }
+        if ($keywords['starttime']!='') {
+            $condition[] = $query->greaterThanOrEqual('purchaseDate', $keywords['starttime']);
+        }
+        if ($keywords['endtime']!='') {
+            $condition[] = $query->lessThanOrEqual('purchaseDate', $keywords['endtime']);
+        }
+
+        if (!empty($condition)) {
+            $query->matching($query->logicalAnd($condition));
+        }
+
+        $query->setOrderings(
+            [
+                'purchaseDate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+                'lastUpdateDate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
+            ]
+        );
+        return $query->execute();
     }
 
     /**

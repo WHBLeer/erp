@@ -28,50 +28,50 @@ data-namespace-typo3-fluid="true">
             <f:form action="list" name="search" object="{search}" class="search">
             	<div class="row">
                 	<div class="col-md-2 mb-1" title="按国家查询">
-						<f:form.select id="country" name="country" options="{countrys}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--选择国家--" class="form-control" />
+						<f:form.select id="country" name="keywords[country]" options="{countrys}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--选择国家--" class="form-control" />
 					</div>
                 	<div class="col-md-2 mb-1" title="按订单状态查询">
-						<f:form.select id="orderStatus" name="orderStatus" options="{orderStatuss}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--订单状态--" class="form-control" />
+						<f:form.select id="orderStatus" name="keywords[orderStatu]s" options="{orderStatuss}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--订单状态--" class="form-control" />
 					</div>
-                	<div class="col-md-2 mb-1" title="按支付状态查询">
-						<f:form.select id="payment" name="payment" options="{payments}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--支付状态--" class="form-control" />
+                	<div class="col-md-2 mb-1" title="按支付方式查询">
+						<f:form.select id="payment" name="keywords[payment]" options="{payments}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--支付状态--" class="form-control" />
 					</div>
                 	<div class="col-md-2 mb-1" title="查询国内物流">
-						<f:form.select id="gnShipper" name="gnShipper" options="{gnShippers}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--国内物流--" class="form-control" />
+						<f:form.select id="gnShipper" name="keywords[gnShippe]r" options="{gnShippers}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--国内物流--" class="form-control" />
 					</div>
                 	<div class="col-md-2 mb-1" title="查询国际物流">
-						<f:form.select id="gjShipper" name="gjShipper" options="{gjShippers}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--国际物流--" class="form-control" />
+						<f:form.select id="gjShipper" name="keywords[gjShippe]r" options="{gjShippers}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--国际物流--" class="form-control" />
 					</div>
                 	<div class="col-md-2 mb-1" title="查询异常">
-						<f:form.select id="abnormal" name="abnormal" options="{abnormals}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--异常状态--" class="form-control" />
+						<f:form.select id="abnormal" name="keywords[abnormal]" options="{abnormals}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--异常状态--" class="form-control" />
 					</div>
 				</div>
             	<div class="row">
 					<div class="col-md-2 mb-1" title="按订单编号查询">
-						<input class="form-control" name="tx_erpmanagementorder_pi1[orderid]" type="number" value="{orderid}" placeholder="订单ID" >
+						<f:form.textfield name="keywords[orderid]" value="{orderid}" class="form-control" placeholder="订单ID" additionalAttributes="{type: 'number'}" />
 					</div>
 					<div class="col-md-2 mb-1" title="按Amazon订单号查询">
-						<f:form.textfield name="ymxNumber" value="{ymxNumber}" class="form-control" placeholder="Amazon订单号" />
+						<f:form.textfield name="keywords[ymxNumber]" value="{ymxNumber}" class="form-control" placeholder="Amazon订单号" />
 					</div>
 					<div class="col-md-2 mb-1" title="按国内运单号查询">
-						<f:form.textfield name="gnWaybill" value="{gnWaybill}" class="form-control" placeholder="国内运单号" />
+						<f:form.textfield name="keywords[gnWaybill]" value="{gnWaybill}" class="form-control" placeholder="国内运单号" />
 					</div>
 					<div class="col-md-2 mb-1" title="按国际运单号查询">
-						<f:form.textfield name="gjWaybill" value="{gjWaybill}" class="form-control" placeholder="国际运单号" />
+						<f:form.textfield name="keywords[gjWaybill]" value="{gjWaybill}" class="form-control" placeholder="国际运单号" />
 					</div>
 					<div class="col-md-2 mb-1" title="按国际追踪号查询">
-						<f:form.textfield name="gjTracking" value="{gjTracking}" class="form-control" placeholder="国际追踪号" />
+						<f:form.textfield name="keywords[gjTracking]" value="{gjTracking}" class="form-control" placeholder="国际追踪号" />
 					</div>
 					<div class="col-md-2 mb-1" title="按产品SKU查询">
-						<f:form.textfield name="productSku" value="{productSku}" class="form-control" placeholder="产品SKU" />
+						<f:form.textfield name="keywords[productSku]" value="{productSku}" class="form-control" placeholder="产品SKU" />
 					</div>
 				</div>
             	<div class="row">
 					<div class="col-md-2 mb-1" title="开始时间">
-						<input class="form-control" name="tx_erpmanagementorder_pi1[starttime]" type="date" value="{starttime}">
+						<input class="form-control" name="tx_erpmanagementorder_pi1[keywords][starttime]" type="date" value="{starttime}">
 					</div>
 					<div class="col-md-2 mb-1" title="结束时间">
-						<input class="form-control" name="tx_erpmanagementorder_pi1[endtime]" type="date" value="{endtime}">
+						<input class="form-control" name="tx_erpmanagementorder_pi1[keywords][endtime]" type="date" value="{endtime}">
 					</div>
 					<div class="col-md-8 mb-1 text-right">
 						<f:link.action action="new" class="btn btn-default">重置</f:link.action>
@@ -126,7 +126,7 @@ data-namespace-typo3-fluid="true">
                                 <tbody>
                                     <f:for each="{orderPagination}" as="order" iteration="itemIteration">
 									<tr>
-                                        <td>
+                                        <td> 
 											<input type="checkbox" name="test" class="custom-checkbox-input" id="chk-{order.uid}" value="{order.uid}">
 										</td>
 										<td>{order.uid} <f:link.action action="pull" arguments="{order : order}"><i class="ti-reload"></i></f:link.action></td>

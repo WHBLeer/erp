@@ -537,8 +537,8 @@ class ErpOrderApi extends ErpServerCommon{
 			'pageSize'	=> $datas['pageSize'],
 			'accountId'	=> $datas['accountId'],
 		);
-		dump($url);
-		dump($this->basedata+$param);
+		// dump($url);
+		// dump($this->basedata+$param);
 		$data = self::getHttpResponsePOST($url,$this->basedata+$param);
 		return $data;
 	}

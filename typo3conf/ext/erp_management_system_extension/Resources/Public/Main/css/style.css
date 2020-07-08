@@ -3949,10 +3949,10 @@ Invoice
 }
 /*# sourceMappingURL=style.css.map */
 
-input[type=checkbox] {
+/* input[type=checkbox] {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
   z-index: auto !important;
   opacity: unset !important;
@@ -3961,8 +3961,8 @@ input[type=checkbox] {
 input[type=checkbox]:after {
   display: inline-block;
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border-radius: 3px;
   background: #fff;
   border: 1px solid #ddd;
@@ -3973,6 +3973,6 @@ input[type=checkbox]:checked:after {
   font-size: 14px;
   font-weight: bold;
   color: #fff;
-  background-color: #7f7159;
+  background-color: #1e7e34;
   text-align: center;
-}
+} */

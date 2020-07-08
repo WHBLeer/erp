@@ -4,7 +4,7 @@
             "config": {
                 "position": [
                     112,
-                    61
+                    60
                 ]
             },
             "name": "New Model Object",
@@ -100,7 +100,7 @@
                             "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "uploadtime",
-                            "propertyType": "String",
+                            "propertyType": "Integer",
                             "uid": "1255133185589"
                         },
                         {
@@ -157,24 +157,35 @@
                             "propertyName": "jgStatus",
                             "propertyType": "Integer",
                             "uid": "883946479220"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u6700\u540e\u66f4\u65b0\u65f6\u95f4",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "lastUpdateDate",
+                            "propertyType": "Integer",
+                            "uid": "739114361606"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "\u4e0a\u4f20\u7684\u4ea7\u54c1",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "products",
+                            "propertyType": "Text",
+                            "uid": "780402464578"
                         }
                     ]
                 },
                 "relationGroup": {
                     "relations": [
                         {
-                            "foreignRelationClass": "\\ERP\\ErpManagementProduct\\Domain\\Model\\Product",
-                            "lazyLoading": false,
-                            "propertyIsExcludeField": true,
-                            "relationDescription": "\u4ea7\u54c1",
-                            "relationName": "product",
-                            "relationType": "zeroToOne",
-                            "relationWire": "",
-                            "renderType": "selectSingle",
-                            "uid": "1393728727387"
-                        },
-                        {
-                            "foreignRelationClass": "\\ERP\\ErpManagementDict\\Domain\\Model\\Region",
+                            "foreignRelationClass": "\\ERP\\ErpManagementUser\\Domain\\Model\\ErpUser",
                             "lazyLoading": false,
                             "propertyIsExcludeField": true,
                             "relationDescription": "\u64cd\u4f5c\u4eba",
@@ -232,7 +243,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2020-06-15 04:28",
+        "last_modified": "2020-07-07 02:40",
         "extension_builder_version": "9.10.2",
         "be_user": "\u7ba1\u7406\u5458 (1)"
     }

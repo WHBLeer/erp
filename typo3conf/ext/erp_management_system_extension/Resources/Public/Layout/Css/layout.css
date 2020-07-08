@@ -33,7 +33,18 @@
     padding-left: 0px;
     padding-right: 0px;
 }
-
+.table.size-95{
+	font-size: 95%;
+}
+.table.size-90{
+	font-size: 90%;
+}
+.table.size-85{
+	font-size: 85%;
+}
+.table.size-80{
+	font-size: 80%;
+}
 .table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6;
@@ -47,6 +58,12 @@
 .table .btn-xs{
     font-size: 10px;
     padding: 4px;
+}
+
+.table td, .table th {
+    padding: .75rem 0.4em;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
 }
 
 .input-group {
@@ -202,7 +219,7 @@ ul li .bt_del_skutype:hover{
 }
 #uploadForm th {
     font-weight: 600;
-    width: 100px;
+    width: 110px;
     border: none;
 }
 #uploadForm td {
@@ -221,18 +238,21 @@ ul li .bt_del_skutype:hover{
 }
 
 .status-0{
-    color: #F7AB71;
+	color: #979797;
 }
 .status-1{
-    color: green;
+	color: #31CDD6;
 }
 .status-2{
-    color: #337AC1;;
+	color: #7ED321;
 }
 .status-3{
-    color: red;
+	color: #D0021B;
 }
-.status-4,.status-5{
+.status-4{
+	color: #F5A623;
+}
+.status-5{
     color: #000000;
 }
 .parsley-errors-list.filled {

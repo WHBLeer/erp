@@ -1,6 +1,8 @@
 <?php
 namespace ERP\ErpManagementProduct\Domain\Repository;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Database\ConnectionPool;
 
 /***
  *
@@ -17,4 +19,21 @@ namespace ERP\ErpManagementProduct\Domain\Repository;
  */
 class ProductRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+    public function findAllRange($start,$end,$user)
+    {
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_erpmanagementproduct_domain_model_product');
+        $statement = $queryBuilder
+        ->select('uid')
+        ->from('tx_erpmanagementproduct_domain_model_product')
+        ->where(
+            $queryBuilder->expr()->eq('approval.code', $queryBuilder->createNamedParameter(1)),
+            $queryBuilder->expr()->eq('shelves.code', $queryBuilder->createNamedParameter(1)),
+            $queryBuilder->expr()->eq('adduser', $queryBuilder->createNamedParameter($user)),
+            $queryBuilder->expr()->gte('uid', $queryBuilder->createNamedParameter($start)),
+            $queryBuilder->expr()->gte('uid', $queryBuilder->createNamedParameter($start)),
+            $queryBuilder->expr()->lte('uid', $queryBuilder->createNamedParameter($end))
+        )
+        ->execute();
+        return $statement->fetchAll();
+    }
 }

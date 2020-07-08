@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-07-07T14:25:12Z" product-name="erp_management_prupload">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-14T19:42:48Z" product-name="erp_management_prupload">
 		<header/>
 		<body>
 			<trans-unit id="market.description">
@@ -36,10 +36,7 @@
 			<trans-unit id="jg_status.description">
 				<source>价格状态 0上传中 1上传成功 2上传失败</source>
 			</trans-unit>
-			<trans-unit id="last_update_date.description">
-				<source>最后更新时间</source>
-			</trans-unit>
-			<trans-unit id="products.description">
+			<trans-unit id="product.description">
 				<source>产品</source>
 			</trans-unit>
 			<trans-unit id="user.description">

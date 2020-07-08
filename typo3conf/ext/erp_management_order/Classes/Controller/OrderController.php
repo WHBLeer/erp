@@ -33,8 +33,10 @@ class OrderController extends ComController
     public function listAction()
     {
         $this->pullOrderByAccountId($this->user['account_id']);
-        $orders = $this->orderRepository->findAll();
+        $keywords = $this->request->hasArgument('keywords')?$this->request->getArgument('keywords'):[];
+        $orders = $this->orderRepository->findAlls($keywords);
         $this->view->assign('orders', $orders);
+        $this->view->assign('keywords', $keywords);
         $this->view->assign('page', $this->page);
     }
 
@@ -153,7 +155,7 @@ class OrderController extends ComController
             $this->updateOrderLasttime();
 
             $orderres = $res['data'];
-            dump($orderres);
+            // dump($orderres);
             foreach ($orderres as $key => $result) {
                 $orders = $this->orderRepository->findByAmazonOrderId($result['amazonOrderId']);
                 $count = $orders->count();

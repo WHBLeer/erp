@@ -16,6 +16,7 @@ CREATE TABLE tx_erpmanagementdict_domain_model_dictitem (
 
 	name varchar(255) DEFAULT '' NOT NULL,
 	code varchar(255) DEFAULT '' NOT NULL,
+	lang varchar(255) DEFAULT '' NOT NULL,
 	dicttype int(11) unsigned DEFAULT '0',
 
 );

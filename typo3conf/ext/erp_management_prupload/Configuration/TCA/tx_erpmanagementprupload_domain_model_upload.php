@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'market,lang,category_text,category_node,template,last_update_date, uploadtime,gx_status,tp_status,kc_status',
+        'searchFields' => 'market,lang,category_text,category_node,template,gx_status,tp_status,kc_status,products',
         'iconfile' => 'EXT:erp_management_prupload/Resources/Public/Icons/tx_erpmanagementprupload_domain_model_upload.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, market, lang, category_text, category_node, template, last_update_date, uploadtime, cp_status, gx_status, tp_status, kc_status, jg_status, product, user',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, market, lang, category_text, category_node, template, uploadtime, cp_status, gx_status, tp_status, kc_status, jg_status, last_update_date, products, user',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, market, lang, category_text, category_node, template, last_update_date, uploadtime, cp_status, gx_status, tp_status, kc_status, jg_status, product, user, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, market, lang, category_text, category_node, template, uploadtime, cp_status, gx_status, tp_status, kc_status, jg_status, last_update_date, products, user, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -161,23 +161,14 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'last_update_date' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_prupload/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementprupload_domain_model_upload.last_update_date',
-            'config' => [
-                'type' => 'input',
-                'size' => 4,
-                'eval' => 'int'
-            ]
-        ],
         'uploadtime' => [
             'exclude' => true,
             'label' => 'LLL:EXT:erp_management_prupload/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementprupload_domain_model_upload.uploadtime',
             'config' => [
                 'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
+                'size' => 4,
+                'eval' => 'int'
+            ]
         ],
         'cp_status' => [
             'exclude' => true,
@@ -193,27 +184,27 @@ return [
             'label' => 'LLL:EXT:erp_management_prupload/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementprupload_domain_model_upload.gx_status',
             'config' => [
                 'type' => 'input',
-                'size' => 4,
-                'eval' => 'int'
-            ]
+                'size' => 30,
+                'eval' => 'trim'
+            ],
         ],
         'tp_status' => [
             'exclude' => true,
             'label' => 'LLL:EXT:erp_management_prupload/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementprupload_domain_model_upload.tp_status',
             'config' => [
                 'type' => 'input',
-                'size' => 4,
-                'eval' => 'int'
-            ]
+                'size' => 30,
+                'eval' => 'trim'
+            ],
         ],
         'kc_status' => [
             'exclude' => true,
             'label' => 'LLL:EXT:erp_management_prupload/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementprupload_domain_model_upload.kc_status',
             'config' => [
                 'type' => 'input',
-                'size' => 4,
-                'eval' => 'int'
-            ]
+                'size' => 30,
+                'eval' => 'trim'
+            ],
         ],
         'jg_status' => [
             'exclude' => true,
@@ -224,29 +215,31 @@ return [
                 'eval' => 'int'
             ]
         ],
-        'product' => [
+        'last_update_date' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:erp_management_prupload/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementprupload_domain_model_upload.product',
+            'label' => 'LLL:EXT:erp_management_prupload/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementprupload_domain_model_upload.last_update_date',
             'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_erpmanagementproduct_domain_model_product',
-                'minitems' => 0,
-                'maxitems' => 1,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
-            ],
+                'type' => 'input',
+                'size' => 4,
+                'eval' => 'int'
+            ]
+        ],
+        'products' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_prupload/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementprupload_domain_model_upload.products',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim'
+            ]
         ],
         'user' => [
             'exclude' => true,
             'label' => 'LLL:EXT:erp_management_prupload/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementprupload_domain_model_upload.user',
             'config' => [
                 'type' => 'inline',
-                'foreign_table' => 'tx_erpmanagementdict_domain_model_region',
+                'foreign_table' => 'fe_users',
                 'minitems' => 0,
                 'maxitems' => 1,
                 'appearance' => [

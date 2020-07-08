@@ -85,6 +85,7 @@ class ProductController extends ComController
         $products = $this->productRepository->findAll();
         $this->view->assign('page', $this->page);
         $this->view->assign('products', $products);
+        
     }
 
     /**
@@ -365,6 +366,16 @@ class ProductController extends ComController
             $dataid = GeneralUtility::_GP('dataid');
             $datas = $this->getVariantImages($dataid);
             JSON($datas);
+        } 
+
+        // 产品id
+        if ($cmd == 'queryRange') {
+            $beginNumber = GeneralUtility::_GP('beginNumber');
+            $endNumber = GeneralUtility::_GP('endNumber');
+            $erpuser = $GLOBALS['TSFE']->fe_user->user['uid'];
+
+            $products = $this->productRepository->findAllRange($beginNumber,$endNumber,$erpuser);
+            JSON(array_column($products,'uid'));
         } 
         JSON(array('code'=>-1,'message'=>'没有请求的动作'));
     }

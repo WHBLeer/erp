@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'name,code',
+        'searchFields' => 'name,code,lang',
         'iconfile' => 'EXT:erp_management_dict/Resources/Public/Icons/tx_erpmanagementdict_domain_model_dictitem.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, code, dicttype',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, code,lang, dicttype',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, code, dicttype, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, code,lang, dicttype, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -128,6 +128,15 @@ return [
         'code' => [
             'exclude' => true,
             'label' => 'LLL:EXT:erp_management_dict/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementdict_domain_model_dictitem.code',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim'
+            ],
+        ],
+        'lang' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:erp_management_dict/Resources/Private/Language/locallang_db.xlf:tx_erpmanagementdict_domain_model_dictitem.lang',
             'config' => [
                 'type' => 'input',
                 'size' => 30,

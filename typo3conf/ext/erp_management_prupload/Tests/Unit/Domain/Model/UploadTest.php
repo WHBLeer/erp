@@ -152,10 +152,10 @@ class UploadTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
     /**
      * @test
      */
-    public function getUploadtimeReturnsInitialValueForString()
+    public function getUploadtimeReturnsInitialValueForInt()
     {
         self::assertSame(
-            '',
+            0,
             $this->subject->getUploadtime()
         );
     }
@@ -163,12 +163,12 @@ class UploadTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
     /**
      * @test
      */
-    public function setUploadtimeForStringSetsUploadtime()
+    public function setUploadtimeForIntSetsUploadtime()
     {
-        $this->subject->setUploadtime('Conceived at T3CON10');
+        $this->subject->setUploadtime(12);
 
         self::assertAttributeEquals(
-            'Conceived at T3CON10',
+            12,
             'uploadtime',
             $this->subject
         );
@@ -302,28 +302,64 @@ class UploadTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
     /**
      * @test
      */
-    public function getProductReturnsInitialValueForProduct()
+    public function getLastUpdateDateReturnsInitialValueForInt()
+    {
+        self::assertSame(
+            0,
+            $this->subject->getLastUpdateDate()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setLastUpdateDateForIntSetsLastUpdateDate()
+    {
+        $this->subject->setLastUpdateDate(12);
+
+        self::assertAttributeEquals(
+            12,
+            'lastUpdateDate',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getProductsReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getProducts()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setProductsForStringSetsProducts()
+    {
+        $this->subject->setProducts('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'products',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getUserReturnsInitialValueForErpUser()
     {
     }
 
     /**
      * @test
      */
-    public function setProductForProductSetsProduct()
-    {
-    }
-
-    /**
-     * @test
-     */
-    public function getUserReturnsInitialValueForRegion()
-    {
-    }
-
-    /**
-     * @test
-     */
-    public function setUserForRegionSetsUser()
+    public function setUserForErpUserSetsUser()
     {
     }
 }

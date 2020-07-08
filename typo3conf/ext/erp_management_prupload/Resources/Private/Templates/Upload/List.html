@@ -16,9 +16,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <f:section name="content">
 	<f:flashMessages as="flashMessages">
 		<script>
-			<f: for each="{flashMessages}" as="flashMessage">
+			<f:for each="{flashMessages}" as="flashMessage">
 				notify("{flashMessage.message}", "{flashMessage.severity}");
-			</f: for>
+			</f:for>
 		</script>
 	</f:flashMessages>
 	<div class="dataTables_wrapper dt-bootstrap4">
@@ -42,23 +42,22 @@ Otherwise your changes will be overwritten the next time you save the extension 
 				<div class="table-responsive">
 					<sll:widget.paginateBe objects="{uploads}" as="uploadPagination"
 						configuration="{settings.paginate}">
-						<table class="table table-hover mb-10">
+						<table class="table table-hover mb-10 size-90">
 							<thead>
 								<tr>
-									<th></th>
-									<th>ID</th>
-									<th>上传用户</th>
+									<th>#</th>
+									<th width="7%">用户</th>
 									<th>授权账户</th>
-									<th>amazon分类</th>
-									<th>分类类型</th>
+									<th width="15%">amazon分类</th>
+									<th width="15%">分类类型</th>
+									<th>产品</th>
+									<th>关系</th>
+									<th>图片</th>
+									<th>库存</th>
+									<th>价格</th>
+									<th>变体</th>
+									<th>上传时间</th>
 									<th>更新时间</th>
-									<th>产品状态</th>
-									<th>关系状态</th>
-									<th>图片状态</th>
-									<th>库存状态</th>
-									<th>价格状态</th>
-									<th>变体数</th>
-									<th>定时上传时间</th>
 									<th>操作</th>
 								</tr>
 							</thead>
@@ -66,48 +65,35 @@ Otherwise your changes will be overwritten the next time you save the extension 
 								<f:for each="{uploadPagination}" as="upload" iteration="itemIteration">
 									<tr>
 										<td>
-											<input type="checkbox" name="test" class="custom-control-input"
-												id="chk{upload.uid}" value="{upload.uid}">
-										</td>
-										<td>
 											{f:cObject(typoscriptObjectPath:'lib.calc',data:'{itemIteration.cycle}+({page}-1)*{settings.paginate.itemsPerPage}')}
 										</td>
-										<td>{upload.user.username}({upload.user.name})</td>
+										<td>{upload.user.username}<br/>({upload.user.name})</td>
 										<td>{upload.market}</td>
-										<td>{upload.category_text}</td>
-										<td>{f:format.date(date: upload.tstamp, format: 'Y-m-d H:i:s')}</td>
-										<td>{upload.cp_status}</td>
-										<td>{upload.gx_status}</td>
-										<td>{upload.tp_status}</td>
-										<td>{upload.kc_status}</td>
-										<td>{upload.jg_status}</td>
-										<td>{upload.product.variants->f:count()}</td>
-										<td>{f:format.date(date: upload.uploadtime, format: 'Y-m-d H:i:s')}</td>
+										<td>{upload.categoryText}</td>
+										<td>{upload.template}</td>
+										<td class="status-{upload.cpStatus}"><f:translate key="tx_erpmanagementprupload_domain_model_upload.status.{upload.cpStatus}" /></td>
+										<td class="status-{upload.gxStatus}"><f:translate key="tx_erpmanagementprupload_domain_model_upload.status.{upload.gxStatus}" /></td>
+										<td class="status-{upload.tpStatus}"><f:translate key="tx_erpmanagementprupload_domain_model_upload.status.{upload.tpStatus}" /></td>
+										<td class="status-{upload.kcStatus}"><f:translate key="tx_erpmanagementprupload_domain_model_upload.status.{upload.kcStatus}" /></td>
+										<td class="status-{upload.jgStatus}"><f:translate key="tx_erpmanagementprupload_domain_model_upload.status.{upload.jgStatus}" /></td>
+										<td>{upload.variants}</td>
+										<td>{f:format.date(date: upload.uploadtime, format: 'Y-m-d H:i')}</td>
 										<td>
-											<f:link.action title="更新" action="pull" class="btn btn-sm btn-primary"
-												arguments="{upload : upload}"><i class="ti-refresh"></i></f:link.action>
-											<f:link.action title="编辑" action="edit" class="btn btn-sm btn-success"
-												arguments="{upload : upload}"><i class="ti-pencil-alt"></i>
+											<f:if condition="{upload.lastUpdateDate}>0">
+												<f:then>
+													{f:format.date(date: upload.lastUpdateDate, format: 'Y-m-d H:i')}
+												</f:then>
+												<f:else>实时上传</f:else>
+											</f:if>
+										</td>
+										<td>
+											<f:link.action title="更新" action="pull" class="btn btn-sm btn-default" arguments="{upload : upload}"><i class="ti-reload"></i></f:link.action>
+											<a href="javascript:void(0);" class="btn btn-sm btn-success" onclick="editUploadProductForm({upload.uid})" title="编辑" ><i class="ti-pencil-alt"></i></a>
+											<f:link.action title="撤回" action="edit" class="btn btn-sm btn-danger" arguments="{upload : upload}"><i class="fas fa-reply"></i>
 											</f:link.action>
 										</td>
 									</tr>
 								</f:for>
-								<tr>
-									<td>
-										<div class="checkbox-wrapper-mail">
-											<input type="checkbox" name="test" class="selectall custom-control-input"
-												id="chkall" value="uid">
-											<label for="chkall" class="toggle"></label>
-										</div>
-									</td>
-									<td colspan="12">
-										<f:form action="multi" name="datas">
-											<f:form.hidden id="multidelete-items" property="items" value="" />
-											<f:form.submit class="btn btn-danger btn-xs delete btn-del btn-delete-all"
-												value="删除选中" />
-										</f:form>
-									</td>
-								</tr>
 							</tbody>
 						</table>
 					</sll:widget.paginateBe>
@@ -117,32 +103,27 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		</div>
 	</div>
 	<div id="uploadForm" class="hide">
-		<f:form action="pull" enctype="multipart/form-data" name="prupload">
+		<f:form action="create" enctype="multipart/form-data" name="upload" object="{upload}" id="pruploadform">
 			<table class="table table-bordered mb-10">
 				<tbody>
 					<tr>
-						<th>开始编号：</th>
+						<th width='100'>起始编号：</th>
 						<td>
-							<input id="beginNumber" name="beginNumber" class="form-control" type="text"
-								placeholder="请输入上传产品起始编号" onchange="chufa()">
+							<input id="beginNumber" name="beginNumber" class="form-control" type="text" placeholder="上传产品起始编号" onchange="chufa()">
 						</td>
-					</tr>
-					<tr>
 						<th>结束编号：</th>
 						<td>
-							<input id="endNumber" name="endNumber" class="form-control" type="text"
-								placeholder="输入上传产品结束编号" onchange="chufa()">
+							<input id="endNumber" name="endNumber" class="form-control" type="text" placeholder="上传产品结束编号" onchange="chufa()">
 						</td>
 					</tr>
 					<tr>
-						<th>产品编号：</th>
-						<td>
-							<f:form.textarea id="puids" name="puids" class="form-control" cols="2"
-								placeholder="输入多个产品id，请以英文逗号分隔。例：1101,1102,1105" />
+						<th>产品编号：<span class="error">*</span></th>
+						<td colspan="3">
+							<f:form.textarea id="puids" property="products" class="form-control" cols="2" placeholder="输入多个产品id，请以英文逗号分隔。例：1101,1102,1105" />
 						</td>
 					</tr>
-					<tr>
-						<th>更新选项：</th>
+					<!-- <tr>
+						<th>更新选项：<span class="error">*</span></th>
 						<td>
 							<label class="checkbox-inline">
 								<input id="updateOption" type="checkbox">全选
@@ -163,35 +144,43 @@ Otherwise your changes will be overwritten the next time you save the extension 
 								<f:form.checkbox name="updateOption[]" value="_POST_PRODUCT_IMAGE_DATA_" />图片
 							</label>
 						</td>
-					</tr>
+					</tr> -->
 					<tr>
-						<th>店铺选择：</th>
-						<td>
-							<f:form.select id="market" name="market" options="{markets}" optionValueField="uid" optionLabelField="name" prependOptionLabel="--请选择店铺--" class="form-control" />
-							<f:form.hidden name="lang" id="uploadlang" value="en" />
+						<th>店铺选择：<span class="error">*</span></th>
+						<td colspan="3">
+							<select class="form-control" onchange="selectMarket(this)" name="tx_erpmanagementprupload_pi1[market]" >
+								<option>--请选择店铺--</option>
+								<f:for each="{markets}" as="market" iteration="i">
+									<option value="{market.name}" lang="{market.lang}">{market.name}</option>
+								</f:for>
+							</select>
+							<f:form.hidden property="lang" id="uploadlang" value="en" />
 						</td>
 					</tr>
 					<tr>
-						<th>分类选择：</th>
-						<td>
+						<th>分类选择：<span class="error">*</span></th>
+						<td colspan="3">
 							<input type="text" id="categoryValuetext" class="form-control"
-								name="tx_erpmanagementprupload_pi1[categoryValuetext]" placeholder="请选择分类" onclick="getCategory()" readonly style="background-color:white;" />
+								name="tx_erpmanagementprupload_pi1[categoryText]" placeholder="请选择分类" onclick="getCategory()" readonly style="background-color:white;" />
 						</td>
 					</tr>
 					<tr>
-						<th>分类节点：</th>
-						<td>
-							<f:form.textfield id="categoryValueid" name="categoryValueid" class="form-control"
-								placeholder="分类节点" readonly="readonly" />
+						<th>分类节点：<span class="error">*</span></th>
+						<td colspan="3">
+							<f:form.textfield id="categoryValueid" property="categoryNode" class="form-control" placeholder="分类节点" readonly="readonly" />
 						</td>
 					</tr>
 					<tr>
-						<th>分类模板：</th>
-						<td>
-							<input type="text" id="uploadType" class="form-control"
-								name="tx_erpmanagementprupload_pi1[uploadType]" placeholder="请选择分类模板"
-								onclick="getTemplate()" readonly style="background-color:white;" />
-							<f:form.hidden name="uploadTypeId" id="uploadTypeId" />
+						<th>分类模板：<span class="error">*</span></th>
+						<td colspan="3">
+							<input type="text" id="uploadType" class="form-control" name="tx_erpmanagementprupload_pi1[template]" placeholder="请选择分类模板" onclick="getTemplate()" readonly style="background-color:white;" />
+							<!-- <f:form.hidden name="uploadTypeId" id="uploadTypeId" /> -->
+						</td>
+					</tr>
+					<tr>
+						<th>上传时间：</th>
+						<td colspan="3">
+							<f:form.select id="market" name="uploadTime" options="{times}" optionValueField="val" optionLabelField="title" prependOptionLabel="--请选择时间--" class="form-control" />
 						</td>
 					</tr>
 				</tbody>
@@ -203,58 +192,95 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		</f:form>
 	</div>
 	<script>
-			//上传商品
-			function uploadProductForm() {
-				layer.open({
-					type: 1,
-					title: '商品上传',
-					maxmin: true,
-					shadeClose: false,
-					area: ['700px', '480px'],
-					content: $("#uploadForm"),
-				});
-			}
+		//上传商品
+		function uploadProductForm(){
+			$("#pruploadform")[0].reset();
+			layer.open({
+				type: 1,
+				title: '商品上传',
+				maxmin: true,
+				shadeClose: false,
+				area: ['700px', '480px'],
+				content: $("#uploadForm"),
+			});
+		}
+		//编辑上传
+		function editUploadProductForm(uid=0){
+			console.log(uid);
+			$.ajax({
+				cache: true,
+				type: "POST",
+				url: "/api/getupload",
+				data: { cmd: 'getupload', uid: uid },
+				async: false,
+				success: function (data) {
+					$("#pruploadform")[0].reset();
+					$("#puids").val(sta);
 
-		//获取商品类别
-		function getCategory() {
-				layer.open({
-					type: 2,
-					title: '商品类别',
-					maxmin: true,
-					shadeClose: false,
-					area: ['800px', '620px'],
-					content: "/api/getcategory",
-				});
-			}
-		//获取商品模板
-		function getTemplate() {
-				layer.open({
-					type: 2,
-					title: '选择分类模板',
-					shadeClose: false, // 点击遮罩关闭层
-					area: ['600px', '400px'],
-					content: "/api/gettemplate",
-				});
-			}
-		function chufa() {
-				if ($("#beginNumber").val() != null && $("#endNumber").val() != null) {
-					$.ajax({
-						cache: true,
-						type: "POST",
-						url: "/api/queryRange",
-						data: { beginNumber: $("#beginNumber").val(), endNumber: $("#endNumber").val() },
-						async: false,
-						success: function (data) {
-							var dataval = "";
-							for (var i = 0; i < data.length; i++) {
-								dataval += data[i] + ",";
-							}
-							$("#piId").val(dataval.substring(0, dataval.length - 1));
-							$("#piId").valid();
-						}
+					layer.open({
+						type: 1,
+						title: '商品上传',
+						maxmin: true,
+						shadeClose: false,
+						area: ['700px', '480px'],
+						content: $("#uploadForm"),
 					});
 				}
+			});
+			
+		}
+
+		//获取商品类别
+		function getCategory(){
+			layer.open({
+				type: 2,
+				title: '商品类别',
+				maxmin: true,
+				shadeClose: false,
+				area: ['800px', '620px'],
+				content: "/api/getcategory",
+			});
+		}
+		//获取商品模板
+		function getTemplate(){
+			layer.open({
+				type: 2,
+				title: '选择分类模板',
+				shadeClose: false, // 点击遮罩关闭层
+				area: ['600px', '400px'],
+				content: "/api/gettemplate",
+			});
+		}
+		function chufa(){
+			if ($("#beginNumber").val() != null && $("#endNumber").val() != null) {
+				$.ajax({
+					cache: true,
+					type: "POST",
+					url: "/api/getproduct",
+					data: { cmd: 'queryRange', beginNumber: $("#beginNumber").val(), endNumber: $("#endNumber").val() },
+					async: false,
+					success: function (data) {
+						var dataval = "";
+						for (var i = 0; i < data.length; i++) {
+							dataval += data[i] + ",";
+						}
+						$("#puids").val(dataval.substring(0, dataval.length - 1));
+						// $("#puids").valid();
+					}
+				});
 			}
+		}
+		function selectMarket(obj) {
+			var sta = $(obj).find('option:selected').attr('lang');
+			$("#uploadlang").val(sta);
+		}
+		$('#updateOption').on('click', function () {
+			if (this.checked) {
+				$("input[name='tx_erpmanagementprupload_pi1[updateOption][]']").attr('checked', true);
+			} else {
+				$("input[name='tx_erpmanagementprupload_pi1[updateOption][]']").attr('checked', false);
+			}
+		});
 	</script>
 </f:section>
 

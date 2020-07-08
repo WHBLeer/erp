@@ -241,10 +241,10 @@ class ErpUserController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $res = $ErpServer->addUserAuthorized($params);
         // dump($res);exit;
         if ($res['rspCode'] == 0) {
-
+            
             //授权信息
             $country = [];
-            foreach ($coun as $key => $con) $country[] = $con->getName();
+            foreach ($coun as $key => $con) $country[] = ['lang' => $con->getLang(),'name'=>$con->getName()];
             $auth = new \ERP\ErpManagementUser\Domain\Model\ErpUserAuth();
             $auth->setAuthCode($res['authCode']);
             $auth->setShopalias($authData['shopalias']);

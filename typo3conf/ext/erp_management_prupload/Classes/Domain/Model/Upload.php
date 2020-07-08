@@ -1,7 +1,8 @@
 <?php
 namespace ERP\ErpManagementPrupload\Domain\Model;
 
-
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Database\ConnectionPool;
 /***
  *
  * This file is part of the "产品上传" Extension for TYPO3 CMS.
@@ -54,16 +55,9 @@ class Upload extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $template = '';
 
     /**
-     * 最后更新时间
-     * 
-     * @var int
-     */
-    protected $lastUpdateDate = 0;
-
-    /**
      * 上传时间
      * 
-     * @var string
+     * @var int
      */
     protected $uploadtime = '';
 
@@ -103,18 +97,54 @@ class Upload extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $jgStatus = 0;
 
     /**
-     * 产品
+     * 最后更新时间
      * 
-     * @var \ERP\ErpManagementProduct\Domain\Model\Product
+     * @var int
      */
-    protected $product = null;
+    protected $lastUpdateDate = 0;
 
     /**
      * 操作人
      * 
-     * @var \ERP\ErpManagementDict\Domain\Model\Region
+     * @var \ERP\ErpManagementUser\Domain\Model\ErpUser
      */
     protected $user = null;
+
+    /**
+     * 上传的产品
+     * 
+     * @var string
+     */
+    protected $products = '';
+
+    /**
+     * 变体
+     * 
+     * @var string
+     */
+    protected $variants = 0;
+
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     * 
+     * @return void
+     */
+    protected function initStorageObjects()
+    {
+    }
 
     /**
      * Returns the market
@@ -207,6 +237,7 @@ class Upload extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function getTemplate()
     {
+        $this->template = substr($this->template, 0, strrpos($this->template, ")") + 1);
         return $this->template;
     }
 
@@ -219,48 +250,6 @@ class Upload extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTemplate($template)
     {
         $this->template = $template;
-    }
-
-    /**
-     * Returns the lastUpdateDate
-     * 
-     * @return int lastUpdateDate
-     */
-    public function getLastUpdateDate()
-    {
-        return $this->lastUpdateDate;
-    }
-
-    /**
-     * Sets the lastUpdateDate
-     * 
-     * @param int $lastUpdateDate
-     * @return void
-     */
-    public function setLastUpdateDate($lastUpdateDate)
-    {
-        $this->lastUpdateDate = $lastUpdateDate;
-    }
-
-    /**
-     * Returns the uploadtime
-     * 
-     * @return string $uploadtime
-     */
-    public function getUploadtime()
-    {
-        return $this->uploadtime;
-    }
-
-    /**
-     * Sets the uploadtime
-     * 
-     * @param string $uploadtime
-     * @return void
-     */
-    public function setUploadtime($uploadtime)
-    {
-        $this->uploadtime = $uploadtime;
     }
 
     /**
@@ -369,30 +358,9 @@ class Upload extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the product
-     * 
-     * @return \ERP\ErpManagementProduct\Domain\Model\Product $product
-     */
-    public function getProduct()
-    {
-        return $this->product;
-    }
-
-    /**
-     * Sets the product
-     * 
-     * @param \ERP\ErpManagementProduct\Domain\Model\Product $product
-     * @return void
-     */
-    public function setProduct(\ERP\ErpManagementProduct\Domain\Model\Product $product)
-    {
-        $this->product = $product;
-    }
-
-    /**
      * Returns the user
      * 
-     * @return \ERP\ErpManagementDict\Domain\Model\Region $user
+     * @return \ERP\ErpManagementUser\Domain\Model\ErpUser $user
      */
     public function getUser()
     {
@@ -402,11 +370,97 @@ class Upload extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the user
      * 
-     * @param \ERP\ErpManagementDict\Domain\Model\Region $user
+     * @param \ERP\ErpManagementUser\Domain\Model\ErpUser $user
      * @return void
      */
-    public function setUser(\ERP\ErpManagementDict\Domain\Model\Region $user)
+    public function setUser(\ERP\ErpManagementUser\Domain\Model\ErpUser $user)
     {
         $this->user = $user;
+    }
+
+    /**
+     * Returns the uploadtime
+     * 
+     * @return int uploadtime
+     */
+    public function getUploadtime()
+    {
+        return $this->uploadtime;
+    }
+
+    /**
+     * Sets the uploadtime
+     * 
+     * @param string $uploadtime
+     * @return void
+     */
+    public function setUploadtime($uploadtime)
+    {
+        $this->uploadtime = $uploadtime;
+    }
+
+    /**
+     * Returns the lastUpdateDate
+     * 
+     * @return int $lastUpdateDate
+     */
+    public function getLastUpdateDate()
+    {
+        return $this->lastUpdateDate;
+    }
+
+    /**
+     * Sets the lastUpdateDate
+     * 
+     * @param int $lastUpdateDate
+     * @return void
+     */
+    public function setLastUpdateDate($lastUpdateDate)
+    {
+        $this->lastUpdateDate = $lastUpdateDate;
+    }
+
+    /**
+     * Returns the products
+     * 
+     * @return string $products
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+     * Sets the products
+     * 
+     * @param string $products
+     * @return void
+     */
+    public function setProducts($products)
+    {
+        $this->products = $products;
+    }
+
+    /**
+     * Returns the variants
+     * 
+     * @return string $variants
+     */
+    public function getVariants()
+    {
+        $uidsArr = array_filter(array_unique(explode(',',trim($this->products))));
+        for ($i=0; $i < count($uidsArr); $i++) { 
+            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tx_erpmanagementproduct_domain_model_product');
+            $this->variants += $queryBuilder
+            ->count('uid')
+            ->from('tx_erpmanagementproduct_domain_model_product')
+            ->where(
+                $queryBuilder->expr()->eq('uid', $queryBuilder->createNamedParameter($uidsArr[$i]))
+            )
+            ->execute()
+            ->fetchColumn(0);
+        }
+        
+        return $this->variants;
     }
 }

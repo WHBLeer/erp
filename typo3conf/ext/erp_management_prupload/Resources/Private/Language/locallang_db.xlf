@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2020-06-15T16:28:23Z" product-name="erp_management_prupload">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-07-07T14:25:12Z" product-name="erp_management_prupload">
 		<header/>
 		<body>
 			<trans-unit id="tx_erpmanagementprupload_domain_model_upload">
@@ -39,8 +39,11 @@
 			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.jg_status">
 				<source>Jg Status</source>
 			</trans-unit>
-			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.product">
-				<source>Product</source>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.last_update_date">
+				<source>Last Update Date</source>
+			</trans-unit>
+			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.products">
+				<source>Products</source>
 			</trans-unit>
 			<trans-unit id="tx_erpmanagementprupload_domain_model_upload.user">
 				<source>User</source>

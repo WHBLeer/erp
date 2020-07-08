@@ -33,6 +33,13 @@ class Dictitem extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $code = '';
 
     /**
+     * 语言
+     * 
+     * @var string
+     */
+    protected $lang = '';
+
+    /**
      * 所属类目
      * 
      * @var \ERP\ErpManagementDict\Domain\Model\Dicttype
@@ -79,6 +86,27 @@ class Dictitem extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setCode($code)
     {
         $this->code = $code;
+    }
+    
+    /**
+     * Returns the lang
+     * 
+     * @return string $lang
+     */
+    public function getLang()
+    {
+        return $this->lang;
+    }
+
+    /**
+     * Sets the lang
+     * 
+     * @param string $lang
+     * @return void
+     */
+    public function setLang($lang)
+    {
+        $this->lang = $lang;
     }
 
     /**
